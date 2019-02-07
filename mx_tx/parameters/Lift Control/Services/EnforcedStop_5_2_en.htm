@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Enforced Stop</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Enforced Stop</em> of the parameter group <em>Services</em> in subsystem <em>Lift Control</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Release Mode</h4></TD>
+<TD valign="top" class="Layout"><p>For service JZH specify how the lift can be released after a forced stop at control floor.<br>Mode:<br> 0: released manually<br> 1: released after timeout<br> 2: released manually or after timeout</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Stop Floor</h4></TD>
+<TD valign="top" class="Layout"><p>For the service JZH (Zwangshaltsteuerung) it specifies the control floor where the lift is forced to stop.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Open Doors</h4></TD>
+<TD valign="top" class="Layout"><p>For service JZH specify the side(s) which open(s) at the control floor.<br><br>door side mask:<br>+ 1 for side 1<br>+ 2 for side 20<br>+ 4 for side 30<br>+ 8 for side 40<br><br>for example:<br>side 1 and 20      = 1 + 2 = 3<br>side 1             = 1<br>side 1, 20 and 40  = 1 + 2 + 8 = 11</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Direction</h4></TD>
+<TD valign="top" class="Layout"><p>For service JZH (Zwangshaltsteuerung) specify direction where the JZH must be controlled. <br><br>Direction:<br> 0 = both<br> 1 = up<br> 2 = down</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Timeout</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the time to wait before the lift can leave the control floor with service 'forced stop' (active JZH).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

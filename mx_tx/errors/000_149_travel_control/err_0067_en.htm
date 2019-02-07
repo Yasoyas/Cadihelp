@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0067 KUET_Fault</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0067 KUET_Fault</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>KUET_Fault</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The monitoring of the door bridging signals (feedback from relays RUET and RUET1) indicates that they are not working properly. The relays RUET and RUET1 are not switching in parallel, or RUET and RUET1 are switching outside the door zone fin/magnet.<br><br>
+Comments: Both signals are transmitted via bus communication from the car. The error does not trigger an emergency stop. An error detected during a trip is logged only after the car has come to rest. Therefore the trip-phase stored in the log always appears as STANDSTILL.<br><br>
+This error is also generated on elevators with MOSIS system. For detailed information about the error cause please refer to the description of the extra information below. With MoSIS this error is also logged when there there is a mismatch between the numbers of floors learnt by MOSIS and by the control system.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>The extra information value is a 8 digit hexadecimal number (0xABCDEFGH) and has to be converted/decoded into binary format (each bit has a specific meaning).<br><br>
+Meaning of value 'GH' (Bit0 to Bit7):<br>
+0000 0001(bin) / 01(hex): Status of KUET and KUET1 are different<br>
+0000 0010(bin) / 02(hex): Enable UET false or outside a floor but KUET or KUET1 is TRUE <br>
+0000 0011(bin) / 03(hex): Enable UET true and at floor but KUET or KUET1 is FALSE<br>
+0000 0100(bin) / 04(hex): Status of KUET_20 and KUET1_20 are different<br>
+0000 0101(bin) / 05(hex): Enable UET_20 false or outside a floor but KUET_20 or KUET1_20 is TRUE<br>
+Additional diagnostics for MX only:<br>
+0000 0110(bin) / 06(hex): Car at floor without door on side1 but IUET or IUET1 is true<br>
+0000 0111(bin) / 07(hex): Car at floor with door on side1 but IUET or IUET1 is false<br>
+0000 1000(bin) / 08(hex): Car outside floor but IUET or IUET1 is true<br>
+0000 1001(bin) / 09(hex): Car at floor without door on side20 but IUET_20 or IUET1_20 is true<br>
+0000 1010(bin) / 0A(hex): Car at floor with door on side20 but IUET_20 or IUET1_20 is false<br>
+0000 1011(bin) / 0B(hex): Car outside floor but IUET_20 or IUET1_20 is true<br><br>
+Meaning of value 'F' (Bit8 to Bit11):<br>
+0000(bin) / 00(hex): 'KUET' false, 'KUET1' false, 'Enable UET' false<br>
+0001(bin) / 01(hex): 'KUET' true, 'KUET1' false, 'Enable UET' false<br>
+0010(bin) / 02(hex): 'KUET' false, 'KUET1' true, 'Enable UET' false<br>
+0011(bin) / 03(hex): 'KUET' true, 'KUET1' true, 'Enable UET' false<br>
+0100(bin) / 04(hex): 'KUET' false, 'KUET1' false, 'Enable UET' true<br>
+0101(bin) / 05(hex): 'KUET' true, 'KUET1' false, 'Enable UET' true<br>
+0110(bin) / 06(hex): 'KUET' false, 'KUET1' true, 'Enable UET' true<br>
+0111(bin) / 07(hex): 'KUET' true, 'KUET1' true, 'Enable UET' true<br><br>
+Meaning of value 'E' (Bit12 to Bit15):  for TX only<br>
+0000(bin) / 00(hex): 'PHS' = OUT_FIN, 'PHNR_D' = OUT_FIN<br>
+0001(bin) / 01(hex): 'PHS' = IN_FIN, 'PHNR_D' = OUT_FIN<br>
+0010(bin) / 02(hex): 'PHS' = OUT_FIN, 'PHNR_D' = IN_FIN<br>
+0011(bin) / 03(hex): 'PHS' = IN_FIN, 'PHNR_D' = IN_FIN<br><br>
+Meaning of value 'D' (Bit16 to Bit19):  for MX only<br>
+0000(bin) / 00(hex): 'IUET' false, 'IUET1' false, 'LUET' false<br>
+0001(bin) / 01(hex): 'IUET' true, 'IUET1' false, 'LUET' false<br>
+0010(bin) / 02(hex): 'IUET' false, 'IUET1' true, 'LUET' false<br>
+0011(bin) / 03(hex): 'IUET' true, 'IUET1' true, 'LUET' false<br>
+0100(bin) / 04(hex): 'IUET' false, 'IUET1' false, 'LUET' true<br>
+0101(bin) / 05(hex): 'IUET' true, 'IUET1' false, 'LUET' true<br>
+0110(bin) / 06(hex): 'IUET' false, 'IUET1' true, 'LUET' true<br>
+0111(bin) / 07(hex): 'IUET' true, 'IUET1' true, 'LUET' true<br><br>
+Meaning of value ‘AB’ (Bit24 to Bit31): for MoSIS only (bit decoding)<br>
+0000 0001(bin) / 01(hex): MoUET_RelaisFail is ON.<br>
+0000 0010(bin) / 02(hex): MoUET_WrongFloors is ON.<br>
+0000 0100(bin) / 04(hex): MoUET_reserve2 is ON.<br>
+0000 1000(bin) / 08(hex): MoUET_inLuet is ON.<br>
+0001 0000(bin) / 10(hex): MoUET_CmdOn is ON.<br>
+0010 0000(bin) / 20(hex): MoUET_inDoorZone is ON.<br>
+0100 0000(bin) / 40(hex): MoUET_v_below is ON.<br>
+1000 0000(bin) / 80(hex): MoUET_OK is ON.<br>
+Meaning of Value “CDEFGH” (Bit0 to Bit23): none (always '000000')<br>
+Example 1: Error 67 with extra info value h68000000 on a MoSIS system<br>
+68 (Hex) / 01101000(bin): MoUET_inLuet and MoUET_inDoorZone and MoUET_v_below are ON.<br>
+Example 2: Error 67 with extra info value h31000000 on a MOSIS system:<br>
+31(Hex) / 00110001(bin): MoUET_RelaisFail and MoUET_CmdOn and MoUET_inDoorZone are ON.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Refer to explanation for the extra info value</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Bad wiring on car</td>
+<td valign="top">Check the connection of the RUET/RUET1 enable- and feedback-signals to the car interface board.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top"></td>
+<td valign="top">Check the wiring of the door zone detection devices (PHUET / KUET)</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Bad environmental conditions (dirt, dust) in the hoistway</td>
+<td valign="top">Check photocell/magnet switches on car for dirt.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Electrical problems</td>
+<td valign="top">Check the ground connection on the car and the power supply for the car interface board and the door bridging device (e.g. PHUET)</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top">Communication problems between control cabinet and car</td>
+<td valign="top">Check the (LON) bus connection from the control cabinet to the car. Caution: KUET error may indicate a communication problem caused by another LON node (landings etc.)</td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top"></td>
+<td valign="top">Check for EMC problems caused by Schindler or 3rd party equipment (MX-GC: refer to field information No.291)</td>
+</tr>
+<tr>
+<td align="center" valign="top">7</td>
+<td valign="top">Configuration</td>
+<td valign="top">Check if number of floors and shaft layout (front rear doors) in configuration is matching the floor vanes in the hoistway.<br>
+MX-GC: Travel control checks for each access is a KUET vane is present for front and/or rear side.</td>
+</tr>
+<tr>
+<td align="center" valign="top">8</td>
+<td valign="top">Mechanical problem with switches</td>
+<td valign="top">Check mounting of KUET switches/fins</td>
+</tr>
+<tr>
+<td align="center" valign="top">9</td>
+<td valign="top">With MoSIS: MOSIS was replaced, e.g. from other installation (learnt floors mismatch)</td>
+<td valign="top">Perform a learn trip.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

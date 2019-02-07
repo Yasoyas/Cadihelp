@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+
+<tocitem      text="Parameters" target="parameter_main">
+  <tocitem    text="General" target="General" >
+    <tocitem  text="Settings" target="GeneralSettings" >
+      <tocitem  text="Door Settings" target="DoorSettings_22_16"/>
+      <tocitem  text="Mechanical" target="Mechanical_22_16"/>
+    </tocitem>
+  </tocitem>
+  <tocitem    text="Specials" target="Specials" >
+    <tocitem  text="Closing Force" target="SpecialsClosingForce" >
+      <tocitem  text="Force Settings" target="ForceSettings_80_27"/>
+      <tocitem  text="HoldingForceAtClosedPos" target="HoldingForceAtClosedPos_80_27"/>
+    </tocitem>
+    <tocitem  text="Clutch" target="SpecialsClutch" >
+      <tocitem  text="Clutch Timing" target="ClutchTiming_97_27"/>
+    </tocitem>
+    <tocitem  text="Door Drive" target="SpecialsDoorDrive" >
+      <tocitem  text="Motor Settings" target="MotorSettings_98_27"/>
+      <tocitem  text="Encoder Door Drive" target="EncoderDoorDrive_98_27"/>
+      <tocitem  text="Transmission Ratio" target="TransmissionRatio_98_27"/>
+      <tocitem  text="Force- Torque" target="Force-Torque_98_27"/>
+      <tocitem  text="Control Regulation" target="ControlRegulation_98_27"/>
+    </tocitem>
+    <tocitem  text="Miscellaneous" target="SpecialsMiscellaneous" >
+      <tocitem  text="Misc.Parameters" target="Misc.Parameters_111_27"/>
+      <tocitem  text="Trace Print Com2 Temp" target="TracePrintCom2Temp_111_27"/>
+      <tocitem  text="Statistics" target="Statistics_111_27"/>
+    </tocitem>
+    <tocitem  text="Motion Special" target="SpecialsMotionSpecial" >
+      <tocitem  text="Power Up Defaults" target="PowerUpDefaults_109_27"/>
+      <tocitem  text="Speed Regulation" target="SpeedRegulation_109_27"/>
+    </tocitem>
+    <tocitem  text="Motion Speed Night Mode" target="SpecialsMotionSpeedNightMode" >
+      <tocitem  text="Closing Speed" target="ClosingSpeed_106_27"/>
+      <tocitem  text="Opening Speed" target="OpeningSpeed_106_27"/>
+      <tocitem  text="Reversing Speed" target="ReversingSpeed_106_27"/>
+      <tocitem  text="Stopping Speed" target="StoppingSpeed_106_27"/>
+    </tocitem>
+    <tocitem  text="Motion Speed Normal Mode" target="SpecialsMotionSpeedNormalMode" >
+      <tocitem  text="Closing Speed" target="ClosingSpeed_104_27"/>
+      <tocitem  text="Opening Speed" target="OpeningSpeed_104_27"/>
+      <tocitem  text="Reversing Speed" target="ReversingSpeed_104_27"/>
+      <tocitem  text="Stopping Speed" target="StoppingSpeed_104_27"/>
+    </tocitem>
+    <tocitem  text="Motion Speed Nudging Mode" target="SpecialsMotionSpeedNudgingMode" >
+      <tocitem  text="Closing Speed" target="ClosingSpeed_107_27"/>
+      <tocitem  text="Opening Speed" target="OpeningSpeed_107_27"/>
+      <tocitem  text="Reversing Speed" target="ReversingSpeed_107_27"/>
+      <tocitem  text="Stopping Speed" target="StoppingSpeed_107_27"/>
+    </tocitem>
+    <tocitem  text="Motion Speed Referencing Trip" target="SpecialsMotionSpeedReferencingTrip" >
+      <tocitem  text="Referencing Speed" target="ReferencingSpeed_108_27"/>
+      <tocitem  text="Referencing Acceleration" target="ReferencingAcceleration_108_27"/>
+    </tocitem>
+    <tocitem  text="Motion Speed Soft Mode" target="SpecialsMotionSpeedSoftMode" >
+      <tocitem  text="Closing Speed" target="ClosingSpeed_105_27"/>
+      <tocitem  text="Opening Speed" target="OpeningSpeed_105_27"/>
+      <tocitem  text="Reversing Speed" target="ReversingSpeed_105_27"/>
+      <tocitem  text="Stopping Speed" target="StoppingSpeed_105_27"/>
+    </tocitem>
+    <tocitem  text="Motion Speed Turbo Mode" target="SpecialsMotionSpeedTurboMode" >
+      <tocitem  text="Closing Speed" target="ClosingSpeed_103_27"/>
+      <tocitem  text="Opening Speed" target="OpeningSpeed_103_27"/>
+      <tocitem  text="Reversing Speed" target="ReversingSpeed_103_27"/>
+      <tocitem  text="Stopping Speed" target="StoppingSpeed_103_27"/>
+    </tocitem>
+    <tocitem  text="Obstacle Detection" target="SpecialsObstacleDetection" >
+      <tocitem  text="Safety Code" target="SafetyCode_99_27"/>
+      <tocitem  text="Emergency Stop" target="EmergencyStop_99_27"/>
+      <tocitem  text="Reopening Control" target="ReopeningControl_99_27"/>
+    </tocitem>
+    <tocitem  text="Service Functions" target="SpecialsServiceFunctions" >
+      <tocitem  text="Door Controller" target="DoorController_101_27"/>
+    </tocitem>
+    <tocitem  text="Status" target="SpecialsStatus" >
+      <tocitem  text="Trace Print Com2" target="TracePrintCom2_112_27"/>
+    </tocitem>
+  </tocitem>
+</tocitem>
+</toc>

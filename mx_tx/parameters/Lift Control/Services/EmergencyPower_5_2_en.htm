@@ -1,0 +1,312 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Emergency Power</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Emergency Power</em> of the parameter group <em>Services</em> in subsystem <em>Lift Control</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Evacuation Mode</h4></TD>
+<TD valign="top" class="Layout"><p>Activation options are automatic or manually via a control center.<br><br>  Activation Mode: <br>    1 = AUTO: Evacuation automatically after the delay ZNO (selects the<br>              best lift)<br>     Set if GRP_NS_MODE = A<br><br>    2 = A_M_OVER: Evacuation automatically with manual override.<br>                  (USA-version)<br>     Not supported by COS<br><br>    3 = GLT_GROUP: Group evacuation is controlled by the building<br>                   interface GLT by the group input RFEFG for evacuation and RFNOG <br>                   for release of elevators (selects the best lift)<br>     Set if (GRP_NS_MODE = M) and ((GRP_BUILDING_SUPERV_INTERFACE = GROUP)<br>            or (GRP_BUILDING_SUPERV_INTERFACE = LAG))<br><br>    4 = GLT_LIFT:  The evacuation is fully controlled by a building-<br>                   interface GLT. The evacuation start per lift is<br>                   given by the lift input RFEF.<br>     Set if (GRP_NS_MODE = M) and (GRP_BUILDING_SUPERV_INTERFACE = LIFT)<br><br><br>>> Rule for MVX-K:<br>  Since signals RFEFG and RFEF are never configured, evacuation is always<br>  automatic (COS characteristic GRP_NS_MODE is not relevant):<br><br>  Set always to 1.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Evacuation  Mode Feeder 2</h4></TD>
+<TD valign="top" class="Layout"><p>Activation options for feeder 2 are automatic / manually via a control center. Only RNO USA<br><br>Activation Mode: (only valued variable)<br> 2 = A_M_OVER: Evacuation automatically with manual override. (USA-<br>               version)<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Evacuation Delay</h4></TD>
+<TD valign="top" class="Layout"><p>Used for emergency power evaucation RNO.<br><br>RNO_ZNO (Zeit Notstrom): Time delay to start the (group) evacuation after activation of input RNO. The value for ZNO is limited to a minimal value (when ZNO > 0) for system recovery after power is restored with RNO.<br><br>With value 0 the evacuation delay is infinite. The evacuation must then be triggered with the input RFEF or RFEFG. The evacuation delay time (ZNO) is also used with building evacuation in order to start the emergency power evacuation within a group if the evacuation signal is not activated.<br><br><br>Values for ZNO in case of building evacuation:<br><br>       RNO_ZFNO<br>       +----------------------------------------------------+<br>       |     group 1                       group 2          |<br>     +-v---------------------+       +------------------+   |<br>     | +----+----+----+----+ |       | +----+----+----+ |   |<br>     | | L1 | L2 | L3 | L4 | |------>| |L1 | L2 | L3  | |---+<br>     | +----+----+----+----+ |       | +----+----+----+ |<br>     +-----------------------+       +------------------+<br>     ^                               ^<br>     |                               |<br>     RNO_ZNO(1)                      RNO_ZNO(2)<br><br>     Group 1: RNO_ZNO =10s (fix)<br>     Group 2: RNO_ZNO =(nbr_lift_G1 + 1)*T1_G1 + T2_G1 + RNO_ZNO_G1<br>     Group 3: RNO_ZNO =(nbr_lift_G2 + 1)*T1_G2 + T2_G2 + RNO_ZNO_G2 + RNO_ZNO_G1<br><br>Abbreviations:<br>--------------<br>T1_G1 = Evacuation delay for one lift in group 1. It correspond to parameter "RNO_TIMEOUT_EVAC_DONE"<br><br>T2_G1 = The given time to evacuate the group 1 in a second step. It correspond to parameter "RNO_TIMEOUT_GROUP_EVAC"<br><br>>> Rule for MVX-K:<br>  Always set to FieldValue (default).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Timeout Evacuation Lift</h4></TD>
+<TD valign="top" class="Layout"><p>For Emergency power service, specify time to wait before blocking a lift that has not done evacuation as required.<br><br>>> Rule for MVX-K:<br>  Always set to FieldValue (default).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Timeout Evacuation Group</h4></TD>
+<TD valign="top" class="Layout"><p>For emergency power service RNO. Defines the time to wait until the group evacuation is considered completed when (after a round of evacuation attempts) one or more lifts have not completed the evacuation to the emergency power recall floor or the closest floor.<br><br>>> Rule for MVX-K:<br>  Always set to FieldValue (default).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Evacuation Floor</h4></TD>
+<TD valign="top" class="Layout"><p>Parking floor by service NS11 / NS21 (Emergency power evacuation / Notstromevakuation)<br><br>Important: when Emergency power and Fire services are present, the parking floor for both services must be the same.<br><br>>> Rule for MVX-K:<br>  if LOC_NS_EVAC_STOP = not ordered then set to LOC_MAIN_FLOOR<br>  else set to LOC_NS_EVAC_STOP<br>  (cSTOP_NS = LOC_NS_EVAC_STOP, cSTOP_MAIN_FLOOR = LOC_MAIN_FLOOR)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Open Doors Evacuation</h4></TD>
+<TD valign="top" class="Layout"><p>Defines which door (front side or/and rear side) must open at the emergency power recall floor. Used for emergency power services with evacuation to predefined recall floor (NS11 / NS21).<br><br>Door side mask:<br><br>1 = ZS1<br>2 = ZS20<br>3 = ZS1 + ZS20<br><br>>> Rule for MVX-K:<br>  if (LOC_NS_EVAC_STOP = not ordered) then set to FieldValue (default)<br>  else set according to ACCESS value of LOC_NS_EVAC_STOP, using above<br>  door side mask scheme</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">JNO Release Mode</h4></TD>
+<TD valign="top" class="Layout"><p>Defines how the elevator is released for emergency power operation (JNO).<br><br>  Activation Modes:<br><br>      1 = MANUAL: Manual release for normal operation under emergency power with the key-switch JNO per car. The number of lifts which can be released simultaneosuly is limited by the parameter "Lifts in Operation". If the parameter RNO_ACTIVATION_MODE is set to GLT_GROUP the input RFNOG must be active before a lift can be switched to JNO mode.<br>      Set if GRP_NS_MODE = MANUAL <br><br>      2 = AUTOMATIC: Automatic release for normal operation under emergency power (best lift). The number of lifts released simultaneously is limited by the parameter "Lifts In Operation". If the parameter RNO_ACTIVATION_MODE is set to GLT_GROUP the input RFNOG must be active before a lift can be switched to JNO mode.<br>      Set if GRP_NS_MODE = AUTO and GRP_BUILDING_SUPERV_INTERFACE =  GROUP<br><br>      3 = A_M_OVER: Release lift(s) automatically with manual override.<br>          The number of lifts released depends on the parameter "Lifts<br>          In Operation".<br>      Not supported by COS <br><br>      4 = GLT_LIFT: Release lift(s) only from the building interface<br>                    GLT with the input lift RFNO.<br>          The number of lifts released is fully controlled from the<br>          building interface.<br>      Set if GRP_NS_MODE = AUTO and GRP_BUILDING_SUPERV_INTERFACE = LIFT<br><br>>> Rule for MVX-K:<br>  Since signal RFNO is not present, only values 1 and 2 apply<br>  (COS characteristic GRP_BUILDING_SUPERV_INTERFACE is not relevant):<br><br>  Set to 1 if GRP_NS_MODE = MANUAL or not ordered (default)<br>  Set to 2 if GRP_NS_MODE = AUTO<br><br>Also known as:<br>P_STR_JNO_RELEASE</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">JNO Delay</h4></TD>
+<TD valign="top" class="Layout"><p>RNO_ZFNO: RNO Zeit Freigabe Notstrom<br><br>It is a delay to release a group back into service JNO after finishing the evacuation of all groups. It is only used in case of  building evacuation. See also parameter RNO_ZNO and JNO_RELEASE<br><br>Value: 0 means infinite, used in case of manually release only with input group RFNO.<br><br>RNO_ZFNO = RNO_ZNO last group + (nbr_lift_Gn + 1 )*T1_Gn + T2_Gn<br><br>T1_Gn: Evacuation delay for one lift in the last group. It correspond to parameter "RNO_TIMEOUT_EVAC_DONE"<br><br>T2_Gn = The given time to evacuate the last group in a second step. It correspond to parameter "RNO_TIMEOUT_GROUP_EVAC"<br><br>>> Rule for MVX-K:<br>  Always set to FieldValue (default).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">JNO Release max.No.Lifts</h4></TD>
+<TD valign="top" class="Layout"><p>Defines how many lifts can operate simultaneously with JNO service after evacuation sequence has completed during Emergency power service NS2/21.<br>Remark: The same parameter value must be set on all lifts in order to prevent inconsistencies of order data (group parameter). The parameter has no impact on the number of lifts evacuated simultaneously ( always one at a time - refer also to P_STR_RNO_JNO_PRIO_LIFTS ) <br><br>For NA:  max. value = 3 when there is no interlocking<br><br>>> Rule for MVX-K: <br>  if (LOC_NS_EVAC_LIFT = not ordered) then set to FieldValue (default)<br>  elsif (LOC_NS_EVAC_LIFT = ALL) then set to GRP_NUMBER_OF_LIFTS<br>  else set to number of lifts ordered in LOC_NS_EVAC_LIFT.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">JNO Release max.No.Lifts Feeder 2</h4></TD>
+<TD valign="top" class="Layout"><p>Specify how many lifts on feeder 2 are allowed to operate simultaneously when the Emergency power service feeder 2 is activated.<br><br>For NA: max 3 when there is no interlocking</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">JNO Release Lift Priority</h4></TD>
+<TD valign="top" class="Layout"><p>Defines which lifts are released for service JNO when the parameter 'JNO Release Mode' (PCT name: JNO_ACTIVATION_MODE) is set to automatic release. The parameter has no impact when the 'JNO Release Mode' is set to 'Manual'.<br><br>The parameter consists of eight values representing priority values 1 to 8. Each lift can be assigned to a JNO release prority. Table must be filled starting from priority 1 (first entry in table). <br>Zero values must be at the end. If a value 0 is in the field 2 and all following fields contain 0 the best lift to be released for JNO will be choosen automatically.<br>Lifts released for JNO is limited by parameter P_STR_RNO_LIFTS_IN_OP<br><br><br>>> Rule for MVX-K:<br>  Always set to "1 0 0 0 0 0 0 0 0" (default).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">JNO Release Lift Priority Feeder 2</h4></TD>
+<TD valign="top" class="Layout"><p>It specifies the order of put back priorities of the feeder 2 lifts.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Lifts on Feeder 1</h4></TD>
+<TD valign="top" class="Layout"><p>It specifies what lifts are on emergency power feeder 1. The lift id of the first car must be at index 2, the next id at index 3 an so forth. The lift ids after the last used index must be 0 if there are lifts on feeder 2. If there are not 8 cars on feeder 1 and there are no lifts on feeder 2 then it's better to have the lift ids of the not used indexes set to 0.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>example:
+
+¨85[ 06 09 01 01 02 00 00 00 00 00 00 ]    * P_STR_RNO_LIFTS_ON_FEEDER_1 = 1 1 2 0 0 0 0 0 0
+Lift 1 and 2 is on Feeder 1
+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Lifts on Feeder 2</h4></TD>
+<TD valign="top" class="Layout"><p>It specifies what lifts are on emergency power feeder 2. The lift id of the first car must be at index 2, the next id at index 3 an so forth. The lift ids after the last used index must be 0.<br><br>example:<br>¨86[ 06 09 01 03 04 00 00 00 00 00 00 ]    * P_STR_RNO_LIFTS_ON_FEEDER_2 = 1 3 4 0 0 0 0 0 0<br>Lift 3 and 4 are on Feeder 2</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Interlocking</h4></TD>
+<TD valign="top" class="Layout"><p>Type of interlocking for multibank emergency power.<br><br>0: no multibank interlocking.<br>1: multibank interlocking with one car remaining in service.<br>2: multibank interlocking with up to three cars remaining in service.<br><br>Remark: commissioning, edit and reset not defined<br><br>example:<br>¨45[ 02 02 0000 ]    * P_STR_RNO_INTERLOCKING = 0<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Interlocking Feeder 2</h4></TD>
+<TD valign="top" class="Layout"><p>Type of interlocking for multibank feeder 2 emergency power.<br><br>0: no multibank interlocking.<br>1: multibank interlocking with one car remaining in service.<br>2: multibank interlocking with up to three cars remaining in service.<br><br>Remark: commissioning, edit and reset not defined<br>example:<br>¨46[ 02 02 0000 ]    * P_STR_RNO_INTERLOCKING_2 = 0<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Light/Fan at open Door</h4></TD>
+<TD valign="top" class="Layout"><p>Specifies if cabin light and cabin fan should be switched off or remain on after arriving on the emergency recall floor (for Emergency Power NSxx and BRx).<br><br>The parameter is only used on the following services:<br>NS1<br>NS11<br>BR1/2 (ALT) SG<br>BR1/2/4 (ALT) HK<br>BR1/4 VN<br>BR2 EN<br><br>For all other fire recall services the behaviour can not be altered with the parameter.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">JNO Release Mode Feeder 2</h4></TD>
+<TD valign="top" class="Layout"><p>Specify how service JNO Feeder 2 is activated. (only for USA RNO)<br><br>Activation Mode: (only valued variable)<br> 3 = A_M_OVER: Release lift(s) automatically with manual override.<br>     The number of lifts released depends on the parameter "Lifts In<br>     Operation".<br><br>Also known as:<br>P_STR_JNO_RELEASE_2<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Emergency Power Manual Mode</h4></TD>
+<TD valign="top" class="Layout"><p>Parameter to define the use of the Auto/Manual switch for EMP operation by the software.<br><br>In Emergency Power Operation (RNO) the control will read the status of the Auto/Manual switch for EMP operation only if this parameter is set to FALSE (0). If the parameter is set to true (1) the control will ignore the Auto/Manual switch for EMP operation and will assume that the switch is ON (manual).<br><br>If the parameter not in the PCT the control assumes the parameter is set to FALSE.<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

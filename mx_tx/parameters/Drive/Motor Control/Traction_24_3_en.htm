@@ -1,0 +1,188 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Traction</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Traction</em> of the parameter group <em>Motor Control</em> in subsystem <em>Drive</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Motor Inertia</h4></TD>
+<TD valign="top" class="Layout"><p>Inertia of motor (rotor). For gearless drives:<br><br>Motortype	IVR<br>FM355-8A:	20 kgm2<br>FM355-8C:	22 kgm2<br>FM500-B:  	121 kgm2<br>FM500-C:  	183 kgm2<br>FM560-A:   	55 kgm2<br>FM560-B:   	66 kgm2<br>FM620-A:   	288 kgm2<br>FM630-B:   	96 kgm2<br>FM710-C:   	266 kgm2<br>FM710-D:   	318 kgm2</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Traction Sheave Inertia</h4></TD>
+<TD valign="top" class="Layout"><p>Inertia of traction sheave<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Fly Wheel</h4></TD>
+<TD valign="top" class="Layout"><p>Definition if flywheel is mounted or not.<br>0: No fly-wheel mounted on hoisting machine<br>1: Fly-wheel mounted on hoisting machine<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Encoder Type (Setting)</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the type of the encoder on the motor.<br><br>{0 = INCREMENTAL}	all inverters with optical, incremental encoder <br>(IG 500, IG1024, IG 2000, IG2048 or IG10000)<br><br>{1 = SINE_WAVE}	optical, sinusoidal encoder. (IG1024 for planetary gear FMP160, IG5000 for FM560 / FM630 / FM710)<br><br>{2 = NO_ENCODER}	inverters without incremental encoder. Only used for modernisations. Causes the inverter to activate the slip control instead of the vector control.<br><br>{3 = SINCOS_ENDAT}  optical, sinusoidal encoder with ENDAT-interface.<br><br>{4 = SINCOS_HYPERFACE}  optical, sinusoidal encoder with Hyperface-interface.<br><br>Exception: If at the same time a planetary gear and an encoder with 1024 periods per revolution is used, set to {1 = SINE_WAVE}.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Tacho Factor Motor (Setting)</h4></TD>
+<TD valign="top" class="Layout"><p>Impulses per revolution on motor encoder.<br><br>{1024}	[COS]	digital encoder IG1024 for modernization<br>{1024}	[COS]	sinusoidal encoder with 1024 periods per revolution for planetary gear. This encoder will replace the digital encoder IG2048 mentioned below. Not used yet.<br><br>{2000}	[COS]	digital encoder IG2000 for geared AC Drives in Europe/Asia<br>{2048}		digital encoder IG2048 for VF-70 North America<br>{2048}	[COS]	digital encoder IG2048 for planetary gear.<br>{4096}	[COS]	digital encoder IG4096 for SGB<br>{5000} 	[COS]	digital encoder IG5000<br>{10000} 	[COS]	digital encoder IG10000 for gearless AC Drives<br><br><br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Phase Direction (Setting)</h4></TD>
+<TD valign="top" class="Layout"><p>Sense of rotation of motor (in case of induction motors the parameter is only used for machines without incremental encoder)<br><br>Parameter extended from software versions: Variosys V1.03 and Vecsys V2.15<br>'Phase_Dir' determines the direction (sense) of rotation of the motor and the sense of rotation of the encoder. The value depends on the required direction of rotation of the motor, the orientation of the motor with regard to the ropes and the car and the orientation of the encoder.<br><br>Induction motors (designation: VM, FM, AM, ....):<br>The parameter value is defined by the commissionig step "Direction Test" ("T3" respectively). It depends on the direction of rotation of the motor, the orientation of the motor with regard to the ropes and the car and the orientation of the encoder.<br>Possible values: 0, 1, 2, 3.<br><br>Synchronous motors (designation: PMS, SM, ....):<br>The value has to be set according to the following rules.<br>PMS230/PMS300/PMA machine:<br>{0}:	The motor rotates counterclockwise (seen from the traction sheave), if the elevator travels upwards.<br>{1}:	The motor rotates clockwise (seen from the traction sheave), if the elevator travels upwards.<br>PMS230/PMS300/PMA machines will not run with values 2 or 3 unless motor phases are not wired correctly.<br><br>PMS420/SM (Zetatop) machine (motors that correspond to the standard EN 60034-8:2002):<br>{2}:	The motor rotates counterclockwise (seen from the traction sheave), if the elevator travels upwards.<br>{3}	The motor rotates clockwise (seen from the traction sheave),  if the elevator travels upwards.<br>PMS420/SM (Zetatop) machines will not run with values 2 or 3 unless motor phases are not wired correctly.<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Gear Type (Setting)</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the type of the gear.<br><br>{0.0 = NO_GEAR}	[COS]	direct traction drives (gearless)<br><br>{1.0 = WORM_GEAR}	[COS]	all worm gears (for instance Schindler worm gears: W140, W163, W200, W250, W53, W54, W55, W56, W57, W58, W59)<br><br>{2.0 = PLANET_GEAR}	[COS]	all planetary gears (high efficient gears, e.g. P420, P450)<br><br>{3.0 = SGB}	[COS]	"Semi Gearless Belt" drives for modernization<br><br>Parameter also sets the control parameters: P Gain Speed, Zero Speed Amp, Speed Edge. The value WORM_GEAR activates a control algorithm that compensates the static friction of worm gears. The values NO_GEAR, PLANET_GEAR and SGB activate the torque feed forward algorithm that calculates the required torque depending on the actual acceleration and Mass Moment of Inertia. The values WORM_GEAR, PLANET_GEAR and SGB activate the fast speed control at the beginning of the ride, if there is no DMS load measurement.<br><br>The parameter P_ANT_BRAKE_TYPE is derived from value of P_ANT_GEAR_TYPE (update function).<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Gear Ratio (Setting)</h4></TD>
+<TD valign="top" class="Layout"><p>Gear ratio<br><br>{1}	[COS]	for gearless (direct traction)<br>{3}	[COS]	SGB <br>{13.66667}	[COS]	for ratio 41/3<br>{17.33333}	[COS]	for ratio 52/3<br>{21.5}	[COS]	for ratio 43/2<br>{22.3}	[COS]	for planetary gear P450<br>{22.91}	[COS]	for planetary gear P420<br>{27.5},	[COS]	for ratio 55/2<br>{32}	[COS]	for planetary gear P450<br>{32.57}	[COS]	for planetary gear P420<br>{34.5}	[COS]	for ratio 69/2<br>{40}	[COS]	for ratio 40/1<br>{42.67}	[COS]	for planetary gear P450<br>{43}	[COS]	for ratio 43/1<br>{43.2}	[COS]	for planetary gear P420<br><br>{54}	[COS]	for ratio 54/1<br>{68}	[COS]	for ratio 68/1<br><br><br>Schindler standard gear ratio according to TK 600867 + eventually non standard value.<br>For North America other than Magnetek drive: Use the gear ratio of the applied machine.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Traction Sheave Diameter (Setting)</h4></TD>
+<TD valign="top" class="Layout"><p>Traction sheave diameter (m)<br><br>{0.27, 0.32}		see remark<br>{0.45, 0.5, 0.52, 0.57, 0.64, 0.715, 0.8, 0.9}	[COS]	see remark<br>{0.52}	[COS]	for FM355<br>{0.65}	[COS]	for FM500 .. FM620<br>{0.659}		for FM500 .. FM620, North America<br><br>Schindler standard drive sheave diameter + eventually non standard value with the following range condition: Drive sheave diameter using the middle of the rope.<br>For North America use the working diameter of the applied machine sheave.  Note that for the FM 500 and FM620 machines with 15.5 mm rope the diameter is increased from 0.650 m to 0.6588 m.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Inertias (Setting)</h4></TD>
+<TD valign="top" class="Layout"><p>Total mass moment of inertia of all moving parts of the elevator installation at rated load, in reference to the motor axis. x: Program output from „drive calculation program”.<br><br>Plausibility check: To check whether the value of the parameter inertias is inside a range which makes sense, the following strongly simplified calculation is given. If the actual value of inertias is not inside the range described below, the value of inertias must be recalculated with the „drive calculation program”.<br><br>Notes:<br>	-units:<br>		- car_wgt (GK), nom_load (GQ): kilogram<br>		- cwgt_bal (KG): for 50 % balance us the value 0.5<br>		- balance_rope (GZM), rope_wgt (GUM): kg/m<br>		- trac_dia, HQK: meters<br>		- IVR: kgm2<br>	- The meaning of the abbreviations and the values for the input of the calculation can be found in the parameter list<br>	- HQK is the altitude of the well (hoistway, shaft)<br>	- a table for IVR is given below<br><br>               [(2 * car_wgt + nom_load + cwgt_bal * nom_load) * 1.1] + [(balance_rope + rope_wgt) * HQK]<br>inertias ~{---------------------------------------------------------------------------------------------------------------------<br>               (roping * gear_ratio)2<br><br>		* (trac_dia / 2)2 } + IVR    (this line is the continuation of the upper line)<br><br>with Schindler-abbreviations:<br><br>	  [(2 * GK + GQ + KG * GQ) * 1.1] + [(GZM + GUM) * HQK]<br>IA ~ 	{ --------------------------------------------------------------------------- * (DD  /2)2 } + IVR<br>	  (KZU * IW)2<br><br>The value for IVR is given approximately in the table below:<br><br>Geared drives:<br>Geartype		IVR<br>W140, W54	0.1 kgm2<br>W163, W55	0.3 kgm2<br>SGB         	0.6 kgm2<br>W200, W56	0.6 kgm2<br>W250, W57, W58, W59	0.7 kgm2<br>P420, P450	0.1 kgm2<br>W58, W59 (two brakes)	1.2 kgm2<br><br>Gearless drives:<br>Motortype		IVR<br>PMS230	2.4 kgm2<br>PMA350	3 kgm2<br>PMS420	2.4 kgm2<br>FM280-C	7.2 kgm2<br>FMR-355	13.1 kgm2<br>FM355-8A	20 kgm2<br>FM355-8C	22 kgm2<br>FM500-B	169 kgm2<br>FM500-C	241 kgm2<br>FM560-A	136 kgm2<br>FM560-B	147 kgm2<br>FM620-A	377 kgm2<br>FM620-B	584 kgm2<br>FM630-B	224 kgm2<br><br>The actual value of inertias should be within the range – 25 % to + 50 % of the simplified calculation.-</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

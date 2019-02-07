@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1263 BIO2 Missing Node</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1263 BIO2 Missing Node</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>BIO2</em> error <em>BIO2 Missing Node</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>A node is missing on the BIO2 bus. There is a BIO2 node that has been recognised and does not response any more.<br>
+A BIO2 node does not response when it is scanned (node without critical IO) or it does not send the heartbeat signal any more (node with critical IO). It is possible that the missing node is defect, so it has to be exchanged by a new one. It also is possible that the missing node has been reteached. That means the node is actually working correct but the host can not receive any answers from the old address of the node. The host can not tell wheter a new node is installed or if an old one has been re-teached. In this case you have to make a freeze.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>0x0000yyxx<br><br>
+xx = access side (01 = front side/02 = rear side) <br>
+yy = floor number</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Task Id.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">No communication to BIO2 board</td>
+<td valign="top">Check BIO2 node board on related floor</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Loss of supply on BIO2 board</td>
+<td valign="top">Check BIO2 node board on related floor</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Re-teach of BIO2 node</td>
+<td valign="top">Execute freeze command after verification of function of node.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Faulty hardware (BIO2 board)</td>
+<td valign="top">Replace boar.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

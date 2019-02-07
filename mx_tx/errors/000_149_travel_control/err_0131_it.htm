@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0131 MoSis_KNE_Fault</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0131 MoSis_KNE_Fault</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>MoSis_KNE_Fault</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Messaggio inviato da MoSis insieme a cambio di stato di relè KNE.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>L'informazione extra è un codice a 8 caratteri con il seguente significato:xSTUVWXYZ<br><br>
+S=0: relè KNE chiuso (normale)<br>
+S=1: relè KNE aperto (per il motivo di apertura vedere gli altri caratteri)<br>
+T=_: RESERVED FOR FUTURE USE<br>
+U=1: KNE aperto per rilevamento di movimento involontario della cabina<br>
+V=1: Errore interno di hardware o software MoSis relativo al KNE. Controllare protocollo errori (MoSis) per ulteriori informazioni.<br>
+W=1: Fallimento test relè (KneRelayFail)<br>
+X=1: Cabina passata oltre la fine del vano conosciuto (StrangePlace). MoSis non è mai stato in questa posizione in precedenza (oltre l'ultimo piano).<br>
+Y=1: Escursione oltre ultimo piano conosciuto (sovracorsa)<br>
+Z=1: Stato pre-commissionamento; nessun piano individuato (Precom)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+</table>
+</body>
+</html>

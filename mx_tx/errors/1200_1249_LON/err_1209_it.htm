@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1209 Missing Node</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1209 Missing Node</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>LON</em> error <em>Missing Node</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Generato quando un nodo precedentemente funzionante è assente sulla rete LON.<br>
+Commento: un nodo viene considerato assente solo se riportato nell'elenco di riferimento dei nodi LON. L'elenco dei nodi viene generato a seguito del comando freeze LON tree oppure fa parte della tabella di configurazione fisica (PCT).<br>
+Per dettagli in merito allo stato dei nodi LON, fare riferimento a 'I/O tracer' di CADI.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Tipo di nodo e ID di ubicazione.<br><br>
+Tipo di nodo LON e ID di ubicazione del nodo codificati come valore a 32 bit (valore esadecimale a 8 cifre)<br>
+xxxxyyyy: le prime 4 cifre (xxxx) identificano il tipo di nodo ("p_type"). Le altre 4 cifre (yyyy) mostrano l'ID del nodo stesso ("p_id").<br><br>
+"p_type" definisce il tipo di nodo interessato (vedere l'elenco più avanti).<br>
+"p_id" definisce l'ID dell'ubicazione del nodo, di norma impostato da un microinterruttore locale o configurato mediante il tastierino M10.<br><br>
+Esempi:<br>
+00010002: tipo di nodo=01, ID=02. (LONIO, microinterruttore=02. Per p-type, vedere l'elenco riportato di seguito)<br>
+00030004: tipo di nodo=03, ID=04. (LFT-DPI, microinterruttore=04.)<br><br>
+Significato dei valori per "p_type":<br><br>
+Valore / Nome software / Nome scheda<br>
+0000(hex) / 0(dec): UNDEF non dovrebbe mai verificarsi<br>
+0001(hex) / 1(dec): GENERIC_IO_BOARD LONIOS16, LONIOH16, ICE, (H)TIC<br>
+0002(hex) / 2(dec): ARRIVAL_INDICATOR LONDAG<br>
+0003(hex) / 3(dec): DIGITAL_POSITION_INDICATOR LFTSDPI8, LFTDPI50<br>
+0004(hex) / 4(dec): LMS_MODUL LONLMS<br>
+0005(hex) / 5(dec): MACHINE_MODUL non utilizzato<br>
+0006(hex) / 6(dec): CIOHNA:  IO cabina per sistema HX<br>
+0007(hex) / 07(dec): HPBHNA: nodo di piano per sistema HX<br>
+0008(hex) / 8(dec): M10_TERMINAL ZRTL<br>
+0009(hex) / 9(dec): M10_DESTINATION_INDICATOR AZRC<br>
+000A(hex) / 10(dec): M10_SPEECH ANN<br>
+000C(hex) / 12(dec): MX_COP LONCOP, LONCPI<br>
+000D(hex) / 13(dec): MX_LOP LONCUS, LONIO(C), LOND(G)I<br>
+000E(hex) / 14(dec): MX_OPT_LIP_BIG LONCUB, LON(P/D)GIO, LONDY(H/IO), LONPII<br>
+001E(hex) / 30(dec): MX_LONIC LONIC, LONGIC<br>
+0036(hex) / 54(dec): CAR_DOOR_NODE LONIBV, LONDIM, LONV70, PLDA<br>
+0037(hex) / 55(dec): SHAFT_DOOR_NODE non utilizzato<br>
+003C(hex) / 60(dec): HIOMRLPP HIOMRL plug and play per NA<br>
+0064(hex) / 100(dec): LOCAL_IO_BOARD ASILOG(A), ASIX(A)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Assenza di alimentazione su apparecchio o scheda I/O</td>
+<td valign="top">Verificare i LED e il cablaggio dell'alimentazione.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Apparecchio o scheda I/O difettosi</td>
+<td valign="top">Sostituire l'apparecchio o la scheda I/O e ripetere il comando LON freeze, se necessario.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

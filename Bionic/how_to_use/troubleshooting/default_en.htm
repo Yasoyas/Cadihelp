@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<!-- (c) 2001 Inventio AG, CH-6052 Hergiswil -->
+<!-- All rights reserved for all countries. -->
+<style>
+<!--
+
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-size: 11pt; font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+
+-->
+</style>
+<title>How to Use: Troubleshooting</title>
+</head>
+
+<body>
+
+<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+  <tr>
+    <td class="Layout"><p class="zb-SectionNumber"></td>
+    <td class="Layout"><h1>Troubleshooting</h1>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" class="Layout"><img src="../../../layout/symbols/blank.gif" width="122"
+    height="1"></td>
+    <td valign="middle" class="Layout"><hr>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" class="Layout"><h4 class="Block">Summary</h4>
+    </td>
+    <td class="Layout">If there are problems during the installation or running of CADI,
+    the following solutions are recommended for the corresponding situations.</td>
+  </tr>
+  <tr>
+    <td class="Layout"></td>
+    <td class="Layout"><hr>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" class="Layout"><h4 class="Block">Error List</h4>
+    </td>
+    <td valign="top" class="Layout"><table border="1" width="100%">
+      <tr>
+        <td width="50%"><p class="Bold" align="center">Problem</td>
+        <td width="50%"><p class="Bold" align="center">Reason / Action</td>
+      </tr>
+      <tr>
+        <td width="50%">Unable to install the ODBC drivers (database) under Windows NT</td>
+        <td width="50%">One must have the correct permissions to install the driver -&gt; ask for
+        administrator privilege.</td>
+      </tr>
+      <tr>
+        <td width="50%">Authorization failed</td>
+        <td width="50%">Incorrect code used -&gt; authorize with the correct code.</td>
+      </tr>
+      <tr>
+        <td width="50%">Help does not start</td>
+        <td width="50%">Help is not properly installed -&gt; CADI must be reinstalled.</td>
+      </tr>
+      <tr>
+        <td width="50%">Data base is not found</td>
+        <td width="50%">Data base is not properly installed -&gt; CADI must be reinstalled.</td>
+      </tr>
+      <tr>
+        <td width="50%">Corrupted Data base/ ODBC Data Source Settings</td>
+        <td width="50%">This Message will occur only during the CADI starts up. Two reasons are
+        possible for this message.<p>1. The version of the CADI data base and the version of
+        CADI are different.</p>
+        <p>Action : Reinstall CADI</p>
+        <p>&nbsp;</p>
+        <p>2. The ODBC Data Source settings are invalid.</p>
+        <p>Action : <a href="default_en.htm#Check the ODBC Data Source Settings">Check the ODBC Data Source Settings</a></td>
+      </tr>
+      <tr>
+        <td width="50%">Functions cannot be chosen from menu, functions do not work properly or
+        parameters cannot be changed</td>
+        <td width="50%">1. Might not be logged in -&gt; check if logged in or not.<p
+        class="Remark">(In order to use some functions, it is required to be logged in)</p>
+        <p>2.&nbsp; Perhaps the connection has been lost or the target has a problem -&gt; check
+        cables for proper connection or choose the correct COM port.</p>
+        <p>3. Might be working offline -&gt; only a few functions can be used offline.</td>
+      </tr>
+      <tr>
+        <td width="50%">Logging in is a problem</td>
+        <td width="50%">1. Already logged in -&gt; no need to log in again.<p>2. Incorrect
+        password for login is used -&gt; use correct password.</p>
+        <p>3. There is no connection -&gt; check the cables or the COM port.</td>
+      </tr>
+      <tr>
+        <td width="50%">Help file has different language than that&nbsp;in use</td>
+        <td width="50%">Presently, the Help for this language is not available -&gt; only English
+        Help is available at the present time.</td>
+      </tr>
+      <caption valign="bottom">Error List</caption>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="Layout"></td>
+    <td class="Layout"><hr>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" class="Layout"><h4 class="Block">Working Offline</h4>
+    </td>
+    <td valign="top" class="Layout">It is possible while working offline to check previously
+    saved parameters or data.</td>
+  </tr>
+  <tr>
+    <td class="Layout"></td>
+    <td class="Layout"><hr>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" class="Layout"><h4 class="Block"><a name="Check the ODBC Data Source Settings">Check the ODBC Data Source Settings</a></h4>
+    </td>
+    <td valign="top" class="Layout"><table border="1" width="100%">
+      <tr>
+        <th width="10%">Step</th>
+        <th width="90%">Description</th>
+      </tr>
+      <tr>
+        <th width="10%">1</th>
+        <td width="90%">
+          <ul>
+            <li>Open
+        &quot;Startmenue&quot; --&gt; &quot;Settings&quot; --&gt; &quot;Control Panel&quot;</li>
+            <li>Open the ODBC Data Sources dialog</li>
+          </ul>
+          <p class="Figure"><img SRC="check_odbc_settings1.gif" width="410" height="361"></td>
+      </tr>
+      <tr>
+        <th width="10%">2</th>
+        <td width="90%">
+        <p><strong>Is there an entry for CADI available</strong> (possible
+        entries: UserDSN or SystemDSN)?</p>
+          <ul>
+            <li><b> NO</b>: press the &quot;Add&quot; button and
+        go to step 5 &quot;Entry for CADI is not available&quot;</li>
+            <li><b>YES</b>: then press the &quot;Configure&quot;
+        button and go to the next step.</li>
+          </ul>
+          <p class="Figure"><img SRC="check_odbc_settings2.gif" width="461" height="379"></td>
+      </tr>
+      <tr>
+        <th width="10%">3</th>
+        <td width="90%"><p>Check the following adjustments.</p>
+        <p class="Figure"><img SRC="check_odbc_settings3.gif" width="471" height="314"></p>
+          <p class="Bold">The Database path must be correct !!</p>
+        <p>If the database path is not correct, press the &quot;Select&quot; button and go to
+        the next step.</td>
+      </tr>
+      <tr>
+        <th width="10%">4</th>
+        <td width="90%"><p class="Figure"><img SRC="check_odbc_settings4.gif" width="402" height="245"></p>
+          <ul>
+            <li>Select the correct CADI GC Directory and the CADI Database(CADI.Mdb).</li>
+            <li>Press the &quot;OK&quot; button and close all dialogs.</li>
+            <li>CADI GC should work now.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th width="10%">5</th>
+        <td width="90%"><p>Entry for CADI is not available</p>
+        <p class="Figure"><img SRC="check_odbc_settings5.gif" width="468" height="347"></p>
+        <p>Select the Microsoft Access Driver, press the &quot;Finish&quot; button and go to the
+        next step.</td>
+      </tr>
+      <tr>
+        <th width="10%">6</th>
+        <td width="90%"><p class="Figure"><img SRC="check_odbc_settings6.gif" width="471" height="314"></p>
+        <p>Fill in the dialog, press the &quot;Select&quot; button and go to step 4</td>
+      </tr>
+    </table>
+    </td>
+  </tr>    
+</table>
+</body>
+</html>

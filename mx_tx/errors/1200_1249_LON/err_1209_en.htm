@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1209 Missing Node</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1209 Missing Node</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>LON</em> error <em>Missing Node</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Generated when a previously running node is missing on the LON network for some time (maximum 1 min.) or when an output on a missing LON can not be set because the node is no longer responding. When a LON node is found missing the control system will respond depending on the IO's configured on the node (e.g. TAB for critical IOs).<br><br>
+Comment: A node will only be considered missing if it is listed in the LON node reference list maintained by the SW. The node list is either generated after a 'freeze LON tree' command (for p&amp;p IO interfaces) or is part of the physical configuration table (PCT). For details about the status of the LON nodes refer to SMLCD or CADI 'I/O tracer'.<br><br>
+Change history: <br>
+Oct.25 2007 extra information value includes LON channel number</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>LON channel identifier; Node type and Location ID.<br><br>
+LON channel identifier, LON node type and LON node location ID are encoded in a 32-bit value (8 digit hex. value)<br>
+wxxxyyyy: The first digit (w) identifies the LON channel (0,1 or 2); 0 means that the control software does not provide this information. The next 3 digits (xxx) identify the Node type ("p_type"). The last 4 digits (yyyy) show the Node Id. ("p_id")<br><br>
+The "p_type" defines which type of node is affected (see the list below).<br>
+The "p_id" defines the location-ID of the node, typically set by a local dipswitch, or configured through the M10-keypad.<br><br>
+Examples:<br>
+10010002: LON channel 1, Node type=01, ID=02. (LONIO, dipswitch=02. See list below for p-type)<br>
+10030004: LON channel 1, Node type=03, ID=04. (LFT-DPI, dipswitch=04.)<br><br>
+Meaning of values for "p_type":<br><br>
+Value / software name / board names<br>
+000(hex) / 0(dec): UNDEF		should never occur<br>
+001(hex) / 1(dec): GENERIC_IO_BOARD	LONIOS16, LONIOH16, ICE, (H)TIC<br>
+002(hex) / 2(dec): ARRIVAL_INDICATOR	LONDAG<br>
+003(hex) / 3(dec): DIGITAL_POSITION_INDICATOR	LFTSDPI8, LFTDPI50<br>
+004(hex) / 4(dec): LMS_MODUL		LONLMS<br>
+005(hex) / 5(dec): MACHINE_MODUL	not used<br>
+006(hex) / 6(dec): CIOHNA		Cab IO for HX system<br>
+007(hex) / 7(dec): HPBHNA		Hall node for HX system<br>
+008(hex) / 8(dec): M10_TERMINAL	ZRTL<br>
+009(hex) / 9(dec): M10_DESTINATION_INDICATOR	AZRC<br>
+00A(hex) / 10(dec): M10_SPEECH		ANN<br>
+00C(hex) / 12(dec): MX_COP		LONCOP, LONCPI<br>
+00D(hex) / 13(dec): MX_LOP		LONCUS, LONIO(C), LOND(G)I<br>
+00E(hex) / 14(dec): MX_OPT_LIP_BIG	LONCUB, LON(P/D)GIO, LONDY(H/IO), LONPII<br>
+01E(hex) / 30(dec): MX_LONIC		LONIC, LONGIC<br>
+036(hex) / 54(dec): CAR_DOOR_NODE	LONIBV, LONDIM, LONV70, PLDA<br>
+037(hex) / 55(dec): SHAFT_DOOR_NODE	not used<br>
+03C(hex) / 60(dec): HIOMRLPP		HIOMRL plug and play for NA<br>
+064(hex) / 100(dec): LOCAL_IO_BOARD	ASILOG(A), ASIX(A)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">No power at fixture or I/O board</td>
+<td valign="top">Check power LED's and power wiring.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Damaged or defective fixture or I/O board</td>
+<td valign="top">Replace damaged fixture or I/O board and repeat LON freeze command if necessary.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

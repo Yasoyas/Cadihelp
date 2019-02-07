@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>EVENTS&nbsp;(28)&nbsp;&nbsp;/&nbsp;&nbsp;EXTENDED_LOG&nbsp;(17)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">attr_1     : log_type<br>      attr_2     : action<br>      data_length: 17<br>      data[0]    : Log id counter; 0 = newest entry.<br>      data[1]    : Severity ID<br>      data[2]    : Sybsystem ID<br>      data[3]    : Extra Info (MSB) | Number of occurences (MSB)<br>      data[4]    : Extra Info      or Number of occurences<br>      data[5]    : Extra Info       | Number of occurences<br>      data[6]    : Extra Info (LSB) | Number of occurences (LSB)<br><br>      data[7]    : Error ID (MSB) 16 bit value 0..65000<br>      data[8]    : Error ID (LSB)<br>      data[9,10] : Date as a 16-bit structure<br>                    [10] bits 0..4 (5 bits) day of month<br>                           0    : unknown date<br>                           1..31: valid value<br>                    [10] bits 5..7 + [9] bit 0, (4 bits) Month<br>                           0    : unknown date<br>                           1..12: January..December<br>                    [9] bits 1..7, (7 bits) Year<br><br>                           99: 1999<br>                            0: 2000<br>                            1: 2001<br>                           ...<br>                           98: 2098<br>      data[11]   : Time, Hour 0..23<br>      data[12]   : Time, Minute 0..59<br>      data[13]   : Time, Second 0..59<br>      data[14]   : Position (8 bits)<br>      data[15]   : mask<br>                    bits 6..7 Direction (VXT_T_DIR), 2 bits<br>                    bits 4..5 reserved<br>                    bit  3    drive available (1 bit)<br><br>                    bits 0..2 drive phase (VXT_T_DRIVE_PHASE), 3 bits<br>      data[16]   : mask<br>                    bit  7    door side 20 available (1 bit)<br>                    bits 4..6 door side 20 state (VXT_T_DOOR_STATE), 3 bits<br>                    bit  3    door side 1 available (1 bit)<br>                    bits 0..2 door side 1 state (VXT_T_DOOR_STATE), 3 bits<br><br>    Description: Reply for VCOM_get on telegram VXT_GET_EXTENDED_LOG.<br>                 Multiple telegrams can be delivered. VXT_START, VXT_END and<br><br>                 data[0] are used for sequence control.<br><br><br>       log_type: (see VXT_T_EH_WHICH_LOG in vx_tel_def.h)<br>          1: VXT_SELECT_TOTAL_LOG, Total Log.<br>          2: VXT_SELECT_EVENT_LOG, Event Log.<br>          3: VXT_SELECT_ERROR_LOG, Error Log.<br><br>       action: (see VXT_T_EH_ACTION in vx_tel_def.h)<br>          1: VXT_START<br>               Value used for all entries except the last one when<br>               replying to a get extended log command.<br>          2: VXT_END<br><br>               Value used for the last entry when replying to<br>               a get extended log command.<br>          3: VXT_EMPTY<br><br>When log is empty.<br>          4: VXT_UPDATE<br>		When there is a new entry in the log.<br>          5: VXT_DELETED  ?</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">EVENTS</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">EXTENDED_LOG</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">0</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+</TABLE>
+</BODY>
+</HTML>

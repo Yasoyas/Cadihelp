@@ -1,0 +1,176 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Load Handling</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Load Handling</em> of the parameter group <em>General</em> in subsystem <em>Load Measurement</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Nominal Load</h4></TD>
+<TD valign="top" class="Layout"><p>Nominal car load [kg]. For double deck elevators this is the sum of the nominal loads for the lower and the upper deck. E.g. if a DD elevator is specified with a nominal load of 2 x 1600kg then the value for P_ANT_NOM_LOAD is 3200kg.<br><br>On first generation VX/TX systems, nom_load was defined twice (also in the LIFT subgroup of the PCT). For TX-GC2/MX only the P_ANT_NOM_LOAD is required.<br><br>The calculation of the drive internal load limit values for the load-measuring system is based on the parameters NOM_LOAD and CODE_TYPE<br>for NA:<br>kl_h_load = NOM_LOAD / 2 ,<br>kl_max_load = NOM_LOAD * 1.1 ,<br>kl_x_load = NOM_LOAD * 1.3 ,<br><br>others (EUAP):<br>kl_h_load = NOM_LOAD / 2 ,<br>kl_x_load = NOM_LOAD * 1.1 ,<br><br>these limits are independent of load limits defined in PCT_GP_RS_GENERAL<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Auto-Adjust Delay</h4></TD>
+<TD valign="top" class="Layout"><p>Enable/disable autoadjust for zero-load with load measuring: HP-LMS.<br><br>0: OFF<br>1..255: auto adjust ON with a period of x days<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Minimal Load Limit</h4></TD>
+<TD valign="top" class="Layout"><p>Value specifying the minimal load limit in [kg]. If the measured car load is below this limit the minimal load function is activated. A value of zero implies that this minimal load function function is disabled.<br>With load contatcs (see parameter LM_TYPE) the minimal load value is used to calculate the load percentage when the input KL-M is active.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Full Load Limit</h4></TD>
+<TD valign="top" class="Layout"><p>Value specifying the full load limit in percent (%) of the nominal load. When the car load exceeds the limit the full load function (<LV>) is activated (floor calls no more served). -> Same effect as with activation of input KL-V.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Over Load Limit</h4></TD>
+<TD valign="top" class="Layout"><p>Value specifying the overload limit in percent (%) of nominal load. When car load exceeds the limit the over load function (<LX>) is activated. -> Same effect as with activation of input KL-X.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Load per Person</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the average weight of one person in kilograms (kg). Used to convert nominal cabin load in kg to the maximum number of passengers.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Minimal Load Control</h4></TD>
+<TD valign="top" class="Layout"><p>Configuration for minimal load control (Anti Nuisance). Cancel excessive car calls in normal operation (only required for KS and KA control mode).<br><br>Parameter values:<br>0: minimal load control off.<br>1: minimal load control with load measurement. Works only with DMS or KL-M.<br>2: minimal load control with door photocell PHT. This mode is required<br>   if minimal load control is ordered, but no DMS and no KL-M are<br>   configured.<br><br>Load always N Service<br>IF LOC_ANTI_NUISANCE is ordered<br>    IF any LOC_DMS is ordered <br>    THEN<br>        SET P_STR_MINIMAL_LOAD_CONTROL = 0<br>          (Reason: The DMS activates automaticaly the load controlled<br>           anti-nuisance, which is more sophisticated than the minimal<br>           load control function with parameter = 1)<br>    ELSE    <br>        SET P_STR_MINIMAL_LOAD_CONTROL = 2<br>    END IF<br>ELSE<br>    IF any LOC_DMS is ordered<br>    THEN    <br>        SET P_STR_MINIMAL_LOAD_CONTROL = 0 (default value)<br>    ELSE<br>        SET P_STR_MINIMAL_LOAD_CONTROL = 0 (default value)<br>    END IF<br>END IF</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Anti Nuisance</h4></TD>
+<TD valign="top" class="Layout"><p>Limit for number of registered car calls based on number of passengers in the car.<br><br>Value 1..10: Allowed difference between the number of passengers in the cabin and the maximum number of car calls. If there are more calls than allowed, the surplus car calls will be canceled.<br>Value 0 : Anti nuisance function disabled. (Anti nuisance is also disabled if no DMS is configured.)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">LX Signalization Mode</h4></TD>
+<TD valign="top" class="Layout"><p>Parameter to control the behaviour of the overlad signals (lamp and buzzer) on the COP (car operating panel). The signals controlled by the parameters are: LL-X, SUMC, SUMLX<br><br>behaviour of the outputs when overload is active (depending on the parameter value):<br>< 2:  LL-X blinking, SUMC on, SUMLX = off<br>> 6:  LL-X blinking, SUMC on, SUMLX = off<br>2:  LL-X blinking, SUMC off, SUMLX = on<br>3:  LL-X blinking, SUMC on, SUMLX = on<br>4:  LL-X on, SUMC on, SUMLX = off<br>5:  LL-X on, SUMC off, SUMLX = on<br>6:  LL-X on, SUMC on, SUMLX = on<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

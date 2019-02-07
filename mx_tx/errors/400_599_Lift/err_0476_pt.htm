@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0476 Fatal Error ON (Breakdown)</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0476 Fatal Error ON (Breakdown)</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Lift</em> error <em>Fatal Error ON (Breakdown)</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Message indicates activation of the Fatal service (elevator breakdown) used to shutdown the elevator after a severe error condition in a subsystem (drive, door etc.) is detected. With active fatal service the elevator is no longer available for transport. <br><br>
+See value of extra information for further details about:<br>
+- predefined duration of active fatal service<br>
+- current service before activation of fatal service <br>
+- error number which caused the activation of the fatal service (reason)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Interpretation (decoding) of the 8 digit hex. value (0xABCDEFGH)<br><br>
+Value of 'GH'(Bit 0 to Bit 7):<br>
+0000 0000(bin)/00(hex) : Fatal Service with Permanent Blockage<br>
+0000 0001(bin)/01(hex) : Fatal Service with Short Blockage<br>
+0000 0101(bin)/05(hex) : Fatal Service with Long Blockage<br>
+0001 1110(bin)/1E(hex) : Fatal Service with Blockage from Door Module(Permanent Blockage)<br><br>
+Value of 'EF'(Bit 8 to Bit 15) : Service Id. number of the Current Service <br>
+For Example: <br>
+01(dec)/01(hex): Normal Service 'N'<br>
+10(dec)/0A(hex): Inspection Service 'INS' 	<br>
+14(dec)/OE(hex): Unavailable Service 'UNV' <br>
+27(Dec)/1B(hex): Sab Service 	<br><br>
+Value of 'CD' (Bit 16 to Bit 23): Value of Lower Byte of the error number that caused the fatal service.<br><br>
+Value of 'AB' (Bit 24 to Bit 31): Value of Upper Byte of the error number that caused the fatal service.<br><br>
+For Example: For Error number 300 (dec) ‘AB’ will be 01(hex) and  'CD' will be 2E(hex)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Identifies the software task which requests the lift control to take the system into fatal service.<br><br>
+1: Init Task<br>
+45(dec): Lift Service  Task<br>
+90(dec): Door Control Front Door (Module RC1)<br>
+91(dec): Door Control Rear Door (Module RC2)<br>
+117(dec): Travel Control</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">A error occurred which sets the elevator to status 'fatal'. This message itself is not an error.</td>
+<td valign="top">Please refer to the extra information of this message for the causing error.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="./images/styles.css" type="text/css">
+	</head>
+	<body>
+		<hr>
+		<table width=100% border=0 cellspacing=0 cellpadding=2 class=filehead>
+			<tr><td align=left colspan=2 class=filehead>
+				<h1>GDDT User Manual</h1></td></tr>
+			<tr><td colspan=2 class=filehead>&copy; 2007 by Schindler Aufzüge AG, R&amp;D-DR</td></tr>
+			<tr><td width=30% class=filehead>Product: <b>VARIOdyn&reg</b></td>
+				<td class=filehead>Project: <b>GDDT</b></td></tr>
+<!--			<tr><td class=filehead>External Reference:</td>
+				<td class=filehead></td></tr>
+			<tr><td class=filehead>Document Number:</td>
+				<td class=filehead>0032</td></tr>
+-->
+			<tr><td class=filehead>Version: GDDT Release 1.2 December 07</td>
+				<td class=filehead></td></tr>
+		</table>
+	<hr>	
+	<h2>Index</h2>
+		  <ol>
+			<li><a href=#Introduction>Introduction</a></li>
+			<ol>
+				<li><a href=#General>General</a></li>
+				<li><a href=#Startup>Start GDDT</a></li>
+			</ol>
+			<li><a href=#FCRFeatures>Use of GDDT with FCR</a></li>
+			<ol>
+				<li><a href=#DriveConfigure>Drive configure</a></li>
+				       <ol>	
+					<li><a href=#Parameter>Parameter</a></li>
+					<li><a href=#TimeDate>Set time and date</a></li>
+				       </ol>
+				<li><a href=#DriveDiagnostic>Drive diagnostic</a></li>
+				       <ol>	
+					<li><a href=#Test>Test</a></li>
+					<li><a href=#ErrorLog>Error Log</a></li>
+					<li><a href=#Monitoring>Monitoring</a></li>
+					<li><a href=#Tracer>Tracer</a></li>
+				       </ol>
+				
+				
+			</ol>
+		               <li><a href=#FCRVariosys>Use of GDDT with Variosys</a></li>
+			<ol>
+				<li><a href=#Terminal>Terminal</a></li>
+				<li><a href=#Tracer>Tracer</a></li>				
+			</ol>
+						
+		 </ol>		
+		
+	<hr>
+	<h2><a name="Introduction">1. Introduction</h2>
+		<h3><a name="General">1.1 General</h3>
+		
+		<p><b>What is GDDT ?</b><br>
+		<b>G</b>raphical <b>D</b>rive <b>D</b>iagnostic <b>T</b>ool (GDDT) is an HMI for Schindler VARIODYN <b>F</b>requency <b>C</b>onverters (FC), based on FCR, VarioSys and VecSys software.<br>
+		The tool can be connected via RS232 interface to mains- as well as to motor control inverter.</p>
+		
+		<p><b>Mains control (FCR) for PF1 FCs:</b> Since FCR SW version V5.0 the GDDT is the exclusive conifguration tool for FCR. 
+		FCs with FCR and SW Version > 5.0 are until now: VF 155PF1AC/DC and VF288PF1AC/DC.
+		For older PF1 FCs (VF120 / 170 / 280 PF1) with SW Version < 5.0, use the program "WinMon".<br></p>
+	 
+		
+		<p><b>Motor control (VarioSys/VecSys):</b> For all VARIODYN motor control FCs, the GDDT can be used as "terminal" program for 3th level diagnostics.<br>
+		In addtion to a terminal program like i.e. TeraTerm, GDDT offers powerful drive specific features like a graphical tracer.<br>
+		The motor control functionality is not enabled per default. For enabling it, GDDT has to be started with the attribute -terminal. 
+		<a href = ./helpInstallation.html#ShortCutProperties>See also installation manual, chapter 6 "Short cut properties".</a>
+		</p>
+		
+		<p>The next picture shows GDDT connected to VARIODYN mains- and motor control inverters.</p>				
+		
+		
+		<p><img src="./images/system_variodyn_3.jpg" alt="Overview picture" title="Overview picture"></p>
+				
+				
+		<h3><a name="Startup">1.2 Start GDDT</h3>
+				
+		<p>Start the program, e.g. by double clicking on GDDT shortcut.<br>
+		On the next picture you can see the startup window.
+		It can take a while until this window occurs.
+		Please make  sure, that this window is not hidden behind an other window.</p>
+		
+		<p><img src="./images/startWindow.png" alt="Overview picture" title="Start window"></p>
+		
+		<p>The next picture shows the standard GDDT setup window.<br>
+		Please note: If you start GDDT with attribute -terminal, you can also select the VarioSys drive system for motor control inverters.</p>
+		
+		
+		<p><img src="./images/selectSystem.png" alt="Overview picture" title="Select system window"></p>
+		
+		<p>Enter an appropriate session name. This name is displayed on the frame header. This helpful if you have several GDDT's sessions open, in example on a parallel inverter installation.<br>
+		It's also possible to change the session name during the operation in menu "File -> Application Settings".</p>
+		
+		<p>After you made your choice, click button "connect system".<br>
+		GDDT starts after checking if the drive system is connected.</p>
+		
+		<p><b>Please note, that a drive system must be connected via the RS232 interface.</b><br>
+		It's not possbile to start GDDT without a drive system.</p>
+		
+		
+
+	<hr>
+	<h2><a name="FCRFeatures">2. Use of GDDT with FCR</h2>
+	 
+	     <h2><a name="DriveConfigure">2.1 Drive Configure</h2>	
+	
+	         <h3><a name="Parameter">2.1.1 Parameter</h3>
+		
+		<p><b>2.1.1.1. Standard parameterisation procedure </b></p>
+		<ol> 
+			<li>Open the parameter dialog: ->Drive Configure->Parameter</li>
+			<li>Each time the parameter window has been opened, GDDT uploads the current parameters from FCR and
+			    sets the uploaded values to column "Upload". Please note that the menus and buttons are blocked until all parameters are uploaded.</li>
+		               <li>The first time you open the parameter window, the FCR system selection window starts up automatically.</li>
+		               <li>In the FCR system selection window, select your drive system, mains and motor voltage.</li>
+		               <li>Press the button "set to work/download col. and download".</li>
+		               <li>GDDT starts the download procedure
+		               <ol>
+		                   <li>All parameters are calculated and put in the "Work/Download" column.</li>
+		                   <li>All selected parameters will be downloaded to FCR.</li>
+		                   <li>After downloading, GDDT invokes the save to memory procedure in FCR.</li>
+		                   <li>The paramteres are now stored persistently on FCR.</li>
+		                   <li>GDDT again uploads the parameters and sets the uploaded values to column "Upload".</li>
+		                   <li>The uploaded parameters are checked against the downloaded parameters.</li>
+		               </ol>
+		               <li>After successful download, persistent storage, upload and verification GDDT displays the action status: "Download successful !"</li>
+		               
+		</ol>	
+		<p><b>2.1.1.2. Meaning of the buttons</b></p>
+		
+		     <p><b>Button "define"</b><br>
+		     Opens the FCR system selection window.</p>
+		     <p><b>Button "upload"</b><br>
+		     Uploads the current parameters from FCR and sets the uploaded values to column "Upload".</p>
+		     <p><b>Button "download"</b> 
+		     <ol>
+		     	<li>Downloads the parameters from work/download column to FCR.</li>
+		               <li>Stores the values on FCR.</li>
+		     	<li>Uploads the parameters and sets the uploaded values to column "Upload".</li>
+		     	<li>Compares the values in the "Work/Download" column with the values inside the "Upload" column.</li>     
+		     </ol>
+		     </p>
+		
+		<p><b>2.1.1.3. Various</b></p>
+		
+		<p>Please note: Try again if a procedure failes. This can happen due to interferences on RS232.</p>
+		
+	        <h3><a name="TimeDate">2.1.2 Set Time and Date</h3>
+		
+		<p><b>Standard  procedure </b></p>
+		<ol> 
+			<li>Open the "Set Time and Date" dialog: ->Drive Configure->Time and Date</li>
+			<li>Each time the "Set Time Date" window has been opened, GDDT uploads the current time and date from FCR and
+			    sets the values inside the edit table. 
+		               <li>If the loaded values are not correct, you can set new values either by pressing the button "Load PC time"
+		                   or by pressing the button "Edit manually" and setting the values manually inside the edit table.</li>
+		               <li>Press the button "Download edit table values".</li>
+		               <li>GDDT sets the time and date on FCR according the values inside the edit table.
+		               <li>Press the button "Load FCR time" and verify the correct function of the FCR clock.</li>               
+		</ol>
+		
+	
+	<hr>
+	<h2><a name="DriveDiagnostic">2.2 Drive Diagnostic</h2>	
+		<h3><a name="Test">2.2.1 Test</h3>
+		<p>This chapter provides a list for commissioning and diagnostics. The test procedures are selfexplanatory.</p>
+		<p><b>Please note that the commissioning tests must be done on first commissioning !</b></p> 
+		
+		<h3><a name="ErrorLog">2.2.2 Error Log</h3>
+		<p>Function to read out and clear the error log.</p>
+		
+		<h3><a name="Monitoring">2.2.3 Monitoring</h3>
+		
+		<p>Window to monitor status values.</p>
+		
+		<p><b>Button "start periodic"</b><br>
+		The monitored values are updated approximately all 2 seconds.
+		Please check that the monitor is running from time to time. Interferences on RS232 communication
+		can stop the monitor.
+		
+		<h3><a name="Tracer">2.2.4 Tracer</h3>
+		
+		<p>The tracer offers you a powerful tool to visualise FCR control records.</p>
+		
+		<p>Enter the trace mode by reseting the FCR. Please note that after a reset the tracer is loaded with
+		   random values. The tracer mode will be left as soon as an other command e.g. read out errorlog is executed.
+		   The next picture shows the dialog for entering in trace mode</p>
+		
+		<p><img src="./images/tracerExecuteReset.png" alt="Execute reset" title="Execute reset"></p>
+		
+		<p><b>FCR Tracer</b><br>
+		The FCR tracer samples 500 values with a step of 1ms. The tracer restarts at each trip start (PWM enable) as well as when the button "Trigger" is pressed.</p>
+		
+		<p><b>"Trace" button</b><br> With the "Trace" button you read out the trace buffer. The values are displayed in the graphical window.</p>
+		
+		<p><b>"Trigger" button</b><br> The trace buffer is restarted. The "Trigger" button can be pressed during a trip.</p>
+		
+		<p>The next picture shows a trace in the graphical window.</p>
+		
+		<p><img src="./images/tracerFCR1.png" alt="FCR tracer overview" title="FCR tracer overview"></p>
+		
+		<p><b>Signal selection</b><br> You can hide the curves of no interest by removing the tick in the check box.</p>
+		
+		
+		<p><b>Zoom function</b></p>
+		<ol>
+		       <li>GDDT offers a powerful zoom function. Click an drag with the mouse the part of the graphic you would like to enlarge.
+		
+		<p><img src="./images/tracerFCRsetZoom.jpg" alt="FCR tracer set zoom" title="FCR tracer set zoom"></p></li>
+		
+		<li> After releasing the mouse button, you'll see the zoomed section.
+		
+		<p><img src="./images/tracerFCRZoom.png" alt="Zoomed FCR trace" title="Zoomed FCR trace"></p></li>
+		
+		<li>To get back to the orginal curves press the "Refresh" button.</li>
+		</ol>
+		
+		<p><b>Cursor</b><br>
+		Two vertical cursors are available. The signal values on cursor position are displayed in the table.
+		<br> Cx Rough value = the rough value from FCR signal on cursor position.<br>
+		     Cx Value = normed value on cursor position.<br></p>
+		
+		<p><b>Norm</b><br>
+		The signal value is multiplied with the value in column "Norm" to get the absolute signal value.
+		The "Norm" value is adjustable.</p>
+
+		
+		
+	<hr>
+	<h2><a name="FCRVariosys">3. Use of GDDT with Variosys / Vecsys</h2>
+		
+		<p><b>Motor control (VarioSys/VecSys):</b> For all VARIODYN motor control FCs, the GDDT can be used as "terminal" program for 3th level diagnostics.<br>
+		In addition to a terminal program like i.e. TeraTerm, GDDT offers powerful drive specific features like a graphical tracer.<br>
+		The motor control functionality is not enabled per default. For enabling it, GDDT has to be started with the attribute -terminal. 
+		For more information see <a href = ./helpInstallation.html#ShortCutProperties>installation manual, chapter 6</a>.
+		</p>
+		
+		
+	        <h3><a name="Terminal">3.1 Terminal</h3>
+		
+		<p>The next picture shows the terminal menu. Some helpful commands for terminal handling can be found.</p>
+		
+		<p><img src="./images/terminalMenu.png" alt="Terminal Menu" title="Terminal Menu"></p></li>
+		
+		<p><b>Logging terminal output to a file</b><br>
+		<ul>
+		    <li><b>Browse Log to File</b><br>A browser will be opened and a file name can be entered manually</li>
+		    <li><b>Auto Log to File</b><br>GDDT generates automatically a file name depending on drive system, session name, date and time</li>
+		    <li><b>Stop Log to File</b><br>Logging to file is stopped</li>
+		    <li><b>Pause / Resume File Logging</b><br>Logging to file is paused / resumed</li>
+		</ul>
+		* = This buttons are only visible when the logger is active
+		</p>
+		
+		<p><b>Insert Comments</b><br>
+		After pressing the menu item "Insert Comment", it is possible to write comments in the output flow window.
+		RS232 communication is interrupted until  "Comment done"* is pressed.
+		<br>
+		* = This menu item is only visible when comment mode is active.
+		</p>
+		
+		<p><b>Command View</b><br>
+		A window with drive commands gets visible. Drive commands can be selected. With the button "WRITE" the command is sent to the FC.<br>
+		<b><span style="color:red">Be careful by using this commands, wrong use can have serious impact on drive functionality !</span></b>
+		</p>
+		
+		
+		
+	         <h3><a name="Tracer">3.2 Tracer</h3>
+		
+		<p>The tracer offers you a powerful tool to visualise motor control records.</p>
+		
+		<p><b>Motor control tracer on Variosys/Vecsys</b><br>
+		The tracer restarts at each trip start. Normally the sample time is 10 ms.
+		This period and the measurands can be adjusted with terminal command "Z".
+		The trace buffer size is limited. On long trips, the start sequence may be lost.</p>
+		
+		<p><b>Trace button</b><br> With the trace button you read out the trace buffer. The values are displayed in the graphical window.</p>
+		
+		<p>The next picture shows a trace in the graphical window.</p>
+		
+		<p><img src="./images/tracerVariodynAll.png" alt="Variosys/Vecsys tracer" title="Variosys/Vecsys tracer"></p></li>
+		
+		
+		<p><b>Zoom function</b></p>
+		<ol>
+		       <li>GDDT offers a powerful zoom function. Click and drag with the mouse the part of the graphic you would like to enlarge.</li>
+		
+		<p><img src="./images/tracerVariosyssetZoom.jpg" alt="Set zoom Variosys" title="Set zoom Variosys"></p></li>
+		
+		<li> After releasing the mouse button, you'll see the zoomed window.
+		
+		<p><img src="./images/tracerVariosysZoom.png" alt="Zoomed Variosys trace" title="Zoomed Variosys trace"></p></li>
+		
+		<li>To get back to the orginal curves press the "Refresh" button.</li>
+		</ol>
+		
+		<p><b>Cursor</b><br>
+		Two vertical cursors are available. The signal values on cursor position are displayed in the table.
+		<br> Cx Rough value = the rough value from Variosys/Vecsys signal on cursor position<br>
+		     Cx Value = normed value on cursor position<br></p>
+		
+		<p><b>Norm</b><br>
+		The signal value is multiplied with the value in column "Norm" to get the absolute signal value.
+		The "Norm" value is adjustable.</p>
+		
+
+	</body>
+</html>

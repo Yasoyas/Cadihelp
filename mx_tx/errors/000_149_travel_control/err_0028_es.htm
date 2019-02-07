@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0028 OverTempMotor</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0028 OverTempMotor</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>OverTempMotor</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The measured motor temperature exceeds the temperature limits defined by the parameter P_ANT_TEMP_OVERHEAT_MOTOR and the minimum temperature limit (-10°C).<br>
+For motors with a temperature sensor type 'PT100 resistor' the error may indicate a problem with the sensor (short circuit or open). The elevator system will normally recover by itself when the motor temperature drops below the overtemperature level (see also description for extra info).<br>
+Remark: Before the introduction of the parameter P_ANT_TEMP_OVERHEAT_MOTOR the overtemperature limit was fix at 150°C (Check motor parameters 'supervision').</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>0(hex)/0(dec): The motor temperature is below the minimum limit of -10°C. The elevator remains blocked until the motor temperatur rises above the minimum limit (fixed value)<br><br>
+1(hex)/1(dec): The motor temperature is above the maximum limit defined by the parameter 'PCT_ANT_TEMP_OVERHEAT_MOTOR'. The elevator remains blocked until the motor temperature drops 20°C below the maximum limit.<br><br>
+A(hex)/10(dez): The motor temperature is above the maximum limit defined by the parameter 'PCT_ANT_TEMP_OVERHEAT_MOTOR' for more than 30min. The elevator remains blocked until the motor temperature drops 20°C below the maximum limit.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Incorrect or missing PT100 connection to the motor.</td>
+<td valign="top">Check wiring of temperature measurement device.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Overtemperature due to excessive current or defectice ventilation on the motor.</td>
+<td valign="top">Check the main supply connection to the motor and the ground connection.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top"></td>
+<td valign="top">Check the motor windings for short circuit on the motor terminal box.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top"></td>
+<td valign="top">Check for correct parameter values of Motor Control.</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top"></td>
+<td valign="top">Check the motor ventilator.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

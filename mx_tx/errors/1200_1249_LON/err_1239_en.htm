@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1239 TelTrap</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1239 TelTrap</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>LON</em> error <em>TelTrap</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Generated when SIOL or SIOG detects a Group Input pin change, for example, Fire Phase 1, JBF, Smoke Detectors, RNO, etc.<br>
+This mechanism logs any transition on these fire inputs into the SIOs local log, even if CADI telegram tracer is not connected or running. This information may be used to troubleshoot faulty fire input signals.<br>
+It is normal for these events to be logged any time the SIO is powered on. The Extra Info contains the state of the fire inputs.<br>
+It is normal for these events to be logged any time the fire inputs change.<br>
+If the system goes on Fire Service unexpectedly, these events may show a ‚glitch on one of the fire inputs.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Encoded TelGrp, TelID, Data:<br>
+Bits 31..24: Tel_Grp<br>
+Bits 23..16: Tel_ID<br>
+Bits 15..12: Att_1<br>
+Bits 11..8: Att_2<br>
+Bits 7..0	: Data<br>
+Example: 0F010001  VXT_INP_GROUP, VXT_JBF, 0, 0 Data=1  Switch JBF is ON</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+</table>
+</body>
+</html>

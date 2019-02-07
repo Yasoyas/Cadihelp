@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0077 LM_PrintsErr</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0077 LM_PrintsErr</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>LM_PrintsErr</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Comportamento imprevisto del dispositivo di misurazione del carico; per la causa dell'errore vedere le altre informazioni.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>x1: dispositivo LMS (ponte uno) assente/guasto<br>
+x2: dispositivo LMS (ponte due) assente/guasto<br><br>
+x64: carico della cabina troppo elevato (20% del carico nominale) per l'autotaratura (eseguita a mezzanotte) del dispositivo seriale di misurazione del carico.<br><br>
+Monitoraggio dei contatti di carico per NA:<br>
+x214: stato errato di KL-M (inattivo) con KL-X attivo<br>
+x224: stato errato di KL-V (inattivo) con KL-X attivo<br>
+x234: stato errato di KL-MAX (inattivo) con KL-X attivo<br>
+x212: stato errato di KL-M (inattivo) con KL-V attivo<br>
+x213: stato errato di KL-M (inattivo) con KL-MAX attivo<br>
+x223: stato errato di KL-V (inattivo) con KL-MAX attivo<br><br>
+Monitoraggio dei contatti di carico per EUAP:<br>
+x114: stato errato di KL-M (inattivo) con KL-X attivo<br>
+x124: stato errato di KL-H (inattivo) con KL-X attivo<br>
+x134: stato errato di KL-V (inattivo) con KL-X attivo<br>
+x112: stato errato di KL-M (inattivo) con KL-H attivo<br>
+x113: stato errato di KL-M (inattivo) con KL-V attivo<br>
+x123: stato errato di KL-H (inattivo) con KL-V attivo</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top"></td>
+<td valign="top">Verificare il dispositivo LMS e il collegamento del bus all'armadietto di controllo.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Velocità di trasmissione errata</td>
+<td valign="top">Verificare che la velocità di trasmissione del bus dell'ascensore sia uguale sul controllo corsa e sul pcb LMS</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Con contatti di carico: stato errato degli ingressi dei contatti di carico (es. KL-V attivo ma KL-M inattivo)</td>
+<td valign="top">Verificare il corretto funzionamento dei contatti di carico KL-M / KL-H /KL-V / KL-MAX / KL-X.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

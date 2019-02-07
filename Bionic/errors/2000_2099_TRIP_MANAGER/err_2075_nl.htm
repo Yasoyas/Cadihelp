@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 2075 E_TRIP_POSITION_CORRECTION_TOO_BIG</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>2075 E_TRIP_POSITION_CORRECTION_TOO_BIG</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>2000_2099_TRIP_MANAGER</em> error <em>E_TRIP_POSITION_CORRECTION_TOO_BIG</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The first limit for the correction of the car position (typ. 30mm) during a trip has exceeded. Note, this warning is only applicable for closed loop drives. The current running trip does not get interrupted.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>ndef</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>ndef</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Insufficient traction</td>
+<td valign="top">Check for excessive rope slip</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Mechanical problem with motor tacho</td>
+<td valign="top">Check tacho on hoisting machine</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Excessive rope elongation during trip</td>
+<td valign="top">Check ropes (type and number of ropes)</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Problem with floor sensor (flag/photocell)</td>
+<td valign="top">Check correct installation/operation of floor sensors in hoistway</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top">Delayed transmission from floor sensor interface board (SDIC) to the drive frequency converter (FC)</td>
+<td valign="top">Check communication on CAN bus (termination)</td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top">Faulty input on the interface board (PCB) for the floor sensor</td>
+<td valign="top">Replace interface board (SDIC)</td>
+</tr>
+<tr>
+<td align="center" valign="top">7</td>
+<td valign="top"></td>
+<td valign="top"></td>
+</tr>
+<tr>
+<td align="center" valign="top">8</td>
+<td valign="top"></td>
+<td valign="top"></td>
+</tr>
+<tr>
+<td align="center" valign="top">9</td>
+<td valign="top"></td>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Field Feedback</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="20%">Location</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Controller</td>
+<td valign="top">Upgrade besturings software naar minimaal v8.6</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Shaft</td>
+<td valign="top">Controleer: de leiders op voldoende smering</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Car / Counterweight</td>
+<td valign="top">Controleer: de balancering met halflast. Eventueel aanpassen.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

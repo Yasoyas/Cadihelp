@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0077 LM_PrintsErr</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0077 LM_PrintsErr</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>LM_PrintsErr</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Unexpected behaviour of the load measurement device. See extra information for possible error causes.<br>
+Software name of error: LMS_DEVICE_FAULT</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>10(hex): First load measuring device (deck one) missing/faulty<br>
+20(hex): Second load measuring device (deck two) missing/faulty<br><br>
+64(hex): Load limit exceeded (20% of nominal load) for automatic zero load calibration of the (serial) load measuring device (performed at night).<br><br>
+Monitoring of load contacts. When a load contact is active the software checks if the contacts for the lower load limits are active too. If not an error message is sent.<br><br>
+Monitoring of load contacts for NA:<br>
+214(hex): KL-M is inactive with KL-X active<br>
+224(hex): KL-V is inactive with KL-X active<br>
+234(hex): KL-H is inactive with KL-X active<br>
+212(hex): KL-M is inactive with KL-V active<br>
+213(hex): KL-M is inactive with KL-H active<br>
+223(hex): KL-H is inactive with KL-V active<br><br>
+Monitoring of load contacts for EUAP:<br>
+114(hex): KL-M is inactive with KL-X active<br>
+124(hex): KL-H is inactive with KL-X active<br>
+134(hex): KL-V is inactive with KL-X active<br>
+112(hex): KL-M is inactive with KL-H active<br>
+113(hex): KL-M is inactive with KL-V active<br>
+123(hex): KL-H is inactive with KL-V active</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top"></td>
+<td valign="top">Check the LMS device and the bus connection to the control cabinet.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Incorrect calibration of load measuring system.</td>
+<td valign="top">Check (repeat) calibration of load measuring system.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">With load contacts: Wrong status of load contact inputs. (e.g. KL-V active but KL-M inactive)</td>
+<td valign="top">Check proper function of load contacts KL-M / KL-H /KL-V / KL-MAX / KL-X.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Incorrect baud rate</td>
+<td valign="top">Check that the baud rate of the lift bus is the same on both Travel Control and LMS pcb</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

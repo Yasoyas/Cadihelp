@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0709 Safety Circuit</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0709 Safety Circuit</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>MC PVEC</em> error <em>Safety Circuit</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The frequency converter detects that the safety circuit opens (relay RSK off) during a trip or a test. The monitoring of the safety circuit done by the control (travel control) may also generate a message when the safety circuit opens. On Schindler frequency converters the monitoring of the safety circuit is more sensitive than the one done by travel control.<br><br>
+Caution: This error does not report a fault or an abnormal behaviour of the power assembly (frequency converter, PVEC/PIOVEC) but of the system as a whole; refer also to safety circuit monitoring (errors) of travel control.<br>
+The error is not generated during inspection or recall trips (electrical emergency operation).</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">The safety circuit opened during a trip or a test. The safety circuit may have been interrupted only for a very short time.</td>
+<td valign="top">Check safety circuit and logs of other subsystems (total error log)</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Cable of safety circuit signal broken or not connected</td>
+<td valign="top">Check wiring from control (ASxxx board) to frequency converter.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

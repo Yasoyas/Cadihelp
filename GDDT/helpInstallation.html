@@ -1,0 +1,185 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="./images/styles.css" type="text/css">
+	</head>
+	<body>
+		<hr>
+		<table width=100% border=0 cellspacing=0 cellpadding=2 class=filehead>
+			<tr><td align=left colspan=2 class=filehead>
+				<h1>Installation of GDDT</h1></td></tr>
+			<tr><td colspan=2 class=filehead>&copy; 2007 by Schindler Aufzüge AG, R&amp;D-DR</td></tr>
+			<tr><td width=30% class=filehead>Product: <b>VARIOdyn&reg</b></td>
+				<td class=filehead>Project: <b>GDDT</b></td></tr>
+<!--			<tr><td class=filehead>External Reference:</td>
+				<td class=filehead></td></tr>
+			<tr><td class=filehead>Document Number:</td>
+				<td class=filehead>0032</td></tr>
+-->
+			<tr><td class=filehead>Version: GDDT Release 1.2 December 07</td>
+				<td class=filehead></td></tr>
+		</table>
+	<hr>	
+	<h2>Index</h2>
+		  <ol>
+			<li><a href=#Introduction>Introduction</a></li>
+			<li><a href=#AutomaticInstallation>Automatic installation via CADI (recommended)</a></li>
+			<li><a href=#FileUpdate>Update of GDDT files</a></li>
+			<li><a href=#ManualInstallation>Manual installation with or without CADI</a></li>
+			<li><a href=#FileStructure>File structure</a></li>
+			<li><a href=#ShortCutProperties>Shortcut properties</a></li>			
+		 </ol>		
+		
+	<hr>
+	<h2><a name="Introduction">1. Introduction</h2>
+		
+		<p>
+		This document describes how to install <b>G</b>raphical <b>D</b>rive <b>D</b>iagnostic <b>T</b>ool (GDDT).<br> 
+		GDDT is a JAVA program. GDDT requires a JAVA virtual machine, also called <b>J</b>ava <b>R</b>untime <b>E</b>nvironment (JRE) installed on your PC. 
+		In addition, GDDT requires some extended library files installed inside the JRE.
+		<b>If you install GDDT according <a href=#AutomaticInstallation>chapter 2 "automatic installation via CADI"</a>
+		, the JRE of CADI will be used and all files will be installed automatically.</b><br>
+		</p>
+		
+
+				
+	<hr>
+	<h2><a name="AutomaticInstallation">2. Automatic installation  via CADI</h2>
+		 
+		  <p>This chapter describes the automatic GDDT installation. The whole <a href=#FileStructure>file structure (see chapter 5) </a> will be generated automatically.</p>
+		  <ul>			
+			<li>Install CADI GC version 2.92 or later on your PC.</li>
+			<li>The installation of CADI contains the installation of GDDT.</li>
+		
+		 </ul>
+		 <p>The next picture shows the CADI program group, containing GDDT.</p>
+		 <img src="./images/cadiProgrammGroupWithGDDT.png">
+		 
+		 <p>The next picture shows the GDDT shortcut.</p>
+		 <img src="./images/desktopShortCutGDDT.png">
+			
+		<p>In the <a href=#ShortCutProperties>shortcut properties (chapter 6)<a>, you can choose between standard functionality (FCR only)
+		or an additional terminal functionality, which contains a powerful graphical trace terminal for motor control inverters (VarioSys/VecSys).</p> 		
+	<hr>
+	<h2><a name="FileUpdate">3. Update to the latest GDDT version</h2>
+
+		<p>You have already installed CADI GC with GDDT, but you need to update to the latest GDDT version.</p>
+		<ul>
+			<li>Replace the old <b>GDDT.jar</b> file with the new file.</li>
+			<li>The GDDT.jar file is located in the CADI top level folder: E.g. C:\Program Files\CADI_GC (see also <a href=#FileStructure>chapter 5 "file structure"</a>).</li>
+			<li>If requested, replace also other files inside the GDDT file structure (see also <a href=#FileStructure>chapter 5 "file structure"</a>).</li>
+		</ul>
+	<!--	
+		<p>The next picture shows the GDDT.jar file in D:\CADI_GC</p>
+		<img src="./images/gddtJarInCADIFolder.png">
+	-->	
+		<hr>
+	
+	<h2><a name="ManualInstallation">4. Manual installation with or without CADI</h2>
+		
+		 <ul>
+			<li>Either the CADI GC version >= 2.90 must be installed on your PC or an JAVA JRE >= version 1.5.</li>
+			<li>Copy all files according <a href=#FileStructure>chapter (5) "file structure"</a>:</li>
+			<ul>
+				<li>Application files: Either in the CADI top level folder or in any directory you want.</li>
+				<li>JRE files: Either in the CADI JRE or the JRE you would like to use.</li>
+				<li>Adapt the JRE path to your JRE. See also <a href=#ShortCutProperties>chapter 6 "short cut properties".</a>.</a></li>
+			</ul>
+		</ul>
+	
+	
+	
+	<hr>
+	<h2><a name="FileStructure">5. File Structure</h3>
+		
+		<p>This chapter provides a description of the GDDT specific file structure.<br>
+		   If you install GDDT according <a href=#AutomaticInstallation>chapter 2 "automatic installation via CADI"</a>
+		   , this files will be installed automatically.
+		</p>
+		
+		<b>Application specific files</b> 
+		
+		
+		<p>Root directory: e.g. C:\Program Files\CADI_GC<p>
+		<ul>			
+			<li><b>GDDT.jar</b> -> This is the main application file</li>
+			<li><b>GDDT shortcut</b> -> Shortcut, containing startup attributes</li>
+			<li><b>GDDT.ico</b> -> Program icon</li>
+			<li>Folder <b>Help</b></li>
+			<ul>
+				<li>Folder <b>gddt</b></li>
+				<ul>
+				    <li><b>index.html</b> -> help file index</li>
+				    <li><b>helpInstallation.html</b> -> help file installation</li> 
+				    <li>more html files...</li>
+				    <li>Folder <b>images</b></li>
+				    <ul>
+				          <li>various images...</li>	
+				    </ul>
+				    <li>Folder <b>gddt_default_files</b></li>
+				    <ul>
+				       <li><b>FCRDefaultParameter.xml</b> -> Files containing FCR parameters</li>
+				       <li><b>DriveSettingsFCR.xml</b> -> Files containing FCR settings</li>
+				       <li><b>ApplicationSettings.xml</b> -> User settings are stored in this file</li>
+				    </ul>
+				 </ul>
+				 <li>Folder <b>fcr</b></li>
+				 <ul>
+				 	<li><b>Parameter_50.html</b> -> Fcr parameter description</li>
+				 	<li><b>Error_50.html</b> -> Fcr error description</li>
+		   	                </ul>
+		              </ul> 
+		</ul>
+		              
+		<b>Additional JRE specific files</b> 
+		
+		
+		<p>Root directory: e.g. C:\Program Files\CADI_GC\<b>jre</b><p>  
+		
+		<ul>
+			<li>Folder <b>bin</b></li>
+			<ul>
+			   <li><b>win32com.dll</b> -> dll for com port*</li>
+			</ul>
+			<li>Folder <b>lib</b></li>
+			<ul>
+			    <li>Folder <b>ext</b></li>
+			    <ul>
+			     	<li><b>plot.jar</b> -> library for graphical display</li>
+			     	<li><b>comm.jar</b> -> library for serial port</li>
+			    </ul>
+			</ul>    		
+		</ul>
+		<p>* = When automatic CADI installation, this file is placed in the CADI root directory e.g. C:\Program Files\CADI_GC\</p>
+	
+	<hr>			
+	<h2><a name="ShortCutProperties">6. Shortcut properties</h2>
+	      
+	      <h3>6.1 Adapt the path to your virtual machine</h3> 
+	      
+	      <ul>
+	       	<li>The shortcut starts (property "Start in:") where the application file GDDT.jar is located<br>
+	       	E.g.: D:\CADI_GC\</li>
+	       	<li>In property "Target", verify the path to the java virual machine (javaw.exe)<br>
+	       	    The javaw.exe file is normally located in the CADI jre\bin folder.<br>
+	       	    Target command line e.g.: D:\CADI_GC\jre\bin\javaw.exe -jar GDDT.jar</li>
+	      </ul>
+	      
+	      
+	      <h3>6.2 GDDT used as terminal with graphical tracer for Variosys</h3>  
+                     
+                     <ul>
+                     <li>GDDT can be used as terminal for Variosys/Vecsys motor control inverters. This terminal contains a powerful graphical tracer.<br>
+                         For enabling this function, you have to add the attribute -terminal at the end of the target call.</li>
+	      
+	      <li>The picture below shows the modified target call inside GDDT shortcut properties.<br>
+                        Add <b>-terminal</b> as attribute behind the GDDT.jar call:<br>
+                        e.g.: D:\CADI_GC\jre\bin\javaw.exe -jar GDDT.jar<b> -terminal</b><br></li>
+	         
+	         <p>
+	         <img src="./images/gddtExtendedFunctions.png" >
+	         </p>
+	      </ul>	
+			    
+	<hr>	
+	</body>
+</html>

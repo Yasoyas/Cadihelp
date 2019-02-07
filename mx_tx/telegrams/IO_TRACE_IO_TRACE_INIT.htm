@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>IO_TRACE&nbsp;(61)&nbsp;&nbsp;/&nbsp;&nbsp;IO_TRACE_INIT&nbsp;(4)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">attr_1     : io_trace_seq (1..3)<br>      attr_2     : io_trace_seq (4..6) or 0 if second telegram<br>      data_length: 3..17 or 1 if second telegram<br>      data[0]    : 1..40 (IO line number) or 16. BMK name character if second telegram<br>      data[1]    : io_trace_data (4..6)<br>      data[2]    : 1. BMK name character<br>      data[3]    : 2. BMK name character<br>      data[4]    : 3. BMK name character<br><br>      data[5]    : 4. BMK name character<br>      data[6]    : 5. BMK name character<br>      data[7]    : 6. BMK name character<br>      data[8]    : 7. BMK name character<br>      data[9]    : 8. BMK name character<br>      data[10]   : 9. BMK name character<br>      data[11]   : 10. BMK name character<br>      data[12]   : 11. BMK name character<br>      data[13]   : 12. BMK name character<br>      data[14]   : 13. BMK name character<br>      data[15]   : 14. BMK name character<br>      data[16]   : 15. BMK name character<br><br>      Description: Gets the IO line number, the direction and the<br>                   BMK name for every IO line of the unit (IO board)<br>                   which is selected for IO display (IO tracing).<br>                   If the BMK name is 16 characters, a second<br>                   telegram is used.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">IO_TRACE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">IO_TRACE_INIT</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">0</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+</TABLE>
+</BODY>
+</HTML>

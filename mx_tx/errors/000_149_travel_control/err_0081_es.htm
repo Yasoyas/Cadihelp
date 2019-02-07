@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0081 TripV_Tacho</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0081 TripV_Tacho</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>TripV_Tacho</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The car position (distance) tacho failed during the trip. Travel Control continues the trip to the nearest floor using the speed tacho feedback from the inverter/motor control.<br>
+Comments: The speed tacho information is provided by Motor Control as a handshake to each speed reference telegram (closed loop). This information is used by Travel Control to calculate position and speed of the car and to continue the current trip with the speed tacho only. The car stops at the nearest floor; normal stopping precision cannot be guaranteed. However the car will stop close enough to the floor so that the door(s) can open normally for passengers to leave the car.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Problem with the signal from the position tacho</td>
+<td valign="top">Check the position tacho as well as its connection to the interface PCB and the PCB hardware.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Bad/broken wire between position tacho and control cabinet</td>
+<td valign="top">Check wiring</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Faulty position tacho</td>
+<td valign="top">Replace position tacho</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">EMC problems</td>
+<td valign="top">Check for EMC interferences caused by Schindler or 3rd party equipment</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Field Feedback</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="20%">Location</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Drive/ Controller</td>
+<td valign="top">Comprobar la posición del tacómetro y las conexiones al interface</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top"></td>
+<td valign="top">Comprobar Información de Campo Nr. 291, 283 (problema EMC)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

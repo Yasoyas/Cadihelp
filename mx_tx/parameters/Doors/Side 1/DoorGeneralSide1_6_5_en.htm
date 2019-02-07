@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Door General Side 1</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Door General Side 1</em> of the parameter group <em>Side 1</em> in subsystem <em>Doors</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Supress VST-S</h4></TD>
+<TD valign="top" class="Layout"><p>When the parameter is set the door control software will switch off (suppress) the output VST-S as soon as the door reaches the door end contact KET-S (input). This parameter is mainly used for 3rd party doors (e.g. Wittur) to avoid problems if door drive VST-S remains ON after door is fully closed.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Door Type</h4></TD>
+<TD valign="top" class="Layout"><p>Specify door type per floor installed on respective side. <br>This parameter is a table with floor number as index.<br>------------------------------------------------------------------------<br>TX-GC:<br>Byte 1: Floor number (index)<br>Byte 2: Car/Shaft Door Type<br>  Automatic doors:<br>  1 = QKS9, V30-230, V30-400( V50-230, V50-400, FERMATOR, QKSW DC, QKSW 400AC, QKS9VF, QKSW_RCF1)<br>  2 = QKS10  <br>  3 = QKS11 <br>  10 = Heavy auto door with additional servo motor<br>  Semi-Automatic Doors:<br>  30 = QK11<br>  Manual Door:<br>  50 = Hand Door (RTS)<br>Byte 3: Floor Access Control<br>   0 = no shaft door<br>   1 = normal access to floor with corresponding car call or DT-O<br>   2 = door exists / access to floor only with key switch (JDC) for the corresponding car call /  DT-O disabled when door closed<br>--------------------------------------------------------------------------------------------------------------------<br>MX-GC / TX-GC2:<br>Byte 1: Floor number (index)<br>Byte 2: Shaft Door Type<br>  100 = No Shaft Door <br>  101 = Manual Shaft Door<br>  102 = Automatic Shaft Door (moved by car door)<br>Byte 3: Floor Access Control<br>   0 = no shaft door (only when Byte 2 = 100)<br>   1 = normal access to floor with corresponding car call or DT-O<br>   2 = access to floor only with key switch (JDC) for the corresponding car call /  DT-O disabled when door closed<br>--------------------------------------------------------------------------------------------------------------------<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example TX-GC: lift with 4 floors side 1/20, floor 1 with QKS9, all other floors with QK11. No door on floor 3. Car
+call on floor 4 is not a normal car call but a key switch.
+
+       +--------+-----------+----------------------+
+       | FLOOR  | DOOR_TYPE | FLOOR ACCESS CONTROL |
+       +========+===========+======================+
+       |   1    |    1      |     1                |
+       +--------+-----------+----------------------+
+       |   2    |   30      |     1                |
+       +--------+-----------+----------------------+
+       |   3    |   30      |     0                |
+       +--------+-----------+----------------------+
+       |   4    |   30      |     2                |
+       +--------+-----------+----------------------+
+
+Example MX-GC/TX-GC2: lift with 4 floors side 1/20, floor 1 with QKS9, all other floors with QK11. No door on floor 3. Car call on floor 4 is not a push button but a key switch.
+
+       +--------+-----------+----------------------+
+       | FLOOR  | DOOR_TYPE | FLOOR ACCESS CONTROL |
+       +========+===========+======================+
+       |   1    |    102    |     1                |
+       +--------+-----------+----------------------+
+       |   2    |    101    |     1                |
+       +--------+-----------+----------------------+
+       |   3    |    100    |     0                |
+       +--------+-----------+----------------------+
+       |   4    |    101    |     2                |
+       +--------+-----------+----------------------+
+
+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

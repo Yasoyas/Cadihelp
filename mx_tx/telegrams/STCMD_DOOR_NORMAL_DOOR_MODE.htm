@@ -1,0 +1,188 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>STCMD_DOOR&nbsp;(9)&nbsp;&nbsp;/&nbsp;&nbsp;NORMAL_DOOR_MODE&nbsp;(1)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">attr_1     : vxt_side<br>      attr_2     : --<br>      data_length: 9<br>      data[0-8]  : see table below<br><br>      Description: door_mode for normal_operations<br><br>      This telegram is used to define the priority and behaviour of each of<br>      the defined reversing devices. The behaviour of a reversing device is<br>      defined in one byte as depicted in the following picture. The definition<br><br>      order determines the priority of the corresponding reversing device.<br>      This means that reversing device KSKB has the highest priority and DTS<br>      the lowest. Byte 6 can also contain a reversing device definition but<br>      there is not one defined at the moment.<br><br>         Bit_Nr:  7     6     5     4     3     2     1     0<br>               ------------------------------------------------- door-<br>               |     |     |     |     |     |     |     |     | mode-<br><br>               ------------------------------------------------- byte<br>               ^                       ^                 ^      \<br>          Tel  |-----------------------|-----------------|-------\<br>         Data- |     Reversing         |   Operating     |activ/ |<br>          Nr.  |      device           |     Mode        |inactiv|<br>         ----  ---------------------------------------------------<br>          [0]  |       VXT_KSKB        |      .....      | ..... |<br><br>          [1]  |       VXT_KTHMT       |      .....      | ..... |<br>          [2]  |       VXT_RPHT        |      .....      | ..... |<br>          [3]  |       VXT_DTO         |      .....      | ..... |<br>          [4]  |       VXT_DTS         |      .....      | ..... |<br>          [5]  |       VXT_REP         |      .....      | ..... |<br>          [6]  |          -            |      .....      | ..... |<br>          [7]  |   Finaltimer          |                 | ..... |<br>               ---------------------------------------------------<br><br>          [8]  |Opentime reduction Mode|   Mode 1...3    | ..... |<br>               ---------------------------------------------------<br>        1) Reversing device ID:  (4 Bits)<br>            As defined in vx_tel_def.h (VXT_T_DOOR_REVERSING_DEVICES).<br>            The order specifies the priority of the reversing devices.<br><br>        2) Operating Mode:  (3 Bits)<br>            The behaviour of the reversing device is defined for the<br>            positive and/or negative edge.<br><br>             ------------------------------------------------------<br>             | Operating Mode | Positive Edge   | Negative Edge   |<br>             ------------------------------------------------------<br>             |      1         |  reversing      | ............... |<br>             |      2         |  reversing      | stop            |<br>             |      3         |  reversing      | reversing in the|<br>             |                |                 | other direction |<br><br>             |      4         |  Stop           | ............... |<br>             |      5         |  TOHZ = 0       | ............... |<br>             |      6         |Stop immediately,| ............... |<br>             |                |when longer      | ............... |<br>             |                |active reversing | ............... |<br>             |      7         |              Reserved             |<br>             ------------------------------------------------------<br><br>        3) activ/inactiv:  (1 Bit)<br>            A reversing device is allowed (activ) when the value == 1<br>            or blocked (inactiv) when the value == 0.<br><br>        4) Opentime reduction Mode: <br>            1: Normal door opened time (given in cmd door open)<br>            2: Reduced (until minimal) door opened time (50% each time)<br>            3: Minimal door opened time</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">STCMD_DOOR</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">NORMAL_DOOR_MODE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">T_SIDE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">9</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[0]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[1]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[2]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[3]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[4]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[5]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[6]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[7]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[8]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_SIDE</h4></TD>
+<TD valign="top" WIDTH="80%">door side</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">0</TD>
+<TD valign="top" WIDTH="70%">SIDE_ALL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">SIDE_1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">SIDE_20</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">SIDE_30</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">SIDE_40</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_VALUE</h4></TD>
+<TD valign="top" WIDTH="80%">This Type is used for general data description. <br>See description above for more details.<br>range: 0..255</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"></TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

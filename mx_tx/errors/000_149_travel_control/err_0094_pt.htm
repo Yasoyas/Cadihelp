@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0094 DoorLockFault</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0094 DoorLockFault</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>DoorLockFault</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The safety circuit shows closed shaft or car door (taps ISKT4 or ISKT5 on) while the door status is 'open'.<br><br>
+Comments: The door state (open) must match with the information (KTS and KTC) read from the safety circuit.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>5(hex)/5(dec): Retiring cam (RCAM) activation error<br>
+6(hex)/6(dec): Retiring cam (RCAM) release error<br>
+28(hex)/40(dec): Monitor status of safety circuit (bridged contacts)<br>
+29(hex)/41(dec): Monitor status of safety circuit (bridged contacts)<br>
+2A(hex)/42(dec):  Shaft Door Contact (KTS) bypassed (KOREA)<br>
+2B(hex)/43(dec):  Car Door Contact (KTC) bypassed (KOREA)<br>
+940(hex)/2368(dec): Shaft Door Contact (KTS) bridged in safety circuit<br>
+941(hex)/2369(dec): Car Door Contact (KTC) bridged in safety circuit<br>
+942(hex)/2370(dec):<br>
+943(hex)/2371(dec):<br>
+944(hex)/2372(dec): Door lock problem during trip preparation with TX-GC2<br>
+945(hex)/2373(dec): Door lock problem during trip preparation with MX-GC/TX-GC<br>
+Refer also to software warning message sent together with 'door lock fault'</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Identifies the file in the core software from where the message is generated.<br>
+104(dec): Monitor<br>
+114(dec): Prepare trip</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Problem with the door contacts</td>
+<td valign="top">Check the door contacts and the wiring to the door interface board.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Safety chain</td>
+<td valign="top">Check for jumpers in the safety chain.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top"></td>
+<td valign="top"></td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top"></td>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

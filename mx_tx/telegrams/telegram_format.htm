@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<!-- (c) 2001 Inventio AG, CH-6052 Hergiswil -->
+<!-- All rights reserved for all countries. -->
+<style>
+<!--
+
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+	
+-->
+</style>
+</head>
+
+<body>
+
+
+<table class="Layout">
+  <tr>
+    <td class="Layout"><p class="zb-SectionNumber"></td>
+    <td class="Layout"><h1>Telegram format</h1></td>
+  </tr>
+  <tr>
+<!-- short-cuts -->
+  </tr>
+  <tr>
+    <td class="Layout"><p class="Line"><img src="../../layout/symbols/blank.gif"></td>
+    <td class="Layout">
+
+<hr noshade color="#0052BA">
+
+</td>
+  </tr>
+  <tr>
+    <td valign="top" class="Layout"><h4 class="Block">Summary</h4></td>
+    <td class="Layout">
+
+<p>#define VCOM_MY_LIFT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11<br>
+#define VCOM_MAX_DATA&nbsp;&nbsp; 17<br>
+<br>
+typedef struct<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp; short tel_grp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*
+0..255&nbsp;&nbsp; */<br>
+&nbsp;&nbsp;&nbsp;&nbsp; short lift_id;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* 0..8,
+11 */<br>
+&nbsp;&nbsp;&nbsp;&nbsp; short tel_id;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*
+0..511&nbsp;&nbsp; */<br>
+&nbsp;&nbsp;&nbsp;&nbsp; short attr_1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*
+0..15&nbsp;&nbsp;&nbsp;&nbsp; */<br>
+&nbsp;&nbsp;&nbsp;&nbsp; short attr_2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*
+0..7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br>
+} VCOM_INFO_TYPE;<br>
+<br>
+typedef struct<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp; VCOM_INFO_TYPE info;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; unsigned char data_length; &nbsp; /* 0..(VCOM_MAX_DATA-1) */<br>
+&nbsp;&nbsp;&nbsp;&nbsp; unsigned char data[VCOM_MAX_DATA];<br>
+<br>
+}VCOM_TEL_TYPE;</p>
+
+</td>
+  </tr>
+  
+</table>
+
+</body>
+</html>

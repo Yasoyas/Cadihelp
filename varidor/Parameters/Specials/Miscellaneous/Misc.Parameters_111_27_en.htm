@@ -1,0 +1,194 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Misc.Parameters</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Misc.Parameters</em> of the parameter group <em>Miscellaneous</em> in subsystem <em>Specials</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Door Location Deck</h4></TD>
+<TD valign="top" class="Layout"><p>Location of Door Drive in Car Normally the location of the door drive in the car (1. side(Zugang 1) or 2. side (Zugang 2)) is defined by a jumper on the lift-control-interface PCB (e.g. the VLON70 or the LONDIM). This allows to specify either Access side 1 or Access side 2. No adjustments have to be made for this case to the door drive, because reading that jumper and forwarding that information is the default. <br><br>For some special configurations (double decker car, three accesses to car) this is not sufficient. For these cases one has to set the Location parameter to one of the values defined below and the door will provide that information to the lift control during configuration. This feature works with a serial/field bus interface only, <br>but not with a parallel interface. <br><br>0: LON_DOOR_NO_DECK, Jumper info is relevant only <br>1: LON_DOOR_DECK_1 <br>2: LON_DOOR_DECK_2 <br><br>This parameter is a setting parameter.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Door Location Side</h4></TD>
+<TD valign="top" class="Layout"><p>Location of Door Drive in Car See Parameter DoorLocationDeck. <br><br>0: NO_SIDE, Jumper Info is relevant only <br>1: LON_DOOR_SIDE_1 <br>2: LON_DOOR_SIDE_2 <br>3: LON_DOOR_SIDE_3 <br>4: LON_DOOR_SIDE_4 <br><br>This parameter is a setting parameter.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Varidor</h4></TD>
+<TD valign="top" class="Layout"><p>Varidor contains the brand number of the door, e.g. 70 for a Varidor 70 or 50 for a Varidor 50 .<br>It is a setting parameter, that initiates default parameter settings. The values 700-710 are reserved for development only.<br><br>This parameter is a setting parameter.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">HT</h4></TD>
+<TD valign="top" class="Layout"><p>Nominal door height in m</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Cladding_Raw</h4></TD>
+<TD valign="top" class="Layout"><p>Cladding thickness<br>This parameter value used for calculation the door mass. The calculation is made by Door Controller itself. <br>Value 0: No Cladding<br>Value 1: Cladding 1.5 mm<br>Value 2: Cladding 1.5..4 mm<br>Value 3: Cladding 4..8 mm<br>Value 4: Cladding 8..12.5 mm</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">ReCalib After N Cycles</h4></TD>
+<TD valign="top" class="Layout"><p>Now the parameter is used to change the Maximum drift for which the calibration is to be applied</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Locking Zone</h4></TD>
+<TD valign="top" class="Layout"><p>Locking_zone is the position where locking may start during closing, i.e. where the clutch may start to release the lending door lock during nudging speed.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Drive Delay</h4></TD>
+<TD valign="top" class="Layout"><p>Delay time of the closed loop force control of the inverter in s.
+The dynamics of the force control loop of the drive unit is modelled as a first order delay.
+If a a voltage step at the drive input, i.e. the analogue input, is applied then the generated torque/force
+will change. The time delay between the step at the input and the instant when the output value reaches 63%
+of the end value is the DriveDelay.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">BKE_Raw</h4></TD>
+<TD valign="top" class="Layout"><p>Nominal door width as input from ESI</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Control Amplification</h4></TD>
+<TD valign="top" class="Layout"><p>Dynamic control amplification setting
+Important: Lower limit > 0 (not zero!!) and Upper limit < 2*DriveDelay/0.006F
+( T1 = 0.01s: 0.006F = 0.0045s -> Upper limit < 4.4, 0.006F = 0.008s -> Upper limit < 2.5 )</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

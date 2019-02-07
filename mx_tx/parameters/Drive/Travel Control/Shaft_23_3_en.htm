@@ -1,0 +1,314 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Shaft</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Shaft</em> of the parameter group <em>Travel Control</em> in subsystem <em>Drive</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">KSERE Distance</h4></TD>
+<TD valign="top" class="Layout"><p>According to SIA 11.02.38. Travel up to 1.5 m underneath the lowest mounted element.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">KSE Distance</h4></TD>
+<TD valign="top" class="Layout"><p>Distance from KSE switches to the bottom/top floor level. KSE switches are used for (depending on type of shaft information system):<br>- automatic positioning of car before starting the learn trip.<br>- finish of learn trip at top floor.(has to match number of floors in PCT)<br>- Synch. trip <br>- Normal Terminal Slowdown monitoring (NA/ASME code) / for NTSL the KSE switches must be placed at a distance:<br>KSE_DISTANCE = ((NOM_SPEED*NOM_SPEED) / (2 * A_MAX)) + (NOM_SPEED * 0.05)<br>(NOM_SPEED in mm/s, A_MAX in mm/s/s)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">GAP Length</h4></TD>
+<TD valign="top" class="Layout"><p>Distance between the two KSE magnets in the upper hoistway area ( only used for TX4 )<br><br>values for GAP_LENGTH depending on shaft info setting:<br>{0: PHS_PHNRD_PHUET}  =  300<br>{1: KS_KS1_KUET} =  300<br>{2: MOSIS} =  300<br>{3: KUET_AGSI}  =  0<br>{4: SI_IG}  =  0<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Fin. Length</h4></TD>
+<TD valign="top" class="Layout"><p>Length of the floor vane.<br><br>values for FIN_LENGTH depending on shaft info setting:<br>{0: PHS_PHNRD_PHUET}  =  200<br>{1: KS_KS1_KUET} =  200<br>{2: MOSIS} =  200<br>{3: KUET_AGSI}  =  240<br>{4: SI_IG} = 200<br><br>Parameter P_ANT_RELEVEL_DISTANCE is calculated based on the value of P_ANT_FIN_LENGTH.<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Distance PHUET &lt;-&gt; PHNRD</h4></TD>
+<TD valign="top" class="Layout"><p>formula: fin_length / 2 - 15<br><br>values for DISTANCE_PHUET_PHNR_D depending on shaft info setting:<br>{0: PHS_PHNRD_PHUET} = 85<br>{1: KS_KS1_KUET} = 75<br>{2: MOSIS} = 85<br>{3: KUET_AGSI} = 0<br>{4: SI_IG } = 85<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Distance PHS &lt;-&gt; PHUET</h4></TD>
+<TD valign="top" class="Layout"><p>formula:  fin_length / 2 - 15<br><br>values for DISTANCE_PHS_PHUET depending on shaft info setting:<br>{0: PHS_PHNRD_PHUET}  =  85<br>{1: KS_KS1_KUET} =  75<br>{2: MOSIS} =  85<br>{3: KUET_AGSI}  =  0<br>{4: SI_IG } = 85<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">On-Level Distance</h4></TD>
+<TD valign="top" class="Layout"><p>The drive sends a ON/OFF message (VXT_CABIN_IS_LEVEL) to the control. This message is used for special control functions ( e.g. ON/OFF level signal in the car ). As long as the car is closer to a floor than the distance defined with the parameter 'ON_LEVEL_DIST' the message will be 'ON level'.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Min Distance</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the levelling accuracy. If the car is within this distance from the floor level it is considered at floor level. A relevelling trip is initiated if the car is not within this distance from the floor level (smallest trip distance).<br><br>If the parameter value is set low there will be more re-leveling trips to bring the car to the floor level within the defined limit. If the value is too high the relevelling travel will never occur.<br><br>The parameter 'Relevel Distance' defines the maximum relevel zone.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Relevel Distance</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum distance for which re-leveling travel will occur</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Max Door Zone</h4></TD>
+<TD valign="top" class="Layout"><p>Note: When the elevator enters the destination floor, at this distance before the stopping point the message ‘’Door open enabled” ("Freigabe Tür öffnen") is generated.<br>In older elevators the same function is produced using KUET magnets, which also allow bridging of the doors. In MICONIC-TX installations enabling of door opening is software controlled and the bridging zone is determined by the length of the floor vane (PHUET photo-electric cell in the vane).<br>It is possible for the door zone to be greater than half the floor vane (max_door_zone > 100). This means that door bridging can be enabled before the PHUET enters the vane. This saves time which would otherwise be lost waiting for the system to react and for the door contacts in the safety circuit to open.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Shaft Length</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the distance from the bottom to the top floor level. The distance is measured and stored after the learning trip is finished.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Ref. Shaft Image</h4></TD>
+<TD valign="top" class="Layout"><p>Elevator position counter (unit = increments) value for the bottom floor on systems with incremental car position encoder . This number is used to avoid negative numbers for the position counter for any trips below the lowest floor. It must be set to a value bigger than zero . <br><br>Note: In the case of a group of elevators where the lowest floor is not identical (e.g. if the number of stops in the lower part of the hoistway are not the same) this parameter is set such that at any given height the position counters all produce the same reading.<br><br>Normally the value is set to 10'000 for elevators with incremental car position encoder.<br><br>For the calculation of ref_shaft_image the following formula is used:<br><br>= (TACHO_FACTOR * 'Distance from group bottom floor') + 10000<br><br>Unit for 'Distance from group bottom floor' is m (meters).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Counterweight Balance</h4></TD>
+<TD valign="top" class="Layout"><p>Required car load to obtain balance between car and counterweight.<br><br>Example: Value 40 for P_ANT_CWGT_BAL means that the total counterweight weight equals 40% of the nominal load capacity of the car plus the weight of the empty car.<br>In North America, the actual value must be determined by Applications Engineering.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Selector Translation Table</h4></TD>
+<TD valign="top" class="Layout"><p>The selector_translation_table (STT) converts the drive related stop (floor) number value (selector/position) to the control (group) related stop (floor) number. <br>The drive only 'knows' about the levels (floors) where it stops and counts these floors 1, 2, 3, 4....etc. The control however knows which elevators in the group serve which floors/entrances. This definition is done with the table 'served_floors'. The floor counting on the control side is always group related (1, 2, 3...etc.).<br>The selector translation table translates between these 2 numbering systems <br>(when a selector or position telegram is sent from the drive to the control the floor value is calculated from drive numbering to group numbering).<br>The selector translation table must have as many entrys as the number of floors served by the lift. <br>(The table may have more entrys but then the values for the exceeding entrys are 0.)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>example: Lift A and B serving floors as follows:
+
+A	B
+
+5	4
+4	3
+3	2
+2	
+1	1
+
+On the control side the floor number for a common floor is the same as for lift A and lift B.
+The selector translation table for lift B is defined as follows (lift B has 4 floors)
+
+STT[1] = 1
+STT[2] = 3
+STT[3] = 4
+STT[4] = 5
+
+In the above example, when the lift B travels from floor 1 to floor 3 the selector value will change directly from 1 to 3.</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Cabin height</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the height of the car. Distance from floor level (with car at floor) to the top of the car. The parameter is used for hoistway access control.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Hoistway Access Zone  Top</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum distance the car travels in down direction with the hoistway top access switch JACT (unit = mm).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Hoistway Access Zone Bottom</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum distance the car travels in up direction with the hoistway bottom access switch JACB (unit = mm).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Other Dual Shaft Elevator</h4></TD>
+<TD valign="top" class="Layout"><p>Elevator identification number of the other elevator/lift in the same hoistway for which the monitoring (limitation) of the car synchron travel is required. With value 0 the function is switched off.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Min Car Distance Synchro Travel</h4></TD>
+<TD valign="top" class="Layout"><p>Required minimum distance between cars when both cars travel in the same direction and at a speed above 'Maximum_Synchro_Speed' [mm].<br>Default value: 2xHK</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

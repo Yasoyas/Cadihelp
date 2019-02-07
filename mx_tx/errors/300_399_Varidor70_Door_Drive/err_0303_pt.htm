@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0303 TRC_POS_ERR</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0303 TRC_POS_ERR</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Varidor70 Door Drive</em> error <em>TRC_POS_ERR</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>[V70 Door Controller SW]<br>
+Reference position information is not or no more valid.<br><br>
+Error response: Wait till the door opens and then stop all further door motions<br><br>
+Easy Setup: Bargraph-RED-LED-5 [ON]</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>This occurs when the current position counter value is not within the limits of closed and open positions. On both directions a 2% tolerance is allowed.<br>
+Two main HW components which might lead to this error are <br>
+a. Position Counter<br>
+b. Position Sensor Unit</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>This error is generated from the Trip Curve Generator</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">1. Referencing Not done properly</td>
+<td valign="top">1. Power off and on the door and do a referencing trip</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">2. Resolver is loosely cabled or cable is damaged</td>
+<td valign="top">1. Try reconnecting the cables<br>
+2. Try a new cable or connector</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">3. Position Sensor Unit is loosely cabled or cable is damaged</td>
+<td valign="top">1. Try reconnecting the cables<br>
+2. Try a new cable or connector</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">4. Cables are loosely fitted</td>
+<td valign="top">1. Try reconnecting the cables</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top">5. Resolver is faulty</td>
+<td valign="top">1. Replace with new Door Controller/Drive</td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top">6. Position Sensor is faulty</td>
+<td valign="top">1. Replace with new Position Sensor Unit</td>
+</tr>
+<tr>
+<td align="center" valign="top">7</td>
+<td valign="top">7. Door Controller PCB is faulty</td>
+<td valign="top">1. Replace with new Door Controller PCB</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

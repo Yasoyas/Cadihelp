@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1015 Operating system RTEMS</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1015 Operating system RTEMS</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>CPU</em> error <em>Operating system RTEMS</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>CPU reset caused by operating system (RTEMS). <br><br>
+Function calling: 'rtems_fatal_error_occurred' directive or 'Internal_error_occurred' directive due to an irrecoverable error.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>This is the type indicator and is dependent upon the source of the error. Possible error causes:<br><br>
+0(dec): INTERNAL_ERROR_NO_CONFIGURATION_TABLE<br>
+1(dec): INTERNAL_ERROR_NO_CPU_TABLE<br>
+2(dec): INTERNAL_ERROR_INVALID_WORKSPACE_ADDRESS<br>
+3(dec):  INTERNAL_ERROR_TOO_LITTLE_WORKSPACE<br>
+4(dec): INTERNAL_ERROR_WORKSPACE_ALLOCATION<br>
+5(dec): INTERNAL_ERROR_INTERRUPT_STACK_TOO_SMALL<br>
+6(dec): INTERNAL_ERROR_THREAD_EXITTED<br>
+7(dec): INTERNAL_ERROR_INCONSISTENT_MP_INFORMATION<br>
+8(dec): INTERNAL_ERROR_INVALID_NODE<br>
+9(dec): INTERNAL_ERROR_NO_MPCI<br>
+10(dec): INTERNAL_ERROR_BAD_PACKET<br>
+11(dec): INTERNAL_ERROR_OUT_OF_PACKETS<br>
+12(dec): INTERNAL_ERROR_OUT_OF_GLOBAL_OBJECTS<br>
+13(dec): INTERNAL_ERROR_OUT_OF_PROXIES<br>
+14(dec): INTERNAL_ERROR_INVALID_GLOBAL_ID<br>
+15(dec): INTERNAL_ERROR_BAD_STACK_HOOK<br>
+16(dec): INTERNAL_ERROR_BAD_ATTRIBUTES</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Identifies the API (application program interface) responsible for the fatal or internal error.<br><br>
+0: INTERNAL_ERROR_CORE<br>
+1: INTERNAL_ERROR_RTEMS_API<br>
+2: INTERNAL_ERROR_POSIX_API<br>
+3: INTERNAL_ERROR_ITRON_API</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Faulty processor board</td>
+<td valign="top">Replace processor board of control</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Error in software</td>
+<td valign="top">Download other version of software (this error should not occur on a released version)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

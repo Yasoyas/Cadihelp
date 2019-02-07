@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><head>
+<!-- (c) 2001 Inventio AG, CH-6052 Hergiswil -->
+<!-- All rights reserved for all countries. -->
+<style>
+<!--
+
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+	
+-->
+</style>
+</head>
+<BODY>
+<TABLE class=Layout>
+  <TBODY>
+  <TR>
+    <TD class=Layout>
+      <P class=zb-SectionNumber></P></TD>
+    <TD class=Layout>
+      <H1>Communication</H1></TD></TR>
+  <TR><!-- short-cuts --></TR>
+  <TR>
+    <TD class=Layout>
+      <P class=Line><img src="../../layout/symbols/blank.gif"></P></TD>
+    <TD class=Layout>
+      <HR color=#0052ba noShade>
+    </TD></TR>
+  <TR>
+    <TD class=Layout vAlign=top>
+      <H4 class=Block>Summary</H4></TD>
+    <TD class=Layout>
+      <P>Die Kommunikation der Miconic-VX erfolgt über Telegramme, mit denen die 
+      Subsysteme untereinander verkehren. Sie wird von einem high level 
+      Kommunikationssystem "VCOM" gewährleistet. Nähere Informationen über VCOM 
+      finden Sie im Dokument "EZ-ST 90 149".</P></TD></TR>
+  <TR>
+    <TD class=Layout>
+      <P class=Line>-</P></TD>
+    <TD class=Layout>
+      <HR color=#0052ba noShade>
+    </TD></TR>
+  <TR>
+    <TD class=Layout vAlign=top>
+      <H4 class=Block>Kommunikation VCOM</H4></TD>
+    <TD class=Layout vAlign=top>
+      <P>VCOM ist ein speziell für die Miconic-VX entwickeltes high- 
+      level-Kommunikationssystem, das auf dem OSI-Modell aufbaut. Der Vorteil 
+      dieses Systems ist die Unabhängigkeit der Applikations-SW von der 
+      Hardware-Architektur und der Software-Struktur des Systems, da die 
+      Schnittstelle zwischen der Kommunikation und der Applikation keine 
+      Address- informationen enthält. Die Quelle einer Information muss also 
+      nicht wissen, wo diese gebraucht wird. VCOM unterstützt sowohl Print 
+      interne wie auch externe Kommunikation.<BR></P>
+      <p><img src="image/tab.jpg" width="374" height="182" alt="tab.jpg (24245 bytes)"></p>
+      <P><BR></P></TD></TR>
+  <TR>
+    <TD class=Layout>
+      <P class=Line>-</P></TD>
+    <TD class=Layout>
+      <HR color=#0052ba noShade>
+    </TD></TR>
+  <TR>
+    <TD class=Layout vAlign=top>
+      <H4 class=Block>Telegrammformat</H4></TD>
+    <TD class=Layout>
+      <P>Auf der Applikationsschicht wird das folgende Telegramm- Format 
+      ersichtlich. Rechts davon wird der von VCOM bei der Kommunikation 
+      zugelassene Wertebereich angegeben.</P>
+      <TABLE border=1 height=288 width="87%">
+        <TBODY>
+        <TR>
+          <TD height=19 width="25%"><BIG></BIG></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>Datentyp</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>Bereich</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>Beispiel</SMALL></SMALL></SMALL></SMALL></TD></TR>
+        <TR>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>lift_id</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>VCOM_LIFT_ID</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>0..VCOM_LIFT_ID_MAX</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 width="25%"><BIG></BIG></TD></TR>
+        <TR>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>tel_grp_id</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>VXT_T_TEL_GRP_ID</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>0..VXT_TEL_GRP_ID_MAX</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>VXT_CMD_DOOR</SMALL></SMALL></SMALL></SMALL></TD></TR>
+        <TR>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>tel_id</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>VXT_T_TEL_ID</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>0..VXT_TEL_ID_MAX</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>VXT_CLOSE</SMALL></SMALL></SMALL></SMALL></TD></TR>
+        <TR>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>attr_1</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>VXT_T_ATTR_1</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>0..VXT_ATTR_1_MAX</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>VXT_T_SIDE</SMALL></SMALL></SMALL></SMALL></TD></TR>
+        <TR>
+          <TD height=13 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>attr_2</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=13 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>VXT_T_ATTR_2</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=13 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>0..VXT_ATTR_2_MAX</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=13 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>---</SMALL></SMALL></SMALL></SMALL></TD></TR>
+        <TR>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>data_length</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 width="25%"><SMALL><SMALL><SMALL><SMALL>unsigned 
+            char</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>0..(VCOM_MAX_DATA-1)</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>1</SMALL></SMALL></SMALL></SMALL></TD></TR>
+        <TR>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>data[0]</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 width="25%"><SMALL><SMALL><SMALL><SMALL>unsigned 
+            char</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>0..255</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>VXT_SPEED</SMALL></SMALL></SMALL></SMALL></TD></TR>
+        <TR>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>data[1]</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 width="25%"><SMALL><SMALL><SMALL><SMALL>unsigned 
+            char</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>0..255</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>---</SMALL></SMALL></SMALL></SMALL></TD></TR>
+        <TR>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>......</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>......</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>......</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=19 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>---</SMALL></SMALL></SMALL></SMALL></TD></TR>
+        <TR>
+          <TD height=38 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>data[VCOM_MAX_DATA-1]</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=38 width="25%"><SMALL><SMALL><SMALL><SMALL>unsigned 
+            char</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=38 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>0..255</SMALL></SMALL></SMALL></SMALL></TD>
+          <TD height=38 
+            width="25%"><SMALL><SMALL><SMALL><SMALL>---</SMALL></SMALL></SMALL></SMALL></TD></TR></TBODY></TABLE>
+      <P>Telegrammstruktur bei VCOM</P></TD></TR></TBODY></TABLE></BODY></HTML>

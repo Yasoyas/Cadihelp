@@ -1,0 +1,238 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>INT_LON&nbsp;(49)&nbsp;&nbsp;/&nbsp;&nbsp;FREEZE_STATUS&nbsp;(18)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">Freeze Status is not only for LON:<br>Valid for all Bus Systems which can have Plug & Play Inputs and Outputs such as:<br>- LON1 and LON2<br>- BIO<br>- CAN<br><br>Attribute 1: Lift Id<br><br>Attribute 2:<br>}VXT_T_LON_FREEZE_SUBSYS;<br>    VXT_LF_LIFT = 1,<br>    VXT_LF_NODE,<br>    VXT_LF_IO,<br>    VXT_LF_UI<br>}FM_T_FREEZE_SUBSYS;<br><br>Data[0]: Freeze state</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">INT_LON</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">FREEZE_STATUS</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">T_LIFT_ID</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">1</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[0]:</em></TD>
+<TD valign="top" class="Layout">T_FREEZE_STATE</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_LIFT_ID</h4></TD>
+<TD valign="top" WIDTH="80%">0: VXT_ANY_LIFT<br>1: VXT_LIFT_1<br>2: VXT_LIFT_2<br>3: VXT_LIFT_3<br>4: VXT_LIFT_4<br>5: VXT_LIFT_5<br>6: VXT_LIFT_6<br>7: VXT_LIFT_7<br>8: VXT_LIFT_8<br>9: VXT_LIFT_9<br>10: VXT_LIFT_10<br>11: VXT_MY_LIFT</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">0</TD>
+<TD valign="top" WIDTH="70%">ANY_LIFT</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">LIFT_1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">LIFT_2</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">LIFT_3</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">LIFT_4</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">5</TD>
+<TD valign="top" WIDTH="70%">LIFT_5</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">6</TD>
+<TD valign="top" WIDTH="70%">LIFT_6</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">7</TD>
+<TD valign="top" WIDTH="70%">LIFT_7</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">8</TD>
+<TD valign="top" WIDTH="70%">LIFT_8</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">9</TD>
+<TD valign="top" WIDTH="70%">LIFT_9</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">10</TD>
+<TD valign="top" WIDTH="70%">LIFT_10</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">11</TD>
+<TD valign="top" WIDTH="70%">MY_LIFT</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_VALUE</h4></TD>
+<TD valign="top" WIDTH="80%">This Type is used for general data description. <br>See description above for more details.<br>range: 0..255</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"></TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_FREEZE_STATE</h4></TD>
+<TD valign="top" WIDTH="80%">States of the freeze process:<br><br>VXT_FREEZE_UNDEFINED (0): invalid state value<br><br>VXT_FREEZE_UNFREEZED (1): <br>VXT_FREEZE_FREEZING (2):<br>VXT_FREEZE_FREEZED (3):<br>VXT_FREEZE_LOCKED (4):<br>VXT_FREEZE_UNLOCKED (5):<br>VXT_FREEZE_EQUAL (6):<br>VXT_FREEZE_NOTEQUAL (7):<br>VXT_FREEZE_ABORT (8):<br></TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">0</TD>
+<TD valign="top" WIDTH="70%">FREEZE_UNDEFINED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">FREEZE_UNFREEZED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">FREEZE_FREEZING</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">FREEZE_FREEZED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">FREEZE_LOCKED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">5</TD>
+<TD valign="top" WIDTH="70%">FREEZE_UNLOCKED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">6</TD>
+<TD valign="top" WIDTH="70%">FREEZE_EQUAL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">7</TD>
+<TD valign="top" WIDTH="70%">FREEZE_NOTEQUAL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">8</TD>
+<TD valign="top" WIDTH="70%">FREEZE_ABORT</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

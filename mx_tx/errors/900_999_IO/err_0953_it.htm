@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0953 Deployment_Rule_Failure</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0953 Deployment_Rule_Failure</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>IO</em> error <em>Deployment_Rule_Failure</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Software detects wrong system configuration based on the deployment rules.<br><br>
+Mod. 18.02.2004 New error Id. (old Id. 971)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>1: Error_Bus_Architecture. Incorrect bus architecture type set in PCT. Check PCT parameter "PCT_GP_BUS_SYSTEM"<br><br>
+2: Error_IO_PCT_Config_Not_Allowed. System does not allow IO configuration through PCT. <br><br>
+3: Error_IO_PNP_Config_Not_Allowed. The system detects a plug and play board but does not allow Plug and Play IO configuration. <br><br>
+4: Error_IO_BIO_Config_Not_Allowed. The system detects a BIO interface board but does not allow BIO nodes.<br><br>
+5: Error_IO_Invalid_Config_Type. Invalid Configuration detected.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Wrong or missing hardware installed or connected.</td>
+<td valign="top">Remove inappropriate hardware.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Wrong PCT parameter value</td>
+<td valign="top">Check/modify PCT parameter PCT_GP_BUS_SYSTEM</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Incorrect PCT downloaded</td>
+<td valign="top">TX: Check/modify PCT (remove IO section in case of plug and play interface boards). <br>
+MX: trigger a new chip card expansion in order to create a a valid PCT.<br>
+Rem: on MX controls (Rel.1/2/3 and Rel.4/2.41) the uploaded PCT contains a dummy I/O section. If such a PCT is downloaded to a MX Rel.4 the software will detects this.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

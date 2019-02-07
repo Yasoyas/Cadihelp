@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0608 Charging DC link failure</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0608 Charging DC link failure</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>MC PVF</em> error <em>Charging DC link failure</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Occurs if the DC link cannot be charged at the beginning of a trip or during a test function.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Input contactor or charge contactor malfunction, in which case this error appears together with warning 612 or 613.</td>
+<td valign="top">Check input or charge contactors (SGRW, SGR, see warning log).</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top"></td>
+<td valign="top">Check coul of contactors.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Wrong feedback from one of these contactors, in which case this error appears together with warning 612 or 613.</td>
+<td valign="top">Check auxiliary contacts and wiring (PVF X4.10, X4.11).</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Converter power supply problems, in which case this error appears together with error 606</td>
+<td valign="top">Check converter power supply.</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top"></td>
+<td valign="top">New AEG inverter (one contactor), parallel inverter (with AEG): front end converter could not be switched on, check converter and contacts RSK, RSK1</td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top">New AEG inverter (one contactor), parallel inverter (with AEG): Bad synchronisation with Travel Control, Error 608 as a consequence of an other error</td>
+<td valign="top">It is possible, that after an emercency stop Travel Control tries to start a new trip while K2 is open, so the dc link could not be charged.</td>
+</tr>
+<tr>
+<td align="center" valign="top">7</td>
+<td valign="top"></td>
+<td valign="top">Check previous errors, check Travel Control local event log if any Travel Control error occurred.</td>
+</tr>
+<tr>
+<td align="center" valign="top">8</td>
+<td valign="top">Parallel inverter with Schindler converter: Input or charge contactor malfunction, in which case this error appears together with warning 644 or 645 ( 651 or 652 / 658 or 659).</td>
+<td valign="top">Check input or charge contactors of the parallel converter (SGRWx, SGRx, see warning log), check auxiliary contacts and wiring (PCC X3.2, X3.4, ...).</td>
+</tr>
+<tr>
+<td align="center" valign="top">9</td>
+<td valign="top">Wrong PVF parameters, concerning input- and load-contactor timing.</td>
+<td valign="top">See error 606 (first cause)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

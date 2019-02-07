@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0020 PositionLost</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0020 PositionLost</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>PositionLost</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>L'errore si verifica nelle seguenti situazioni:<br>
+- la cabina supera un'aletta o un magnete di un piano a una posizione che differisce di oltre 15 cm da quella memorizzata durante la corsa di apprendimento.<br>
+- la cabina supera la posizione di un piano senza trovare un'aletta o un magnete alla posizione di quel piano memorizzata durante la corsa di apprendimento.<br>
+- la cabina si avvicina a un piano di destinazione senza trovare un'aletta o un magnete alla posizione di quel piano memorizzata durante la corsa di apprendimento.<br>
+- la cabina si trova a un piano e non rileva alcuna aletta/magnete.<br>
+Commenti:<br>
+- Dopo l'errore, il controllo corsa avvia una corsa di sincronizzazione. In caso di rilevatore di posizione incrementale (IG), la cabina effettuerà una corsa verso la posizione KSE. In caso di rilevatore di posizione a encoder assoluto (AGSI), la cabina raggiungerà il livello del piano successivo.<br>
+- Se la cabina si trova al piano e una delle fotocellule dà un messaggio OUT_FIN errato, il controllo corsa considererà le informazioni della fotocellula reali e riterrà che la cabina si trovi sul bordo dell'aletta e non al livello del piano. Questa situazione può verificarsi in grandi edifici con tensione significativa della corda, se la cabina rimane a lungo al piano. Il controllo corsa sovrascriverà la posizione e verrà avviata una corsa di rilivellamento per una distanza di 15 mm. Tuttavia, poiché la cabina era a livello all'inizio di questa corsa, la seconda fotocellula uscirà dall'aletta. Entrambe le fotocellule usciranno così dall'aletta, ma il controllo corsa continuerà a ritenere che la cabina sia quasi a livello e ciò verrà rilevato come POSITION_LOST.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>0 (hex)/ 0 (dec): Con la cabina al piano, i segnali PHS e PHNR_D sono inattivi ('IN_FIN'). La transizione 'OUT_FIN' del segnale PHS si verifica con ritardo.<br>
+1 (hex)/ 1 (dec): La transizione 'OUT_FIN' del segnale PHNR_D si verifica con ritardo.<br>
+2 (hex)/ 2 (dec): TX-GC2: Informazioni pozzo errate ==&gt; posizione piano / MX-GC con AGSI: LUET non si è attivato durante il passaggio a un piano.<br>
+3 (hex)/ 3 (dec): MX-GC/TX-GC: Informazioni pozzo errate ==&gt; posizione piano<br>
+4 (hex)/ 4 (dec): TX-GC2: Informazioni pozzo errate ==&gt; KSE-D / discrepanza rilevata tra le informazioni della zona della porta (KUET) e il valore di posizione del dispositivo di feedback della posizione della cabina (AGSI/IGS). Il segnale digitale per la zona della porta proveniente dalle informazioni del pozzo (LUET) è attivo, ma secondo il valore di posizione della cabina questa è ben al di fuori della zona della porta.<br>
+5 (hex)/ 5 (dec): MX-GC/TX-GC: Informazioni pozzo errate -&gt; KSE-D<br>
+8 (hex)/ 8 (dec): TX-GC2: Informazioni pozzo errate -&gt; KSE-U<br>
+9 (hex)/ 9 (dec): MX-GC/TX-GC: Informazioni pozzo errate -&gt; KSE-U<br>
+A (hex)/ 10 (dec): Posizione del magnete KSE-U a oltre 15 cm di distanza dalla posizione memorizzata durante la corsa di apprendimento.<br>
+B (hex)/ 11 (dec): Posizione del magnete KSE-D a oltre 15 cm di distanza dalla posizione memorizzata durante la corsa di apprendimento.<br>
+C (hex)/ 12 (dec): Durante una corsa di sincronizzazione, il magnete KSE-D si è spostato di oltre 15 cm rispetto alla posizione memorizzata durante la corsa di apprendimento.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>ndef</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Problema meccanico con le informazioni del pozzo.</td>
+<td valign="top">Verificare la posizione di alette o magneti. Ripetere la corsa di apprendimento.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top"></td>
+<td valign="top">Verificare la distanza orizzontale tra alette/magneti e fotocellula/interruttore. Assicurarsi che lo spazio della cabina non sia eccessivo quando questa si trova ai piani.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Il rilevatore di posizione (tipo IG o AGSI) non funziona correttamente.</td>
+<td valign="top">Verificare eventuali slittamenti meccanici sul rilevatore di posizione.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top"></td>
+<td valign="top">Verificare se il rilevatore funziona correttamente.</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top"></td>
+<td valign="top">Verificare la corda del rilevatore e la sua tensione, nonché le due pulegge della corda. La scanalatura delle pulegge del rilevatore deve essere pulita (specialmente per IGS-200).</td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top">Le fotocellule (PHS / PHNR_D o interruttori magnetici) presentano disturbi elettrici.</td>
+<td valign="top">Verificare l'alimentazione delle fotocellule.</td>
+</tr>
+<tr>
+<td align="center" valign="top">7</td>
+<td valign="top"></td>
+<td valign="top">Verificare il collegamento di terra sul tetto della cabina e dal locale macchine/armadietto di controllo verso la cabina.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Field Feedback</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="20%">Location</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Shaft</td>
+<td valign="top">Controllare le informazioni di vano (supporti e magneti)</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Shaft/Drive</td>
+<td valign="top">Controllare : tachimetrica e slittamento delle corde.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Shaft/ Car/ Controller</td>
+<td valign="top">Controllare : fotocellule PHS/PHNR_D (alimentazione), messa a terra (cabina, manovra)</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top"></td>
+<td valign="top">Controllare : Field info No. 275, 283, 291 (problemi EMC)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Names General</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Names General</em> of the parameter group <em>Supervisory Display</em> in subsystem <em>CADI-SMLCD</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Group Name</h4></TD>
+<TD valign="top" class="Layout"><p>Specify a name for the group displayed on a supervisory display.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Lift Name</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the name of the lift to be displayed on the supervisory display (TUEM). Default value: 'A' for lift 1, 'B' for lift 2, etc. Maximum length is 10 characters. If less characters used the remaining characters have to be zero.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Services Name</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the string (characters) shown on the service interface (CADI, SMLCD, Lobby monitoring system...) for the currently active service (function). Per service the following values are defined in this PCT parameter:<br><br>1. Service identification number (number)<br>2. Presentation identification number (number)<br>3. Service name ( maximum 4 ASCII characters)<br><br>Characters not uset for the service name (e.g. 'N' ) shall be filled with 0 (zero not '0'). The Presentation identification number is the display attribute but is not used at the moment.<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example: 
++------------+------------+-------------------+
+| SERVICE_ID | PRESENT_ID |   SERVICE_NAME    |
++============+============+===================+
+|  COL 1     |   COL 2    |COL3|COL4|COL5|COL6|
++------------+------------+----+----+----+----+
+|  1         |  49        | 4E   00   00   00 | =&gt; N
++------------+------------+----+----+----+----+
+|  3         |  50        | 4A   41   42   00 | =&gt; JAB
++------------+------------+----+----+----+----+
+|  8         |  49        | 4A   4E   46   46 | =&gt; JNFF
++------------+------------+----+----+----+----+
+
+Default values (in PCT description file format (number in hexadecimal)):
+
+ ¤5B                                  *   PCT_GP_RS_SERV_NAME
+  {42 [08 06 01 01 4E 00 00 00]       *    P_STR_SERV_NAME - N
+  ¤42 [08 06 03 01 4A 41 42 00]       *    P_STR_SERV_NAME - JAB
+  ¤42 [08 06 04 01 4A 52 56 00]       *    P_STR_SERV_NAME - JRV
+  ¤42 [08 06 05 01 44 50 46 00]       *    P_STR_SERV_NAME - DPF
+  ¤42 [08 06 06 01 4A 4C 49 00]       *    P_STR_SERV_NAME - JLI
+  ¤42 [08 06 07 01 4A 42 46 00]       *    P_STR_SERV_NAME - JBF
+  ¤42 [08 06 08 01 42 52 32 00]       *    P_STR_SERV_NAME - BR2 (JNFF)
+  ¤42 [08 06 09 06 52 4E 4F 00]       *    P_STR_SERV_NAME - RNO
+  ¤42 [08 06 0A 01 49 4E 53 00]       *    P_STR_SERV_NAME - INS
+  ¤42 [08 06 0B 06 4C 2D 58 00]       *    P_STR_SERV_NAME - L-X
+  ¤42 [08 06 0D 01 4A 4E 4F 00]       *    P_STR_SERV_NAME - JNO
+  ¤42 [08 06 0E 01 55 4E 56 00]       *    P_STR_SERV_NAME - UNV
+  ¤42 [08 06 10 01 46 41 54 4C]       *    P_STR_SERV_NAME - FATL
+  ¤42 [08 06 11 01 4B 46 4D 00]       *    P_STR_SERV_NAME - KFM
+  ¤42 [08 06 12 01 4A 48 43 31]       *    P_STR_SERV_NAME - JHC1
+  ¤42 [08 06 13 01 4E 46 31 00]       *    P_STR_SERV_NAME - NF1 (NF5 if M10)
+  ¤42 [08 06 14 01 4E 46 32 00]       *    P_STR_SERV_NAME - NF2 (NF6 if M10)
+  ¤42 [08 06 15 01 47 41 53 54]       *    P_STR_SERV_NAME - GAST
+  ¤42 [08 06 16 01 53 50 5A 53]       *    P_STR_SERV_NAME - SPZS
+  ¤42 [08 06 18 01 4A 52 56 50]       *    P_STR_SERV_NAME - JRVP
+  ¤42 [08 06 19 01 44 46 31 00]       *    P_STR_SERV_NAME - DF1 (DF5 if M10)
+  ¤42 [08 06 1A 01 4B 54 48 4D]       *    P_STR_SERV_NAME - KTHM
+  ¤42 [08 06 1B 01 53 41 42 00]       *    P_STR_SERV_NAME - SAB
+  ¤42 [08 06 1D 01 45 41 51 00]       *    P_STR_SERV_NAME - EAQ 
+  ¤42 [08 06 1E 01 47 53 55 00]       *    P_STR_SERV_NAME - GSU
+  ¤42 [08 06 23 01 44 48 00 00]       *    P_STR_SERV_NAME - DH  
+  ¤42 [08 06 27 01 53 50 43 00]       *    P_STR_SERV_NAME - SPC
+  ¤42 [08 06 28 01 53 50 53 00]       *    P_STR_SERV_NAME - SPS
+  ¤42 [08 06 29 01 4A 5A 48 00]       *    P_STR_SERV_NAME - JZH 
+  ¤42 [08 06 2A 01 42 53 32 00]       *    P_STR_SERV_NAME - BS2 
+  ¤42 [08 06 2B 01 45 41 51 43]       *    P_STR_SERV_NAME - EAQC
+  ¤42 [08 06 34 01 42 53 31 00]       *    P_STR_SERV_NAME - BS1 
+  ¤42 [08 06 35 01 44 32 33 36]       *    P_STR_SERV_NAME - D236
+  ¤42 [08 06 36 01 46 4F 46 00]       *    P_STR_SERV_NAME - FOF 
+  ¤42 [08 06 37 01 46 4C 43 00]       *    P_STR_SERV_NAME - FLC
+  ¤42 [08 06 38 01 57 41 44 00]       *    P_STR_SERV_NAME - WAD 
+  ¤42 [08 06 39 01 50 48 54 53]       *    P_STR_SERV_NAME - PHTS
+  ¤42 [08 06 3A 01 4E 46 45 00]       *    P_STR_SERV_NAME - NFE
+  ¤42 [08 06 52 01 41 52 41 00]       *    P_STR_SERV_NAME - ARA
+  }</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

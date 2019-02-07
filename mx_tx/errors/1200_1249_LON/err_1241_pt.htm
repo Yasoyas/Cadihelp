@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1241 LonPupXON</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1241 LonPupXON</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>LON</em> error <em>LonPupXON</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>There was a large burst of traffic on the LON bus, and the main The CPU was very busy at the time. To prevent disturbing the drive software, the LON driver temporarily allowed incomming messages to be buffered in the LON ‚MIP coprocessor for later retrieval, thus providing more available CPU time for critical drive tasks.<br>
+This event is normally fairly infrequent and not a problem, however if it is observed frequently, or along with other errors at the same time it may indicate a possible communication, wiring, or configuration problem. <br>
+Check Subsystem &gt; Communication &gt; LON, Status &gt; Network &gt; Lift LON or Group LON, make sure the ‚Lost Messages and ‚Missed Messages are both 0, other values indicate a serious communication problem.<br>
+Check that all devices connected to the LON busses and all devices parallel wired to LON I/O boards are functioning correctly. Sometimes an input may be toggling frequently and creating abnormal excessive LON-bus traffic.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>n is the channel-ID (1=LiftLON, 2=GroupLON)<br>
+n010'0000 +   iq_size now = IQ is nearly full - Downlink Quench XOFF <br>
+n020'0000 +   iq_size now = IQ is better now - Downlink Resume XON <br>
+n030'0000 +   iq_size now = IQ was nearly full &amp; got better XON and XOFF close together</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+</table>
+</body>
+</html>

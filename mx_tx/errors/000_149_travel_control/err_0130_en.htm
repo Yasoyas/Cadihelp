@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0130 PCT_Drive_Para</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0130 PCT_Drive_Para</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>PCT_Drive_Para</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The value of a PCT Drive Parameter does not match with the current hardware or <br>
+is not allow the according to the Deploment Rules. Refer to the Extra Info for identification of the Drive Parameter.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Parameter Id. (hexadecimal) of parameter with wrong value.<br>
+for example:<br><br>
+0h4B : P_ANT CODE_TYPE<br>
+0h77 : P_ANT_SAFETY_TYPE</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">A PCT has been downloaded with a wrong parameter value, or</td>
+<td valign="top">Download PCT with correct value or modifiy parameter to the correct value with CADI or SMLCD.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">The Parameter has been changed to an invalid value.</td>
+<td valign="top">Modifiy parameter to the correct value with CADI or SMLCD.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0712 Power Electronic Failure</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0712 Power Electronic Failure</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>MC PVEC</em> error <em>Power Electronic Failure</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The feedback of the power electronics module(s) report an error.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Meaning of extra info value for VecSys 2.15 / VARIOsys 1.02 and higher:<br>
+x00: Any error in power module<br>
+x01(Bitmask Bit 0): Error in phase U / VF11BR: overcurrent<br>
+x02(Bitmask Bit 1): Error in phase V / VF11BR: supply voltage error<br>
+x04(Bitmask Bit 2): Error in phase W<br>
+x08(Bitmask Bit 3): Error in brake chopper<br><br>
+Meaning of extra info value for VecSys 2.14 / VARIOsys 1.01 and below (older):<br>
+x01: error in phase U<br>
+x02: error in phase V<br>
+x03: error in phase W<br>
+x04: error in brake chopper<br>
+x05: any error in power module</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Cable from power unit broken or not connected</td>
+<td valign="top">check cable and connectors</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Power module faulty</td>
+<td valign="top">replace power unit</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Fan faulty</td>
+<td valign="top">check that the fan runs during a trip, run fan test, check cables, replace fan</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Brake resistor/chopper faulty (overvoltage trigger)</td>
+<td valign="top">check brake resistor and cables</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top">Temperature in machine room or hoistway too high</td>
+<td valign="top"></td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top">Wrong dimensioning (calculation) of the drive system</td>
+<td valign="top"></td>
+</tr>
+<tr>
+<td align="center" valign="top">7</td>
+<td valign="top">For extra info value=0: thyristor not on (VF30BR only)</td>
+<td valign="top"></td>
+</tr>
+<tr>
+<td align="center" valign="top">8</td>
+<td valign="top">For extra info value=5: overcurrent / short circuit</td>
+<td valign="top"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

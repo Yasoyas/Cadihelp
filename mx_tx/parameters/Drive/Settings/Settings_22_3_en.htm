@@ -1,0 +1,308 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Settings</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Settings</em> of the parameter group <em>Settings</em> in subsystem <em>Drive</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Inverter</h4></TD>
+<TD valign="top" class="Layout"><p>Setting value for the frequency converter. Each value identifies a specific inverter type. Based on the setting value the converter software selects the correct values (predefined) for all derived values (target configuration on motor control). The derived parameters from the inverter setting value are all parameters in the parameter group 'inverter' (e.g. inverter_type, line_converter_type, brake_chopper_type, current_sensor_type, etc.)<br><br>{1 = VF22BR}	VF22BR, Id.No. 59400150/59400600/59400570	<br>{2 = VF33BR}	VF33BR, Id.No. 59400170/59400610/59400580<br>{3 = VF30BR}	VF30BR<br>{5 = VF44BR }	VF44BR, Id.No. 59400380/59400390/59400790<br>{7 = VF100BR}	VF100BR<br>{8 = VF120}	VF120PF1<br>{9 = VF170}	VF170PF1<br>{10 = VF280}	VF280PF1<br>{11 = VF11BR}	VF11BR, Id.No. 59400660<br>{12 = VF88BR}	VF88BR, Id.No. 59400670/59400650<br>{13 = VF122BR}	VF122BR, Id.No. 59400550/59400560<br>{14 = VF30_230V}	VF30BR, inverter input voltage: 230 V<br>{15 = VF50BR}	VF50BR<br>{16 = VF85BR}	VF85BR<br>{17 = VF120BR}	VF120BR<br>{18 = VF155}	VF155PF1 AC<br>{19 = VF288}	VF288PF1 AC<br>{20 = VF122BR DC}	VF122BR DC<br>{21 = VF155 DC}	VF155PF1 DC<br>{22 = VF288 DC}	VF288PF1 DC<br><br>If this parameter is not used for commissioning of the inverter, the inverter parameters (normally derived from the setting value) must be defined individually in the PCT.<br><br>The value 0 corresponds to “NO_SETTING”. A negative value indicates which value the parameter 'inverter setting' originally had and that at least one parameter on the inverter was modified. The inverter software sets the negative value automatically when a parameter is modified .<br>The parameter 'Inv Current Ampl' is selected for the corresponding Motor Control PCB (effective as from PVEC VecSys Software V2.05, older versions select 'Inv Current Ampl' for the PIOVEC boards QA and QB).<br><br>Remark valid for VF120 and VF170: The values of the parameters 'Inv Current Ampl', 'Inv Current Scale' and 'Current Sensor Type' are set according to the OCP current measurement (effective as from PVEC VecSys software V2.05, older versions according to the LEM current measurement).<br><br>Parallel Converters: use the setting of the single converter connected in parallel.<br><br>Frequency converters VF11BR, VF22BR, VF33BR and VF44BR may correct parameter 'Inverter Id' according to the detection of the power unit and select the corresponding parameters automatically (hardware recognition).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Brake</h4></TD>
+<TD valign="top" class="Layout"><p>The parameter defines the type of the electrical brake on the hoisting machine. <br>Values:<br>{0 =  MB_07E}<br>{1 =  MB_09D}<br>{2 = MB_10D}<br>{3 = MB_10E}<br>{4 = MB_11D}<br>{5 = MB_11E}<br>{6 = MB_13D}<br>{7 = MB_13E}<br>{8 = MB_14D}<br>{9 = MB_14E}<br>{10 = MB_16E}<br>{11 = MB_ES16}<br>{12 = MB_ES19}<br>{13 = MB_ZS19_1}<br>{14 = MB_ZS19_2<br>{15 = MB_BZ16}<br>{16 = MB630_HYB44}<br>{17 = MB750_HYB44}<br>{18 = MB900_HYB45}<br>{19 = MB900_HYB46}<br>{20 = MB_15B}<br>{21 = MB_18B}<br>{22 = CMOD}	Custom Modular Brake Setting used in USA also,contactor  type C/C<br>{23 = USA_B} 	USA Brake setting with USA Brake type, contactor type C/C<br>{24 = MB800_HYB54}<br>{25 = MB940_HYB55}<br>{26 = SB_EINSCHUETZ}    (use 100 for configuration with PCT)<br>{27 = HW_SIM_LAB}<br>{28 = MB1215_HYB66}<br>{29 = MBS1215_HYB66}<br>{30 = CMOD2}	Custom Modular Brake Setting used in USA also,contactor  type O/C<br>{31 = USA_B2} 	USA Brake setting with USA Brake type,contactor  type O/C<br>{100 = SB_EINSCHUETZ}<br><br>The following parameters are derived from the brake setting value:<br>P_ANT_BRAKE_TYPE;<br>P_ANT_OPENING_VOLTAGE;<br>P_ANT_HOLDING_VOLTAGE;<br>P_ANT_OPENING_CURRENT;<br>P_ANT_HOLDING_CURRENT;<br>P_ANT_HYDRO_ON_TIME;<br>P_ANT_HYDRO_PAUSE_TIME;<br><br>Table with values for the parameters derived from P_ANT_BRAKE_SETTING. The sequence of the values from left to right relates to the list above (first value is for parameter = P_ANT_BRAKE_TYPE, last value is for parameter  P_ANT_HYDRO_PAUSE_TIME):<br><br>MB_07E:          MAGNET_BRAKE1, 80,  40, 16,  8, 400, 6000<br>MB_09D:          MAGNET_BRAKE1, 80,  60, 16, 11, 400, 6000<br>MB_10D:          MAGNET_BRAKE1, 80,  40, 22, 11, 400, 6000<br>MB_10E:          MAGNET_BRAKE1, 80,  80, 14, 14, 400, 6000<br>MB_11D:          MAGNET_BRAKE1,         80,  50, 23, 14, 400, 6000<br>MB_11E:          MAGNET_BRAKE1,         80,  50, 15,  9, 400, 6000<br>MB_13D:          MAGNET_BRAKE1,         80,  50, 32, 20, 400, 6000<br>MB_13E:          MAGNET_BRAKE1,         80,  50, 18, 11, 400, 6000<br>MB_14D:          MAGNET_BRAKE1,         80,  40, 41, 21, 400, 6000<br>MB_14E:          MAGNET_BRAKE1,         80,  60, 17, 13, 400, 6000<br>MB_16E:          MAGNET_BRAKE1,         80,  40, 27, 14, 400, 6000<br>MB_ES16,         MAGNET_BRAKE1,         80,  50, 17, 10, 400, 6000<br>MB_ES19,         MAGNET_BRAKE1,         80,  40, 30, 10, 400, 6000<br>MB_ZS19_1:       MAGNET_BRAKE1,         80,  40, 30, 10, 400, 6000<br>MB_ZS19_2:       MAGNET_BRAKE1,         80,  60, 30, 22, 400, 6000<br>MB_BZ16:         MAGNET_BRAKE1,         80,  40, 98, 44, 400, 6000<br>MB630_HYB44:     HYDRO_BRAKE1,         110, 110,  2,  2, 400, 6000<br>MB750_HYB44:     HYDRO_BRAKE1,         110, 110,  2,  2, 400, 6000<br>MB900_HYB45:     HYDRO_BRAKE1,         110, 110,  2,  2, 400, 6000<br>MB900_HYB46:     HYDRO_BRAKE1,         110, 110,  2,  2, 400, 6000<br>MB_15B:          MAGNET_BRAKE1,         80,  40, 39, 20, 400, 6000<br>MB_18B:          MAGNET_BRAKE1,         80,  40, 50, 25, 400, 6000<br>CMOD:            CM_BRAKE1,             80,  40, 50, 25, 400, 6000<br>USA_B:           MAGNET_BRAKE1,         80,  50, 23, 14, 400, 6000<br>MB800_HYB54:     HYDRO_BRAKE1,         110, 110,  4,  4, 400, 6000<br>MB940_HYB55:     HYDRO_BRAKE1,         110, 110,  8,  8, 400, 6000<br>SB_EINSCHUETZ_26:  CM_BRAKE1,             80,  40, 50, 25, 400, 6000<br>HW_SIM_LAB:      MAGNET_BRAKE1,         80,  40,  4,  2, 400, 6000<br>MB1215_HYB66:    HYDRO_BRAKE1,         110, 110,  4,  4, 400, 6000<br>MBS1215_HYB66:   HYDRO_BRAKE1,         110, 110,  4,  4, 400, 6000<br>CMOD2:            CM_BRAKE2,             80,  40, 50, 25, 400, 6000<br>USA_B2:           MAGNET_BRAKE2,         80,  50, 23, 14, 400, 6000<br>SB_EINSCHUETZ:    see SB_EINSCHUETZ_26</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Id Motor</h4></TD>
+<TD valign="top" class="Layout"><p>Identification of the motor. The motor parameters are derived from the parameter table on the inverter based on the value for the motor setting. This parameter needs to be edited only if the motor parameters selected are not commissioned individually.<br><br>Value: 4 last digits of the Schindler Id.No.<br>Example: the motor VM132-C4A240 is identified with the Id.No. 147964. Therefore, the correct value for the Motor Id is 7964.<br><br>The value 0 corresponds to NO_SETTING. A negative value indicates which value the parameter had originally i.e. before at least one motor parameter was edited and will be set automatically by software.. <br>All motor parameters are defined in DR-92069_Vxx.<br><a href='../Motor Control/MotorTable.htm'>Motor list</a></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Gear Type</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the type of the gear.<br><br>{0.0 = NO_GEAR}	[COS]	direct traction drives (gearless)<br><br>{1.0 = WORM_GEAR}	[COS]	all worm gears (for instance Schindler worm gears: W140, W163, W200, W250, W53, W54, W55, W56, W57, W58, W59)<br><br>{2.0 = PLANET_GEAR}	[COS]	all planetary gears (high efficient gears, e.g. P420, P450)<br><br>{3.0 = SGB}	[COS]	"Semi Gearless Belt" drives for modernization<br><br>Parameter also sets the control parameters: P Gain Speed, Zero Speed Amp, Speed Edge. The value WORM_GEAR activates a control algorithm that compensates the static friction of worm gears. The values NO_GEAR, PLANET_GEAR and SGB activate the torque feed forward algorithm that calculates the required torque depending on the actual acceleration and Mass Moment of Inertia. The values WORM_GEAR, PLANET_GEAR and SGB activate the fast speed control at the beginning of the ride, if there is no DMS load measurement.<br><br>The parameter P_ANT_BRAKE_TYPE is derived from value of P_ANT_GEAR_TYPE (update function).<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Encoder Type</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the type of the encoder on the motor.<br><br>{0 = INCREMENTAL}	all inverters with optical, incremental encoder <br>(IG 500, IG1024, IG 2000, IG2048 or IG10000)<br><br>{1 = SINE_WAVE}	optical, sinusoidal encoder. (IG1024 for planetary gear FMP160, IG5000 for FM560 / FM630 / FM710)<br><br>{2 = NO_ENCODER}	inverters without incremental encoder. Only used for modernisations. Causes the inverter to activate the slip control instead of the vector control.<br><br>{3 = SINCOS_ENDAT}  optical, sinusoidal encoder with ENDAT-interface.<br><br>{4 = SINCOS_HYPERFACE}  optical, sinusoidal encoder with Hyperface-interface.<br><br>Exception: If at the same time a planetary gear and an encoder with 1024 periods per revolution is used, set to {1 = SINE_WAVE}.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">ETSL Type</h4></TD>
+<TD valign="top" class="Layout"><p>Type of (Emergency) Terminal Stopping device or function.<br>Emergency terminal speed limiting (ETSL) function is required with reduced buffer stroke.<br><br>{0 = RSE}	 [COS]	Emergency term. speed limit. by centrifugal switches(RSE)<br>{1 = ETSL}	 [COS]	Emergency term. speed limit. with optical sensor (ETSL)<br>{2 = NONE} [COS]	No emergency terminal speed limiting device<br>{3 = MoSis_ETSL}	Emergency terminal speed limiting with MoSis<br>{4 = MoSis_ETSL_NTSD}	Emergency terminal speed limiting and Normal Terminal Stopping with MoSis<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Shaft Info</h4></TD>
+<TD valign="top" class="Layout"><p>Type of shaft information system.<br><br>{0}	PHUET, PHS, PHNRD<br>{1}	KUET, KS, KS1<br>{2}	MOSIS<br>{3}            KUET_AGSI (MX-GC)<br>{4}            SI_IG (MX-GC)<br><br>The following parameters are defined based on the value of the shaft_info_setting:<br>P_ANT_GAP_LENGTH;<br>P_ANT_FIN_LENGTH;<br>P_ANT_DISTANCE_PHS_PHUET;<br>P_ANT_DISTANCE_PHUET_PHNRD;<br>P_ANT_KSERE_DISTANCE;<br>(P_ANT_MAX_TRIP_TIME); not related to brake setting anymore<br><br>Values for the parameters derived from 'brake_setting'<br>(0) PHS_PHNRD_PHUET <br>gap_length: 300<br>fin_length: 200<br>distance_phs_phuet: 85<br>distance_phuet_phnrd: 85<br>KSERE distance: 0<br><br>(1) KS_KS1_KUET <br>gap_length: 300<br>fin_length: 200<br>distance_phs_phuet: 75<br>distance_phuet_phnrd: 75<br>KSERE distance: 0<br><br>(2) MOSIS <br>gap_length: 300<br>fin_length: 200<br>distance_phs_phuet: 85<br>distance_phuet_phnrd: 85<br>KSERE distance: 0<br><br>3 KUET_AGSI  (MX)<br>gap_length: 0<br>fin_length: 240<br>distance_phs_phuet: 0<br>distance_phuet_phnrd: 0<br>KSERE distance: 100<br><br>4 SI_IG (MX)<br>gap_length: 0<br>fin_length: 200<br>distance_phs_phuet: 85<br>distance_phuet_phnrd: 85<br>KSERE distance: 100</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Load Measurement Type</h4></TD>
+<TD valign="top" class="Layout"><p>Type of load measurement device/system.<br><br>{0} NO_LMS [COS] Installation without load measurement<br>{1} KL_LMS [COS] Installation with load contacts<br>{2} CAR_DMS [COS Installation with DMS (strain gages) placed under the car platform<br>{3} HP_DMS [COS] Installation with DMS placed on hitch plate (dead end or crosshead)<br>{4} HP_LC5K [COS]	Installation with 3 load cells placed on hitch plate each rated to 5000 £ (2400 Kg)<br>{5} HP_LC10K[COS]	Installation with 3 load cells placed on hitch plate each rated to 10000 £ (4800 Kg)<br>{6} HP_LVDT Installation with LVDT sensor (output 4-20 mA) placed on hitch plate<br>{7} BRK_DMS Installation with DMS sensor placed on brake construction<br>{8} HP_DGS Installation with Sensors from DIGISENS placed on hitch plate<br>{9} DD_CAR_DMS Installation with DMS (strain gages) placed under the car platform with double decker elevators<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Nominal Load</h4></TD>
+<TD valign="top" class="Layout"><p>Nominal car load [kg]. For double deck elevators this is the sum of the nominal loads for the lower and the upper deck. E.g. if a DD elevator is specified with a nominal load of 2 x 1600kg then the value for P_ANT_NOM_LOAD is 3200kg.<br><br>On first generation VX/TX systems, nom_load was defined twice (also in the LIFT subgroup of the PCT). For TX-GC2/MX only the P_ANT_NOM_LOAD is required.<br><br>The calculation of the drive internal load limit values for the load-measuring system is based on the parameters NOM_LOAD and CODE_TYPE<br>for NA:<br>kl_h_load = NOM_LOAD / 2 ,<br>kl_max_load = NOM_LOAD * 1.1 ,<br>kl_x_load = NOM_LOAD * 1.3 ,<br><br>others (EUAP):<br>kl_h_load = NOM_LOAD / 2 ,<br>kl_x_load = NOM_LOAD * 1.1 ,<br><br>these limits are independent of load limits defined in PCT_GP_RS_GENERAL<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Nominal Speed</h4></TD>
+<TD valign="top" class="Layout"><p>Nominal speed of car.<br>Parameter for the fourth phase in the speed curve (V4).<br>Note: The system does not allow an increase above the value of v_max = V4 * 1.1.<br><br>The following parameters are set or calculated internally based on the value of the nominal speed:<br>set A2, A6, J1, J3, J5, J7, V_INSP, V_RECALL, V_SYNCH, V_LEARN to default values (MX-GC: special values); <br>NA only: A_MAX = A2 ;</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Code Type</h4></TD>
+<TD valign="top" class="Layout"><p>The parameter is used to (de-) activated specific functions in travel control according to the applicable regulations/norms for the different countries/states.<br><br>EN81 = 0,<br>USA_A17 = 1,<br>CAN_B44 = 2,<br>AS1735 = 3,<br>HKG = 4,<br>USA_A17_2000 = 5,<br>USA_A17_2004 = 6,<br>USA_A17_2005 = 7,<br>USA_A17_2007 = 8,<br><br>HKG: Requirement for HKG-standard = Inspection-Speed must be limited to 0.5 m/s. That means no value adjustable above 0.5 m/s via SMLCD/CADI.<br><br>Based on the parameter CODE_TYPE (setting) the following functions are (de-)activated.<br>{0: EN81}: SD=off, MD=off, MWC=off<br>{1: USA_A17}: SD=on, MD=on, MWC=on<br>{2: CAN_B44}: SD=on, MD=on, MWC=on<br>{3: AS1735}: SD=off, MD=off, MWC=off<br>{4: HKG}: SD=off, MD=off, MWC=off<br>{5: A17_2000}: SD=on, MD=on, MWC=on<br>{6: A17_2004}: SD=on, MD=on, MWC=on<br>{7: A17_2005}: SD=on, MD=on, MWC=on<br>{8: A17_2007}: SD=on, MD=on, MWC=on<br><br>SD: terminal slowdown for NA: NTSD(US)<br>MD: monitor doors<br>MWC: manual operation without control (travel control)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Inverter Input Voltage</h4></TD>
+<TD valign="top" class="Layout"><p>Inverter Input Voltage (VAC)<br>This setting partially sets the parameters udcl_nom, udcl_low_lim_idle, udcl_upp_lim_idle, udcl_low_lim_ride, Iinv_nom and Iinv_accel to their initial value. For more details see the description of the corresponding parameters.<br><br>The inverter input voltage is different from the mains voltage if there is a transformer between the mains and the line converter. If the inverter is not commissioned by settings, the value 400 V is selected.<br><br>{1.0 = 230V}		inverter input voltage 230 V (220 V)<br>{2.0 = 380V}	[COS]	inverter input voltage 380 V<br>{3.0 = 400V}	[COS]	inverter input voltage 400 V<br>{4.0 = 415V}	[COS]	inverter input voltage 415 V<br>{5.0 = 460V}	[COS]	inverter input voltage 460 V<br>{6.0 = 480V}	[COS]	inverter input voltage 480 V<br><br>Inverter Input Voltage without matching transformer TA:<br>Inverter Input Voltage	VF30BR	VF50BR, VF85BR	VF100BR	VF120, VF170, VF180<br>220V	(-6% / +15%)   X			<br>230V	(-10% / +10%) X			<br>380V	(-10% / +16%) X	(-15% / +10%) X	(-10% / +10%) X	(-10% / +10%) X<br>400V	(-15% / +10%) X	(-15% / +10%) X	(-15% / +10%) X	(-10% / +10%) X<br>415V	(-17% / +10%) X	(-15% / +10%) X	(-15% / +10%) X	(-10% / +10%) X<br>460V				(-10% / +10%) X<br>480V				<br>Otherwise with matching transformer TA (400V).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Tacho Factor Motor</h4></TD>
+<TD valign="top" class="Layout"><p>Impulses per revolution on motor encoder.<br><br>{1024}	[COS]	digital encoder IG1024 for modernization<br>{1024}	[COS]	sinusoidal encoder with 1024 periods per revolution for planetary gear. This encoder will replace the digital encoder IG2048 mentioned below. Not used yet.<br><br>{2000}	[COS]	digital encoder IG2000 for geared AC Drives in Europe/Asia<br>{2048}		digital encoder IG2048 for VF-70 North America<br>{2048}	[COS]	digital encoder IG2048 for planetary gear.<br>{4096}	[COS]	digital encoder IG4096 for SGB<br>{5000} 	[COS]	digital encoder IG5000<br>{10000} 	[COS]	digital encoder IG10000 for gearless AC Drives<br><br><br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Tacho Factor Shaft</h4></TD>
+<TD valign="top" class="Layout"><p>Resolution of car position encoder (inc./m). Defines the number of increments from the car position detection device for 1 meter travel distance.<br><br>When an IGBV200 is mounted on another governor:  <br>	Tacho Factor = (316 * 3438) /  (sheave diameter)	<br>In all cases, the sheave diameter to be used is measured to the midline of the rope.<br>For GB42 governor this formula is not applicable, because this component has a different transmission ratio.<br><br>With MoSIS the value for the tacho factor is read from MoSIS and the parameteris set automatically to the correct value.<br>The 'WinAutoTacho' function must not be used with absolute car position encoders.<br><br>{3438}	[COS]	For encoder IGS200<br>{3438}	[COS]	For encoder IGBV200/GBF with GBF and rope diameter of 8mm<br>		(sheave diameter 316mm); Europe<br>{3374}		For encoder IGBV200 with GBF and rope diameter 9.5mm<br>		(sheave diameter 322mm); USA and Australia<br>{3395}	[COS]	For encoder IGBV200/GB32 with GB32 (sheave diameter 320mm)<br>{3538}	 	For IGBV200 with B5D governor<br>{3686}		For IGBV200 with V16 governor<br>{3418}		For 1500 ppr encoder with B22 governor<br>{3760}		For 900 ppr encoder with B5D governor<br>{3609}		For 900 ppr encoder with HW206 governor<br>{3760}		For 1200 ppr encoder with V16 governor<br>{3342}		For 400 ppr encoder with 6 modernization pulley kit<br>{3916}		For 800 ppr encoder with 10.25 car top encoder<br>{3200}		For AGSI absolute position encoder (MX)<br>{4000}		For ALSIS absolute position encoder (MX)<br>{9143}		For MoSIS absolute encoder (TX-GC2)<br>{1108}		For encoder IGBV200 with GB42 governor</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Gear Ratio</h4></TD>
+<TD valign="top" class="Layout"><p>Gear ratio<br><br>{1}	[COS]	for gearless (direct traction)<br>{3}	[COS]	SGB <br>{13.66667}	[COS]	for ratio 41/3<br>{17.33333}	[COS]	for ratio 52/3<br>{21.5}	[COS]	for ratio 43/2<br>{22.3}	[COS]	for planetary gear P450<br>{22.91}	[COS]	for planetary gear P420<br>{27.5},	[COS]	for ratio 55/2<br>{32}	[COS]	for planetary gear P450<br>{32.57}	[COS]	for planetary gear P420<br>{34.5}	[COS]	for ratio 69/2<br>{40}	[COS]	for ratio 40/1<br>{42.67}	[COS]	for planetary gear P450<br>{43}	[COS]	for ratio 43/1<br>{43.2}	[COS]	for planetary gear P420<br><br>{54}	[COS]	for ratio 54/1<br>{68}	[COS]	for ratio 68/1<br><br><br>Schindler standard gear ratio according to TK 600867 + eventually non standard value.<br>For North America other than Magnetek drive: Use the gear ratio of the applied machine.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Traction Sheave Diameter</h4></TD>
+<TD valign="top" class="Layout"><p>Traction sheave diameter (m)<br><br>{0.27, 0.32}		see remark<br>{0.45, 0.5, 0.52, 0.57, 0.64, 0.715, 0.8, 0.9}	[COS]	see remark<br>{0.52}	[COS]	for FM355<br>{0.65}	[COS]	for FM500 .. FM620<br>{0.659}		for FM500 .. FM620, North America<br><br>Schindler standard drive sheave diameter + eventually non standard value with the following range condition: Drive sheave diameter using the middle of the rope.<br>For North America use the working diameter of the applied machine sheave.  Note that for the FM 500 and FM620 machines with 15.5 mm rope the diameter is increased from 0.650 m to 0.6588 m.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Inertias</h4></TD>
+<TD valign="top" class="Layout"><p>Total mass moment of inertia of all moving parts of the elevator installation at rated load, in reference to the motor axis. x: Program output from „drive calculation program”.<br><br>Plausibility check: To check whether the value of the parameter inertias is inside a range which makes sense, the following strongly simplified calculation is given. If the actual value of inertias is not inside the range described below, the value of inertias must be recalculated with the „drive calculation program”.<br><br>Notes:<br>	-units:<br>		- car_wgt (GK), nom_load (GQ): kilogram<br>		- cwgt_bal (KG): for 50 % balance us the value 0.5<br>		- balance_rope (GZM), rope_wgt (GUM): kg/m<br>		- trac_dia, HQK: meters<br>		- IVR: kgm2<br>	- The meaning of the abbreviations and the values for the input of the calculation can be found in the parameter list<br>	- HQK is the altitude of the well (hoistway, shaft)<br>	- a table for IVR is given below<br><br>               [(2 * car_wgt + nom_load + cwgt_bal * nom_load) * 1.1] + [(balance_rope + rope_wgt) * HQK]<br>inertias ~{---------------------------------------------------------------------------------------------------------------------<br>               (roping * gear_ratio)2<br><br>		* (trac_dia / 2)2 } + IVR    (this line is the continuation of the upper line)<br><br>with Schindler-abbreviations:<br><br>	  [(2 * GK + GQ + KG * GQ) * 1.1] + [(GZM + GUM) * HQK]<br>IA ~ 	{ --------------------------------------------------------------------------- * (DD  /2)2 } + IVR<br>	  (KZU * IW)2<br><br>The value for IVR is given approximately in the table below:<br><br>Geared drives:<br>Geartype		IVR<br>W140, W54	0.1 kgm2<br>W163, W55	0.3 kgm2<br>SGB         	0.6 kgm2<br>W200, W56	0.6 kgm2<br>W250, W57, W58, W59	0.7 kgm2<br>P420, P450	0.1 kgm2<br>W58, W59 (two brakes)	1.2 kgm2<br><br>Gearless drives:<br>Motortype		IVR<br>PMS230	2.4 kgm2<br>PMA350	3 kgm2<br>PMS420	2.4 kgm2<br>FM280-C	7.2 kgm2<br>FMR-355	13.1 kgm2<br>FM355-8A	20 kgm2<br>FM355-8C	22 kgm2<br>FM500-B	169 kgm2<br>FM500-C	241 kgm2<br>FM560-A	136 kgm2<br>FM560-B	147 kgm2<br>FM620-A	377 kgm2<br>FM620-B	584 kgm2<br>FM630-B	224 kgm2<br><br>The actual value of inertias should be within the range – 25 % to + 50 % of the simplified calculation.-</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Phase Direction</h4></TD>
+<TD valign="top" class="Layout"><p>Sense of rotation of motor (in case of induction motors the parameter is only used for machines without incremental encoder)<br><br>Parameter extended from software versions: Variosys V1.03 and Vecsys V2.15<br>'Phase_Dir' determines the direction (sense) of rotation of the motor and the sense of rotation of the encoder. The value depends on the required direction of rotation of the motor, the orientation of the motor with regard to the ropes and the car and the orientation of the encoder.<br><br>Induction motors (designation: VM, FM, AM, ....):<br>The parameter value is defined by the commissionig step "Direction Test" ("T3" respectively). It depends on the direction of rotation of the motor, the orientation of the motor with regard to the ropes and the car and the orientation of the encoder.<br>Possible values: 0, 1, 2, 3.<br><br>Synchronous motors (designation: PMS, SM, ....):<br>The value has to be set according to the following rules.<br>PMS230/PMS300/PMA machine:<br>{0}:	The motor rotates counterclockwise (seen from the traction sheave), if the elevator travels upwards.<br>{1}:	The motor rotates clockwise (seen from the traction sheave), if the elevator travels upwards.<br>PMS230/PMS300/PMA machines will not run with values 2 or 3 unless motor phases are not wired correctly.<br><br>PMS420/SM (Zetatop) machine (motors that correspond to the standard EN 60034-8:2002):<br>{2}:	The motor rotates counterclockwise (seen from the traction sheave), if the elevator travels upwards.<br>{3}	The motor rotates clockwise (seen from the traction sheave),  if the elevator travels upwards.<br>PMS420/SM (Zetatop) machines will not run with values 2 or 3 unless motor phases are not wired correctly.<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Reeving Factor</h4></TD>
+<TD valign="top" class="Layout"><p>Type of suspension. ( 1:1 / 2:1 etc.)<br><br>1:  ROPING 1:1<br>2:  ROPING 2:1<br>4:  ROPING 4:1<br>6:  ROPING 6:1<br>8:  ROPING 8:1<br>(also known as 'Reeving Factor' / CADI uses the term 'Roping'.)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Encoder PPR</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the number of pulses per revolution for the motor encoder.  (magnetek function #10).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

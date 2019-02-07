@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1557 E_FC_OUTPUT_CONTACTORS_SUPERVISOR</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1557 E_FC_OUTPUT_CONTACTORS_SUPERVISOR</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>1500_1599_FREQUENCY_CONVERTER</em> error <em>E_FC_OUTPUT_CONTACTORS_SUPERVISOR</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>One or more drive main contactor does not operate as expected.<br>
+Note, this error message might be logged at certain drive types after opening of the safety circuit. In this case no real contactor error exists unless it is confirmed by subsequent logging of error 1556 E_FC_OUTPUT_CONTACTORS_SUPERVISOR_PERS.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>
+</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>
+</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Safety circuit has opened</td>
+<td valign="top">When the safety circuit has opened unexpectedly check elevator message log for previous reported messages in order to identify the root cause of the problem</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">The contactor feedback signal is faulty</td>
+<td valign="top">Check on the service interface menu (e.g. 723 or 30623) for the  state of the contactor feedback signal.<br>
+Check general wiring of contactor feedback signal (e.g. to DIN1 and DIN2 of drive)</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">A contactor is defective (e.g. contacts stuck together)</td>
+<td valign="top">Replace defective contactor (e.g. SFx, SHx)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

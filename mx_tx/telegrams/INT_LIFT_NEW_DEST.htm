@@ -1,0 +1,196 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>INT_LIFT&nbsp;(23)&nbsp;&nbsp;/&nbsp;&nbsp;NEW_DEST&nbsp;(7)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">data_length: 7<br>data[0] : floor_number<br>data[1] : call_type_1<br>data[2] : call_type_2<br>data[3] : door_action<br>data[4] : special door open time high byte<br>data[5] : special door open time low byte<br>data[6] : passanger_type<br><br>Description: A new destination was choosen<br>wait_special_time:<br>1: don't abort special door open time (data[4] and [5])<br>   when new dest at other floor occurs.<br>0: normal behaviour<br><br>Caution: has effect only if there is a simulated call (data[1], [2]).<br><br>Bit call_type_1:<br>0 Cabin_Call from VXT_SIDE_1<br>1 Simulated Call from VXT_SIDE_1<br>2 Up_Floor_Call from VXT_SIDE_1<br>3 Down_Floor_Call from VXT_SIDE_1<br><br>4 Cabin_Call from VXT_SIDE_20<br>5 Simulated Call from VXT_SIDE_20<br>6 Up_Floor_Call from VXT_SIDE_20<br>7 Down_Floor_Call from VXT_SIDE_20<br><br>Bit call_type_2:<br>0 Cabin_Call from VXT_SIDE_30<br>1 Simulated Call from VXT_SIDE_30<br>2 Up_Floor_Call from VXT_SIDE_30<br>3 Down_Floor_Call from VXT_SIDE_30<br><br>4 Cabin_Call from VXT_SIDE_40<br>5 Simulated Call from VXT_SIDE_40<br>6 Up_Floor_Call from VXT_SIDE_40<br>7 Down_Floor_Call from VXT_SIDE_40<br><br>door_action:           bit_0  door_action on side_1  (LSB)<br>                       bit_1  door_action on side_20<br><br>          0 = no door_action   bit_2  door_action on side_30<br>          1 = door_action      bit_3  door_action on side_40<br><br>door open time:<br>  0: standard door open time (like for standard calls).<br>  1..65534 (0xFFFE): special door open time, as specified in [0.1s].<br>  65535 (OxFFFF): keep door open.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">INT_LIFT</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">NEW_DEST</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">7</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[0]:</em></TD>
+<TD valign="top" class="Layout">T_FLOOR</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[1]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[2]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[3]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[4]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[5]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[6]:</em></TD>
+<TD valign="top" class="Layout">T_PASSENGER</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_FLOOR</h4></TD>
+<TD valign="top" WIDTH="80%">Floor Number [1..128]</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"></TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_VALUE</h4></TD>
+<TD valign="top" WIDTH="80%">This Type is used for general data description. <br>See description above for more details.<br>range: 0..255</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"></TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_PASSENGER</h4></TD>
+<TD valign="top" WIDTH="80%">0: undefined<br>1: VXT_NORMAL used for KS/KA/PI and M10<br>2: VXT_HANDICAPPED used for KS/KA/PI<br>3: VXT_HANDICAP_TRAVEL used only for M10<br>4: VXT_HANDICAP_EXITING used only for M10<br>5: VXT_HANDICAP_BOARDING used only for M10<br>6: VXT_HANDICAP_BOARD_EXIT used only for M10</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">NORMAL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">HANDICAPPED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">HANDICAP_TRAVEL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">HANDICAP_EXITING</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">5</TD>
+<TD valign="top" WIDTH="70%">HANDICAP_BOARDING</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">6</TD>
+<TD valign="top" WIDTH="70%">HANDICAP_BOARD_EXIT</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

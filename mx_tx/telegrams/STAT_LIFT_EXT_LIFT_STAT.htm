@@ -1,0 +1,346 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>STAT_LIFT&nbsp;(7)&nbsp;&nbsp;/&nbsp;&nbsp;EXT_LIFT_STAT&nbsp;(3)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">attr_1     : --<br>      attr_2     : --<br>      data_length: 10<br>      data[0]    : vxt_state          (lift available)<br>      data[1]    : vxt_drive_phase<br>      data[2]    : floor_number       (selector)<br>      data[3]    : floor_number       (cabin position)<br>      data[4]    : cabin_load         (in per cent)<br>      data[5]    : vxt_dir            (travel direction)<br><br>      data[6]    : vxt_door_state     (vxt_side_1)<br>      data[7]    : vxt_door_state     (vxt_side_20)<br>      data[8]    : vxt_door_state     (vxt_side_30)<br>      data[9]    : vxt_door_state     (vxt_side_40)<br><br>      Description: Lift status.  NO MORE USED<br><br>                   if one of the poss. door-info is not available<br>                   then the value of the corresponding data-<br>                   byte (data[6]..data[9]) is undefined. Take for<br><br>                   undefined the value from VXT_UNDEFINED !<br><br>              cabin_load:   Load range  | active load contact<br>                          -----------------------------------<br>                           00% bis  40% |     KL_M<br>                           41% bis 100% |     KL_V<br>                          101% bis 120% |     KL_X</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">STAT_LIFT</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">EXT_LIFT_STAT</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">10</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[0]:</em></TD>
+<TD valign="top" class="Layout">T_STATE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[1]:</em></TD>
+<TD valign="top" class="Layout">T_DRIVE_PHASE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[2]:</em></TD>
+<TD valign="top" class="Layout">T_FLOOR</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[3]:</em></TD>
+<TD valign="top" class="Layout">T_FLOOR</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[4]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[5]:</em></TD>
+<TD valign="top" class="Layout">T_DIR</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[6]:</em></TD>
+<TD valign="top" class="Layout">T_DOOR_STATE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[7]:</em></TD>
+<TD valign="top" class="Layout">T_DOOR_STATE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[8]:</em></TD>
+<TD valign="top" class="Layout">T_DOOR_STATE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[9]:</em></TD>
+<TD valign="top" class="Layout">T_DOOR_STATE</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_STATE</h4></TD>
+<TD valign="top" WIDTH="80%">State ON, OFF and Blinking:<br>possible states of outputs or inputs<br><br>and<br><br>Priority Ready and Fully Ready:<br>possible states of bus (LON1, LON2 and BIO) and <br>STATUS IO-Handler Telegrams<br><br><br></TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">0</TD>
+<TD valign="top" WIDTH="70%">STATE_0</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">STATE_1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">STATE_BLINKING</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">PRIORITY_READY</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">FULLY_READY</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">241</TD>
+<TD valign="top" WIDTH="70%">WILDCARD</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">255</TD>
+<TD valign="top" WIDTH="70%">UNDEFINED</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_DRIVE_PHASE</h4></TD>
+<TD valign="top" WIDTH="80%">Drive phase.</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">ACCELERATION</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">FULLSPEED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">BRAKING</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">STANDING</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">5</TD>
+<TD valign="top" WIDTH="70%">MG_SET_ON</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">6</TD>
+<TD valign="top" WIDTH="70%">MG_SET_OFF</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">7</TD>
+<TD valign="top" WIDTH="70%">SYNCH</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">8</TD>
+<TD valign="top" WIDTH="70%">LAST_DRIVE_PHASE</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_FLOOR</h4></TD>
+<TD valign="top" WIDTH="80%">Floor Number [1..128]</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"></TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_VALUE</h4></TD>
+<TD valign="top" WIDTH="80%">This Type is used for general data description. <br>See description above for more details.<br>range: 0..255</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"></TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_DIR</h4></TD>
+<TD valign="top" WIDTH="80%">Direction</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">0</TD>
+<TD valign="top" WIDTH="70%">BOTH</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">UP</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">DOWN</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">NONE</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_DOOR_STATE</h4></TD>
+<TD valign="top" WIDTH="80%">Door state</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">0</TD>
+<TD valign="top" WIDTH="70%">UNDEF_DOOR_STATE</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">CLOSED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">CLOSING</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">OPENED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">OPENING</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">5</TD>
+<TD valign="top" WIDTH="70%">STOPPED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">6</TD>
+<TD valign="top" WIDTH="70%">LOCKED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">7</TD>
+<TD valign="top" WIDTH="70%">UNLOCKED</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,138 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>INT_LON&nbsp;(49)&nbsp;&nbsp;/&nbsp;&nbsp;LON_DB_REQUEST&nbsp;(23)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">Description This Telegram is used to request the content of the masters LON DB information.<br>It is only used in a configuration with group bus architecture.<br><br>Attribute 1<br>0: REQUEST COMMAND<br>1: TRACE COMMAND<br>2: TRACE DATA<br><br>Attribute 2<br>(only used in case attribute 1 is set to Request Command)<br>0. Cancel Request<br>1. Request Critical IO<br>2. Request Uncritical IOs<br>3. Request all IOs<br>4. Request Next Sequence Number<br><br>The data lenght is either 1 or 5 bytes, depending on the command.<br><br><br>Request Commands:<br>=================<br><br>Cancel Request:<br>---------------<br>Cancels a previously send request.<br>Attribute 1:    GIO_DLD_RQ_REQUEST = 0<br>Attribute 2:    GIO_DLD_CMD_CANCEL = 0<br>Lift Id:        ID of master<br>Data length:    1<br>Data[0]:        Lift ID of slave which cancels a request<br><br>Request all critical LON nodes<br>------------------------------<br>Request all critical LON nodes from the master.<br>Attribute 1:    GIO_DLD_RQ_REQUEST = 0<br>Attribute 2:    GIO_DLD_CMD_CRITICAL = 1<br>Lift Id:        ID of master<br>Data length:    1<br>Data[0]:        Lift ID of slave which request the critical nodes<br><br>Request all uncritical LON node<br>-------------------------------<br>Request all uncritical LON nodes from the master.<br>Attribute 1:    GIO_DLD_RQ_REQUEST = 0<br>Attribute 2:    GIO_DLD_CMD_UNCRITICAL = 2<br>Lift Id:        ID of master<br>Data length:    1<br>Data[0]:        Lift ID of slave which request the uncritical nodes<br><br><br>Request all LON nodes<br>---------------------<br>Request all LON nodes from the master.<br>Attribute 1:    GIO_DLD_RQ_REQUEST = 0<br>Attribute 2:    GIO_DLD_CMD_ALL = 3<br>Lift Id:        ID of Master<br>Data length:    1<br>Data[0]:        Lift ID of slave which request the critical nodes<br><br>Request the next sequence number<br>--------------------------------<br>Request the next sequence number for the spontaneous LON node update information send by the master.<br>Attribute 1:    GIO_DLD_RQ_REQUEST = 0<br>Attribute 2:    GIO_DLD_CMD_CRITICAL = 1<br>Lift Id:        ID of Master<br>Data length:    1<br>Data[0]:        Lift ID of slave which request the next sequence number<br><br>Trace command and traces<br>========================<br><br>Trace mode telegram<br>-------------------<br>The following telegram switches the trace mode on or off, depending on the data byte at position 0. Due to the implementation the trace must be activated per lift, the broadcast telegram does not work.<br>Attribute 1:    GIO_DLD_RQTRACE_CMD = 1<br>Attribute 2:    0<br>Lift Id:        ID of lift, on which the trace mode must be changed.<br>Data length:    1<br>Data[0]:        0: Trace mode is switched off<br>                1: Trace mode is switched on<br><br>Trace data Telegram<br>-------------------<br>This telegram contains some data about the internal state of the LON database distribution logic. The following telegram switches the trace mode on or off, depending on the data byte at position 0.<br>Attribute 1:    GIO_DLD_RQTRACE_INFO = 2<br>Attribute 2:    0<br>Lift Id:        Lift ID of the sender<br>Data length:    5<br>+--+ Data[0]:   Master Slave state<br>|  |<br>|  +-- 0: Init<br>|  +-- 1: Lift is master<br>|  +-- 2: Lift is slave<br>|  +-- 3: Distribute LON DB service disabled (e.g. no TX system)<br>|<br>+--+ Data[1]:   Master state machine state.<br>|  |<br>|  +-- 0: Initial state<br>|  +-- 1: Stopped; the lift might be slave<br>|  +-- 2: Data initialization<br>|  +-- 3: Waiting for fully ready of the IO Handler<br>|  +-- 4: Master is fully ready; data transmission can be handled now.<br>|<br>+--+ Data[2]:   Slave State machine state<br>|  |<br>|  +-- 0: Initial state<br>|  +-- 1: Stopped ? lift might be master<br>|  +-- 2: Data initialization<br>|  +-- 3: Waiting for fully ready of the IO Handler<br>|  +-- 4: slave is fully ready; data transmission can be handled now.<br>|<br>+--+ Data[3]   Periodic data transmission timer running state.<br>|  |<br>|  +-- 0: Timer not running, no data transmission active.<br>|  +-- 1: Timer running, data transmission running.<br>|<br>+--+ Data[4]    Slave timer running state.<br>|  |<br>|  +-- 0: not running, slave state machine is inactive.<br>|  +-- 1: running, slave state machine is active.<br>|<br>+--+ Data[5]    Master timer running state.<br>   |<br>   +-- 0: not running, master state machine is inactive.<br>   +-- 1: running, master state machine is active.<br></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">INT_LON</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">LON_DB_REQUEST</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">6</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[0]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[1]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[2]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[3]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[4]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[5]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_VALUE</h4></TD>
+<TD valign="top" WIDTH="80%">This Type is used for general data description. <br>See description above for more details.<br>range: 0..255</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"></TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

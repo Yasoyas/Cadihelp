@@ -1,0 +1,182 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>INT_LON&nbsp;(49)&nbsp;&nbsp;/&nbsp;&nbsp;LON_DB_UPDATE&nbsp;(22)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">Description This Telegram is used to transmit the LON DB information from the master to the slave lifts.<br>It is only used in a configuration with group bus architecture.<br>It helps to decrease the dead time after a master switch.<br><br><br>Attribute 1:<br><br>Bit 0:<br>- 0 Spontaneous Update<br>- 1 Table Transmission<br>For spontaneous Transmissions:<br>Bit 1 to 3:<br>LON DB Commands<br>0 LON_DB_CMD_NONE: Not used<br>1 LON_DB_CMD_REMOVE_ALL_GROUP_CHANNELS_NODES: Not used<br>2 LON_DBADD_NODE: Used --> Attribute 1 Value: 4<br>3 LON_DB_UPDATE_NODE_TO_DEAD: Not used<br>4 CMD_LON_DB_UPDATE_NODE_TO_ALIVE: Not used<br>5 CMD_LON_DB_REMOVE_NODE: Used --> Attribute 1 Value: 10<br><br>For Table Transmission:<br>Bit 2:<br>0: For all telegrams except the first one.<br>1: First telegram after a request.<br><br>Attribute 2:<br>0. Not used<br>1. Data package Part 1<br>2. Data package Part 2<br>3. Transmission summary for table transmission<br>4. Next sequence number<br>5. Not used<br>6. Not used<br>7. Error<br><br>Data Bytes<br><br>The data bytes have different meanings depending on the Attribute 2 Value<br><br>Next sequence number<br>Data [0,1]: Next Sequence Number<br>Data package part 1<br>Data [0]: Node Type<br>Data [1,2]: Node ID<br>Data [3]: Subnet Address<br>Data [4]: Node Address<br>Data [5-10]: Neuron ID<br>Date[11-16] Location String<br><br>Data package part 2<br>Data [0-7]: ID String<br>Data [8]: HW Version<br>Data [9]: SW Version<br>Data [10]: Revision<br>Data [11]: Priority and Channel<br>Data [12]: Model<br>Data [13]: Version<br>Data[14]: Check sum<br>Data[15,16]: Sequnece number<br><br>Transmission Summary<br>Data[0,1] Next Sequence Number, for the updates<br>Data[2,3] Number of Critical records<br>Data[4,5] Number of Non Critical Records<br><br>Error<br>Data[0,1]: Error Number<br>Data[2]: Lift ID of lift causing the error.<br>Data[3]: Subsystem casing the error<br>- 0: Distribute LON DB<br>- 1: System Timer Unit<br>- 2: LON DB Sunsystem<br>- 3: VCOM Subsystem<br><br>Erro codes Distribute LON DB<br>-  0: No Error<br>-  1: Invalid Command<br>-  2: Invalid Request<br>-  3: Lift is Not Master<br>-  4: Master is not ready<br>-  5: Data package is out of order<br>-  6: Checksum Error<br>-  7: Sequnece error<br>-  8: Invalid Lift ID<br>-  9: No Data in VCOM Telegram<br>- 10: LON DB is inconsisten<br>- 11: Other Error<br><br>Error Codes System Timer Unit<br>- 0: STU_NO_ERROR<br>- 1: STU_TIMER_NOT_INITIALISED<br>- 2: STU_TIMER_LIST_FULL<br>- 3: STU_NO_ACTION_GIVEN<br>- 4: STU_TIMEOUT_TOO_LONG<br>- 5: STU_INVALID_HANDLE<br>- 6: STU_LAST_ERROR<br><br>Error codes LON<br>-  1: DB_NO_ERROR<br>-  2: DB_ADDRESS_EXIST<br>-  3: DB_ADDRESS_NOT_FOUND<br>-  4: DB_ADDRESS_NOT_VALID<br>-  5: DB_INDEX_NOT_VALID<br>-  6: DB_NO_FREE_NODE_FOUND<br>-  7: BD_NODE_UNCONF<br>-  8: DB_NODE_DEAD<br>-  9: DB_NODE_NOT_FOUND<br>- 10: DB_CORRUPT<br>- 11: DB_EMPTY<br>- 12: DB_FULL<br>- 13: DB_ERR_NO_ACCESS<br>- 14: DB_ERR_IS_MASTER<br>- 15: DB_ERR_NONEXISTENT<br>- 16: DB_ERR_INCONSISTENT<br>- 17: DB_ERR_DUPLICATED<br><br>Error Codes VCOM<br>- Not used in the current implementation.<br></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">INT_LON</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">LON_DB_UPDATE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">17</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[0]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[1]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[2]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[3]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[4]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[5]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[6]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[7]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[8]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[9]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[10]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[11]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[12]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[13]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[14]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[15]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[16]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_VALUE</h4></TD>
+<TD valign="top" WIDTH="80%">This Type is used for general data description. <br>See description above for more details.<br>range: 0..255</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"></TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

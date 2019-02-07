@@ -1,0 +1,226 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Cost Calculation</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Cost Calculation</em> of the parameter group <em>General</em> in subsystem <em>Group Control</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Max.Number of Trips</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum number of trip before aborting when calculating the cost of serving floor calls.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Bonus for Allocated</h4></TD>
+<TD valign="top" class="Layout"><p>Cost substracted to the real cost for the lift that has the corresponding floor call already allocated to it. The maximum value is checked by software and corrected if bigger than P_STR_FFA_DOOR_OPEN_TIME / 2 + P_STR_FFA_DOOR_MOVING_TIME.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Out Cost Factor</h4></TD>
+<TD valign="top" class="Layout"><p>Multiplication factor for the outside costs (costs due to car position, drive and door status ,...). It allows increasing the importance of outside costs regarding inside costs. A value of 1 means same importance.<br><br>Hint: by setting this parameter to 5 (maximum value) the influence of the internal costs is very limited. This way the effect of elevators bypassing floor calls sometimes, which is typically observed on elevators with glass doors, can be reduced.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Inter Floor Time</h4></TD>
+<TD valign="top" class="Layout"><p>Time necessary in fullspeed to cover a standard floor distance (4 m). Used by the group algorithm.<br>Formula: (4 / speed) * 10<br><br>Example:<br>1   m/s -> 40 (4 s)<br>1.6 m/s -> 25 (2.5 s)  (4 / 1.6 * 10)<br>2   m/s -> 20 (2 s)<br>3.5 m/s -> 11 (1.1 s)<br>4   m/s -> 10 (1 s)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Door Moving Time</h4></TD>
+<TD valign="top" class="Layout"><p>Time necessary to open or closed a door. Used by the cost calculation. There is only one value for the whole group.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Idle Time</h4></TD>
+<TD valign="top" class="Layout"><p>Time interval when the cost calculation task is suspended. It allows other tasks with lower priority to execute. If this value is increased the cost calculation will be slower.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Time Lost per Stop</h4></TD>
+<TD valign="top" class="Layout"><p>Time lost for an intermediary stop in comparison with a direct trip. Used by the group algorithm. Only one average value for the whole group.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Door Open Time</h4></TD>
+<TD valign="top" class="Layout"><p>Door open time used by the cost calculation. There is only one value for the whole group.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Blind Zone Extra Cost</h4></TD>
+<TD valign="top" class="Layout"><p>It defines the extra cost per meter of blind zone added to the cost of a call when crossing a blind zone.<br>Remark: set this vlaue to zero to disable the blind zone extra cost feature.<br>See also parameter P_STR_BLIND_ZONE_MIN_LENGTH.<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Blind Zone min.Length</h4></TD>
+<TD valign="top" class="Layout"><p>It defines the minimum length in meter between two floors necessary to be considered as a blind zone. A blind zone will affect the cost (malus) of serving a call if the car needs to cross it to serve this call. <br>Remark: if this value is higher than the biggest floor distance for this commission, this extra cost feature is disabled (no blind zone => no malus).<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Floor Distances</h4></TD>
+<TD valign="top" class="Layout"><p>List containing distances between consecutive floors (first value: distance between floor 1 and 2). Floor values are group related.<br>Used by the group algorithm.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example: 
+
+Disposition:                 Parameter
+                         +---------+-----------+
+ floor#  L1   Distance   | INDEX   | DISTANCE  |
+       +---+             +=========+===========+
+    4  |   |             |  1      |   10      | floor 1-&gt;2
+       +---+  4          +---------+-----------+
+    3  |   |             |  2      |    4      |       2-&gt;3
+       +---+  4          +---------+-----------+
+    2  |   |             |  3      |    4      |       3-&gt;4
+       +---+             +---------+-----------+
+       | X |  10         +---+ 
+    1  |   | 
+       +---+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Door Reopen Mode</h4></TD>
+<TD valign="top" class="Layout"><p>Door reversing mode when a floor call is registered on the floor where a car is currently standing. If the doors of the car standing at the floor corresponding to the new floor call are closing, it allows to choose if the floor call will be served immediately by this car (in that case the door will reopen) or not (doors continues to close).<br><br> 1: doors are allowed to reopen (default).<br> 2: doors are not allowed to reopen => call allocated to another lift or not immediately served.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,211 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Door Times Side 2</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Door Times Side 2</em> of the parameter group <em>Side 2</em> in subsystem <em>Doors</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Min. Door Open Time</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the minimum time the door remains open after reversing or normal opening. The door close button (DT-S) is disabled during this time.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Hold Open Exiting</h4></TD>
+<TD valign="top" class="Layout"><p>Normal door open time when a car call is served. For side 20 only. The door open time can be reduced by pressing the door close button.<br><br>old parameter name: P_STR_DC_DELAY_20<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Extra open time Floor_Car calls</h4></TD>
+<TD valign="top" class="Layout"><p>Additional door open time for entrance side 20 when a car call (DC) and a floor call (DE) are served concurrently. The parameter value is added to the normal door open time defined by the parameter for the door open time for side 20 when a landing call is served ('hold open boarding').</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Reopen Delay</h4></TD>
+<TD valign="top" class="Layout"><p>Delay time after door drove from one direction until it drives it the other. The delay time is normally 100ms (0.1s). A higher delay time reduces noise and mechanical forces (is important for sensitive door types to increase their life), but increases also the door times (flight time). The influence of this parameter can be observed when the door reverses (reopening).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Final Timer</h4></TD>
+<TD valign="top" class="Layout"><p>Specifies the time to wait after a door close command before activating the final timer (door nudging) if the door does not close. The final timer function disables the reversing devices, activates the buzzer in the car and closes the door with reduced speed (the closing force limiter (KSKB) remains active). <br>The final timer function is deactivated by setting the parameter to 0.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Hold Open Boarding</h4></TD>
+<TD valign="top" class="Layout"><p>Normal door open time (side 20) when a landing call is served (boarding). The door open time can be set individually for each landing. (The actual time the door remains open be reduced by pressing the door close button.)<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example: 
++------+-----------+
+| FLOOR| OPEN_TIME |
++======+===========+
+|  1   |    40     |
++------+-----------+
+|  2   |   100     |
++------+-----------+
+|  3   |    40     |
++------+-----------+
+|  4   |    40     |
++------+-----------+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Door lock timeout</h4></TD>
+<TD valign="top" class="Layout"><p>Automatic doors: Defines the door unlock timeout. If the door is locked at standstill the closing signal (VST-S) remains activated until the timeout has occured or a block door command has been received.<br><br>Manual operated doors: Defines the door unlock timeout. If the door is locked (VRV) at standstill the locking device remains energized until the timeout has occured or a block door command has been received.<br><br>Values:<br>0:	delay time for unlock timeout is 30 sec. (Default value)<br>1 - 36000:	delay time for unlock timeout 0.1 ... 3600 Sek.<br>> 36001:   no unlock timeout (door remains locked)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Time VST-O off</h4></TD>
+<TD valign="top" class="Layout"><p>Delay time to switch the output VST-O off after the door has reached the open position (KET-O active)<br><br>0: no delay time for VST-O off (default value)<br>1 to 31999	: delay time for VST-O off in 100ms (0.1 ... 3199 sec.)<br>32000: VST-O remains active when door is open. (until door close command)<br>65535: Load default value (-> RC software will set parameter to 0)<br><br>Zeit Verzögerung für Abschaltung von VST-O<br>Bei einigen Türantrieben wird verlagt, dass VST-O am Türantrieb anliegt, solange die Tür ein Öffnungskommando hat. Typisch für eine solche Anwendung ist z.B. die 'Tormax' Tür, welche automatisch über eine Federkraft schliesst.<br><br>(Die Steuerung erfolgt über folgendend RC Parameter:<br>P_KAB_RESERVE_5    =    P_KAB_KEEP_VSTO_TIME)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Min. Door Open Time Hall Call (ADA)</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the minimum time the door remains open when serving a landing (hall) call on handicapped elevators. The door close button (DT-S) is disabled during this time. Used for elevators which have to fulfill the ADA requirements for handicapped people. See ADA accessibility guidelines (ADAAG) chapter 4.10.7<br><br>4.10.7* Door and Signal Timing for Hall Calls. <br>The minimum acceptable time from notification that a car is answering a call until the doors of that car start to close shall be calculated from the following equation:<br>   T = D/(1.5 ft/s)    or    T = D/(445 mm/s) <br><br>where T total time in seconds and D distance (in feet or millimeters) from a point in the lobby or corridor 60 in (1525 mm) directly in front of the farthest call button controlling that car to the centerline of its hoistway door (see Fig. 21). For cars with in-car lanterns, T begins when the lantern is visible from the vicinity of hall call buttons and an audible signal is sounded. The minimum acceptable notification time shall be 5 seconds. <br><br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Max Door Travel Time</h4></TD>
+<TD valign="top" class="Layout"><p>This parameter defines the maximum time the software waits for the door end contacts to be reached. This means if the door is moving from close to open, then the door open contact should be active within maximum this time. This parameter need not be set essentially in the PCT, nor does it need to be present. In case of a 0 or this parameter not existing in the PCT, the core software takes a default of 15secs. Any non-zero value present in the PCT, would be taken as is for this monitoring.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Back Step Time</h4></TD>
+<TD valign="top" class="Layout"><p>This parameter defines the time for which the door should continue reversing in case KSKB is activated when the lift is outside the door zone and the door is closing. <br>1 unit equals 100ms</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

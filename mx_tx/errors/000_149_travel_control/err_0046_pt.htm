@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0046 ErrFloorTop</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0046 ErrFloorTop</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>ErrFloorTop</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The number of floors found during the learn trip does not match the number of floors calculated from the configuration data (PCT). The number of floor is derived from the 'SELECTOR_TRANSLATION_TABLE' in the PCT. The learn trip will be aborted if values do not match.<br>
+Comments: Some types of floor fins have an additional hole to attach a safety cord from fin to fin. Make sure these holes are not in the track of the photocell PHS or are covered reliably so that the photocell will not detect a wrong floor this way. For troubleshooting verify the number of floors and the related floor distances with CADI (shaft image). Possibly there were more floors found than configured and some floor distances may be too small (e.g. 100mm)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Incorrect parameters</td>
+<td valign="top">Check parameter values in table 'SELECTOR_TRANSLATION_TABLE' with CADI (number of entries in table is equal to number of floors for elevator).</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Problem with floor detection</td>
+<td valign="top">Use CADI to examine the shaft image for number of floors found during learn trip.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">PHS device not mounted properly</td>
+<td valign="top">Check the horizontal distance between PHS photocell and the fin.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0138 Brake Not Set</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0138 Brake Not Set</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>Brake Not Set</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>After a normal (automatic) trip the brake does not close as expected (status of KB contacts shows open brake) after the 'brake off' command timeout following the 'SB off' command. In this critical situation the inverter remains powered and keeps the car on the floor. The door(s) are closed immediately and remain closed (door open button is disabled). With closed doors the inverter is switched off and the elevator is blocked permanently with fatal error. Before opening the doors manually to release the passengers a check must be done to confirm that the brake applies sufficient mechanical torque to hold the car.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>ndef</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Brake does not close due to mechanical obstruction</td>
+<td valign="top">Check brake for correct function (sufficient mechanical torque applied to machine)</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Problem with wiring of KB contacts to control</td>
+<td valign="top">Check wiring and operation of KB contacts</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Faulty input circuit for KB contacts (both !)</td>
+<td valign="top">Check input status of KB contacts. Replace pcb if necessary</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

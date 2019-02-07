@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Option Box</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Option Box</em> of the parameter group <em>Terminals</em> in subsystem <em>Miconic 10</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Destination Call Buttons</h4></TD>
+<TD valign="top" class="Layout"><p>Definition of the function assigned to the dedicated call button(s) on M10 Terminals with option box.<br>The additional buttons on the M10 option box are used to give destination calls for specific destinations. The parameter defines the destination floor value (in group floor notation 1..x) for these dedicated buttons. A maximum of eight dedicated buttons on a terminal is foreseen. The definition of the dedicated buttons with this parameter is used on all terminals but is overwritten by the programming of the button on the M10 terminal. (Refer also to local programming procedures of the dedicated buttons on the M10 terminal.)<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example:
+ ¨69                     * PCT_GP_M10_DEVICES
+  {01 [02 02 0005] * P_M10D_CALL_DISPLAY_DUR
+  ...
+  ¨0B [06 02 01 03] * P_M10D_DEDICATED_BUTTON 1 floor 3
+  ¨0B [06 02 02 07] * P_M10D_DEDICATED_BUTTON 2 floor 7
+  ¨0B [06 02 03 08] * P_M10D_DEDICATED_BUTTON 3 floor 8
+  ¨0B [06 02 04 0B] * P_M10D_DEDICATED_BUTTON 4 floor 11
+  ¨0B [06 02 05 10] * P_M10D_DEDICATED_BUTTON 5 floor 16
+  ¨0B [06 02 06 06] * P_M10D_DEDICATED_BUTTON 6 default value 6
+  ¨0B [06 02 07 07] * P_M10D_DEDICATED_BUTTON 7 default value 7
+  ¨0B [06 02 08 08] * P_M10D_DEDICATED_BUTTON 8 default value 8
+  }
+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

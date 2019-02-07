@@ -1,0 +1,718 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/map_1_0.dtd">
+
+<map version="1.0">
+  <mapID target="parameter_main"     url="default_en.htm"/>
+  <mapID target="GroupControl" url="Group Control/default_en.htm"/>
+  <mapID target="GroupControlDisplay" url="Group Control/Display/default_en.htm"/>
+  <mapID target="SpecialDisplay_15_1" url="Group Control/Display/SpecialDisplay_15_1_en.htm"/>
+  <mapID target="param_270" url="Group Control/Display/SpecialDisplay_15_1_en.htm#param_270"/>
+  <mapID target="param_276" url="Group Control/Display/SpecialDisplay_15_1_en.htm#param_276"/>
+  <mapID target="param_277" url="Group Control/Display/SpecialDisplay_15_1_en.htm#param_277"/>
+  <mapID target="DisplayGeneral_15_1" url="Group Control/Display/DisplayGeneral_15_1_en.htm"/>
+  <mapID target="param_271" url="Group Control/Display/DisplayGeneral_15_1_en.htm#param_271"/>
+  <mapID target="param_275" url="Group Control/Display/DisplayGeneral_15_1_en.htm#param_275"/>
+  <mapID target="param_551" url="Group Control/Display/DisplayGeneral_15_1_en.htm#param_551"/>
+  <mapID target="param_1271" url="Group Control/Display/DisplayGeneral_15_1_en.htm#param_1271"/>
+  <mapID target="GroupControlGeneral" url="Group Control/General/default_en.htm"/>
+  <mapID target="GroupGeneral_1_1" url="Group Control/General/GroupGeneral_1_1_en.htm"/>
+  <mapID target="param_550" url="Group Control/General/GroupGeneral_1_1_en.htm#param_550"/>
+  <mapID target="param_552" url="Group Control/General/GroupGeneral_1_1_en.htm#param_552"/>
+  <mapID target="param_553" url="Group Control/General/GroupGeneral_1_1_en.htm#param_553"/>
+  <mapID target="param_554" url="Group Control/General/GroupGeneral_1_1_en.htm#param_554"/>
+  <mapID target="param_555" url="Group Control/General/GroupGeneral_1_1_en.htm#param_555"/>
+  <mapID target="Building_1_1" url="Group Control/General/Building_1_1_en.htm"/>
+  <mapID target="param_1035" url="Group Control/General/Building_1_1_en.htm#param_1035"/>
+  <mapID target="param_1036" url="Group Control/General/Building_1_1_en.htm#param_1036"/>
+  <mapID target="CostCalculation_1_1" url="Group Control/General/CostCalculation_1_1_en.htm"/>
+  <mapID target="param_406" url="Group Control/General/CostCalculation_1_1_en.htm#param_406"/>
+  <mapID target="param_444" url="Group Control/General/CostCalculation_1_1_en.htm#param_444"/>
+  <mapID target="param_445" url="Group Control/General/CostCalculation_1_1_en.htm#param_445"/>
+  <mapID target="param_446" url="Group Control/General/CostCalculation_1_1_en.htm#param_446"/>
+  <mapID target="param_447" url="Group Control/General/CostCalculation_1_1_en.htm#param_447"/>
+  <mapID target="param_448" url="Group Control/General/CostCalculation_1_1_en.htm#param_448"/>
+  <mapID target="param_449" url="Group Control/General/CostCalculation_1_1_en.htm#param_449"/>
+  <mapID target="param_450" url="Group Control/General/CostCalculation_1_1_en.htm#param_450"/>
+  <mapID target="param_451" url="Group Control/General/CostCalculation_1_1_en.htm#param_451"/>
+  <mapID target="param_452" url="Group Control/General/CostCalculation_1_1_en.htm#param_452"/>
+  <mapID target="param_594" url="Group Control/General/CostCalculation_1_1_en.htm#param_594"/>
+  <mapID target="param_595" url="Group Control/General/CostCalculation_1_1_en.htm#param_595"/>
+  <mapID target="CostCalculationM10_1_1" url="Group Control/General/CostCalculationM10_1_1_en.htm"/>
+  <mapID target="param_322" url="Group Control/General/CostCalculationM10_1_1_en.htm#param_322"/>
+  <mapID target="param_323" url="Group Control/General/CostCalculationM10_1_1_en.htm#param_323"/>
+  <mapID target="param_329" url="Group Control/General/CostCalculationM10_1_1_en.htm#param_329"/>
+  <mapID target="param_333" url="Group Control/General/CostCalculationM10_1_1_en.htm#param_333"/>
+  <mapID target="param_336" url="Group Control/General/CostCalculationM10_1_1_en.htm#param_336"/>
+  <mapID target="param_337" url="Group Control/General/CostCalculationM10_1_1_en.htm#param_337"/>
+  <mapID target="param_339" url="Group Control/General/CostCalculationM10_1_1_en.htm#param_339"/>
+  <mapID target="param_340" url="Group Control/General/CostCalculationM10_1_1_en.htm#param_340"/>
+  <mapID target="param_341" url="Group Control/General/CostCalculationM10_1_1_en.htm#param_341"/>
+  <mapID target="param_412" url="Group Control/General/CostCalculationM10_1_1_en.htm#param_412"/>
+  <mapID target="param_571" url="Group Control/General/CostCalculationM10_1_1_en.htm#param_571"/>
+  <mapID target="ServedFloors_1_1" url="Group Control/General/ServedFloors_1_1_en.htm"/>
+  <mapID target="param_556" url="Group Control/General/ServedFloors_1_1_en.htm#param_556"/>
+  <mapID target="param_557" url="Group Control/General/ServedFloors_1_1_en.htm#param_557"/>
+  <mapID target="GroupControlParking" url="Group Control/Parking/default_en.htm"/>
+  <mapID target="ParkingGeneral_11_1" url="Group Control/Parking/ParkingGeneral_11_1_en.htm"/>
+  <mapID target="param_318" url="Group Control/Parking/ParkingGeneral_11_1_en.htm#param_318"/>
+  <mapID target="param_423" url="Group Control/Parking/ParkingGeneral_11_1_en.htm#param_423"/>
+  <mapID target="param_424" url="Group Control/Parking/ParkingGeneral_11_1_en.htm#param_424"/>
+  <mapID target="param_530" url="Group Control/Parking/ParkingGeneral_11_1_en.htm#param_530"/>
+  <mapID target="PredefinitionParking_11_1" url="Group Control/Parking/PredefinitionParking_11_1_en.htm"/>
+  <mapID target="param_425" url="Group Control/Parking/PredefinitionParking_11_1_en.htm#param_425"/>
+  <mapID target="param_426" url="Group Control/Parking/PredefinitionParking_11_1_en.htm#param_426"/>
+  <mapID target="param_427" url="Group Control/Parking/PredefinitionParking_11_1_en.htm#param_427"/>
+  <mapID target="param_428" url="Group Control/Parking/PredefinitionParking_11_1_en.htm#param_428"/>
+  <mapID target="param_429" url="Group Control/Parking/PredefinitionParking_11_1_en.htm#param_429"/>
+  <mapID target="param_430" url="Group Control/Parking/PredefinitionParking_11_1_en.htm#param_430"/>
+  <mapID target="param_431" url="Group Control/Parking/PredefinitionParking_11_1_en.htm#param_431"/>
+  <mapID target="param_432" url="Group Control/Parking/PredefinitionParking_11_1_en.htm#param_432"/>
+  <mapID target="param_433" url="Group Control/Parking/PredefinitionParking_11_1_en.htm#param_433"/>
+  <mapID target="param_434" url="Group Control/Parking/PredefinitionParking_11_1_en.htm#param_434"/>
+  <mapID target="StatisticalParking_11_1" url="Group Control/Parking/StatisticalParking_11_1_en.htm"/>
+  <mapID target="param_520" url="Group Control/Parking/StatisticalParking_11_1_en.htm#param_520"/>
+  <mapID target="param_521" url="Group Control/Parking/StatisticalParking_11_1_en.htm#param_521"/>
+  <mapID target="param_549" url="Group Control/Parking/StatisticalParking_11_1_en.htm#param_549"/>
+  <mapID target="GroupControlPeakControl" url="Group Control/Peak Control/default_en.htm"/>
+  <mapID target="PeakControlGeneral_2_1" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm"/>
+  <mapID target="param_438" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_438"/>
+  <mapID target="param_439" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_439"/>
+  <mapID target="param_440" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_440"/>
+  <mapID target="param_476" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_476"/>
+  <mapID target="param_477" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_477"/>
+  <mapID target="param_483" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_483"/>
+  <mapID target="param_543" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_543"/>
+  <mapID target="param_544" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_544"/>
+  <mapID target="param_545" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_545"/>
+  <mapID target="param_546" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_546"/>
+  <mapID target="param_547" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_547"/>
+  <mapID target="param_548" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_548"/>
+  <mapID target="param_611" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_611"/>
+  <mapID target="param_612" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_612"/>
+  <mapID target="param_613" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_613"/>
+  <mapID target="param_614" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_614"/>
+  <mapID target="param_615" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_615"/>
+  <mapID target="param_616" url="Group Control/Peak Control/PeakControlGeneral_2_1_en.htm#param_616"/>
+  <mapID target="Templates_2_1" url="Group Control/Peak Control/Templates_2_1_en.htm"/>
+  <mapID target="param_522" url="Group Control/Peak Control/Templates_2_1_en.htm#param_522"/>
+  <mapID target="param_523" url="Group Control/Peak Control/Templates_2_1_en.htm#param_523"/>
+  <mapID target="param_524" url="Group Control/Peak Control/Templates_2_1_en.htm#param_524"/>
+  <mapID target="param_525" url="Group Control/Peak Control/Templates_2_1_en.htm#param_525"/>
+  <mapID target="param_526" url="Group Control/Peak Control/Templates_2_1_en.htm#param_526"/>
+  <mapID target="GroupControlServices" url="Group Control/Services/default_en.htm"/>
+  <mapID target="FiremansControl_5_1" url="Group Control/Services/FiremansControl_5_1_en.htm"/>
+  <mapID target="param_606" url="Group Control/Services/FiremansControl_5_1_en.htm#param_606"/>
+  <mapID target="GroupControlSubgroupControl" url="Group Control/Subgroup Control/default_en.htm"/>
+  <mapID target="Specification_3_1" url="Group Control/Subgroup Control/Specification_3_1_en.htm"/>
+  <mapID target="param_515" url="Group Control/Subgroup Control/Specification_3_1_en.htm#param_515"/>
+  <mapID target="param_516" url="Group Control/Subgroup Control/Specification_3_1_en.htm#param_516"/>
+  <mapID target="param_517" url="Group Control/Subgroup Control/Specification_3_1_en.htm#param_517"/>
+  <mapID target="param_519" url="Group Control/Subgroup Control/Specification_3_1_en.htm#param_519"/>
+  <mapID target="param_619" url="Group Control/Subgroup Control/Specification_3_1_en.htm#param_619"/>
+  <mapID target="Signalisation_3_1" url="Group Control/Subgroup Control/Signalisation_3_1_en.htm"/>
+  <mapID target="param_587" url="Group Control/Subgroup Control/Signalisation_3_1_en.htm#param_587"/>
+  <mapID target="RiserReallocation_3_1" url="Group Control/Subgroup Control/RiserReallocation_3_1_en.htm"/>
+  <mapID target="param_518" url="Group Control/Subgroup Control/RiserReallocation_3_1_en.htm#param_518"/>
+  <mapID target="LiftControl" url="Lift Control/default_en.htm"/>
+  <mapID target="LiftControlGeneral" url="Lift Control/General/default_en.htm"/>
+  <mapID target="LiftGeneral_1_2" url="Lift Control/General/LiftGeneral_1_2_en.htm"/>
+  <mapID target="param_311" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_311"/>
+  <mapID target="param_312" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_312"/>
+  <mapID target="param_313" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_313"/>
+  <mapID target="param_314" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_314"/>
+  <mapID target="param_315" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_315"/>
+  <mapID target="param_317" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_317"/>
+  <mapID target="param_417" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_417"/>
+  <mapID target="param_618" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_618"/>
+  <mapID target="param_1210" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_1210"/>
+  <mapID target="param_1211" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_1211"/>
+  <mapID target="param_1214" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_1214"/>
+  <mapID target="param_1215" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_1215"/>
+  <mapID target="param_1217" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_1217"/>
+  <mapID target="param_1258" url="Lift Control/General/LiftGeneral_1_2_en.htm#param_1258"/>
+  <mapID target="HandicappedMode_1_2" url="Lift Control/General/HandicappedMode_1_2_en.htm"/>
+  <mapID target="param_535" url="Lift Control/General/HandicappedMode_1_2_en.htm#param_535"/>
+  <mapID target="param_1056" url="Lift Control/General/HandicappedMode_1_2_en.htm#param_1056"/>
+  <mapID target="param_1248" url="Lift Control/General/HandicappedMode_1_2_en.htm#param_1248"/>
+  <mapID target="param_1249" url="Lift Control/General/HandicappedMode_1_2_en.htm#param_1249"/>
+  <mapID target="param_1250" url="Lift Control/General/HandicappedMode_1_2_en.htm#param_1250"/>
+  <mapID target="param_1251" url="Lift Control/General/HandicappedMode_1_2_en.htm#param_1251"/>
+  <mapID target="TimeoutsLift_1_2" url="Lift Control/General/TimeoutsLift_1_2_en.htm"/>
+  <mapID target="param_415" url="Lift Control/General/TimeoutsLift_1_2_en.htm#param_415"/>
+  <mapID target="param_474" url="Lift Control/General/TimeoutsLift_1_2_en.htm#param_474"/>
+  <mapID target="param_527" url="Lift Control/General/TimeoutsLift_1_2_en.htm#param_527"/>
+  <mapID target="param_528" url="Lift Control/General/TimeoutsLift_1_2_en.htm#param_528"/>
+  <mapID target="param_529" url="Lift Control/General/TimeoutsLift_1_2_en.htm#param_529"/>
+  <mapID target="param_534" url="Lift Control/General/TimeoutsLift_1_2_en.htm#param_534"/>
+  <mapID target="param_538" url="Lift Control/General/TimeoutsLift_1_2_en.htm#param_538"/>
+  <mapID target="param_539" url="Lift Control/General/TimeoutsLift_1_2_en.htm#param_539"/>
+  <mapID target="param_540" url="Lift Control/General/TimeoutsLift_1_2_en.htm#param_540"/>
+  <mapID target="param_541" url="Lift Control/General/TimeoutsLift_1_2_en.htm#param_541"/>
+  <mapID target="param_542" url="Lift Control/General/TimeoutsLift_1_2_en.htm#param_542"/>
+  <mapID target="param_1273" url="Lift Control/General/TimeoutsLift_1_2_en.htm#param_1273"/>
+  <mapID target="LiftControlGong" url="Lift Control/Gong/default_en.htm"/>
+  <mapID target="Melodies_4_2" url="Lift Control/Gong/Melodies_4_2_en.htm"/>
+  <mapID target="param_280" url="Lift Control/Gong/Melodies_4_2_en.htm#param_280"/>
+  <mapID target="param_281" url="Lift Control/Gong/Melodies_4_2_en.htm#param_281"/>
+  <mapID target="param_282" url="Lift Control/Gong/Melodies_4_2_en.htm#param_282"/>
+  <mapID target="GonginCar_4_2" url="Lift Control/Gong/GonginCar_4_2_en.htm"/>
+  <mapID target="param_279" url="Lift Control/Gong/GonginCar_4_2_en.htm#param_279"/>
+  <mapID target="param_453" url="Lift Control/Gong/GonginCar_4_2_en.htm#param_453"/>
+  <mapID target="param_454" url="Lift Control/Gong/GonginCar_4_2_en.htm#param_454"/>
+  <mapID target="param_1120" url="Lift Control/Gong/GonginCar_4_2_en.htm#param_1120"/>
+  <mapID target="param_1208" url="Lift Control/Gong/GonginCar_4_2_en.htm#param_1208"/>
+  <mapID target="GongonFloor_4_2" url="Lift Control/Gong/GongonFloor_4_2_en.htm"/>
+  <mapID target="param_278" url="Lift Control/Gong/GongonFloor_4_2_en.htm#param_278"/>
+  <mapID target="param_1058" url="Lift Control/Gong/GongonFloor_4_2_en.htm#param_1058"/>
+  <mapID target="LiftControlServices" url="Lift Control/Services/default_en.htm"/>
+  <mapID target="BankinghouseControl_5_2" url="Lift Control/Services/BankinghouseControl_5_2_en.htm"/>
+  <mapID target="param_409" url="Lift Control/Services/BankinghouseControl_5_2_en.htm#param_409"/>
+  <mapID target="param_410" url="Lift Control/Services/BankinghouseControl_5_2_en.htm#param_410"/>
+  <mapID target="param_411" url="Lift Control/Services/BankinghouseControl_5_2_en.htm#param_411"/>
+  <mapID target="BuildingSway_5_2" url="Lift Control/Services/BuildingSway_5_2_en.htm"/>
+  <mapID target="param_1262" url="Lift Control/Services/BuildingSway_5_2_en.htm#param_1262"/>
+  <mapID target="param_1263" url="Lift Control/Services/BuildingSway_5_2_en.htm#param_1263"/>
+  <mapID target="param_1264" url="Lift Control/Services/BuildingSway_5_2_en.htm#param_1264"/>
+  <mapID target="param_1265" url="Lift Control/Services/BuildingSway_5_2_en.htm#param_1265"/>
+  <mapID target="param_1266" url="Lift Control/Services/BuildingSway_5_2_en.htm#param_1266"/>
+  <mapID target="param_1267" url="Lift Control/Services/BuildingSway_5_2_en.htm#param_1267"/>
+  <mapID target="param_1268" url="Lift Control/Services/BuildingSway_5_2_en.htm#param_1268"/>
+  <mapID target="EmergencyStop_5_2" url="Lift Control/Services/EmergencyStop_5_2_en.htm"/>
+  <mapID target="param_1209" url="Lift Control/Services/EmergencyStop_5_2_en.htm#param_1209"/>
+  <mapID target="Earthquake_5_2" url="Lift Control/Services/Earthquake_5_2_en.htm"/>
+  <mapID target="param_416" url="Lift Control/Services/Earthquake_5_2_en.htm#param_416"/>
+  <mapID target="ServiceGeneral_5_2" url="Lift Control/Services/ServiceGeneral_5_2_en.htm"/>
+  <mapID target="param_593" url="Lift Control/Services/ServiceGeneral_5_2_en.htm#param_593"/>
+  <mapID target="CarSelectionControl_5_2" url="Lift Control/Services/CarSelectionControl_5_2_en.htm"/>
+  <mapID target="param_473" url="Lift Control/Services/CarSelectionControl_5_2_en.htm#param_473"/>
+  <mapID target="CardReader_5_2" url="Lift Control/Services/CardReader_5_2_en.htm"/>
+  <mapID target="param_269" url="Lift Control/Services/CardReader_5_2_en.htm#param_269"/>
+  <mapID target="param_413" url="Lift Control/Services/CardReader_5_2_en.htm#param_413"/>
+  <mapID target="param_414" url="Lift Control/Services/CardReader_5_2_en.htm#param_414"/>
+  <mapID target="param_573" url="Lift Control/Services/CardReader_5_2_en.htm#param_573"/>
+  <mapID target="DPF_DH_DF_JRVP_JRV_5_2" url="Lift Control/Services/DPF_DH_DF_JRVP_JRV_5_2_en.htm"/>
+  <mapID target="param_420" url="Lift Control/Services/DPF_DH_DF_JRVP_JRV_5_2_en.htm#param_420"/>
+  <mapID target="param_435" url="Lift Control/Services/DPF_DH_DF_JRVP_JRV_5_2_en.htm#param_435"/>
+  <mapID target="param_437" url="Lift Control/Services/DPF_DH_DF_JRVP_JRV_5_2_en.htm#param_437"/>
+  <mapID target="param_536" url="Lift Control/Services/DPF_DH_DF_JRVP_JRV_5_2_en.htm#param_536"/>
+  <mapID target="param_1212" url="Lift Control/Services/DPF_DH_DF_JRVP_JRV_5_2_en.htm#param_1212"/>
+  <mapID target="param_1213" url="Lift Control/Services/DPF_DH_DF_JRVP_JRV_5_2_en.htm#param_1213"/>
+  <mapID target="EmergencyPower_5_2" url="Lift Control/Services/EmergencyPower_5_2_en.htm"/>
+  <mapID target="param_464" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_464"/>
+  <mapID target="param_465" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_465"/>
+  <mapID target="param_466" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_466"/>
+  <mapID target="param_467" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_467"/>
+  <mapID target="param_489" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_489"/>
+  <mapID target="param_490" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_490"/>
+  <mapID target="param_491" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_491"/>
+  <mapID target="param_492" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_492"/>
+  <mapID target="param_494" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_494"/>
+  <mapID target="param_495" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_495"/>
+  <mapID target="param_496" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_496"/>
+  <mapID target="param_497" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_497"/>
+  <mapID target="param_498" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_498"/>
+  <mapID target="param_499" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_499"/>
+  <mapID target="param_500" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_500"/>
+  <mapID target="param_501" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_501"/>
+  <mapID target="param_502" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_502"/>
+  <mapID target="param_503" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_503"/>
+  <mapID target="param_562" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_562"/>
+  <mapID target="param_1256" url="Lift Control/Services/EmergencyPower_5_2_en.htm#param_1256"/>
+  <mapID target="EnforcedStop_5_2" url="Lift Control/Services/EnforcedStop_5_2_en.htm"/>
+  <mapID target="param_468" url="Lift Control/Services/EnforcedStop_5_2_en.htm#param_468"/>
+  <mapID target="param_469" url="Lift Control/Services/EnforcedStop_5_2_en.htm#param_469"/>
+  <mapID target="param_470" url="Lift Control/Services/EnforcedStop_5_2_en.htm#param_470"/>
+  <mapID target="param_471" url="Lift Control/Services/EnforcedStop_5_2_en.htm#param_471"/>
+  <mapID target="param_472" url="Lift Control/Services/EnforcedStop_5_2_en.htm#param_472"/>
+  <mapID target="FiremansControl_5_2" url="Lift Control/Services/FiremansControl_5_2_en.htm"/>
+  <mapID target="param_457" url="Lift Control/Services/FiremansControl_5_2_en.htm#param_457"/>
+  <mapID target="param_458" url="Lift Control/Services/FiremansControl_5_2_en.htm#param_458"/>
+  <mapID target="param_459" url="Lift Control/Services/FiremansControl_5_2_en.htm#param_459"/>
+  <mapID target="param_460" url="Lift Control/Services/FiremansControl_5_2_en.htm#param_460"/>
+  <mapID target="param_461" url="Lift Control/Services/FiremansControl_5_2_en.htm#param_461"/>
+  <mapID target="param_462" url="Lift Control/Services/FiremansControl_5_2_en.htm#param_462"/>
+  <mapID target="param_463" url="Lift Control/Services/FiremansControl_5_2_en.htm#param_463"/>
+  <mapID target="param_493" url="Lift Control/Services/FiremansControl_5_2_en.htm#param_493"/>
+  <mapID target="param_562" url="Lift Control/Services/FiremansControl_5_2_en.htm#param_562"/>
+  <mapID target="OutofServices_5_2" url="Lift Control/Services/OutofServices_5_2_en.htm"/>
+  <mapID target="param_455" url="Lift Control/Services/OutofServices_5_2_en.htm#param_455"/>
+  <mapID target="param_456" url="Lift Control/Services/OutofServices_5_2_en.htm#param_456"/>
+  <mapID target="RampTrip_5_2" url="Lift Control/Services/RampTrip_5_2_en.htm"/>
+  <mapID target="param_487" url="Lift Control/Services/RampTrip_5_2_en.htm#param_487"/>
+  <mapID target="param_488" url="Lift Control/Services/RampTrip_5_2_en.htm#param_488"/>
+  <mapID target="ServicesReserve_5_2" url="Lift Control/Services/ServicesReserve_5_2_en.htm"/>
+  <mapID target="param_505" url="Lift Control/Services/ServicesReserve_5_2_en.htm#param_505"/>
+  <mapID target="param_506" url="Lift Control/Services/ServicesReserve_5_2_en.htm#param_506"/>
+  <mapID target="param_507" url="Lift Control/Services/ServicesReserve_5_2_en.htm#param_507"/>
+  <mapID target="param_508" url="Lift Control/Services/ServicesReserve_5_2_en.htm#param_508"/>
+  <mapID target="param_509" url="Lift Control/Services/ServicesReserve_5_2_en.htm#param_509"/>
+  <mapID target="param_510" url="Lift Control/Services/ServicesReserve_5_2_en.htm#param_510"/>
+  <mapID target="param_511" url="Lift Control/Services/ServicesReserve_5_2_en.htm#param_511"/>
+  <mapID target="param_512" url="Lift Control/Services/ServicesReserve_5_2_en.htm#param_512"/>
+  <mapID target="param_513" url="Lift Control/Services/ServicesReserve_5_2_en.htm#param_513"/>
+  <mapID target="param_514" url="Lift Control/Services/ServicesReserve_5_2_en.htm#param_514"/>
+  <mapID target="EmergencyControl_5_2" url="Lift Control/Services/EmergencyControl_5_2_en.htm"/>
+  <mapID target="param_437" url="Lift Control/Services/EmergencyControl_5_2_en.htm#param_437"/>
+  <mapID target="param_484" url="Lift Control/Services/EmergencyControl_5_2_en.htm#param_484"/>
+  <mapID target="param_485" url="Lift Control/Services/EmergencyControl_5_2_en.htm#param_485"/>
+  <mapID target="param_486" url="Lift Control/Services/EmergencyControl_5_2_en.htm#param_486"/>
+  <mapID target="Sabbath_5_2" url="Lift Control/Services/Sabbath_5_2_en.htm"/>
+  <mapID target="param_1116" url="Lift Control/Services/Sabbath_5_2_en.htm#param_1116"/>
+  <mapID target="param_1117" url="Lift Control/Services/Sabbath_5_2_en.htm#param_1117"/>
+  <mapID target="param_1118" url="Lift Control/Services/Sabbath_5_2_en.htm#param_1118"/>
+  <mapID target="Others_5_2" url="Lift Control/Services/Others_5_2_en.htm"/>
+  <mapID target="param_407" url="Lift Control/Services/Others_5_2_en.htm#param_407"/>
+  <mapID target="param_1272" url="Lift Control/Services/Others_5_2_en.htm#param_1272"/>
+  <mapID target="param_1288" url="Lift Control/Services/Others_5_2_en.htm#param_1288"/>
+  <mapID target="LiftControlVoiceSettings" url="Lift Control/Voice Settings/default_en.htm"/>
+  <mapID target="Voice_31_2" url="Lift Control/Voice Settings/Voice_31_2_en.htm"/>
+  <mapID target="param_1054" url="Lift Control/Voice Settings/Voice_31_2_en.htm#param_1054"/>
+  <mapID target="param_1055" url="Lift Control/Voice Settings/Voice_31_2_en.htm#param_1055"/>
+  <mapID target="param_1085" url="Lift Control/Voice Settings/Voice_31_2_en.htm#param_1085"/>
+  <mapID target="param_1086" url="Lift Control/Voice Settings/Voice_31_2_en.htm#param_1086"/>
+  <mapID target="param_1122" url="Lift Control/Voice Settings/Voice_31_2_en.htm#param_1122"/>
+  <mapID target="param_1123" url="Lift Control/Voice Settings/Voice_31_2_en.htm#param_1123"/>
+  <mapID target="Drive" url="Drive/default_en.htm"/>
+  <mapID target="DriveMotorControl" url="Drive/Motor Control/default_en.htm"/>
+  <mapID target="Inverter_24_3" url="Drive/Motor Control/Inverter_24_3_en.htm"/>
+  <mapID target="param_14" url="Drive/Motor Control/Inverter_24_3_en.htm#param_14"/>
+  <mapID target="param_24" url="Drive/Motor Control/Inverter_24_3_en.htm#param_24"/>
+  <mapID target="param_26" url="Drive/Motor Control/Inverter_24_3_en.htm#param_26"/>
+  <mapID target="param_69" url="Drive/Motor Control/Inverter_24_3_en.htm#param_69"/>
+  <mapID target="param_70" url="Drive/Motor Control/Inverter_24_3_en.htm#param_70"/>
+  <mapID target="param_71" url="Drive/Motor Control/Inverter_24_3_en.htm#param_71"/>
+  <mapID target="param_72" url="Drive/Motor Control/Inverter_24_3_en.htm#param_72"/>
+  <mapID target="param_73" url="Drive/Motor Control/Inverter_24_3_en.htm#param_73"/>
+  <mapID target="param_74" url="Drive/Motor Control/Inverter_24_3_en.htm#param_74"/>
+  <mapID target="param_80" url="Drive/Motor Control/Inverter_24_3_en.htm#param_80"/>
+  <mapID target="param_83" url="Drive/Motor Control/Inverter_24_3_en.htm#param_83"/>
+  <mapID target="param_104" url="Drive/Motor Control/Inverter_24_3_en.htm#param_104"/>
+  <mapID target="param_154" url="Drive/Motor Control/Inverter_24_3_en.htm#param_154"/>
+  <mapID target="param_155" url="Drive/Motor Control/Inverter_24_3_en.htm#param_155"/>
+  <mapID target="param_209" url="Drive/Motor Control/Inverter_24_3_en.htm#param_209"/>
+  <mapID target="param_210" url="Drive/Motor Control/Inverter_24_3_en.htm#param_210"/>
+  <mapID target="param_211" url="Drive/Motor Control/Inverter_24_3_en.htm#param_211"/>
+  <mapID target="param_212" url="Drive/Motor Control/Inverter_24_3_en.htm#param_212"/>
+  <mapID target="param_213" url="Drive/Motor Control/Inverter_24_3_en.htm#param_213"/>
+  <mapID target="param_220" url="Drive/Motor Control/Inverter_24_3_en.htm#param_220"/>
+  <mapID target="param_221" url="Drive/Motor Control/Inverter_24_3_en.htm#param_221"/>
+  <mapID target="param_235" url="Drive/Motor Control/Inverter_24_3_en.htm#param_235"/>
+  <mapID target="param_236" url="Drive/Motor Control/Inverter_24_3_en.htm#param_236"/>
+  <mapID target="Hoistway_24_3" url="Drive/Motor Control/Hoistway_24_3_en.htm"/>
+  <mapID target="param_25" url="Drive/Motor Control/Hoistway_24_3_en.htm#param_25"/>
+  <mapID target="param_105" url="Drive/Motor Control/Hoistway_24_3_en.htm#param_105"/>
+  <mapID target="param_132" url="Drive/Motor Control/Hoistway_24_3_en.htm#param_132"/>
+  <mapID target="param_135" url="Drive/Motor Control/Hoistway_24_3_en.htm#param_135"/>
+  <mapID target="param_185" url="Drive/Motor Control/Hoistway_24_3_en.htm#param_185"/>
+  <mapID target="param_195" url="Drive/Motor Control/Hoistway_24_3_en.htm#param_195"/>
+  <mapID target="param_1072" url="Drive/Motor Control/Hoistway_24_3_en.htm#param_1072"/>
+  <mapID target="param_1073" url="Drive/Motor Control/Hoistway_24_3_en.htm#param_1073"/>
+  <mapID target="param_1076" url="Drive/Motor Control/Hoistway_24_3_en.htm#param_1076"/>
+  <mapID target="Traction_24_3" url="Drive/Motor Control/Traction_24_3_en.htm"/>
+  <mapID target="param_41" url="Drive/Motor Control/Traction_24_3_en.htm#param_41"/>
+  <mapID target="param_53" url="Drive/Motor Control/Traction_24_3_en.htm#param_53"/>
+  <mapID target="param_58" url="Drive/Motor Control/Traction_24_3_en.htm#param_58"/>
+  <mapID target="param_59" url="Drive/Motor Control/Traction_24_3_en.htm#param_59"/>
+  <mapID target="param_76" url="Drive/Motor Control/Traction_24_3_en.htm#param_76"/>
+  <mapID target="param_77" url="Drive/Motor Control/Traction_24_3_en.htm#param_77"/>
+  <mapID target="param_151" url="Drive/Motor Control/Traction_24_3_en.htm#param_151"/>
+  <mapID target="param_228" url="Drive/Motor Control/Traction_24_3_en.htm#param_228"/>
+  <mapID target="param_1060" url="Drive/Motor Control/Traction_24_3_en.htm#param_1060"/>
+  <mapID target="param_1061" url="Drive/Motor Control/Traction_24_3_en.htm#param_1061"/>
+  <mapID target="Rope_24_3" url="Drive/Motor Control/Rope_24_3_en.htm"/>
+  <mapID target="param_1062" url="Drive/Motor Control/Rope_24_3_en.htm#param_1062"/>
+  <mapID target="param_1063" url="Drive/Motor Control/Rope_24_3_en.htm#param_1063"/>
+  <mapID target="param_1064" url="Drive/Motor Control/Rope_24_3_en.htm#param_1064"/>
+  <mapID target="param_1065" url="Drive/Motor Control/Rope_24_3_en.htm#param_1065"/>
+  <mapID target="param_1066" url="Drive/Motor Control/Rope_24_3_en.htm#param_1066"/>
+  <mapID target="param_1067" url="Drive/Motor Control/Rope_24_3_en.htm#param_1067"/>
+  <mapID target="param_1068" url="Drive/Motor Control/Rope_24_3_en.htm#param_1068"/>
+  <mapID target="param_1069" url="Drive/Motor Control/Rope_24_3_en.htm#param_1069"/>
+  <mapID target="param_1070" url="Drive/Motor Control/Rope_24_3_en.htm#param_1070"/>
+  <mapID target="param_1071" url="Drive/Motor Control/Rope_24_3_en.htm#param_1071"/>
+  <mapID target="param_1074" url="Drive/Motor Control/Rope_24_3_en.htm#param_1074"/>
+  <mapID target="param_1075" url="Drive/Motor Control/Rope_24_3_en.htm#param_1075"/>
+  <mapID target="DMC_24_3" url="Drive/Motor Control/DMC_24_3_en.htm"/>
+  <mapID target="param_1078" url="Drive/Motor Control/DMC_24_3_en.htm#param_1078"/>
+  <mapID target="param_1079" url="Drive/Motor Control/DMC_24_3_en.htm#param_1079"/>
+  <mapID target="param_1080" url="Drive/Motor Control/DMC_24_3_en.htm#param_1080"/>
+  <mapID target="param_1081" url="Drive/Motor Control/DMC_24_3_en.htm#param_1081"/>
+  <mapID target="param_1082" url="Drive/Motor Control/DMC_24_3_en.htm#param_1082"/>
+  <mapID target="param_1083" url="Drive/Motor Control/DMC_24_3_en.htm#param_1083"/>
+  <mapID target="param_1084" url="Drive/Motor Control/DMC_24_3_en.htm#param_1084"/>
+  <mapID target="Motor(Asynchron_Synchron_DC)_24_3" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm"/>
+  <mapID target="param_54" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm#param_54"/>
+  <mapID target="param_88" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm#param_88"/>
+  <mapID target="param_91" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm#param_91"/>
+  <mapID target="param_128" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm#param_128"/>
+  <mapID target="param_129" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm#param_129"/>
+  <mapID target="param_133" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm#param_133"/>
+  <mapID target="param_152" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm#param_152"/>
+  <mapID target="param_186" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm#param_186"/>
+  <mapID target="param_227" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm#param_227"/>
+  <mapID target="param_242" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm#param_242"/>
+  <mapID target="param_262" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm#param_262"/>
+  <mapID target="param_263" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm#param_263"/>
+  <mapID target="param_264" url="Drive/Motor Control/Motor(Asynchron_Synchron_DC)_24_3_en.htm#param_264"/>
+  <mapID target="Supervisor_24_3" url="Drive/Motor Control/Supervisor_24_3_en.htm"/>
+  <mapID target="param_28" url="Drive/Motor Control/Supervisor_24_3_en.htm#param_28"/>
+  <mapID target="param_81" url="Drive/Motor Control/Supervisor_24_3_en.htm#param_81"/>
+  <mapID target="param_86" url="Drive/Motor Control/Supervisor_24_3_en.htm#param_86"/>
+  <mapID target="param_121" url="Drive/Motor Control/Supervisor_24_3_en.htm#param_121"/>
+  <mapID target="param_139" url="Drive/Motor Control/Supervisor_24_3_en.htm#param_139"/>
+  <mapID target="param_140" url="Drive/Motor Control/Supervisor_24_3_en.htm#param_140"/>
+  <mapID target="param_231" url="Drive/Motor Control/Supervisor_24_3_en.htm#param_231"/>
+  <mapID target="param_233" url="Drive/Motor Control/Supervisor_24_3_en.htm#param_233"/>
+  <mapID target="param_234" url="Drive/Motor Control/Supervisor_24_3_en.htm#param_234"/>
+  <mapID target="param_238" url="Drive/Motor Control/Supervisor_24_3_en.htm#param_238"/>
+  <mapID target="Controller_24_3" url="Drive/Motor Control/Controller_24_3_en.htm"/>
+  <mapID target="param_12" url="Drive/Motor Control/Controller_24_3_en.htm#param_12"/>
+  <mapID target="param_35" url="Drive/Motor Control/Controller_24_3_en.htm#param_35"/>
+  <mapID target="param_147" url="Drive/Motor Control/Controller_24_3_en.htm#param_147"/>
+  <mapID target="param_148" url="Drive/Motor Control/Controller_24_3_en.htm#param_148"/>
+  <mapID target="param_149" url="Drive/Motor Control/Controller_24_3_en.htm#param_149"/>
+  <mapID target="param_200" url="Drive/Motor Control/Controller_24_3_en.htm#param_200"/>
+  <mapID target="param_206" url="Drive/Motor Control/Controller_24_3_en.htm#param_206"/>
+  <mapID target="param_222" url="Drive/Motor Control/Controller_24_3_en.htm#param_222"/>
+  <mapID target="param_265" url="Drive/Motor Control/Controller_24_3_en.htm#param_265"/>
+  <mapID target="Reserve_24_3" url="Drive/Motor Control/Reserve_24_3_en.htm"/>
+  <mapID target="param_116" url="Drive/Motor Control/Reserve_24_3_en.htm#param_116"/>
+  <mapID target="param_117" url="Drive/Motor Control/Reserve_24_3_en.htm#param_117"/>
+  <mapID target="param_118" url="Drive/Motor Control/Reserve_24_3_en.htm#param_118"/>
+  <mapID target="param_119" url="Drive/Motor Control/Reserve_24_3_en.htm#param_119"/>
+  <mapID target="param_120" url="Drive/Motor Control/Reserve_24_3_en.htm#param_120"/>
+  <mapID target="Magnetek-Motor_24_3" url="Drive/Motor Control/Magnetek-Motor_24_3_en.htm"/>
+  <mapID target="param_122" url="Drive/Motor Control/Magnetek-Motor_24_3_en.htm#param_122"/>
+  <mapID target="param_123" url="Drive/Motor Control/Magnetek-Motor_24_3_en.htm#param_123"/>
+  <mapID target="param_157" url="Drive/Motor Control/Magnetek-Motor_24_3_en.htm#param_157"/>
+  <mapID target="param_158" url="Drive/Motor Control/Magnetek-Motor_24_3_en.htm#param_158"/>
+  <mapID target="param_159" url="Drive/Motor Control/Magnetek-Motor_24_3_en.htm#param_159"/>
+  <mapID target="param_160" url="Drive/Motor Control/Magnetek-Motor_24_3_en.htm#param_160"/>
+  <mapID target="Magnetek-MotorField_24_3" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm"/>
+  <mapID target="param_46" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm#param_46"/>
+  <mapID target="param_47" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm#param_47"/>
+  <mapID target="param_48" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm#param_48"/>
+  <mapID target="param_49" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm#param_49"/>
+  <mapID target="param_55" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm#param_55"/>
+  <mapID target="param_56" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm#param_56"/>
+  <mapID target="param_124" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm#param_124"/>
+  <mapID target="param_125" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm#param_125"/>
+  <mapID target="param_187" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm#param_187"/>
+  <mapID target="param_205" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm#param_205"/>
+  <mapID target="param_1218" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm#param_1218"/>
+  <mapID target="param_1219" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm#param_1219"/>
+  <mapID target="param_1220" url="Drive/Motor Control/Magnetek-MotorField_24_3_en.htm#param_1220"/>
+  <mapID target="Magnetek-Elevator_24_3" url="Drive/Motor Control/Magnetek-Elevator_24_3_en.htm"/>
+  <mapID target="param_7" url="Drive/Motor Control/Magnetek-Elevator_24_3_en.htm#param_7"/>
+  <mapID target="param_9" url="Drive/Motor Control/Magnetek-Elevator_24_3_en.htm#param_9"/>
+  <mapID target="param_10" url="Drive/Motor Control/Magnetek-Elevator_24_3_en.htm#param_10"/>
+  <mapID target="param_40" url="Drive/Motor Control/Magnetek-Elevator_24_3_en.htm#param_40"/>
+  <mapID target="param_60" url="Drive/Motor Control/Magnetek-Elevator_24_3_en.htm#param_60"/>
+  <mapID target="param_106" url="Drive/Motor Control/Magnetek-Elevator_24_3_en.htm#param_106"/>
+  <mapID target="param_130" url="Drive/Motor Control/Magnetek-Elevator_24_3_en.htm#param_130"/>
+  <mapID target="param_134" url="Drive/Motor Control/Magnetek-Elevator_24_3_en.htm#param_134"/>
+  <mapID target="param_161" url="Drive/Motor Control/Magnetek-Elevator_24_3_en.htm#param_161"/>
+  <mapID target="param_218" url="Drive/Motor Control/Magnetek-Elevator_24_3_en.htm#param_218"/>
+  <mapID target="param_219" url="Drive/Motor Control/Magnetek-Elevator_24_3_en.htm#param_219"/>
+  <mapID target="Magnetek-Regulation_24_3" url="Drive/Motor Control/Magnetek-Regulation_24_3_en.htm"/>
+  <mapID target="param_23" url="Drive/Motor Control/Magnetek-Regulation_24_3_en.htm#param_23"/>
+  <mapID target="param_182" url="Drive/Motor Control/Magnetek-Regulation_24_3_en.htm#param_182"/>
+  <mapID target="param_204" url="Drive/Motor Control/Magnetek-Regulation_24_3_en.htm#param_204"/>
+  <mapID target="param_208" url="Drive/Motor Control/Magnetek-Regulation_24_3_en.htm#param_208"/>
+  <mapID target="param_216" url="Drive/Motor Control/Magnetek-Regulation_24_3_en.htm#param_216"/>
+  <mapID target="param_243" url="Drive/Motor Control/Magnetek-Regulation_24_3_en.htm#param_243"/>
+  <mapID target="Magnetek-Supervisor_24_3" url="Drive/Motor Control/Magnetek-Supervisor_24_3_en.htm"/>
+  <mapID target="param_22" url="Drive/Motor Control/Magnetek-Supervisor_24_3_en.htm#param_22"/>
+  <mapID target="param_68" url="Drive/Motor Control/Magnetek-Supervisor_24_3_en.htm#param_68"/>
+  <mapID target="param_111" url="Drive/Motor Control/Magnetek-Supervisor_24_3_en.htm#param_111"/>
+  <mapID target="param_141" url="Drive/Motor Control/Magnetek-Supervisor_24_3_en.htm#param_141"/>
+  <mapID target="param_142" url="Drive/Motor Control/Magnetek-Supervisor_24_3_en.htm#param_142"/>
+  <mapID target="param_143" url="Drive/Motor Control/Magnetek-Supervisor_24_3_en.htm#param_143"/>
+  <mapID target="param_215" url="Drive/Motor Control/Magnetek-Supervisor_24_3_en.htm#param_215"/>
+  <mapID target="param_251" url="Drive/Motor Control/Magnetek-Supervisor_24_3_en.htm#param_251"/>
+  <mapID target="DriveSettings" url="Drive/Settings/default_en.htm"/>
+  <mapID target="Settings_22_3" url="Drive/Settings/Settings_22_3_en.htm"/>
+  <mapID target="param_15" url="Drive/Settings/Settings_22_3_en.htm#param_15"/>
+  <mapID target="param_20" url="Drive/Settings/Settings_22_3_en.htm#param_20"/>
+  <mapID target="param_40" url="Drive/Settings/Settings_22_3_en.htm#param_40"/>
+  <mapID target="param_41" url="Drive/Settings/Settings_22_3_en.htm#param_41"/>
+  <mapID target="param_42" url="Drive/Settings/Settings_22_3_en.htm#param_42"/>
+  <mapID target="param_58" url="Drive/Settings/Settings_22_3_en.htm#param_58"/>
+  <mapID target="param_59" url="Drive/Settings/Settings_22_3_en.htm#param_59"/>
+  <mapID target="param_76" url="Drive/Settings/Settings_22_3_en.htm#param_76"/>
+  <mapID target="param_77" url="Drive/Settings/Settings_22_3_en.htm#param_77"/>
+  <mapID target="param_79" url="Drive/Settings/Settings_22_3_en.htm#param_79"/>
+  <mapID target="param_80" url="Drive/Settings/Settings_22_3_en.htm#param_80"/>
+  <mapID target="param_105" url="Drive/Settings/Settings_22_3_en.htm#param_105"/>
+  <mapID target="param_128" url="Drive/Settings/Settings_22_3_en.htm#param_128"/>
+  <mapID target="param_132" url="Drive/Settings/Settings_22_3_en.htm#param_132"/>
+  <mapID target="param_135" url="Drive/Settings/Settings_22_3_en.htm#param_135"/>
+  <mapID target="param_151" url="Drive/Settings/Settings_22_3_en.htm#param_151"/>
+  <mapID target="param_185" url="Drive/Settings/Settings_22_3_en.htm#param_185"/>
+  <mapID target="param_194" url="Drive/Settings/Settings_22_3_en.htm#param_194"/>
+  <mapID target="param_217" url="Drive/Settings/Settings_22_3_en.htm#param_217"/>
+  <mapID target="param_228" url="Drive/Settings/Settings_22_3_en.htm#param_228"/>
+  <mapID target="DMCSettings_22_3" url="Drive/Settings/DMCSettings_22_3_en.htm"/>
+  <mapID target="param_1062" url="Drive/Settings/DMCSettings_22_3_en.htm#param_1062"/>
+  <mapID target="param_1063" url="Drive/Settings/DMCSettings_22_3_en.htm#param_1063"/>
+  <mapID target="param_1072" url="Drive/Settings/DMCSettings_22_3_en.htm#param_1072"/>
+  <mapID target="param_1074" url="Drive/Settings/DMCSettings_22_3_en.htm#param_1074"/>
+  <mapID target="param_1075" url="Drive/Settings/DMCSettings_22_3_en.htm#param_1075"/>
+  <mapID target="param_1077" url="Drive/Settings/DMCSettings_22_3_en.htm#param_1077"/>
+  <mapID target="DriveTravelControl" url="Drive/Travel Control/default_en.htm"/>
+  <mapID target="Brake_23_3" url="Drive/Travel Control/Brake_23_3_en.htm"/>
+  <mapID target="param_15" url="Drive/Travel Control/Brake_23_3_en.htm#param_15"/>
+  <mapID target="param_16" url="Drive/Travel Control/Brake_23_3_en.htm#param_16"/>
+  <mapID target="param_17" url="Drive/Travel Control/Brake_23_3_en.htm#param_17"/>
+  <mapID target="param_18" url="Drive/Travel Control/Brake_23_3_en.htm#param_18"/>
+  <mapID target="param_36" url="Drive/Travel Control/Brake_23_3_en.htm#param_36"/>
+  <mapID target="param_37" url="Drive/Travel Control/Brake_23_3_en.htm#param_37"/>
+  <mapID target="param_61" url="Drive/Travel Control/Brake_23_3_en.htm#param_61"/>
+  <mapID target="param_62" url="Drive/Travel Control/Brake_23_3_en.htm#param_62"/>
+  <mapID target="param_63" url="Drive/Travel Control/Brake_23_3_en.htm#param_63"/>
+  <mapID target="param_64" url="Drive/Travel Control/Brake_23_3_en.htm#param_64"/>
+  <mapID target="param_100" url="Drive/Travel Control/Brake_23_3_en.htm#param_100"/>
+  <mapID target="param_137" url="Drive/Travel Control/Brake_23_3_en.htm#param_137"/>
+  <mapID target="param_138" url="Drive/Travel Control/Brake_23_3_en.htm#param_138"/>
+  <mapID target="param_191" url="Drive/Travel Control/Brake_23_3_en.htm#param_191"/>
+  <mapID target="Accel._Decel._Jerk_23_3" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm"/>
+  <mapID target="param_1" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm#param_1"/>
+  <mapID target="param_2" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm#param_2"/>
+  <mapID target="param_3" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm#param_3"/>
+  <mapID target="param_4" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm#param_4"/>
+  <mapID target="param_5" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm#param_5"/>
+  <mapID target="param_8" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm#param_8"/>
+  <mapID target="param_93" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm#param_93"/>
+  <mapID target="param_94" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm#param_94"/>
+  <mapID target="param_95" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm#param_95"/>
+  <mapID target="param_96" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm#param_96"/>
+  <mapID target="param_97" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm#param_97"/>
+  <mapID target="param_98" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm#param_98"/>
+  <mapID target="param_1109" url="Drive/Travel Control/Accel._Decel._Jerk_23_3_en.htm#param_1109"/>
+  <mapID target="Simulation_23_3" url="Drive/Travel Control/Simulation_23_3_en.htm"/>
+  <mapID target="param_196" url="Drive/Travel Control/Simulation_23_3_en.htm#param_196"/>
+  <mapID target="param_197" url="Drive/Travel Control/Simulation_23_3_en.htm#param_197"/>
+  <mapID target="param_198" url="Drive/Travel Control/Simulation_23_3_en.htm#param_198"/>
+  <mapID target="DC-Drive_23_3" url="Drive/Travel Control/DC-Drive_23_3_en.htm"/>
+  <mapID target="param_50" url="Drive/Travel Control/DC-Drive_23_3_en.htm#param_50"/>
+  <mapID target="param_51" url="Drive/Travel Control/DC-Drive_23_3_en.htm#param_51"/>
+  <mapID target="param_632" url="Drive/Travel Control/DC-Drive_23_3_en.htm#param_632"/>
+  <mapID target="General_23_3" url="Drive/Travel Control/General_23_3_en.htm"/>
+  <mapID target="param_34" url="Drive/Travel Control/General_23_3_en.htm#param_34"/>
+  <mapID target="param_78" url="Drive/Travel Control/General_23_3_en.htm#param_78"/>
+  <mapID target="param_115" url="Drive/Travel Control/General_23_3_en.htm#param_115"/>
+  <mapID target="param_188" url="Drive/Travel Control/General_23_3_en.htm#param_188"/>
+  <mapID target="param_241" url="Drive/Travel Control/General_23_3_en.htm#param_241"/>
+  <mapID target="Regulation_23_3" url="Drive/Travel Control/Regulation_23_3_en.htm"/>
+  <mapID target="param_6" url="Drive/Travel Control/Regulation_23_3_en.htm#param_6"/>
+  <mapID target="param_29" url="Drive/Travel Control/Regulation_23_3_en.htm#param_29"/>
+  <mapID target="param_32" url="Drive/Travel Control/Regulation_23_3_en.htm#param_32"/>
+  <mapID target="param_66" url="Drive/Travel Control/Regulation_23_3_en.htm#param_66"/>
+  <mapID target="param_67" url="Drive/Travel Control/Regulation_23_3_en.htm#param_67"/>
+  <mapID target="param_101" url="Drive/Travel Control/Regulation_23_3_en.htm#param_101"/>
+  <mapID target="param_144" url="Drive/Travel Control/Regulation_23_3_en.htm#param_144"/>
+  <mapID target="param_145" url="Drive/Travel Control/Regulation_23_3_en.htm#param_145"/>
+  <mapID target="param_146" url="Drive/Travel Control/Regulation_23_3_en.htm#param_146"/>
+  <mapID target="param_153" url="Drive/Travel Control/Regulation_23_3_en.htm#param_153"/>
+  <mapID target="param_171" url="Drive/Travel Control/Regulation_23_3_en.htm#param_171"/>
+  <mapID target="param_176" url="Drive/Travel Control/Regulation_23_3_en.htm#param_176"/>
+  <mapID target="param_183" url="Drive/Travel Control/Regulation_23_3_en.htm#param_183"/>
+  <mapID target="param_223" url="Drive/Travel Control/Regulation_23_3_en.htm#param_223"/>
+  <mapID target="param_225" url="Drive/Travel Control/Regulation_23_3_en.htm#param_225"/>
+  <mapID target="param_260" url="Drive/Travel Control/Regulation_23_3_en.htm#param_260"/>
+  <mapID target="param_261" url="Drive/Travel Control/Regulation_23_3_en.htm#param_261"/>
+  <mapID target="param_633" url="Drive/Travel Control/Regulation_23_3_en.htm#param_633"/>
+  <mapID target="param_1254" url="Drive/Travel Control/Regulation_23_3_en.htm#param_1254"/>
+  <mapID target="Speed_23_3" url="Drive/Travel Control/Speed_23_3_en.htm"/>
+  <mapID target="param_244" url="Drive/Travel Control/Speed_23_3_en.htm#param_244"/>
+  <mapID target="param_245" url="Drive/Travel Control/Speed_23_3_en.htm#param_245"/>
+  <mapID target="param_249" url="Drive/Travel Control/Speed_23_3_en.htm#param_249"/>
+  <mapID target="param_250" url="Drive/Travel Control/Speed_23_3_en.htm#param_250"/>
+  <mapID target="param_252" url="Drive/Travel Control/Speed_23_3_en.htm#param_252"/>
+  <mapID target="param_253" url="Drive/Travel Control/Speed_23_3_en.htm#param_253"/>
+  <mapID target="param_1260" url="Drive/Travel Control/Speed_23_3_en.htm#param_1260"/>
+  <mapID target="param_1261" url="Drive/Travel Control/Speed_23_3_en.htm#param_1261"/>
+  <mapID target="param_1269" url="Drive/Travel Control/Speed_23_3_en.htm#param_1269"/>
+  <mapID target="param_1275" url="Drive/Travel Control/Speed_23_3_en.htm#param_1275"/>
+  <mapID target="Shaft_23_3" url="Drive/Travel Control/Shaft_23_3_en.htm"/>
+  <mapID target="param_25" url="Drive/Travel Control/Shaft_23_3_en.htm#param_25"/>
+  <mapID target="param_30" url="Drive/Travel Control/Shaft_23_3_en.htm#param_30"/>
+  <mapID target="param_31" url="Drive/Travel Control/Shaft_23_3_en.htm#param_31"/>
+  <mapID target="param_52" url="Drive/Travel Control/Shaft_23_3_en.htm#param_52"/>
+  <mapID target="param_57" url="Drive/Travel Control/Shaft_23_3_en.htm#param_57"/>
+  <mapID target="param_102" url="Drive/Travel Control/Shaft_23_3_en.htm#param_102"/>
+  <mapID target="param_103" url="Drive/Travel Control/Shaft_23_3_en.htm#param_103"/>
+  <mapID target="param_113" url="Drive/Travel Control/Shaft_23_3_en.htm#param_113"/>
+  <mapID target="param_126" url="Drive/Travel Control/Shaft_23_3_en.htm#param_126"/>
+  <mapID target="param_136" url="Drive/Travel Control/Shaft_23_3_en.htm#param_136"/>
+  <mapID target="param_166" url="Drive/Travel Control/Shaft_23_3_en.htm#param_166"/>
+  <mapID target="param_170" url="Drive/Travel Control/Shaft_23_3_en.htm#param_170"/>
+  <mapID target="param_177" url="Drive/Travel Control/Shaft_23_3_en.htm#param_177"/>
+  <mapID target="param_178" url="Drive/Travel Control/Shaft_23_3_en.htm#param_178"/>
+  <mapID target="param_179" url="Drive/Travel Control/Shaft_23_3_en.htm#param_179"/>
+  <mapID target="param_190" url="Drive/Travel Control/Shaft_23_3_en.htm#param_190"/>
+  <mapID target="param_195" url="Drive/Travel Control/Shaft_23_3_en.htm#param_195"/>
+  <mapID target="param_1034" url="Drive/Travel Control/Shaft_23_3_en.htm#param_1034"/>
+  <mapID target="param_1274" url="Drive/Travel Control/Shaft_23_3_en.htm#param_1274"/>
+  <mapID target="Doors" url="Doors/default_en.htm"/>
+  <mapID target="DoorsAllDoors" url="Doors/All Doors/default_en.htm"/>
+  <mapID target="DoorMode_10_5" url="Doors/All Doors/DoorMode_10_5_en.htm"/>
+  <mapID target="param_436" url="Doors/All Doors/DoorMode_10_5_en.htm#param_436"/>
+  <mapID target="DoorTimeouts_10_5" url="Doors/All Doors/DoorTimeouts_10_5_en.htm"/>
+  <mapID target="param_531" url="Doors/All Doors/DoorTimeouts_10_5_en.htm#param_531"/>
+  <mapID target="param_532" url="Doors/All Doors/DoorTimeouts_10_5_en.htm#param_532"/>
+  <mapID target="param_533" url="Doors/All Doors/DoorTimeouts_10_5_en.htm#param_533"/>
+  <mapID target="param_537" url="Doors/All Doors/DoorTimeouts_10_5_en.htm#param_537"/>
+  <mapID target="DoorGeneral_10_5" url="Doors/All Doors/DoorGeneral_10_5_en.htm"/>
+  <mapID target="param_1216" url="Doors/All Doors/DoorGeneral_10_5_en.htm#param_1216"/>
+  <mapID target="DoorsMiconic10" url="Doors/Miconic 10/default_en.htm"/>
+  <mapID target="DoorTimesM10_9_5" url="Doors/Miconic 10/DoorTimesM10_9_5_en.htm"/>
+  <mapID target="param_326" url="Doors/Miconic 10/DoorTimesM10_9_5_en.htm#param_326"/>
+  <mapID target="param_327" url="Doors/Miconic 10/DoorTimesM10_9_5_en.htm#param_327"/>
+  <mapID target="param_328" url="Doors/Miconic 10/DoorTimesM10_9_5_en.htm#param_328"/>
+  <mapID target="param_334" url="Doors/Miconic 10/DoorTimesM10_9_5_en.htm#param_334"/>
+  <mapID target="param_335" url="Doors/Miconic 10/DoorTimesM10_9_5_en.htm#param_335"/>
+  <mapID target="param_572" url="Doors/Miconic 10/DoorTimesM10_9_5_en.htm#param_572"/>
+  <mapID target="DoorsSide1" url="Doors/Side 1/default_en.htm"/>
+  <mapID target="DoorGeneralSide1_6_5" url="Doors/Side 1/DoorGeneralSide1_6_5_en.htm"/>
+  <mapID target="param_297" url="Doors/Side 1/DoorGeneralSide1_6_5_en.htm#param_297"/>
+  <mapID target="param_307" url="Doors/Side 1/DoorGeneralSide1_6_5_en.htm#param_307"/>
+  <mapID target="ReserveDoorSide1_6_5" url="Doors/Side 1/ReserveDoorSide1_6_5_en.htm"/>
+  <mapID target="param_302" url="Doors/Side 1/ReserveDoorSide1_6_5_en.htm#param_302"/>
+  <mapID target="DoorTimesSide1_6_5" url="Doors/Side 1/DoorTimesSide1_6_5_en.htm"/>
+  <mapID target="param_298" url="Doors/Side 1/DoorTimesSide1_6_5_en.htm#param_298"/>
+  <mapID target="param_300" url="Doors/Side 1/DoorTimesSide1_6_5_en.htm#param_300"/>
+  <mapID target="param_303" url="Doors/Side 1/DoorTimesSide1_6_5_en.htm#param_303"/>
+  <mapID target="param_304" url="Doors/Side 1/DoorTimesSide1_6_5_en.htm#param_304"/>
+  <mapID target="param_305" url="Doors/Side 1/DoorTimesSide1_6_5_en.htm#param_305"/>
+  <mapID target="param_306" url="Doors/Side 1/DoorTimesSide1_6_5_en.htm#param_306"/>
+  <mapID target="param_308" url="Doors/Side 1/DoorTimesSide1_6_5_en.htm#param_308"/>
+  <mapID target="param_418" url="Doors/Side 1/DoorTimesSide1_6_5_en.htm#param_418"/>
+  <mapID target="param_421" url="Doors/Side 1/DoorTimesSide1_6_5_en.htm#param_421"/>
+  <mapID target="param_441" url="Doors/Side 1/DoorTimesSide1_6_5_en.htm#param_441"/>
+  <mapID target="param_1255" url="Doors/Side 1/DoorTimesSide1_6_5_en.htm#param_1255"/>
+  <mapID target="DoorsSide2" url="Doors/Side 2/default_en.htm"/>
+  <mapID target="DoorGeneralSide2_7_5" url="Doors/Side 2/DoorGeneralSide2_7_5_en.htm"/>
+  <mapID target="param_297" url="Doors/Side 2/DoorGeneralSide2_7_5_en.htm#param_297"/>
+  <mapID target="param_307" url="Doors/Side 2/DoorGeneralSide2_7_5_en.htm#param_307"/>
+  <mapID target="ReserveDoorSide2_7_5" url="Doors/Side 2/ReserveDoorSide2_7_5_en.htm"/>
+  <mapID target="param_302" url="Doors/Side 2/ReserveDoorSide2_7_5_en.htm#param_302"/>
+  <mapID target="DoorTimesSide2_7_5" url="Doors/Side 2/DoorTimesSide2_7_5_en.htm"/>
+  <mapID target="param_298" url="Doors/Side 2/DoorTimesSide2_7_5_en.htm#param_298"/>
+  <mapID target="param_300" url="Doors/Side 2/DoorTimesSide2_7_5_en.htm#param_300"/>
+  <mapID target="param_303" url="Doors/Side 2/DoorTimesSide2_7_5_en.htm#param_303"/>
+  <mapID target="param_304" url="Doors/Side 2/DoorTimesSide2_7_5_en.htm#param_304"/>
+  <mapID target="param_305" url="Doors/Side 2/DoorTimesSide2_7_5_en.htm#param_305"/>
+  <mapID target="param_306" url="Doors/Side 2/DoorTimesSide2_7_5_en.htm#param_306"/>
+  <mapID target="param_308" url="Doors/Side 2/DoorTimesSide2_7_5_en.htm#param_308"/>
+  <mapID target="param_419" url="Doors/Side 2/DoorTimesSide2_7_5_en.htm#param_419"/>
+  <mapID target="param_422" url="Doors/Side 2/DoorTimesSide2_7_5_en.htm#param_422"/>
+  <mapID target="param_442" url="Doors/Side 2/DoorTimesSide2_7_5_en.htm#param_442"/>
+  <mapID target="param_1255" url="Doors/Side 2/DoorTimesSide2_7_5_en.htm#param_1255"/>
+  <mapID target="LoadMeasurement" url="Load Measurement/default_en.htm"/>
+  <mapID target="LoadMeasurementGeneral" url="Load Measurement/General/default_en.htm"/>
+  <mapID target="LoadHandling_1_6" url="Load Measurement/General/LoadHandling_1_6_en.htm"/>
+  <mapID target="param_132" url="Load Measurement/General/LoadHandling_1_6_en.htm#param_132"/>
+  <mapID target="param_180" url="Load Measurement/General/LoadHandling_1_6_en.htm#param_180"/>
+  <mapID target="param_408" url="Load Measurement/General/LoadHandling_1_6_en.htm#param_408"/>
+  <mapID target="param_478" url="Load Measurement/General/LoadHandling_1_6_en.htm#param_478"/>
+  <mapID target="param_479" url="Load Measurement/General/LoadHandling_1_6_en.htm#param_479"/>
+  <mapID target="param_480" url="Load Measurement/General/LoadHandling_1_6_en.htm#param_480"/>
+  <mapID target="param_481" url="Load Measurement/General/LoadHandling_1_6_en.htm#param_481"/>
+  <mapID target="param_482" url="Load Measurement/General/LoadHandling_1_6_en.htm#param_482"/>
+  <mapID target="param_563" url="Load Measurement/General/LoadHandling_1_6_en.htm#param_563"/>
+  <mapID target="Unbalance_1_6" url="Load Measurement/General/Unbalance_1_6_en.htm"/>
+  <mapID target="param_239" url="Load Measurement/General/Unbalance_1_6_en.htm#param_239"/>
+  <mapID target="param_240" url="Load Measurement/General/Unbalance_1_6_en.htm#param_240"/>
+  <mapID target="ServitelLC" url="Servitel LC/default_en.htm"/>
+  <mapID target="ServitelLCDialSequences" url="Servitel LC/Dial Sequences/default_en.htm"/>
+  <mapID target="Installation_27_10" url="Servitel LC/Dial Sequences/Installation_27_10_en.htm"/>
+  <mapID target="param_380" url="Servitel LC/Dial Sequences/Installation_27_10_en.htm#param_380"/>
+  <mapID target="DialSequence_27_10" url="Servitel LC/Dial Sequences/DialSequence_27_10_en.htm"/>
+  <mapID target="param_375" url="Servitel LC/Dial Sequences/DialSequence_27_10_en.htm#param_375"/>
+  <mapID target="param_376" url="Servitel LC/Dial Sequences/DialSequence_27_10_en.htm#param_376"/>
+  <mapID target="param_377" url="Servitel LC/Dial Sequences/DialSequence_27_10_en.htm#param_377"/>
+  <mapID target="param_378" url="Servitel LC/Dial Sequences/DialSequence_27_10_en.htm#param_378"/>
+  <mapID target="param_379" url="Servitel LC/Dial Sequences/DialSequence_27_10_en.htm#param_379"/>
+  <mapID target="Call-Timing_27_10" url="Servitel LC/Dial Sequences/Call-Timing_27_10_en.htm"/>
+  <mapID target="param_381" url="Servitel LC/Dial Sequences/Call-Timing_27_10_en.htm#param_381"/>
+  <mapID target="ServitelLCMonitoring" url="Servitel LC/Monitoring/default_en.htm"/>
+  <mapID target="MonitoringGeneral_21_10" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm"/>
+  <mapID target="param_384" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_384"/>
+  <mapID target="param_385" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_385"/>
+  <mapID target="param_386" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_386"/>
+  <mapID target="param_387" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_387"/>
+  <mapID target="param_388" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_388"/>
+  <mapID target="param_389" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_389"/>
+  <mapID target="param_390" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_390"/>
+  <mapID target="param_391" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_391"/>
+  <mapID target="param_392" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_392"/>
+  <mapID target="param_393" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_393"/>
+  <mapID target="param_394" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_394"/>
+  <mapID target="param_403" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_403"/>
+  <mapID target="param_404" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_404"/>
+  <mapID target="param_405" url="Servitel LC/Monitoring/MonitoringGeneral_21_10_en.htm#param_405"/>
+  <mapID target="ServitelLCPhoneSettings" url="Servitel LC/Phone Settings/default_en.htm"/>
+  <mapID target="PhoneSettings_28_10" url="Servitel LC/Phone Settings/PhoneSettings_28_10_en.htm"/>
+  <mapID target="param_364" url="Servitel LC/Phone Settings/PhoneSettings_28_10_en.htm#param_364"/>
+  <mapID target="param_365" url="Servitel LC/Phone Settings/PhoneSettings_28_10_en.htm#param_365"/>
+  <mapID target="param_366" url="Servitel LC/Phone Settings/PhoneSettings_28_10_en.htm#param_366"/>
+  <mapID target="param_367" url="Servitel LC/Phone Settings/PhoneSettings_28_10_en.htm#param_367"/>
+  <mapID target="param_368" url="Servitel LC/Phone Settings/PhoneSettings_28_10_en.htm#param_368"/>
+  <mapID target="param_369" url="Servitel LC/Phone Settings/PhoneSettings_28_10_en.htm#param_369"/>
+  <mapID target="param_370" url="Servitel LC/Phone Settings/PhoneSettings_28_10_en.htm#param_370"/>
+  <mapID target="param_371" url="Servitel LC/Phone Settings/PhoneSettings_28_10_en.htm#param_371"/>
+  <mapID target="param_372" url="Servitel LC/Phone Settings/PhoneSettings_28_10_en.htm#param_372"/>
+  <mapID target="param_373" url="Servitel LC/Phone Settings/PhoneSettings_28_10_en.htm#param_373"/>
+  <mapID target="param_374" url="Servitel LC/Phone Settings/PhoneSettings_28_10_en.htm#param_374"/>
+  <mapID target="Modem_28_10" url="Servitel LC/Phone Settings/Modem_28_10_en.htm"/>
+  <mapID target="param_360" url="Servitel LC/Phone Settings/Modem_28_10_en.htm#param_360"/>
+  <mapID target="param_361" url="Servitel LC/Phone Settings/Modem_28_10_en.htm#param_361"/>
+  <mapID target="param_362" url="Servitel LC/Phone Settings/Modem_28_10_en.htm#param_362"/>
+  <mapID target="param_363" url="Servitel LC/Phone Settings/Modem_28_10_en.htm#param_363"/>
+  <mapID target="Answer-Timing_28_10" url="Servitel LC/Phone Settings/Answer-Timing_28_10_en.htm"/>
+  <mapID target="param_358" url="Servitel LC/Phone Settings/Answer-Timing_28_10_en.htm#param_358"/>
+  <mapID target="param_359" url="Servitel LC/Phone Settings/Answer-Timing_28_10_en.htm#param_359"/>
+  <mapID target="Miconic10" url="Miconic 10/default_en.htm"/>
+  <mapID target="Miconic10General" url="Miconic 10/General/default_en.htm"/>
+  <mapID target="HandicappedCallHandlingM10_1_11" url="Miconic 10/General/HandicappedCallHandlingM10_1_11_en.htm"/>
+  <mapID target="param_325" url="Miconic 10/General/HandicappedCallHandlingM10_1_11_en.htm#param_325"/>
+  <mapID target="param_330" url="Miconic 10/General/HandicappedCallHandlingM10_1_11_en.htm#param_330"/>
+  <mapID target="param_331" url="Miconic 10/General/HandicappedCallHandlingM10_1_11_en.htm#param_331"/>
+  <mapID target="param_332" url="Miconic 10/General/HandicappedCallHandlingM10_1_11_en.htm#param_332"/>
+  <mapID target="TerminalLiftAllocation_1_11" url="Miconic 10/General/TerminalLiftAllocation_1_11_en.htm"/>
+  <mapID target="param_570" url="Miconic 10/General/TerminalLiftAllocation_1_11_en.htm#param_570"/>
+  <mapID target="Miconic10Control_1_11" url="Miconic 10/General/Miconic10Control_1_11_en.htm"/>
+  <mapID target="param_610" url="Miconic 10/General/Miconic10Control_1_11_en.htm#param_610"/>
+  <mapID target="param_1000" url="Miconic 10/General/Miconic10Control_1_11_en.htm#param_1000"/>
+  <mapID target="param_1119" url="Miconic 10/General/Miconic10Control_1_11_en.htm#param_1119"/>
+  <mapID target="Miconic10Terminals" url="Miconic 10/Terminals/default_en.htm"/>
+  <mapID target="DestinationIndicator_12_11" url="Miconic 10/Terminals/DestinationIndicator_12_11_en.htm"/>
+  <mapID target="param_346" url="Miconic 10/Terminals/DestinationIndicator_12_11_en.htm#param_346"/>
+  <mapID target="param_347" url="Miconic 10/Terminals/DestinationIndicator_12_11_en.htm#param_347"/>
+  <mapID target="param_349" url="Miconic 10/Terminals/DestinationIndicator_12_11_en.htm#param_349"/>
+  <mapID target="FloorTerminal_12_11" url="Miconic 10/Terminals/FloorTerminal_12_11_en.htm"/>
+  <mapID target="param_321" url="Miconic 10/Terminals/FloorTerminal_12_11_en.htm#param_321"/>
+  <mapID target="param_324" url="Miconic 10/Terminals/FloorTerminal_12_11_en.htm#param_324"/>
+  <mapID target="param_338" url="Miconic 10/Terminals/FloorTerminal_12_11_en.htm#param_338"/>
+  <mapID target="param_342" url="Miconic 10/Terminals/FloorTerminal_12_11_en.htm#param_342"/>
+  <mapID target="param_344" url="Miconic 10/Terminals/FloorTerminal_12_11_en.htm#param_344"/>
+  <mapID target="param_345" url="Miconic 10/Terminals/FloorTerminal_12_11_en.htm#param_345"/>
+  <mapID target="param_348" url="Miconic 10/Terminals/FloorTerminal_12_11_en.htm#param_348"/>
+  <mapID target="param_350" url="Miconic 10/Terminals/FloorTerminal_12_11_en.htm#param_350"/>
+  <mapID target="param_351" url="Miconic 10/Terminals/FloorTerminal_12_11_en.htm#param_351"/>
+  <mapID target="param_592" url="Miconic 10/Terminals/FloorTerminal_12_11_en.htm#param_592"/>
+  <mapID target="OptionBox_12_11" url="Miconic 10/Terminals/OptionBox_12_11_en.htm"/>
+  <mapID target="param_564" url="Miconic 10/Terminals/OptionBox_12_11_en.htm#param_564"/>
+  <mapID target="CADI-SMLCD" url="CADI-SMLCD/default_en.htm"/>
+  <mapID target="CADI-SMLCDGeneral" url="CADI-SMLCD/General/default_en.htm"/>
+  <mapID target="SMLCD_1_12" url="CADI-SMLCD/General/SMLCD_1_12_en.htm"/>
+  <mapID target="param_310" url="CADI-SMLCD/General/SMLCD_1_12_en.htm#param_310"/>
+  <mapID target="CADI-SMLCDSupervisoryDisplay" url="CADI-SMLCD/Supervisory Display/default_en.htm"/>
+  <mapID target="NamesGeneral_13_12" url="CADI-SMLCD/Supervisory Display/NamesGeneral_13_12_en.htm"/>
+  <mapID target="param_504" url="CADI-SMLCD/Supervisory Display/NamesGeneral_13_12_en.htm#param_504"/>
+  <mapID target="param_559" url="CADI-SMLCD/Supervisory Display/NamesGeneral_13_12_en.htm#param_559"/>
+  <mapID target="param_561" url="CADI-SMLCD/Supervisory Display/NamesGeneral_13_12_en.htm#param_561"/>
+</map>

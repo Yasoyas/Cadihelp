@@ -1,0 +1,168 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>RSD_STATE&nbsp;(38)&nbsp;&nbsp;/&nbsp;&nbsp;MODEM_STATE&nbsp;(1)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">attr_1     : vxt_modem_state<br>      attr_2     : -<br>      data_length: 1<br>      data[0]    : TelephoneNumberIndex (0..5)<br><br>      Description:<br><br>        vxt_modem_state:<br><br>            VXT_DESTINATION_BUSY:<br>                   Angerufene Telephonnummer (TelephoneNumberIndex) ist<br>                   besetzt.<br><br>            VXT_MODEM_BUSY:<br>                   Modem ist bereits besetzt.<br><br>            VXT_LINE_NOT_AVAILABLE:<br>                   Angerufene Telephonnummer (TelephoneNumberIndex) ist<br>                   nicht anrufbar, weil Telephonleitung zur Zeit nicht<br>                   verfuegbar ist.<br><br>            VXT_NO_VALID_NUMBER:<br>                   Angerufene Telephonnummer (TelephoneNumberIndex) ist nicht<br>                   anrufbar, weil keine gueltige Telephonnummer eingetragen ist.<br><br>            VXT_NOT_AVAILABLE:<br>                   Modem ist nicht vorhanden (zB. Verbindung Modem-STR<br><br>                   unterbrochen).<br><br>            VXT_AVAILABLE:<br>                   Modem ist vorhanden.<br><br>            VXT_CONNECTION_ABORTED:<br>                   Telephonverbindung wurde waehrend Verbindung unterbrochen<br>                   oder ein Verbindungsaufbau ist nicht erfolgreich, weil die<br>                   Zentrale ausgesteckt ist oder nicht das Telefon abnimmt.<br><br>            VXT_CONNECTED:<br>                   Angerufene Telephonnummer (TelephoneNumberIndex) wurde<br><br>                   gewaehlt und  Verbindung  hergestellt  oder  weitergegebene<br>                   Verbindung (Pass  On) war erfolgreich. Nach dieser Meldung<br>                   darf der Modembenutzer seine Daten senden.<br><br>            VXT_CONNECT_REQUEST:<br>                   Anruf von aussen ist eingetroffen. Modem hat abgehoben und<br>                   Verbindung hergestellt. Die Protokollverbindung ist noch<br>                   nicht hergestellt, dh. es muss noch auf VXT_CONNECTED<br><br>                   gewartet werden.<br><br>            VXT_DISCONNECTED:<br>                   Verbindung wurde regulaer mit Kommando (HANG_UP) abgebrochen.<br><br>            VXT_BUFFER_OK:<br>                   VCOM-Buffer ist leer, dh. es koennen neue Daten geschickt<br>                   werden.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">RSD_STATE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">MODEM_STATE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">T_MODEM_STATE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">1</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[0]:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_MODEM_STATE</h4></TD>
+<TD valign="top" WIDTH="80%">1: VXT_DESTINATION_BUSY 2: VXT_MODEM_BUSY<br>3: VXT_LINE_NOT_AVAILABLE<br>4: VXT_NO_VALID_NUMBER<br>5: VXT_NO_AVAILABLE<br>6: VXT_AVAILABLE<br>7: VXT_CONNECTION_ABORTED<br>8: VXT_CONNECTED<br>9: VXT_CONNECT_REQUEST<br>10: VXT_DISCONNECTED</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">DESTINATION_BUSY</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">MODEM_BUSY</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">LINE_NOT_AVAILABLE</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">NO_VALID_NUMBER</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">5</TD>
+<TD valign="top" WIDTH="70%">NOT_AVAILABLE</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">6</TD>
+<TD valign="top" WIDTH="70%">AVAILABLE</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">7</TD>
+<TD valign="top" WIDTH="70%">CONNECTION_ABORTED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">8</TD>
+<TD valign="top" WIDTH="70%">CONNECTED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">9</TD>
+<TD valign="top" WIDTH="70%">CONNECT_REQUEST</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">10</TD>
+<TD valign="top" WIDTH="70%">DISCONNECTED</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">11</TD>
+<TD valign="top" WIDTH="70%">BUFFER_OK</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

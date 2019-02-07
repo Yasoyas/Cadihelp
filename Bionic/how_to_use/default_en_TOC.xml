@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+
+<tocitem	text="How to Use"	         	target="how_to_use_main"			 >
+
+  <tocitem 	text="Introduction"			target="$introduction"			 >
+    <tocitem	text="Installation and License"		target="$installation_and_license"	/>
+  </tocitem>
+
+
+  <tocitem	text="Functions"			target="$functions"			 >
+      <tocitem  text="Transfer"				target="Transfer"			/>    
+      <tocitem  text="Command"				target="command"			/>    
+      <tocitem  text="Save To Text File"                target="save_text_file"                 />
+      <tocitem  text="Append To Text File"              target="append_text_file"               />
+      <tocitem  text="Send Text File"                   target="send_text_file"                 />
+  </tocitem>
+
+
+
+  <tocitem	text="Troubleshooting"			target="$troubleshooting"	        />
+
+
+ </tocitem>
+
+
+</toc>

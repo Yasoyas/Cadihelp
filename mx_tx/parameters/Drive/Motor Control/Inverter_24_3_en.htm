@@ -1,0 +1,344 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Inverter</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Inverter</em> of the parameter group <em>Motor Control</em> in subsystem <em>Drive</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Inverter</h4></TD>
+<TD valign="top" class="Layout"><p>Setting value for the frequency converter. Each value identifies a specific inverter type. Based on the setting value the converter software selects the correct values (predefined) for all derived values (target configuration on motor control). The derived parameters from the inverter setting value are all parameters in the parameter group 'inverter' (e.g. inverter_type, line_converter_type, brake_chopper_type, current_sensor_type, etc.)<br><br>{1 = VF22BR}	VF22BR, Id.No. 59400150/59400600/59400570	<br>{2 = VF33BR}	VF33BR, Id.No. 59400170/59400610/59400580<br>{3 = VF30BR}	VF30BR<br>{5 = VF44BR }	VF44BR, Id.No. 59400380/59400390/59400790<br>{7 = VF100BR}	VF100BR<br>{8 = VF120}	VF120PF1<br>{9 = VF170}	VF170PF1<br>{10 = VF280}	VF280PF1<br>{11 = VF11BR}	VF11BR, Id.No. 59400660<br>{12 = VF88BR}	VF88BR, Id.No. 59400670/59400650<br>{13 = VF122BR}	VF122BR, Id.No. 59400550/59400560<br>{14 = VF30_230V}	VF30BR, inverter input voltage: 230 V<br>{15 = VF50BR}	VF50BR<br>{16 = VF85BR}	VF85BR<br>{17 = VF120BR}	VF120BR<br>{18 = VF155}	VF155PF1 AC<br>{19 = VF288}	VF288PF1 AC<br>{20 = VF122BR DC}	VF122BR DC<br>{21 = VF155 DC}	VF155PF1 DC<br>{22 = VF288 DC}	VF288PF1 DC<br><br>If this parameter is not used for commissioning of the inverter, the inverter parameters (normally derived from the setting value) must be defined individually in the PCT.<br><br>The value 0 corresponds to “NO_SETTING”. A negative value indicates which value the parameter 'inverter setting' originally had and that at least one parameter on the inverter was modified. The inverter software sets the negative value automatically when a parameter is modified .<br>The parameter 'Inv Current Ampl' is selected for the corresponding Motor Control PCB (effective as from PVEC VecSys Software V2.05, older versions select 'Inv Current Ampl' for the PIOVEC boards QA and QB).<br><br>Remark valid for VF120 and VF170: The values of the parameters 'Inv Current Ampl', 'Inv Current Scale' and 'Current Sensor Type' are set according to the OCP current measurement (effective as from PVEC VecSys software V2.05, older versions according to the LEM current measurement).<br><br>Parallel Converters: use the setting of the single converter connected in parallel.<br><br>Frequency converters VF11BR, VF22BR, VF33BR and VF44BR may correct parameter 'Inverter Id' according to the detection of the power unit and select the corresponding parameters automatically (hardware recognition).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Inverter Type</h4></TD>
+<TD valign="top" class="Layout"><p>Inverter type<br><br>0: SKIIP		<br>for VF22BR/VF33BR (with PIOVEC PCB),VF50BR,VF85BR, VF100BR, VF120BR, VF120PF1, VF170PF1, VF280PF1, VF122BR, VF288PF1 AC<br><br>1: MINISKIIP<br>for VF11BR, VF22BR/VF33BR (with VARIOcon PCB), VF44BR, VF88BR, VF30BR, VF155PF1 AC<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Line Converter Type</h4></TD>
+<TD valign="top" class="Layout"><p>Line Power Module<br><br>0: SIXPULS_DIODE	<br>for inverters with rectifier: VF11BR, VF22BR, VF33BR, VF44BR, VF50BR, VF85BR, VF88BR, VF100BR, VF120BR, VF122BR<br><br>1: FCR_DIGITAL	<br>for inverters with FCR (line converter): VF120PF1, VF170PF1, VF280PF1, VF155PF1 AC, VF288PF1 AC<br><br>4: SIXPULS_THYRISTOR_HC	<br>for inverters with half-controlled sixpuls thyristor (with MiniSkiiP8): VF30BR<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Brake Chopper Type</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the type of the Brake chopper<br><br>0: STANDALONE	<br>brake chopper control on power unit: VF100BR<br><br>1: SW_CONTROL_TEMP<br>brake chopper is controlled by software: analogue measurement of Brake Resistor temperature: VF11BR, VF22BR, VF33BR, VF44BR, VF88BR, VF122BR<br><br>2: SW_CONTROL<br>brake chopper is controlled by software: VF22BR (Id. 59400150/ 59400600), VF33BR (Id. 59400170/59400610), VF30BR, VF50BR, VF85BR, VF120BR<br><br>3: NO_BC	<br>no brake chopper: for inverters with line converters (FCR): VF120PF1, VF170PF1, VF280PF1, VF155PF1 AC, VF288PF1 AC</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Current Sensor Type</h4></TD>
+<TD valign="top" class="Layout"><p>Type of current measurement. Two different types of current measurement are used:<br><br>1. The current is measured inside the power module: "OCP"<br>2. The current is measured outside the power module with LEM converters: "LEM"<br><br>Values [-]:<br><br>{0=LEM_3_PHASE}  three phase current measurement with LEM sensors for VF100BR, VF120PF1 (LEM), VF170PF1 (LEM), VF280PF1 (LEM)<br><br>{1=SKIIP_3_PHASE}	three phase current measurement from SKIIP: VF11BR, VF22BR, VF33BR, VF44BR, VF88BR, VF122BR, VF30BR, VF50BR, VF85BR, VF120BR, VF120PF1 (OCP), VF170PF1 (OCP), VF280PF1 (OCP), VF155PF1 AC, VF288PF1 AC<br><br>{2=TWO_PHASE}	two phase current measurement, not used<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">R Shunt</h4></TD>
+<TD valign="top" class="Layout"><p>Shunt resistor value [Ohm]. The parameter is only used on inverters with "LEM" type current sensors.<br><br>Value [Ohms]:<br>{12.0}	all inverters with LEM current transducers: VF100BR, VF120PF1 (LEM), VF170PF1 (LEM)<br><br>{12.0}	all inverters without discrete LEM current sensors: VF11BR, VF22BR, VF33BR, VF44BR, VF88BR, VF122BR, VF30BR, VF50BR, VF85BR, VF120BR, VF120PF1 (OCP), VF170PF1(OCP), VF280PF1, VF155PF1 AC, VF288PF1 AC. The parameter is not evaluated.<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">I-Nominal</h4></TD>
+<TD valign="top" class="Layout"><p>Nominal Inverter Current (peak value) in [A]:<br><br>{27}    VF11BR<br>{37}    VF22BR<br>{30}    VF22BR (Id. 59400570), inverter input voltage = 460/480 V<br>{43}    VF30BR<br>{52}    VF33BR <br>{66}    VF33BR (Id. 59400580), inverter input voltage = 380/400/415 V<br>{57}    VF33BR (Id. 59400580), inverter input voltage = 460/480 V<br>{65}    VF50BR, inverter input voltage = 380/400/415 V<br>{54}    VF50BR, inverter input voltage = 460/480 V<br>{68}    VF44BR, inverter input voltage = 380/400/415 V<br>{57}    VF44BR, inverter input voltage = 460/480 V<br>{85}    VF44BR (Id. 59400790), inverter input voltage = 380/400/415 V<br>{71}    VF44BR (Id. 59400790), inverter input voltage = 460/480 V	<br>{113}  VF85BR, VF88BR, inverter input voltage = 380/400/415<br>{93}    VF85BR, VF88BR, inverter input voltage = 460/480 V<br>{141}  VF100BR<br>{148}  VF120BR, 122BR inverter input voltage = 380/400/415<br>{122}  VF120BR, 122BR inverter input voltage = 460/480 V<br>{126}  VF120PF1, Rated Motor Voltage = 340 V & inverter input voltage = 380/400/415 V (Rated DC Link Voltage = 650 V)<br>{107}  VF120PF1, Rated Motor Voltage = 460 V (Rated DC Link Voltage = 750/800 V), standard configuration<br>{144}  VF155PF1 AC, Rated Motor Voltage = 340 V & inverter input voltage = 380/400/415 V (Rated DC Link Voltage = 650 V)<br>{130}  VF155PF1 AC, Rated Motor Voltage = 460 V (Rated DC Link Voltage = 750/800 V), standard configuration<br>{180}  VF170PF1, Rated Motor Voltage = 340 V & inverter input voltage = 380/400/415 V (Rated DC Link Voltage = 650 V)<br>{153}  VF170PF1, Rated Motor Voltage = 460 V (Rated DC Link Voltage = 750/800 V), standard configuration<br>{264}  VF280PF1, Rated Motor Voltage = 340 V & inverter input voltage = 380/400/415 V (Rated DC Link Voltage = 650 V)<br>{255}  VF280PF1, Rated Motor Voltage = 460 V (Rated DC Link Voltage = 750/800 V), standard  configuration<br>{270}  VF288PF1 AC, Rated Motor Voltage = 340 V & inverter input voltage = 380/400/415 V (Rated DC Link Voltage = 650 V)<br>{260}  VF288PF1 AC, Rated Motor Voltage = 460 V (Rated DC Link Voltage = 750/800 V), standard  configuration<br>{220}  VF122BR DC<br>{110}  VF155PF1 DC<br>{250}  VF288PF1 DC</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">I- Acceleration</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum inverter current, the current references are limited to this value [A].<br><br>{40}    VF11BR<br>{55}    VF22BR<br>{45}    VF22BR(Id. 59400570), inverter input voltage = 460/480 V<br>{75}    VF30BR<br>{81}    VF33BR<br>{103}  VF33BR(Id. 59400580), inverter input voltage = 380/400/415 V<br>{85}    VF33BR(Id. 59400580), inverter input voltage = 460/480 V<br>{116}  VF50BR, inverter input voltage = 380/400/415 V<br>{95}    VF50BR, inverter input voltage = 460/480 V<br>{115}  VF44BR, inverter input voltage = 380/400/415 V<br>{95}    VF44BR, inverter input voltage = 460/480 V<br>{139}  VF44BR(Id. 59400790), inverter input voltage = 380/400/415 V<br>{122}  VF44BR(Id. 59400790), inverter input voltage = 460/480 V	<br>{204}  VF85BR, VF88BR, inverter input voltage = 380/400/415 V<br>{168}  VF85BR, VF88BR, inverter input voltage = 460/480 V<br>{255}  VF100BR<br>{297}  VF120BR, VF122BR, inverter input voltage = 380/400/415<br>{243}  VF120BR, VF122BRinverter input voltage = 460/480 V<br>{252}  VF120PF1, Rated Motor Voltage = 340 V & inverter input voltage = 380/400/415 V <br>(Rated DC Link Voltage = 650 V)<br>{215}  VF120PF1, Rated Motor Voltage = 460 V (Rated DC Link Voltage = 750/800 V), standard configuration<br>{288}  VF155PF1 AC, Rated Motor Voltage = 340 V & inverter input voltage = 380/400/415 V <br>(Rated DC Link Voltage = 650 V)<br>{260}  VF155PF1 AC, Rated Motor Voltage = 460 V (Rated DC Link Voltage = 750/800 V), standard configuration<br>{354}  VF170PF1, Rated Motor Voltage = 340 V & inverter input voltage = 380/400/415 V <br>(Rated DC Link Voltage = 650 V)<br>{305}  VF170PF1, Rated Motor Voltage = 460 V (Rated DC Link Voltage = 750/800 V), standard configuration<br>{529}  VF280PF1, Rated Motor Voltage = 340 V & inverter input voltage = 380/400/415 V <br>(Rated DC Link Voltage = 650 V)<br>{509}  VF280PF1, Rated Motor Voltage = 460 V (Rated DC Link Voltage = 750/800 V), standard configuration<br>{545}  VF288PF1 AC, Rated Motor Voltage = 340 V & inverter input voltage = 380/400/415 V <br>(Rated DC Link Voltage = 650 V)<br>{571}  VF288PF1 AC, Rated Motor Voltage = 460 V (Rated DC Link Voltage = 750/800 V), standard configuration<br>{400}  VF122BR DC<br>{200}  VF155PF1 DC<br>{450}  VF155PF1 DC<br><br>-----------------------------------------------------------------------------------------------------------------<br>with VF70-94/95:  commission dependent value (x) according to the table below<br><br>Motor type	PMN [kW]	x=iinv_accel<br>160MW140-4A304	6.7	91<br>160MW140-4B240	8	91<br>VM 132-4A256	7.5	91<br>VM 132-4A224 	8.2	91<br>VM 132-4A240	9	91<br>VM 132-4A224 	10	91<br>VM 160-4A224	12	102<br>VM 132-4C176	12.5	102<br>VM 132-4C160	14	112<br>VM 160 4A192	15	113<br>VM 160-4B192	15	113<br>VM 160 4A176	16.5	123<br>VM 160 4B160	18	143<br>VM 160-4C160	18	143<br>VM 160 4B144	19.5	153<br>VM 160-4D128	22	163<br>VM 160 4C128	22.5	163<br>VM 160 4C112	24.5	163<br>VM 160 4D112	27	163<br><br>The motors with the designation  VM .... correspond to the old  motors with the description <br>	FM ..... <br>Difference: VM .... - motors possess a PT-100 resistor instead of the 3 thermistors. <br><br>On Reliance SSDC drives this parameter is used to compute a portion of the torque signal sent to the drive based on the acceleration feed forward value.<br><br>For the Magnetek SSDC drive, this becomes “v_sense %” (magnetek function #14).<br>This defines the point at which the tach loss and reverse tach monitors start working.  These monitors are turned off at very low speeds, and turn on at this percentage of full speed armature voltage.   Min = 0, Max = 50, units = %. Normally set to 25</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">t_I- Start</h4></TD>
+<TD valign="top" class="Layout"><p>Time after start for which the maximum current reference (current limit) is set to the value of: 'Accel Inv Current' * 1.15<br><br>Default value [s]: {0.3}<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">I- Amp</h4></TD>
+<TD valign="top" class="Layout"><p>Amplification factor of the current measurement on PIOVEC/L2/L3 boards.<br><br>Inverters with 'LEM' current sensors:<br>{1.81}	VF100BR, VF120PF1 (LEM), VF170PF1 (LEM), VF280PF1 (LEM)<br><br>Inverters without LEM current sensors:<br>{0.2485}	PIOVEC board QA and QB: VF280PF1<br>{0.454}	PIOVEC board QC: VF22BR, VF33BR, VF120PF1 (OCP), VF170PF1 (OCP), VF280PF1 (OCP)<br>{0.2582} 	PIOVECL2 board: VF30BR<br>{0.2485} 	PIOVECL3 board: VF30BR, VF50BR, VF85BR, VF120BR<br>{0.6006}	VARIOcon board: VF22BR, VF33BR, VF44BR, VF88BR, VF122BR, VF155PF1 AC, VF288PF1 AC<br><br>The parameter value is set by the software depending on PIOVECx PCB/VARIOcon and Inverter Id / Type Current Sensor.<br>On inverters without LEM current sensors two configurable amplification factors are provided on the target hardware PIOVEC. One is 'Inv Current Ampl', the other one is 1.0. The PVEC VecSys Software selects the suitable.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Inverter Current Ratio</h4></TD>
+<TD valign="top" class="Layout"><p>Ratio of the „LEM“ current transducers. Parameter is only used on inverters with „LEM“ current sensors.<br><br>Values [-]:	<br>{1000}	for ratio 1000 / 1: no inverters available<br>{2000}	for ratio 2000 / 1: VF100BR, VF120PF1, VF170PF1<br>{1000}	all inverters without discrete LEM current transducers: VF11BR, VF22BR, VF33BR, VF44BR, VF88BR, VF122BR, VF30BR, VF50BR, VF85BR, VF120BR, F155PF1 AC, VF288PF1 AC.<br><br>This value is not evaluated.<br>{5000}	for ratio 5000/1: VF280PF1<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">I-Scale</h4></TD>
+<TD valign="top" class="Layout"><p>Scaling of the power module current measurement; not used for inverters with LEM current sensors.<br><br>Values [V/A] effective by PVEC VecSys software version V2.05:<br>{0.1180}	VF11BR<br>{0.08909}	VF30BR<br>{0.05022}	VF22BR (PVEC/PIOVEC), VF33BR<br>{0.07330}	VF22BR (VARIOcon)<br>{0.01950}	VF44BR (VARIOcon)<br>{0.01350}	VF44BR (Id. 59400790)<br>{0.05333}	VF50BR (150 A - IGBT)<br>{0.02667}	VF85BR, VF88BR<br>{0.01333}	VF120BR, VF122BR, VF120PF1 (OCP), VF170PF1 (OCP)<br>{0.00889}	VF280PF1<br>{0.08909} 	all inverters with LEM current sensors: VF100BR, VF120PF1 (LEM), VF170PF1 (LEM). The parameter is not evaluated.<br>{0.016}	VF155PF1 AC<br>{0.0053}	VF288PF1 AC<br>{0.00533}	VF122BR DC<br>{tbd}	VF155PF1 DC<br>{tbd}	VF288PF1 DC<br><br>Values [V] for PVEC VecSys software version V2.04 (release date: Oct.9, 1997) or older:<br>{6.68} VF30BR<br>{6.19} VF50BR, inverter input voltage = 380/400/415 V<br>{5.07} VF50BR, inverter input voltage = 460/480 V<br>{5.44} VF85BR, inverter input voltage = 380/400/415 V<br>{4.48} VF85BR, inverter input voltage = 460/480 V<br>{3.36} VF120PF1 (OCP), Rated Motor Voltage = 340 V (Rated DC Link Voltage = 650 V)<br>{2.87} VF120PF1 (OCP), Rated Motor Voltage = 460 V (Rated DC Link Voltage = 750 V), standard<br>{4.72} VF170PF1 (OCP), Rated Motor Voltage = 340 V (Rated DC Link Voltage = 650 V)<br>{4.07} VF170PF1 (OCP), Rated Motor Voltage = 460 V (Rated DC Link Voltage = 750 V), standard<br>{4.70} VF280PF1, Rated Motor Voltage = 340 V (Rated DC Link Voltage = 650 V)<br>{4.53} VF280PF1, Rated Motor Voltage = 460 V (Rated DC Link Voltage = 750 V), standard <br>{6.68} for all inverters with LEM current sensors: VF100BR, VF120PF1 (LEM), VF170PF1 (LEM). The parameter is not evaluated.<br><br>The parameter is only used if the current measurement is done on the power converter (OCP) and not on the controller hardware (condition: inverter parameter Current Sensor Type = SKIIP_3_PHASE). Calculation: Inv Current Scale = (8 V / IGBT-continuous current corresponding to power module data sheet).<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">T Base Drive</h4></TD>
+<TD valign="top" class="Layout"><p>not used</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">PWM Frequency</h4></TD>
+<TD valign="top" class="Layout"><p>PWM-switching frequency (PWM: pulse width modulation)<br>Parameter not used yet</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Contactor Mode</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the behaviour of the Inverter Contactor (SGRW/SH).<br>Bit 1 = 0: SH used for EN81 safety interface X15 (contactor monitoring) / SH turns off after every trip<br>Bit 2 = 0:  Mains separation/discharging with SGRW and SH after 2hrs (to save energy) <br><br>Regardless of the parameter value separation from mains is done if the inverter is not available (Error State = BLOCKED or DEAD)<br><br>Values [-]:	<br>{0}	default<br>{1}	SH remains on after trip,  e.g. for configurations with output contactors (IVXVF)<br>{2}	Inverter remains charged using SGRW (with Error State = START_ALLOWED)<br>{3}, {1} and {2}	mains separation and safety interface disabled (if Error State = START_ALLOWED)<br><br>This parameter with PCT id. h5F and inverter comm. id 80(dec) was formerly named 'Inv Lock Time' but was not used by the inverter. With inverter SW versions VecSys V2.16 and VARIOsys V1.08 the parameter was renamed to 'Inv Contactor Mode'.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Temp Hysteresis</h4></TD>
+<TD valign="top" class="Layout"><p>Temperature hysteresis for fan control.<br><br>Values [C]:<br>{10}<br>{5}	for converters using VIP (VF22R, VF33BR, VF44BR, VF88BR, VF122BR, VF155PF1 AC, VF288PF1 AC)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Temp Fan On</h4></TD>
+<TD valign="top" class="Layout"><p>Temperature limit for inverter heatsink fan to start.<br><br>Values [C]:<br>{60}<br>{40} 	for converters using VIP (VF22R, VF33BR, VF44BR, VF88BR, VF122BR, VF155PF1 AC, VF288PF1 AC)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Time Fan On</h4></TD>
+<TD valign="top" class="Layout"><p>Running time of the inverter fan(s). For converter with KTHBR this time starts every trip. For converter using VIP this time starts every trip and there is a minimum fan speed and no speed reduction during this periode.<br><br>Values: <br>500s<br>120s for converters using VIP (VF88BR,122BR,VF155,VF288)<br>60s for converters using VIP (VF22R,33BR,VF44BR)<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">U-Nominal</h4></TD>
+<TD valign="top" class="Layout"><p>Rated DC link voltage<br><br>{325}   	inverter input voltage: 230 V, for: VF30BR, VF50BR, VF85BR, VF120BR<br>{537}	inverter input voltage: 380 V, for all VFxxBR,<br>{566}	inverter input voltage: 400 V, for all VFxxBR,<br>{586} 	inverter input voltage: 415 V, for all VFxxBR,<br>{651}	inverter input voltage: 460 V, for VF22BR (Id. 59400570), VF33BR (Id. 59400580),  VF44BR, VF88BR, VF122BR, VF50BR, VF85BR, VF120BR<br>{679}	inverter input voltage: 480 V, for: VF22BR (Id. 59400570), VF33BR (Id. 59400580),  VF44BR, VF88BR, VF122BR, VF50BR, VF85BR, VF120BR<br>{650}	VF120PF1, VF170PF1, VF280PF1, VF155PF1 AC, VF288PF1 AC Rated Motor Voltage = 340 V & inverter input voltage = 380, 400, 415 V<br>{750}	VF120PF1, VF170PF1, VF280PF1, VF155PF1 AC, VF288PF1 AC Rated Motor Voltage = 460 V<br>(If the rated motor voltage is 460 V, the rated dc link voltage always has to be set to 750 V unless the inverter input voltage is 480 V)<br>{750}	VF120PF1, VF170PF1, VF280PF1, VF155PF1 AC, VF288PF1 AC inverter input voltage = 460 V <br>(If the inverter input voltage is 460 V, the rated dc link voltage always has to be set to 750 V, unless the inverter input voltage is 480 V)<br>{800}	VF120PF1, VF170PF1, VF280PF1, VF155PF1 AC, VF288PF1 AC inverter input voltage = 480V<br><br>for VFxxxPF1: Parameter value must correspondent with FCR regulated DC link voltage. Parameter-relation: see Inverter Input Voltage (VFxxBR), Inverter Id, Rated Motor Voltage (VFxxPF1 / VecSys only)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">U-Resolution</h4></TD>
+<TD valign="top" class="Layout"><p>AD-converter resolution for the DC link voltage [V/digit]:<br><br>{0.6274}	inverters with PIOVECL2 board: VF30BR<br><br>{0.6055}	inverters with PIOVECL3 board: VF30BR, VF50BR, VF85BR, VF120BR<br><br>{0.4419}	inverters with PIOVEC board: VF22BR, VF33BR, VF100BR, VF120PF1, VF170PF1, VF280PF1<br><br>{0.5371}	inverters with VARIOcon board:  VF11BR, VF22BR, VF33BR, VF44BR, VF88BR, VF122BR, VF155PF1 AC, VF288PF1 AC<br><br>{0.2686}	inverters with VARIOcon board / 200 V version: VF33BR_200</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">t DC Link</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum timeout for charging of DC link. (maximum time delay between switching on SGRW and SGR/SH).<br><br>1.0	VF30BR<br>2.0	VF11BR, VF44BR, VF50BR<br>2.5	VF100BR<br>3.0	VF85BR, VF88BR, VF120PF1, VF170PF1, VF155PF1 AC<br>4.0	VF120BR, VF280PF1, VF22BR, VF33BR, VF122BR, VF288PF1 AC<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Capacity</h4></TD>
+<TD valign="top" class="Layout"><p>Capacity of the DC link capacitors (micro Farad); used for the pulse forming test for the capacitors.<br><br>Values [microF]:<br>470	for VF11BR<br>712	for VF30BR with PIOVECL2 board<br>1500	for VF30BR with PIOVECL3 board<br>1500	for VF22BR, VF33BR<br>3300	for VF44BR, VF50BR, VF100BR<br>4950	for VF85BR, VF88BR<br>6600	for VF120BR, VF122BR<br>9900	for VF120PF1<br>12000	for VF155PF1 AC<br>14850	for VF170PF1<br>19800	for VF280PF1<br>24000	for VF288PF1 AC<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">I Rem Upp Lim</h4></TD>
+<TD valign="top" class="Layout"><p>Limit of discharging current representing capacitor’s leakage current. Parameter is used for test of capacitors for pulse forming. Value [mA]:<br><br>100:	VF11BR, VF22BR, VF33BR, VF44BR, VF88BR, VF30BR, VF50BR, VF85BR<br><br>200:	VF100BR, VF120BR, VF122BR<br><br>250:	VF120PF1<br><br>300:	VF170PF1, VF280PF1, VF155PF1, VF288PF1<br><br>The value is determinated according to:<br>I_rem = C_dcl [ { U(t1) - U(t2) } / delta_T ]<br>with t1 = 0.5s and t2 = 2.5s (discharging time)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

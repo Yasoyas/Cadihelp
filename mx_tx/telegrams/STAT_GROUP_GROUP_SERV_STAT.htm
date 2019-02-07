@@ -1,0 +1,520 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>STAT_GROUP&nbsp;(8)&nbsp;&nbsp;/&nbsp;&nbsp;GROUP_SERV_STAT&nbsp;(7)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">attr_1     : --<br>      attr_2     : --<br>      data_length: max 17<br>      data[0]    : VXT_T_SERV_MODE<br>      data[1]    : service_info       /* service specific info */<br>        '        :     '              /*  '        '       '   */<br>      data[16]   : service_info       /* service specific info */<br><br>      Description: This telegram is used to send group service specific<br><br>                   information.<br>      data[1]..data[16] are free for individual information, according to<br>                        the service_id data[0].</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">STAT_GROUP</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">GROUP_SERV_STAT</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">1</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[0]:</em></TD>
+<TD valign="top" class="Layout">T_SERV_MODE</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_SERV_MODE</h4></TD>
+<TD valign="top" WIDTH="80%">Definition of all service id's. <br>Every Service in one SCT has to have it's own id.<br><br>For more information about each service go under:<br>KID -> Servcies -> Service Defintions -> Service Name</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">0</TD>
+<TD valign="top" WIDTH="70%">MODE_UNDEF</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">MODE_N</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">MODE_JABX</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">MODE_JAB</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">MODE_JRV</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">5</TD>
+<TD valign="top" WIDTH="70%">MODE_DPF</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">6</TD>
+<TD valign="top" WIDTH="70%">MODE_JLI</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">7</TD>
+<TD valign="top" WIDTH="70%">MODE_JBF</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">8</TD>
+<TD valign="top" WIDTH="70%">MODE_JNFF</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">9</TD>
+<TD valign="top" WIDTH="70%">MODE_RNO</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">10</TD>
+<TD valign="top" WIDTH="70%">MODE_INS</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">11</TD>
+<TD valign="top" WIDTH="70%">MODE_LX</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">12</TD>
+<TD valign="top" WIDTH="70%">MODE_DISABLE_DOOR</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">13</TD>
+<TD valign="top" WIDTH="70%">MODE_JNO</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">14</TD>
+<TD valign="top" WIDTH="70%">MODE_SUNV</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">15</TD>
+<TD valign="top" WIDTH="70%">MODE_N_DE</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">16</TD>
+<TD valign="top" WIDTH="70%">MODE_FATAL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">17</TD>
+<TD valign="top" WIDTH="70%">MODE_KFM</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">18</TD>
+<TD valign="top" WIDTH="70%">MODE_JHC1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">19</TD>
+<TD valign="top" WIDTH="70%">MODE_NF1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">20</TD>
+<TD valign="top" WIDTH="70%">MODE_NF2</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">21</TD>
+<TD valign="top" WIDTH="70%">MODE_GAST</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">22</TD>
+<TD valign="top" WIDTH="70%">MODE_SPZS</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">23</TD>
+<TD valign="top" WIDTH="70%">MODE_KKT</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">24</TD>
+<TD valign="top" WIDTH="70%">MODE_JRVP</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">25</TD>
+<TD valign="top" WIDTH="70%">MODE_DDF1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">26</TD>
+<TD valign="top" WIDTH="70%">MODE_KTHM</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">27</TD>
+<TD valign="top" WIDTH="70%">MODE_SAB</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">28</TD>
+<TD valign="top" WIDTH="70%">MODE_HOSPITAL_EMERGENCY</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">29</TD>
+<TD valign="top" WIDTH="70%">MODE_EARTHQUAKE</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">30</TD>
+<TD valign="top" WIDTH="70%">MODE_GSU</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">31</TD>
+<TD valign="top" WIDTH="70%">MODE_JTI</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">32</TD>
+<TD valign="top" WIDTH="70%">MODE_32</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">33</TD>
+<TD valign="top" WIDTH="70%">MODE_33</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">34</TD>
+<TD valign="top" WIDTH="70%">MODE_34</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">35</TD>
+<TD valign="top" WIDTH="70%">MODE_DH</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">36</TD>
+<TD valign="top" WIDTH="70%">MODE_36</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">37</TD>
+<TD valign="top" WIDTH="70%">MODE_37</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">38</TD>
+<TD valign="top" WIDTH="70%">MODE_UNKNOWN</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">39</TD>
+<TD valign="top" WIDTH="70%">MODE_SPC</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">40</TD>
+<TD valign="top" WIDTH="70%">MODE_SPS</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">41</TD>
+<TD valign="top" WIDTH="70%">MODE_JZH</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">42</TD>
+<TD valign="top" WIDTH="70%">MODE_JBS2</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">43</TD>
+<TD valign="top" WIDTH="70%">MODE_EAQ_COLL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">44</TD>
+<TD valign="top" WIDTH="70%">MODE_RES_3</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">45</TD>
+<TD valign="top" WIDTH="70%">MODE_JBF_2</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">46</TD>
+<TD valign="top" WIDTH="70%">MODE_FB</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">47</TD>
+<TD valign="top" WIDTH="70%">MODE_RES_6</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">48</TD>
+<TD valign="top" WIDTH="70%">MODE_RES_7</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">49</TD>
+<TD valign="top" WIDTH="70%">MODE_LPWR</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">50</TD>
+<TD valign="top" WIDTH="70%">MODE_50</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">51</TD>
+<TD valign="top" WIDTH="70%">MODE_DDF2</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">52</TD>
+<TD valign="top" WIDTH="70%">MODE_SO</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">53</TD>
+<TD valign="top" WIDTH="70%">MODE_DM236</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">54</TD>
+<TD valign="top" WIDTH="70%">MODE_FLOOR_ON_FIRE</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">55</TD>
+<TD valign="top" WIDTH="70%">MODE_FLOOR_LIGHT</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">56</TD>
+<TD valign="top" WIDTH="70%">MODE_WATER_DETECTOR</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">57</TD>
+<TD valign="top" WIDTH="70%">MODE_PHTS</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">58</TD>
+<TD valign="top" WIDTH="70%">MODE_NFE</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">59</TD>
+<TD valign="top" WIDTH="70%">MODE_BNO</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">60</TD>
+<TD valign="top" WIDTH="70%">MODE_MAX</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">61</TD>
+<TD valign="top" WIDTH="70%">MODE_RNO_2</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">62</TD>
+<TD valign="top" WIDTH="70%">MODE_JNO_2</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">63</TD>
+<TD valign="top" WIDTH="70%">MODE_BNO_2</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">64</TD>
+<TD valign="top" WIDTH="70%">MODE_FF</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">65</TD>
+<TD valign="top" WIDTH="70%">MODE_LNOC</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">66</TD>
+<TD valign="top" WIDTH="70%">MODE_APE</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">67</TD>
+<TD valign="top" WIDTH="70%">MODE_EMT1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">68</TD>
+<TD valign="top" WIDTH="70%">MODE_EMT2</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">69</TD>
+<TD valign="top" WIDTH="70%">MODE_LAB</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">70</TD>
+<TD valign="top" WIDTH="70%">MODE_OTP</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">71</TD>
+<TD valign="top" WIDTH="70%">MODE_LRNO_1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">72</TD>
+<TD valign="top" WIDTH="70%">MODE_EMT3</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">73</TD>
+<TD valign="top" WIDTH="70%">MODE_AST</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">74</TD>
+<TD valign="top" WIDTH="70%">MODE_FR16</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">75</TD>
+<TD valign="top" WIDTH="70%">MODE_75</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">76</TD>
+<TD valign="top" WIDTH="70%">MODE_76</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">77</TD>
+<TD valign="top" WIDTH="70%">MODE_PSW</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">78</TD>
+<TD valign="top" WIDTH="70%">MODE_LBF</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">79</TD>
+<TD valign="top" WIDTH="70%">MODE_RES_2</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">80</TD>
+<TD valign="top" WIDTH="70%">MODE_ACC</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">81</TD>
+<TD valign="top" WIDTH="70%">MODE_81</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">82</TD>
+<TD valign="top" WIDTH="70%">MODE_ARA</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">83</TD>
+<TD valign="top" WIDTH="70%">MODE_NF2B</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">84</TD>
+<TD valign="top" WIDTH="70%">MODE_EQL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">85</TD>
+<TD valign="top" WIDTH="70%">MODE_EMT4</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">86</TD>
+<TD valign="top" WIDTH="70%">MODE_LRNO_2</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">87</TD>
+<TD valign="top" WIDTH="70%">MODE_FS</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">88</TD>
+<TD valign="top" WIDTH="70%">MODE_AS</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">89</TD>
+<TD valign="top" WIDTH="70%">MODE_SDU</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">90</TD>
+<TD valign="top" WIDTH="70%">MODE_TAB</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">91</TD>
+<TD valign="top" WIDTH="70%">MODE_SHUNT</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">92</TD>
+<TD valign="top" WIDTH="70%">MODE_SHUNTO</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">93</TD>
+<TD valign="top" WIDTH="70%">MODE_D94MON</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">94</TD>
+<TD valign="top" WIDTH="70%">MODE_FATAL_DO</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">95</TD>
+<TD valign="top" WIDTH="70%">MODE_FATAL_CO</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">96</TD>
+<TD valign="top" WIDTH="70%">MODE_BLOCKOP</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">97</TD>
+<TD valign="top" WIDTH="70%">MODE_MTHM</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">98</TD>
+<TD valign="top" WIDTH="70%">MODE_LAST_SERVICE</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

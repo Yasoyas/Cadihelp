@@ -1,0 +1,176 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>STAT_DRIVE&nbsp;(6)&nbsp;&nbsp;/&nbsp;&nbsp;TRIP_TYPE&nbsp;(7)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">attr_1     : --<br>      attr_2     : --<br>      data_length: 1<br>      data[0]    : vxt_trip_info<br><br>      Description: Status vom aktuellen Fahrtyp des Antriebs<br><br>         vxt_trip_info:   Value        DEFINTION<br>                          -----        ------------<br>                            0          NOTRIP<br>                            1          NORMALTRIP<br>                            2          MANUALTRIPS (inspection,recall)<br><br>                            3          LEARNTRIP<br>                            4          SYNCHTRIP<br>                            5          RELEVELLING<br>                            6          CORRECTIONTRIP<br>                            7          DUMMY1<br>                            8          INSTALLATIONTRIP<br>                            9          CONTROLTRIP<br>                           10          BLOCKED_BY_STR<br>                           11          DOCKINGTRIP<br>                         12..15        Specialtrips</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">STAT_DRIVE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">TRIP_TYPE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">1</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[0]:</em></TD>
+<TD valign="top" class="Layout">T_TRIP_INFO</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_TRIP_INFO</h4></TD>
+<TD valign="top" WIDTH="80%">TravelControl internal trip types are translated into application level trip types as follows:<br><br>Application:            TravelControl      Value<br>------------            -------------      -----<br>VXT_NOTRIP,             DS_UNDEFINED        0<br>VXT_NOTRIP,             DS_NO_PARA          1<br>VXT_NOTRIP,             DS_INTERNAL_INIT    2<br>VXT_NOTRIP,             DS_PRECOMMISSON     3<br>VXT_INSTALLATIONTRIP,   DS_MONTAGE          4<br>VXT_LEARNTRIP,          DS_LEARN            5<br>VXT_SYNCHTRIP,          DS_SYNCH            6<br>VXT_MANUALTRIPS,        DS_INSPECTION       7<br>VXT_MANUALTRIPS,        DS_RECALL           8<br>VXT_NORMALTRIP,         DS_NORMAL           9<br>VXT_RELEVELLING,        DS_RELEVEL         10<br>VXT_NOTRIP,             DS_COMMISSION      11<br>VXT_DUMMY1,             DS_ABNAHME_ON      12<br>VXT_NOTRIP,             DS_HOLD_BY_BUTTON  13<br>VXT_BLOCKED_BY_STR,     DS_HOLD_BY_STR     14<br>VXT_NOTRIP,             DS_BLOCK_TEMP      15<br>VXT_NOTRIP,             DS_BLOCK_PERM      16<br>VXT_CONTROLTRIP,        DS_CONTROL_TRIP    17<br>VXT_NOTRIP,             DS_SICURTRNIC      18<br>VXT_NOTRIP,             DS_BYPASS_DOOR     19<br>VXT_MANUALTRIPS,        DS_RAMP_TRIP       20<br>VXT_NOTRIP,             DS_SWITCH_CONFLICT 21<br>VXT_DUMMY1              DS_ABNAHME_TEST    22<br></TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">0</TD>
+<TD valign="top" WIDTH="70%">NOTRIP</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">NORMALTRIP</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">MANUALTRIPS</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">LEARNTRIP</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">SYNCHTRIP</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">5</TD>
+<TD valign="top" WIDTH="70%">RELEVELLING</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">6</TD>
+<TD valign="top" WIDTH="70%">CORRECTIONTRIP</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">7</TD>
+<TD valign="top" WIDTH="70%">DUMMY1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">8</TD>
+<TD valign="top" WIDTH="70%">INSTALLATIONTRIP</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">9</TD>
+<TD valign="top" WIDTH="70%">CONTROLTRIP</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">10</TD>
+<TD valign="top" WIDTH="70%">BLOCKED_BY_STR</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">11</TD>
+<TD valign="top" WIDTH="70%">DOCKINGTRIP</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">12</TD>
+<TD valign="top" WIDTH="70%">COLDOILTRIP</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

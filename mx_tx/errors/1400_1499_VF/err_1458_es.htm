@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1458 Inv_VF20_PCT</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1458 Inv_VF20_PCT</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>VF</em> error <em>Inv_VF20_PCT</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Invalid parameter in VF20/30 parameter group</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>0x01-0x80 (parameter-ID): <br>
+Drive parameter in PCT out of range <br>
+0x01: P_VF20_30_TACHO_FACTOR <br>
+0x02: P_VF20_30_KSE_DISTANCE <br>
+0x03: P_VF20_30_KSERE_DISTANCE <br>
+0x04: P_VF20_30_GAP_LENGTH <br>
+0x05: P_VF20_30_LOAD_TYPE <br>
+0x06: P_VF20_30_DRIVE_RES_1 <br>
+0x07: P_VF20_30_DRIVE_RES_2 <br>
+0x08: P_VF20_30_DRIVE_RES_3 <br>
+0x09: P_VF20_30_DRIVE_RES_4 <br>
+0x20: P_VF20_30_FN <br>
+0x21: P_VF20_30_VKN <br>
+0x22: P_VF20_30_FC_MAX_R <br>
+0x23: P_VF20_30_MM_IMP <br>
+0x24: P_VF20_30_FT_RU1 <br>
+0x25: P_VF20_30_DELTA_U <br>
+0x26: P_VF20_30_BARMAG_RES_0 <br>
+0x27: P_VF20_30_T_DIFF <br>
+0x28: P_VF20_30_T_AUF <br>
+0x29: P_VF20_30_U_END <br>
+0x2A: P_VF20_30_S_KBR_2 <br>
+0x2B: P_VF20_30_ BARMAG_RES_ <br>
+0x2C: P_VF20_3 BARMAG_RES_0_ <br>
+0x80: P_VF20_30_SELECTOR_TRANS_TABLE<br>
+0xFE: condition U_END &gt;= DELTA_U not fulfilled. <br>
+0xAA (GENERAL_PARAM): Stored general drive parameter (Tacho-1m, KSE-Distance, KSERE-Distance, GAP-Length, Load-Type) out of range. <br>
+0xBB (BARMAG_PARAM): Stored converter-specific drive parameter (FN, VKN, MM_IMP, S_KBR_2, FT_RU1, DELTA_U, FC_MAX_R, T_DIFF, T_AUF, U_END) out of range</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Parameter value wrongly set in PCT</td>
+<td valign="top">Adjust appropriate parameter with CADI/SMLCD</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">PCT structure invalid (one or more parameters missing)</td>
+<td valign="top">Replace PCT (Perform a PCT-download with CADI or change PEROM)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

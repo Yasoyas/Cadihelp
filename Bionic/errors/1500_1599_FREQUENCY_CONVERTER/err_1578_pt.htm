@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1578 E_FC_RPM_IDENT_FAILED</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1578 E_FC_RPM_IDENT_FAILED</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>1500_1599_FREQUENCY_CONVERTER</em> error <em>E_FC_RPM_IDENT_FAILED</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The learning procedure of the drive motor revolution parameter (RPM) wasn't successful. It was aborted after 10 consecutive trip cycles (travel up and down). Note, no parameter will be overwritten.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>ndef</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>ndef</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">manipulation by the fitter. Different destinations per travel direction entered during the learning procedure.</td>
+<td valign="top">Follow instruction J42101241 (V3 or later) 'Biodyn XX C/P BR Comissioning' or TK.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Wrong initial value of drive motor revolution parameter (CF16 PA38) set for the learning procedure.</td>
+<td valign="top">Follow instruction J42101241 (V3 or later) 'Biodyn XX C/P BR Comissioning' or TK.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">The learning procedure wasn't able to bring the delta trip time (difference of the time measured at a trip in up and down direction) lower than a specific limit.</td>
+<td valign="top">Follow instruction J42101241 (V3 or later) 'Biodyn XX C/P BR Comissioning' or TK.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">The learning procedure wasn't able to bring the delta nominal speed (difference of the meassured actual car speed compared with the reference car speed) lower than a specific limit.</td>
+<td valign="top">Follow instruction J42101241 (V3 or later) 'Biodyn XX C/P BR Comissioning' or TK.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

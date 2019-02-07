@@ -1,0 +1,223 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Specification</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Specification</em> of the parameter group <em>Subgroup Control</em> in subsystem <em>Group Control</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Lift Allocation</h4></TD>
+<TD valign="top" class="Layout"><p>The parameter (table) defines which lifts belong to which subgroup. It is possible to define up to 8 different subgroups. Important: a lift may be part of more than one subgroup if necessary (e.g.: double duplex control). For a standart elevator (group) with no subgroup control the parameter has a default value corresponding to a subgroup (#1) which includes all lifts.<br><br>Together with the parameter P_STR_SG_RISER a complete definition of the subgroup(s) and the related effective risers is made. The index number (subgroup number) in this table corresponds to the index number for P_STR_SG_RISER.<br><br>In order to allow to add subgroup definitions using CADI this table must always be complete (8 lines with 9 data) in the PCT. For subgroups not used the lift numbers in the corresponding fields are set to 0.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>a): 5 different subgroups which consist of different set of lifts
+
+ ¤5D                                      *   PCT_GP_RS_SUBGROUP
+ {...
+ ¤75[06 09 01 01 02 03 04 05 06 00 00]    * subgroup 1: lift 1..6
+ ¤75[06 09 02 01 02 00 00 00 00 00 00]    * subgroup 2: lift 1, 2
+ ¤75[06 09 03 03 04 00 00 00 00 00 00]    * subgroup 3: lift 3, 4
+ ¤75[06 09 04 05 06 00 00 00 00 00 00]    * subgroup 4: lift 5, 6
+ ¤75[06 09 05 01 02 03 04 00 00 00 00]    * subgroup 5: lift 1..4
+ ¤75[06 09 06 00 00 00 00 00 00 00 00]    * subgroup 6: not used
+ ¤75[06 09 07 00 00 00 00 00 00 00 00]    * subgroup 7: not used
+ ¤75[06 09 08 00 00 00 00 00 00 00 00]    * subgroup 8(max): not used
+ ...
+ }
+
+b) Default value: only one subgroup (subgroup 1)
+ with all existing lifts (P_SYS_NUMBER_OF_LIFT). e.g. default with number of lift = 5
+
+  ¤5D                                  *   PCT_GP_RS_SUBGROUP
+   {...
+   ¤75[06 09 01 01 02 03 04 05 00 00 00]    * subgroup 1: lift 1..5
+   ¤75[06 09 02 00 00 00 00 00 00 00 00]    * subgroup 2: not used
+   ¤75[06 09 03 00 00 00 00 00 00 00 00]    * subgroup 3: not used
+   ¤75[06 09 04 00 00 00 00 00 00 00 00]    * subgroup 4: not used
+   ¤75[06 09 05 00 00 00 00 00 00 00 00]    * subgroup 5: not used
+   ¤75[06 09 06 00 00 00 00 00 00 00 00]    * subgroup 6: not used
+   ¤75[06 09 07 00 00 00 00 00 00 00 00]    * subgroup 7: not used
+   ¤75[06 09 08 00 00 00 00 00 00 00 00]    * subgroup 8(max): not used
+   ...
+   }</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Riser Allocation</h4></TD>
+<TD valign="top" class="Layout"><p>This parameter table defines which risers (set of floor calls) are effective for which subgroups defined in P_STR_SG_SUBGROUP. Or in other words, which landing calls are served by which subgroup (a subgroup may consist of a single lift). The floor call signal (DE-U/D) includes a riser number in addition to the floor and side attribute. This riser number for the floor calls is either defined with the signal definition in the PCT for TX-GC/TX-R5 (Group LON bus) or is taken from the parameter P_IO_RISER_ID_FLOOR (Riser Id.) for MX-GC/TX-GC2. <br><br>Together with the parameter P_STR_SG_SUBGROUP a complete definition of the subgroups and the related effective risers is made. The index (subgroup number) in this table corresponds to the index number for P_STR_SG_SUBGROUP.<br><br>Remark: In order to allow to make subgroup definitions using CADI this table must always be complete (8 lines, 9 data) in PCT. For subgroups not used the riser number is 0.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>a) Effective risers for subgroups 1 to 5
+  ¤5D                                  *   PCT_GP_RS_SUBGROUP
+    {...
+    ¤76[06 09 01 01 02 03 00 00 00 00 00]  * subgroup 1: risers 1..3
+    ¤76[06 09 02 01 00 00 00 00 00 00 00]  * subgroup 2: riser 1
+    ¤76[06 09 03 02 00 00 00 00 00 00 00]  * subgroup 3: riser 2
+    ¤76[06 09 04 03 00 00 00 00 00 00 00]  * subgroup 4: riser 3
+    ¤76[06 09 05 01 02 00 00 00 00 00 00]  * subgroup 5: risers 1..2
+    ¤76[06 09 06 00 00 00 00 00 00 00 00]  * subgroup 6: not used
+    ¤76[06 09 07 00 00 00 00 00 00 00 00]  * subgroup 7: not used
+    ¤76[06 09 08 00 00 00 00 00 00 00 00]  * subgroup 8: not used
+    ...
+    }
+
+b) Default value: all risers effective for subgroup 1.
+
+  ¤5D                                  *   PCT_GP_RS_SUBGROUP
+    {...
+    ¤76[06 09 01 01 02 03 04 05 06 07 08]  * subgroup 1: risers 1..8
+    ¤76[06 09 02 00 00 00 00 00 00 00 00]  * subgroup 2: not used
+    ¤76[06 09 03 00 00 00 00 00 00 00 00]  * subgroup 3: not used
+    ¤76[06 09 04 00 00 00 00 00 00 00 00]  * subgroup 4: not used
+    ¤76[06 09 05 00 00 00 00 00 00 00 00]  * subgroup 5: not used
+    ¤76[06 09 06 00 00 00 00 00 00 00 00]  * subgroup 6: not used
+    ¤76[06 09 07 00 00 00 00 00 00 00 00]  * subgroup 7: not used
+    ¤76[06 09 08 00 00 00 00 00 00 00 00]  * subgroup 8: not used
+    ...
+    }</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Activation Mode</h4></TD>
+<TD valign="top" class="Layout"><p>This parameter defines which subgroups are active in subgroup modes 0 to 7. A subgroup mode defines which subgroups are simultaneously active. A maximum of 4 subgroups can operate in a subgroup mode. Up to 8 modes (0..7) can be defined. The default value for P_STR_SG_MODE must include at least one subgroup for mode 0 because this mode is active when no subgroup switching is required. The switching between subgroup modes is done with the group input JUG; this signal includes an attribute which defines which mode (0..7) shall be active. The parameter P_STR_SG_SUBGROUP defines which elevators are part of each subgroup used in this parameter.<br><br>In order to allow to add mode definitions using CADI, this table must always be complete (8 lines, 5 data) in PCT. For all modes which are not defined the subgroup numbers are 0.<br><br>The subgroup number used here correspond to the ones defined in parameters P_STR_SG_SUBGROUP and P_STR_SG_RISER.<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>a.) 3 subgroup modes used
+  ¤5D                                  *   PCT_GP_RS_SUBGROUP
+    {...
+    ¤77[06 05 00 01 00 00 00] * Mode 0, active subgroup: 1   
+    ¤77[06 05 01 02 03 04 00] * Mode 1, active subgroups: 2..4
+    ¤77[06 05 02 03 05 00 00] * Mode 2, active subgroups: 3, 5
+    ¤77[06 05 03 00 00 00 00] * Mode 3, not used
+    ¤77[06 05 04 00 00 00 00] * Mode 4, not used
+    ¤77[06 05 05 00 00 00 00] * Mode 5, not used
+    ¤77[06 05 06 00 00 00 00] * Mode 6, not used
+    ¤77[06 05 07 00 00 00 00] * Mode 7, not used
+    ...
+    }
+
+b.) Default value: subgroup 1 active in mode 0.
+
+  ¤5D                                  *   PCT_GP_RS_SUBGROUP
+    {...
+    ¤77[06 05 00 01 00 00 00] * Mode 0, active subgroup: 1   
+    ¤77[06 05 01 00 00 00 00] * Mode 1, not used
+    ¤77[06 05 02 00 00 00 00] * Mode 2, not used
+    ¤77[06 05 03 00 00 00 00] * Mode 3, not used
+    ¤77[06 05 04 00 00 00 00] * Mode 4, not used
+    ¤77[06 05 05 00 00 00 00] * Mode 5, not used
+    ¤77[06 05 06 00 00 00 00] * Mode 6, not used
+    ¤77[06 05 07 00 00 00 00] * Mode 7, not used
+    ...
+    }</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Handicapped Riser</h4></TD>
+<TD valign="top" class="Layout"><p>List of risers with handicapped floor calls. Used by Wheelchair Handicapped Control.<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example: riser 1 and 3 are handicapped risers
+
+  ¤5D                                  *   PCT_GP_RS_SUBGROUP
+    {...
+    ¤97 [06 09 01 01 03 00 00 00 00 00 00] * P_STR_SG_HANDIC_RISER
+    }
+
+Default values: no handicapped risers
+
+  ¤5D                                  *   PCT_GP_RS_SUBGROUP
+    {...
+    ¤97 [06 09 01 00 00 00 00 00 00 00 00] * P_STR_SG_HANDIC_RISER
+    }</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Riser Id.</h4></TD>
+<TD valign="top" class="Layout"><p>Definition of the riser Id. for landing calls (ZS1 and ZS20) used by I/O handler. With the introduction of the plug & play fixtures and the new (TX-GC2) user bus architecture the definition of the riser Id. for the landing calls is done with this parameter. All landing calls (DE-k) connected to an elevator will have the riser Id. given with this parameter separately for front and rear side landing calls.<br><br>Attention: Because this parameter is used to configure the IO's it is necessary to make a dobule reset after the parameter is modified. Only then the floor call IO's are reconfigured.<br><br>Normally all landing calls connected to an elevator have the same riser Id. In this case the floor index value (Field1) will be 0 and the PCT has a single entry (not per floor). <br>example for PCT entry: <br>C0 [ 06 03 00 01 01 ]   riser Id. 1 for all landing calls front and rear side<br><br>If some landing calls must be defined with a different riser Id. this can be achieved by adding a line in the PCT for these levels with the correct riser definition.<br>example for PCT entry:<br>C0 [ 06 03 00 01 01 ]    riser Id. 1 for all landing calls except landing call floor 6 with riser Id.2<br>C0 [ 06 03 06 02 02 ]<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

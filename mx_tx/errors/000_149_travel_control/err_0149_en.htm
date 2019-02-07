@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0149 Safety T5</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0149 Safety T5</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>Safety T5</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Used for the monitoring of the car door contact(s) KTC. The safety circuit is open before the fifth tap (ISKT5) but after the fourth tap (ISKT4). The message is logged if:<br>
+a) the safety circuit opens during a trip due to a car door contact (front or rear) which opens unexpectedly. <br>
+b) the safety circuit does not close as expected after the door has closed.<br><br>
+Comments: Refer also to wiring diagram for contacts causing the error.<br>
+If the pre-opening of the door during landing is not working properly this event may appear instead of error 'SafetyRTS'. If this error persists, change the drive parameter 'DOOR_CONTACT_DELAY' from 50 (0.5 s) to 70 or 100. This is time the logic waits during startup from the first time the SKD signal 5 (safety end) is received to the moment when the door overbridging is disabled. During this time, the door contacts may bounce. Do not increase the value for this parameter too much because it will further increase the trip preparation timer. More care should be taken to improve the adjustment of the door movement.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>= 00000000: no information<br><br>
+= xxyyyyyy: First 2 digits (xx) hold information for software development only.<br>
+The remaining 6 digits (yyyyyy) show the car position ( decimal value in mm ) when the error occured.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Door contacts KTC</td>
+<td valign="top">Check switching of car door contacts</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Bad wiring of car door contacts in safety circuit</td>
+<td valign="top">Check wiring to car door contacts</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Door bridging circuit</td>
+<td valign="top">Check the door bridging circuit</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Faulty input on interface board for safety circuit tap inputs</td>
+<td valign="top">Check the interface board and the connections to the safety circuit. Replace board if necessary.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

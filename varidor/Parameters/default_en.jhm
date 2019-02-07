@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/map_1_0.dtd">
+
+<map version="1.0">
+  <mapID target="parameter_main"     url="default_en.htm"/>
+  <mapID target="General" url="General/default_en.htm"/>
+  <mapID target="GeneralSettings" url="General/Settings/default_en.htm"/>
+  <mapID target="DoorSettings_22_16" url="General/Settings/DoorSettings_22_16_en.htm"/>
+  <mapID target="param_725" url="General/Settings/DoorSettings_22_16_en.htm#param_725"/>
+  <mapID target="param_726" url="General/Settings/DoorSettings_22_16_en.htm#param_726"/>
+  <mapID target="param_727" url="General/Settings/DoorSettings_22_16_en.htm#param_727"/>
+  <mapID target="param_728" url="General/Settings/DoorSettings_22_16_en.htm#param_728"/>
+  <mapID target="param_730" url="General/Settings/DoorSettings_22_16_en.htm#param_730"/>
+  <mapID target="param_731" url="General/Settings/DoorSettings_22_16_en.htm#param_731"/>
+  <mapID target="param_740" url="General/Settings/DoorSettings_22_16_en.htm#param_740"/>
+  <mapID target="param_779" url="General/Settings/DoorSettings_22_16_en.htm#param_779"/>
+  <mapID target="param_780" url="General/Settings/DoorSettings_22_16_en.htm#param_780"/>
+  <mapID target="Mechanical_22_16" url="General/Settings/Mechanical_22_16_en.htm"/>
+  <mapID target="param_735" url="General/Settings/Mechanical_22_16_en.htm#param_735"/>
+  <mapID target="param_736" url="General/Settings/Mechanical_22_16_en.htm#param_736"/>
+  <mapID target="param_759" url="General/Settings/Mechanical_22_16_en.htm#param_759"/>
+  <mapID target="param_760" url="General/Settings/Mechanical_22_16_en.htm#param_760"/>
+  <mapID target="param_761" url="General/Settings/Mechanical_22_16_en.htm#param_761"/>
+  <mapID target="param_763" url="General/Settings/Mechanical_22_16_en.htm#param_763"/>
+  <mapID target="param_854" url="General/Settings/Mechanical_22_16_en.htm#param_854"/>
+  <mapID target="param_855" url="General/Settings/Mechanical_22_16_en.htm#param_855"/>
+  <mapID target="Specials" url="Specials/default_en.htm"/>
+  <mapID target="SpecialsClosingForce" url="Specials/Closing Force/default_en.htm"/>
+  <mapID target="ForceSettings_80_27" url="Specials/Closing Force/ForceSettings_80_27_en.htm"/>
+  <mapID target="param_770" url="Specials/Closing Force/ForceSettings_80_27_en.htm#param_770"/>
+  <mapID target="param_771" url="Specials/Closing Force/ForceSettings_80_27_en.htm#param_771"/>
+  <mapID target="param_1027" url="Specials/Closing Force/ForceSettings_80_27_en.htm#param_1027"/>
+  <mapID target="HoldingForceAtClosedPos_80_27" url="Specials/Closing Force/HoldingForceAtClosedPos_80_27_en.htm"/>
+  <mapID target="param_1276" url="Specials/Closing Force/HoldingForceAtClosedPos_80_27_en.htm#param_1276"/>
+  <mapID target="param_1277" url="Specials/Closing Force/HoldingForceAtClosedPos_80_27_en.htm#param_1277"/>
+  <mapID target="param_1278" url="Specials/Closing Force/HoldingForceAtClosedPos_80_27_en.htm#param_1278"/>
+  <mapID target="param_1279" url="Specials/Closing Force/HoldingForceAtClosedPos_80_27_en.htm#param_1279"/>
+  <mapID target="param_1280" url="Specials/Closing Force/HoldingForceAtClosedPos_80_27_en.htm#param_1280"/>
+  <mapID target="SpecialsClutch" url="Specials/Clutch/default_en.htm"/>
+  <mapID target="ClutchTiming_97_27" url="Specials/Clutch/ClutchTiming_97_27_en.htm"/>
+  <mapID target="param_852" url="Specials/Clutch/ClutchTiming_97_27_en.htm#param_852"/>
+  <mapID target="param_853" url="Specials/Clutch/ClutchTiming_97_27_en.htm#param_853"/>
+  <mapID target="SpecialsDoorDrive" url="Specials/Door Drive/default_en.htm"/>
+  <mapID target="MotorSettings_98_27" url="Specials/Door Drive/MotorSettings_98_27_en.htm"/>
+  <mapID target="param_750" url="Specials/Door Drive/MotorSettings_98_27_en.htm#param_750"/>
+  <mapID target="param_756" url="Specials/Door Drive/MotorSettings_98_27_en.htm#param_756"/>
+  <mapID target="EncoderDoorDrive_98_27" url="Specials/Door Drive/EncoderDoorDrive_98_27_en.htm"/>
+  <mapID target="param_754" url="Specials/Door Drive/EncoderDoorDrive_98_27_en.htm#param_754"/>
+  <mapID target="param_755" url="Specials/Door Drive/EncoderDoorDrive_98_27_en.htm#param_755"/>
+  <mapID target="TransmissionRatio_98_27" url="Specials/Door Drive/TransmissionRatio_98_27_en.htm"/>
+  <mapID target="param_757" url="Specials/Door Drive/TransmissionRatio_98_27_en.htm#param_757"/>
+  <mapID target="param_758" url="Specials/Door Drive/TransmissionRatio_98_27_en.htm#param_758"/>
+  <mapID target="Force-Torque_98_27" url="Specials/Door Drive/Force-Torque_98_27_en.htm"/>
+  <mapID target="param_752" url="Specials/Door Drive/Force-Torque_98_27_en.htm#param_752"/>
+  <mapID target="param_753" url="Specials/Door Drive/Force-Torque_98_27_en.htm#param_753"/>
+  <mapID target="ControlRegulation_98_27" url="Specials/Door Drive/ControlRegulation_98_27_en.htm"/>
+  <mapID target="param_762" url="Specials/Door Drive/ControlRegulation_98_27_en.htm#param_762"/>
+  <mapID target="SpecialsMiscellaneous" url="Specials/Miscellaneous/default_en.htm"/>
+  <mapID target="Misc.Parameters_111_27" url="Specials/Miscellaneous/Misc.Parameters_111_27_en.htm"/>
+  <mapID target="param_724" url="Specials/Miscellaneous/Misc.Parameters_111_27_en.htm#param_724"/>
+  <mapID target="param_729" url="Specials/Miscellaneous/Misc.Parameters_111_27_en.htm#param_729"/>
+  <mapID target="param_733" url="Specials/Miscellaneous/Misc.Parameters_111_27_en.htm#param_733"/>
+  <mapID target="param_737" url="Specials/Miscellaneous/Misc.Parameters_111_27_en.htm#param_737"/>
+  <mapID target="param_739" url="Specials/Miscellaneous/Misc.Parameters_111_27_en.htm#param_739"/>
+  <mapID target="param_749" url="Specials/Miscellaneous/Misc.Parameters_111_27_en.htm#param_749"/>
+  <mapID target="param_751" url="Specials/Miscellaneous/Misc.Parameters_111_27_en.htm#param_751"/>
+  <mapID target="param_1024" url="Specials/Miscellaneous/Misc.Parameters_111_27_en.htm#param_1024"/>
+  <mapID target="param_1025" url="Specials/Miscellaneous/Misc.Parameters_111_27_en.htm#param_1025"/>
+  <mapID target="param_1111" url="Specials/Miscellaneous/Misc.Parameters_111_27_en.htm#param_1111"/>
+  <mapID target="TracePrintCom2Temp_111_27" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm"/>
+  <mapID target="param_1037" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1037"/>
+  <mapID target="param_1038" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1038"/>
+  <mapID target="param_1039" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1039"/>
+  <mapID target="param_1040" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1040"/>
+  <mapID target="param_1041" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1041"/>
+  <mapID target="param_1042" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1042"/>
+  <mapID target="param_1043" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1043"/>
+  <mapID target="param_1044" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1044"/>
+  <mapID target="param_1045" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1045"/>
+  <mapID target="param_1046" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1046"/>
+  <mapID target="param_1047" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1047"/>
+  <mapID target="param_1048" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1048"/>
+  <mapID target="param_1049" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1049"/>
+  <mapID target="param_1050" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1050"/>
+  <mapID target="param_1051" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1051"/>
+  <mapID target="param_1052" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1052"/>
+  <mapID target="param_1053" url="Specials/Miscellaneous/TracePrintCom2Temp_111_27_en.htm#param_1053"/>
+  <mapID target="Statistics_111_27" url="Specials/Miscellaneous/Statistics_111_27_en.htm"/>
+  <mapID target="param_1121" url="Specials/Miscellaneous/Statistics_111_27_en.htm#param_1121"/>
+  <mapID target="SpecialsMotionSpecial" url="Specials/Motion Special/default_en.htm"/>
+  <mapID target="PowerUpDefaults_109_27" url="Specials/Motion Special/PowerUpDefaults_109_27_en.htm"/>
+  <mapID target="param_772" url="Specials/Motion Special/PowerUpDefaults_109_27_en.htm#param_772"/>
+  <mapID target="param_773" url="Specials/Motion Special/PowerUpDefaults_109_27_en.htm#param_773"/>
+  <mapID target="SpeedRegulation_109_27" url="Specials/Motion Special/SpeedRegulation_109_27_en.htm"/>
+  <mapID target="param_776" url="Specials/Motion Special/SpeedRegulation_109_27_en.htm#param_776"/>
+  <mapID target="param_777" url="Specials/Motion Special/SpeedRegulation_109_27_en.htm#param_777"/>
+  <mapID target="param_778" url="Specials/Motion Special/SpeedRegulation_109_27_en.htm#param_778"/>
+  <mapID target="SpecialsMotionSpeedNightMode" url="Specials/Motion Speed Night Mode/default_en.htm"/>
+  <mapID target="ClosingSpeed_106_27" url="Specials/Motion Speed Night Mode/ClosingSpeed_106_27_en.htm"/>
+  <mapID target="param_796" url="Specials/Motion Speed Night Mode/ClosingSpeed_106_27_en.htm#param_796"/>
+  <mapID target="param_798" url="Specials/Motion Speed Night Mode/ClosingSpeed_106_27_en.htm#param_798"/>
+  <mapID target="param_800" url="Specials/Motion Speed Night Mode/ClosingSpeed_106_27_en.htm#param_800"/>
+  <mapID target="param_802" url="Specials/Motion Speed Night Mode/ClosingSpeed_106_27_en.htm#param_802"/>
+  <mapID target="param_804" url="Specials/Motion Speed Night Mode/ClosingSpeed_106_27_en.htm#param_804"/>
+  <mapID target="OpeningSpeed_106_27" url="Specials/Motion Speed Night Mode/OpeningSpeed_106_27_en.htm"/>
+  <mapID target="param_795" url="Specials/Motion Speed Night Mode/OpeningSpeed_106_27_en.htm#param_795"/>
+  <mapID target="param_797" url="Specials/Motion Speed Night Mode/OpeningSpeed_106_27_en.htm#param_797"/>
+  <mapID target="param_799" url="Specials/Motion Speed Night Mode/OpeningSpeed_106_27_en.htm#param_799"/>
+  <mapID target="param_801" url="Specials/Motion Speed Night Mode/OpeningSpeed_106_27_en.htm#param_801"/>
+  <mapID target="param_803" url="Specials/Motion Speed Night Mode/OpeningSpeed_106_27_en.htm#param_803"/>
+  <mapID target="ReversingSpeed_106_27" url="Specials/Motion Speed Night Mode/ReversingSpeed_106_27_en.htm"/>
+  <mapID target="param_807" url="Specials/Motion Speed Night Mode/ReversingSpeed_106_27_en.htm#param_807"/>
+  <mapID target="param_808" url="Specials/Motion Speed Night Mode/ReversingSpeed_106_27_en.htm#param_808"/>
+  <mapID target="StoppingSpeed_106_27" url="Specials/Motion Speed Night Mode/StoppingSpeed_106_27_en.htm"/>
+  <mapID target="param_805" url="Specials/Motion Speed Night Mode/StoppingSpeed_106_27_en.htm#param_805"/>
+  <mapID target="param_806" url="Specials/Motion Speed Night Mode/StoppingSpeed_106_27_en.htm#param_806"/>
+  <mapID target="SpecialsMotionSpeedNormalMode" url="Specials/Motion Speed Normal Mode/default_en.htm"/>
+  <mapID target="ClosingSpeed_104_27" url="Specials/Motion Speed Normal Mode/ClosingSpeed_104_27_en.htm"/>
+  <mapID target="param_824" url="Specials/Motion Speed Normal Mode/ClosingSpeed_104_27_en.htm#param_824"/>
+  <mapID target="param_826" url="Specials/Motion Speed Normal Mode/ClosingSpeed_104_27_en.htm#param_826"/>
+  <mapID target="param_828" url="Specials/Motion Speed Normal Mode/ClosingSpeed_104_27_en.htm#param_828"/>
+  <mapID target="param_830" url="Specials/Motion Speed Normal Mode/ClosingSpeed_104_27_en.htm#param_830"/>
+  <mapID target="param_832" url="Specials/Motion Speed Normal Mode/ClosingSpeed_104_27_en.htm#param_832"/>
+  <mapID target="OpeningSpeed_104_27" url="Specials/Motion Speed Normal Mode/OpeningSpeed_104_27_en.htm"/>
+  <mapID target="param_823" url="Specials/Motion Speed Normal Mode/OpeningSpeed_104_27_en.htm#param_823"/>
+  <mapID target="param_825" url="Specials/Motion Speed Normal Mode/OpeningSpeed_104_27_en.htm#param_825"/>
+  <mapID target="param_827" url="Specials/Motion Speed Normal Mode/OpeningSpeed_104_27_en.htm#param_827"/>
+  <mapID target="param_829" url="Specials/Motion Speed Normal Mode/OpeningSpeed_104_27_en.htm#param_829"/>
+  <mapID target="param_831" url="Specials/Motion Speed Normal Mode/OpeningSpeed_104_27_en.htm#param_831"/>
+  <mapID target="ReversingSpeed_104_27" url="Specials/Motion Speed Normal Mode/ReversingSpeed_104_27_en.htm"/>
+  <mapID target="param_835" url="Specials/Motion Speed Normal Mode/ReversingSpeed_104_27_en.htm#param_835"/>
+  <mapID target="param_836" url="Specials/Motion Speed Normal Mode/ReversingSpeed_104_27_en.htm#param_836"/>
+  <mapID target="StoppingSpeed_104_27" url="Specials/Motion Speed Normal Mode/StoppingSpeed_104_27_en.htm"/>
+  <mapID target="param_833" url="Specials/Motion Speed Normal Mode/StoppingSpeed_104_27_en.htm#param_833"/>
+  <mapID target="param_834" url="Specials/Motion Speed Normal Mode/StoppingSpeed_104_27_en.htm#param_834"/>
+  <mapID target="SpecialsMotionSpeedNudgingMode" url="Specials/Motion Speed Nudging Mode/default_en.htm"/>
+  <mapID target="ClosingSpeed_107_27" url="Specials/Motion Speed Nudging Mode/ClosingSpeed_107_27_en.htm"/>
+  <mapID target="param_782" url="Specials/Motion Speed Nudging Mode/ClosingSpeed_107_27_en.htm#param_782"/>
+  <mapID target="param_784" url="Specials/Motion Speed Nudging Mode/ClosingSpeed_107_27_en.htm#param_784"/>
+  <mapID target="param_786" url="Specials/Motion Speed Nudging Mode/ClosingSpeed_107_27_en.htm#param_786"/>
+  <mapID target="param_788" url="Specials/Motion Speed Nudging Mode/ClosingSpeed_107_27_en.htm#param_788"/>
+  <mapID target="param_790" url="Specials/Motion Speed Nudging Mode/ClosingSpeed_107_27_en.htm#param_790"/>
+  <mapID target="OpeningSpeed_107_27" url="Specials/Motion Speed Nudging Mode/OpeningSpeed_107_27_en.htm"/>
+  <mapID target="param_781" url="Specials/Motion Speed Nudging Mode/OpeningSpeed_107_27_en.htm#param_781"/>
+  <mapID target="param_783" url="Specials/Motion Speed Nudging Mode/OpeningSpeed_107_27_en.htm#param_783"/>
+  <mapID target="param_785" url="Specials/Motion Speed Nudging Mode/OpeningSpeed_107_27_en.htm#param_785"/>
+  <mapID target="param_787" url="Specials/Motion Speed Nudging Mode/OpeningSpeed_107_27_en.htm#param_787"/>
+  <mapID target="param_789" url="Specials/Motion Speed Nudging Mode/OpeningSpeed_107_27_en.htm#param_789"/>
+  <mapID target="ReversingSpeed_107_27" url="Specials/Motion Speed Nudging Mode/ReversingSpeed_107_27_en.htm"/>
+  <mapID target="param_793" url="Specials/Motion Speed Nudging Mode/ReversingSpeed_107_27_en.htm#param_793"/>
+  <mapID target="param_794" url="Specials/Motion Speed Nudging Mode/ReversingSpeed_107_27_en.htm#param_794"/>
+  <mapID target="StoppingSpeed_107_27" url="Specials/Motion Speed Nudging Mode/StoppingSpeed_107_27_en.htm"/>
+  <mapID target="param_791" url="Specials/Motion Speed Nudging Mode/StoppingSpeed_107_27_en.htm#param_791"/>
+  <mapID target="param_792" url="Specials/Motion Speed Nudging Mode/StoppingSpeed_107_27_en.htm#param_792"/>
+  <mapID target="SpecialsMotionSpeedReferencingTrip" url="Specials/Motion Speed Referencing Trip/default_en.htm"/>
+  <mapID target="ReferencingSpeed_108_27" url="Specials/Motion Speed Referencing Trip/ReferencingSpeed_108_27_en.htm"/>
+  <mapID target="param_764" url="Specials/Motion Speed Referencing Trip/ReferencingSpeed_108_27_en.htm#param_764"/>
+  <mapID target="ReferencingAcceleration_108_27" url="Specials/Motion Speed Referencing Trip/ReferencingAcceleration_108_27_en.htm"/>
+  <mapID target="param_765" url="Specials/Motion Speed Referencing Trip/ReferencingAcceleration_108_27_en.htm#param_765"/>
+  <mapID target="param_766" url="Specials/Motion Speed Referencing Trip/ReferencingAcceleration_108_27_en.htm#param_766"/>
+  <mapID target="SpecialsMotionSpeedSoftMode" url="Specials/Motion Speed Soft Mode/default_en.htm"/>
+  <mapID target="ClosingSpeed_105_27" url="Specials/Motion Speed Soft Mode/ClosingSpeed_105_27_en.htm"/>
+  <mapID target="param_810" url="Specials/Motion Speed Soft Mode/ClosingSpeed_105_27_en.htm#param_810"/>
+  <mapID target="param_812" url="Specials/Motion Speed Soft Mode/ClosingSpeed_105_27_en.htm#param_812"/>
+  <mapID target="param_814" url="Specials/Motion Speed Soft Mode/ClosingSpeed_105_27_en.htm#param_814"/>
+  <mapID target="param_816" url="Specials/Motion Speed Soft Mode/ClosingSpeed_105_27_en.htm#param_816"/>
+  <mapID target="param_818" url="Specials/Motion Speed Soft Mode/ClosingSpeed_105_27_en.htm#param_818"/>
+  <mapID target="OpeningSpeed_105_27" url="Specials/Motion Speed Soft Mode/OpeningSpeed_105_27_en.htm"/>
+  <mapID target="param_809" url="Specials/Motion Speed Soft Mode/OpeningSpeed_105_27_en.htm#param_809"/>
+  <mapID target="param_811" url="Specials/Motion Speed Soft Mode/OpeningSpeed_105_27_en.htm#param_811"/>
+  <mapID target="param_813" url="Specials/Motion Speed Soft Mode/OpeningSpeed_105_27_en.htm#param_813"/>
+  <mapID target="param_815" url="Specials/Motion Speed Soft Mode/OpeningSpeed_105_27_en.htm#param_815"/>
+  <mapID target="param_817" url="Specials/Motion Speed Soft Mode/OpeningSpeed_105_27_en.htm#param_817"/>
+  <mapID target="ReversingSpeed_105_27" url="Specials/Motion Speed Soft Mode/ReversingSpeed_105_27_en.htm"/>
+  <mapID target="param_821" url="Specials/Motion Speed Soft Mode/ReversingSpeed_105_27_en.htm#param_821"/>
+  <mapID target="param_822" url="Specials/Motion Speed Soft Mode/ReversingSpeed_105_27_en.htm#param_822"/>
+  <mapID target="StoppingSpeed_105_27" url="Specials/Motion Speed Soft Mode/StoppingSpeed_105_27_en.htm"/>
+  <mapID target="param_819" url="Specials/Motion Speed Soft Mode/StoppingSpeed_105_27_en.htm#param_819"/>
+  <mapID target="param_820" url="Specials/Motion Speed Soft Mode/StoppingSpeed_105_27_en.htm#param_820"/>
+  <mapID target="SpecialsMotionSpeedTurboMode" url="Specials/Motion Speed Turbo Mode/default_en.htm"/>
+  <mapID target="ClosingSpeed_103_27" url="Specials/Motion Speed Turbo Mode/ClosingSpeed_103_27_en.htm"/>
+  <mapID target="param_838" url="Specials/Motion Speed Turbo Mode/ClosingSpeed_103_27_en.htm#param_838"/>
+  <mapID target="param_840" url="Specials/Motion Speed Turbo Mode/ClosingSpeed_103_27_en.htm#param_840"/>
+  <mapID target="param_842" url="Specials/Motion Speed Turbo Mode/ClosingSpeed_103_27_en.htm#param_842"/>
+  <mapID target="param_844" url="Specials/Motion Speed Turbo Mode/ClosingSpeed_103_27_en.htm#param_844"/>
+  <mapID target="param_846" url="Specials/Motion Speed Turbo Mode/ClosingSpeed_103_27_en.htm#param_846"/>
+  <mapID target="OpeningSpeed_103_27" url="Specials/Motion Speed Turbo Mode/OpeningSpeed_103_27_en.htm"/>
+  <mapID target="param_837" url="Specials/Motion Speed Turbo Mode/OpeningSpeed_103_27_en.htm#param_837"/>
+  <mapID target="param_839" url="Specials/Motion Speed Turbo Mode/OpeningSpeed_103_27_en.htm#param_839"/>
+  <mapID target="param_841" url="Specials/Motion Speed Turbo Mode/OpeningSpeed_103_27_en.htm#param_841"/>
+  <mapID target="param_843" url="Specials/Motion Speed Turbo Mode/OpeningSpeed_103_27_en.htm#param_843"/>
+  <mapID target="param_845" url="Specials/Motion Speed Turbo Mode/OpeningSpeed_103_27_en.htm#param_845"/>
+  <mapID target="ReversingSpeed_103_27" url="Specials/Motion Speed Turbo Mode/ReversingSpeed_103_27_en.htm"/>
+  <mapID target="param_849" url="Specials/Motion Speed Turbo Mode/ReversingSpeed_103_27_en.htm#param_849"/>
+  <mapID target="param_850" url="Specials/Motion Speed Turbo Mode/ReversingSpeed_103_27_en.htm#param_850"/>
+  <mapID target="StoppingSpeed_103_27" url="Specials/Motion Speed Turbo Mode/StoppingSpeed_103_27_en.htm"/>
+  <mapID target="param_847" url="Specials/Motion Speed Turbo Mode/StoppingSpeed_103_27_en.htm#param_847"/>
+  <mapID target="param_848" url="Specials/Motion Speed Turbo Mode/StoppingSpeed_103_27_en.htm#param_848"/>
+  <mapID target="SpecialsObstacleDetection" url="Specials/Obstacle Detection/default_en.htm"/>
+  <mapID target="SafetyCode_99_27" url="Specials/Obstacle Detection/SafetyCode_99_27_en.htm"/>
+  <mapID target="param_732" url="Specials/Obstacle Detection/SafetyCode_99_27_en.htm#param_732"/>
+  <mapID target="param_741" url="Specials/Obstacle Detection/SafetyCode_99_27_en.htm#param_741"/>
+  <mapID target="param_742" url="Specials/Obstacle Detection/SafetyCode_99_27_en.htm#param_742"/>
+  <mapID target="param_743" url="Specials/Obstacle Detection/SafetyCode_99_27_en.htm#param_743"/>
+  <mapID target="param_744" url="Specials/Obstacle Detection/SafetyCode_99_27_en.htm#param_744"/>
+  <mapID target="EmergencyStop_99_27" url="Specials/Obstacle Detection/EmergencyStop_99_27_en.htm"/>
+  <mapID target="param_746" url="Specials/Obstacle Detection/EmergencyStop_99_27_en.htm#param_746"/>
+  <mapID target="param_747" url="Specials/Obstacle Detection/EmergencyStop_99_27_en.htm#param_747"/>
+  <mapID target="param_748" url="Specials/Obstacle Detection/EmergencyStop_99_27_en.htm#param_748"/>
+  <mapID target="ReopeningControl_99_27" url="Specials/Obstacle Detection/ReopeningControl_99_27_en.htm"/>
+  <mapID target="param_767" url="Specials/Obstacle Detection/ReopeningControl_99_27_en.htm#param_767"/>
+  <mapID target="param_769" url="Specials/Obstacle Detection/ReopeningControl_99_27_en.htm#param_769"/>
+  <mapID target="SpecialsServiceFunctions" url="Specials/Service Functions/default_en.htm"/>
+  <mapID target="DoorController_101_27" url="Specials/Service Functions/DoorController_101_27_en.htm"/>
+  <mapID target="param_889" url="Specials/Service Functions/DoorController_101_27_en.htm#param_889"/>
+  <mapID target="param_890" url="Specials/Service Functions/DoorController_101_27_en.htm#param_890"/>
+  <mapID target="SpecialsStatus" url="Specials/Status/default_en.htm"/>
+  <mapID target="TracePrintCom2_112_27" url="Specials/Status/TracePrintCom2_112_27_en.htm"/>
+  <mapID target="param_738" url="Specials/Status/TracePrintCom2_112_27_en.htm#param_738"/>
+</map>

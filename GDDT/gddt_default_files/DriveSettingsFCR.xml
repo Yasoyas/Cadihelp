@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Drive Settings</comment>
+
+
+
+<entry key="FCRSettingFileVersion">1</entry>
+
+<entry key="NumberOfInverterSettingsFCR">4</entry>
+<entry key="InverterSettingsFCR_Default">0</entry>
+
+
+<entry key="InverterSettingsFCR_1_Name">VF155PF1AC</entry>
+<entry key="InverterSettingsFCR_1_Number">18</entry>
+<entry key="InverterSettingsFCR_2_Name">VF288PF1AC</entry>
+<entry key="InverterSettingsFCR_2_Number">19</entry>
+<entry key="InverterSettingsFCR_3_Name">VF155PF1DC</entry>
+<entry key="InverterSettingsFCR_3_Number">21</entry>
+<entry key="InverterSettingsFCR_4_Name">VF288PF1DC</entry>
+<entry key="InverterSettingsFCR_4_Number">22</entry>
+
+
+
+<entry key="NumberOfMainsVoltageSettingsFCR">5</entry>
+<entry key="MainsVoltageSettingsFCR_Default">1</entry>
+
+<entry key="MainsVoltageSettingsFCR_1">380</entry>
+<entry key="MainsVoltageSettingsFCR_2">400</entry>
+<entry key="MainsVoltageSettingsFCR_3">415</entry>
+<entry key="MainsVoltageSettingsFCR_4">460</entry>
+<entry key="MainsVoltageSettingsFCR_5">480</entry>
+
+
+<entry key="NumberOfMotorACVoltageSettingsFCR">2</entry>
+<entry key="MotorACVoltageSettingsFCR_Default">1</entry>
+
+<entry key="MotorACVoltageSettingsFCR_1">340</entry>
+<entry key="MotorACVoltageSettingsFCR_2">460</entry>
+
+<entry key="NumberOfMotorDCVoltageSettingsFCR">4</entry>
+<entry key="MotorDCVoltageSettingsFCR_Default">0</entry>
+
+<entry key="MotorDCVoltageSettingsFCR_1">550</entry>
+<entry key="MotorDCVoltageSettingsFCR_2">600</entry>
+<entry key="MotorDCVoltageSettingsFCR_3">650</entry>
+<entry key="MotorDCVoltageSettingsFCR_4">700</entry>
+</properties>

@@ -1,0 +1,152 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>IO_TRACE&nbsp;(61)&nbsp;&nbsp;/&nbsp;&nbsp;LON_DOWNLOAD&nbsp;(29)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">attr_1: VXT_IO_TRACE_FIRST_TEL [1]<br>        VXT_IO_TRACE_ONE_TEL   [3] If the size of the data requires<br>                                   more than one telegram, then the<br>                                   id is VXT_IO_TRACE_FIRST_TEL<br><br>attr_2: VXT_IO_TRACE_ONE_BLOCK [6]<br>        VXT_IO_TRACE_NO_BLOCK  [7] There is only one block with the<br>                                   id VXT_IO_TRACE_ONE_BLOCK<br><br>If no download is in progress, NO_BLOCK is sent back.<br><br>data_length:	8 + length of UI label (max. 17)	<br><br>data[0]	VXT_DI_DOWNLOAD_START [8] (VXT_T_CHANNEL_UNIT_STATE)	<br>data[1]	1..255	internal board type<br>data[2]	0..255	unit type (0 = not used, undefined)<br>data[3]	0x00..0xFF	unit ID (high byte)<br>data[4]	0x01..0xFF	unit ID (low byte)<br>data[5]	0x01..0xFF	Subnet (LON) / NetWorkAdr_MSB (BIO2)<br>data[6]	0x01..0x7F	Node (LON) / NetWorkAdr_LSB (BIO2)<br><br>data[7]	VXT_DI_NODE_STATE_DEAD [0]<br>        VXT_DI_NODE_STATE_ALIVE [1]	Connection state<br><br>data[8]	DI_UNFROZEN   [0]<br>        DI_FROZEN     [1]  freeze state<br><br>data[9]	VXT_T_CHANNEL_ID   channel Id<br><br>data[10]  1. Unit name Char  This user interface label represents<br>                             the unit name. The length of this name<br>                             can be up to 25 characters (2 telegrams).<br>data[11]  2. Unit name Char	<br>..	..	<br>data[16]  7. Unit name Char	<br></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">IO_TRACE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">LON_DOWNLOAD</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">T_IO_TRACE_SEQ</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">T_IO_TRACE_SEQ</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">0</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_IO_TRACE_SEQ</h4></TD>
+<TD valign="top" WIDTH="80%">1: VXT_IO_TRACE_FIRST_TEL<br>2: VXT_IO_TRACE_SEC_TEL<br>3: VXT_IO_TRACE_ONE_TEL<br>4: VXT_IO_TRACE_START_BLOCK<br>5: VXT_IO_TRACE_END_BLOCK<br>6: VXT_IO_TRACE_ONE_BLOCK<br>7: VXT_IO_TRACE_NO_BLOCK</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">IO_TRACE_FIRST_TEL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">IO_TRACE_SEC_TEL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">IO_TRACE_ONE_TEL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">IO_TRACE_START_BLOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">5</TD>
+<TD valign="top" WIDTH="70%">IO_TRACE_END_BLOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">6</TD>
+<TD valign="top" WIDTH="70%">IO_TRACE_ONE_BLOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">7</TD>
+<TD valign="top" WIDTH="70%">IO_TRACE_NO_BLOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">8</TD>
+<TD valign="top" WIDTH="70%">IO_TRACE_LAST_TEL</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

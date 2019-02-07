@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0092 IVXVF_HW_Fault</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0092 IVXVF_HW_Fault</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>IVXVF_HW_Fault</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Monitoring of I/O's in Travel Control detects abnormal status of I/O's (uncontrolled activation of relays or bad status of inputs). Check extra info for detailed description of possible cause.<br>
+See also error #135</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>0 (hex)/ 0 (dec):   All relays controlled by Travel Control are active unintentionally<br><br>
+A (hex)/ 10 (dec): DRH-U button on the recall panel is pressed without active recall control JRH; check wiring of JRH / DRH-U<br><br>
+B (hex)/ 11 (dec): DRH-D button on the recall panel is pressed without active recall control JRH; check wiring of JRH / DRH-D<br><br>
+14( hex)/ 20 (dec): DREC-U button on the inspection panel is pressed without active inspection control JREC; check wiring of JREC / DREC-U<br><br>
+15 (hex)/ 21 (dec): DREC-D button on the inspection panel is pressed without active inspection control JREC; check wiring of JREC / DREC-D<br><br>
+16 (hex)/ 22 (dec) DREC-E button on the inspection panel is pressed without active inspection control JREC; check wiring of JREC / DREC-E.<br><br>
+17 (hex)/ 23 (dec) DREC-U button pressed for more than 30 seconds and no trip because DREC-E not pressed simultaneously; both buttons must be released before a new trip is initiated.<br><br>
+18 (hex)/ 24 (dec) DREC-D button pressed for more than 30 seconds and no trip because DREC-E not pressed simultaneously; both buttons must be released before a new trip is initiated.<br><br>
+19 (hex)/ 25 (dec) DREC-E button pressed for more than 30 seconds and no trip because DREC-U or DREC-D not pressed simultaneously; buttons must be released before a new trip is initiated.<br><br>
+1E (hex)/ 30 (dec): DRH-E button on the recall panel is pressed without active recall control JRH; check wiring of JRH / DRH-E<br><br>
+32 (hex)/ 50 (dec): The status of the input RTCCON is not same as the status of the input RTC1CON (check) for more than 0.6 seconds.<br><br>
+33 (hex)/ 51 (dec): The status of the input RTSCON is not same as the status of the input RTS1CON (check) for more than 0.6 seconds.<br><br>
+34 (hex)/ 52 (dec): The status of the input RTSCON_20 is not same as the status of the input RTS1CON_20 (check) for more than 0.6 seconds.<br><br>
+5C (hex)/ 92 (dec): Manually bridged safety circuit detected (between taps 3 and 5) with active inspection control REC. Activation of inspection control on car is not allowed with bridge safety circuit across the inspection control panel (JREC / JHC) <br><br>
+5D (hex)/ 93 (dec): Used for NA: Manually bridged safety circuit detected (between taps 3 and 5) with active inspection control REC. Activation of inspection control on car is not allowed with bridge safety circuit across the inspection control panel (JREC / JHC)<br><br>
+64 (hex)/ 100 (dec): refer to description of extra information for error 74. (monitoring of open safety circuit before the third tap ISKT3 for more than 15 minutes is done with error 74 /changed 20.02.03)<br><br>
+14D (hex)/ 333 (dec):  The status of the input JRH is not same as the status of the input JRHCH (check) for more than 20 seconds.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Reserved</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Handling problem (wrong manipulation on recall- or inspection panel)</td>
+<td valign="top">none</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Grounding or EMC problem</td>
+<td valign="top">Remove all possible ground loops from the corresponding pcb (i.e. use AC mains socket in the control cabinet to power the service laptop).</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">HW fault</td>
+<td valign="top">1) Check wiring<br>
+2) Check function of I/Os' (refer to extra info)<br>
+3) Replace the pcb (IVXVF / GCIO) if necessary</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Jumper in safety circuit</td>
+<td valign="top">Remove jumper</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Field Feedback</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="20%">Location</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Car Roof</td>
+<td valign="top">Conectar inspección, presionar botones subida/bajada, desconectar inspección</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

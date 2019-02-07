@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0632 Open safety circuit</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0632 Open safety circuit</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>MC PVF</em> error <em>Open safety circuit</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>1.) After receiving a start command from the interface board, the state of motor contactor SH1 (VF 70-94) or K3 (old VF 100, 140) is proved. If it is de energised, this error is generated. AEG with only one contactor (K2) or Variodyn with UKE2 board (VF 35, 45, 70-95, 100/BR): Feedback RSK and RSK1 is proved. Parallel Operation: Feedback RSK, RSK1 (Mic V: RH, RH1) and K2 of the slave (cabinet AS3) is proved.<br>
+2.) During test function "check current loop", started from CADI motor contactors must be closed. If they are not, the current loop is open and the test is finished by issuing this error.<br>
+3.) During a trip, if the motor contactors open for the period of time shorter than 10 ms, and close again, a warning (no error) is issued to suggest that the PVF controller may get problems to follow reference current values. The trip is finished andstopsimmediately. Subsequent warning or error may be error 614. If the motor contactors become open during a trip, and stay open for longer then 10 ms, no warning and no error is generated. The PVF assumesthat such a trip is finished and stops immediately. This is usual situation for the montage or inspection trip.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">At the beginning of a trip, motor contactors are switched off before PVF gets stop command, after the start command is already received: the car or shaft door contacts, or any other component in the safety chain is not stable.</td>
+<td valign="top">Check safety chain</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Bad TOPT (only VF 70-94 and old VF 100, 140).</td>
+<td valign="top">Replace TOPT</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Bad relay RSK or RSK1 (feedback)</td>
+<td valign="top">Check feedback of relay RSK and RSK1</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Wrong feedback wiring.</td>
+<td valign="top">Check PVF input X4.6</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top">Bad supply of the motor contactors.</td>
+<td valign="top">Check supply of SH, SH1 (SF), (K2)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

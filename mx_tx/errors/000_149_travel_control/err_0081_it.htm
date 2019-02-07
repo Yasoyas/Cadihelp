@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0081 TripV_Tacho</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0081 TripV_Tacho</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>TripV_Tacho</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Il rilevatore di posizione ha subito un guasto durante la corsa. Il controllo corsa prosegue la corsa fino al piano più vicino utilizzando il feedback del rilevatore di velocità.<br>
+Commenti: Le informazioni del rilevatore di velocità vengono fornite dal controllo motore come handshake per ciascun telegramma di riferimento della velocità (circuito chiuso). Queste informazioni vengono utilizzate dal controllo corsa per calcolare la posizione e la velocità della cabina e proseguire la corsa in atto solo con il rilevatore di velocità. La cabina verrà portata al piano più vicino; la normale precisione di arresto non può essere garantita. La cabina si arresterà tuttavia nei pressi del piano in maniera sufficiente da consentire la normale apertura delle porte e l'uscita dei passeggeri.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Problema con il segnale del rilevatore di posizione</td>
+<td valign="top">Verificare il rilevatore di posizione e il suo collegamento al PCB di interfaccia e l'hardware del PCB.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Field Feedback</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="20%">Location</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Drive/ Controller</td>
+<td valign="top">Controllare : posizione tachimetrica motore sua connessione con il Drive.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top"></td>
+<td valign="top">Controllare Field Info No. 291, 283 (problemi EMC)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

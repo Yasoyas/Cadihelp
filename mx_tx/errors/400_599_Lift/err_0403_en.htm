@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0403 PowerUp</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0403 PowerUp</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Lift</em> error <em>PowerUp</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The CPU on the main control pcb reinitialises. Check log for CPU error codes (1000 to 1100).</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Depending on Source ID. See below.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>00 = Power up the first time<br>
+Extra Info: 01 = First time power up after installation of new SW or configuration<br>
+Extra Info: 02 = Power up after double reset<br>
+------------------------------------------------------------------<br>
+01 = Power up manual reset or unknown reason<br>
+------------------------------------------------------------------<br>
+02 = Power up due to CADI reset<br>
+------------------------------------------------------------------<br>
+03 = Power up due to preparation for new download.<br>
+------------------------------------------------------------------<br>
+04 = Power up caused by errorhandler:<br>
+Extra Info: 01 = Limit for reset action reached<br>
+Extra Info: 02 = Reset after "Fatal error block system short"<br>
+Extra Info: 03 = Reset after "Fatal error block system long"<br>
+Extra Info: 04 = Reset after "Fatal error block system permanent"<br>
+------------------------------------------------------------------<br>
+05 = Power up Watchdog<br>
+Extra Info: Information about internal circumstances of the task(s) which stopped responding.<br>
+See also CPU error 1062.<br>
+------------------------------------------------------------------</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Power up after internal problem (e.g. Watchdog, Software exception handling)</td>
+<td valign="top">Scan error log for reason of reset</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">External reason for power up (e.g. reset button pressed, complete loss of power)</td>
+<td valign="top">Source Id contains information about reason for power up</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

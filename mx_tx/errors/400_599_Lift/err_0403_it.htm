@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0403 PowerUp</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0403 PowerUp</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Lift</em> error <em>PowerUp</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>La CPU sul pcb di controllo principale si reinizializza.<br>
+Commenti: verificare se nel registro sono presenti i codici di errore CPU compresi tra 1000 e 1100</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>00 = Prima accensione[Altre informazioni: (solo per il gestore di errore Power_up) 01 = prima accensione dopo l'installazione di nuovo SW o configurazione 02 = accensione dopo doppia reimpostazione] 01 = accensione per reimpostazione manuale o ragione sconosciuta 02 = accensione per reimpostazione CADI 03 = accensione per preparazione di nuovo download. 04 = accensione provocata da gestore di errore:[Altre informazioni: (solo per il gestore di errore Power_up) 01 = raggiunto il limite di reimpostazione 02 = reimpostazione dopo "Fatal error block system short" 03 = reimpostazione dopo "Fatal error block system long" 04 = reimpostazione dopo "Fatal error block system permanent"] 05 = Watchdog accensione [Altre informazioni: (solo per watchdog di errore Power_up). Corrisponde a una maschera di bit che indica quali attività erano in corso quando si è verificata la reimpostazione. Bit0 = HCBBit1 = HFCBit2 = SPG1 = ok0 = questa attività non ha risposto entro l'intervallo di tempo consentito.]</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Accensione dopo problema interno (es. watchdog, gestione d'errore software)</td>
+<td valign="top">Consultare il registro errori per individuare la ragione della reimpostazione</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Ragione esterna per l'accensione (es. pressione del pulsante di reimpostazione, perdita totale di alimentazione)</td>
+<td valign="top">L'Id origine contiene informazioni sulla ragione dell'accensione</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

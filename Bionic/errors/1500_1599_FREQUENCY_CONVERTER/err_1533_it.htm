@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1533 E_FC_SPEED_SUPERVISION</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1533 E_FC_SPEED_SUPERVISION</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>1500_1599_FREQUENCY_CONVERTER</em> error <em>E_FC_SPEED_SUPERVISION</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Differenza troppo grande fra la velocità di riferimento e la velocità reale del motore dell'azionamento cabina. La velocità effettiva viene calcolata in base alle informazioni dell'encoder incrementale.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">I meccanismi di azionamento sono inibiti o bloccati</td>
+<td valign="top">Controllare la corretta apertura del freno.<br>
+Controllare l'eventuale blocco dei meccanismi di azionamento (ad es.ingranaggi del riduttore, lubrificazione).<br>
+Controllare l'eventuale errato bilanciamento del peso della cabina e del contrappeso.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Errata impostazione del parametro del motore o dell'encoder motore o parametro del limite di velocità impostato con margine troppo scarso</td>
+<td valign="top">Modificare il parametro corrispondente di conseguenza.<br>
+Da notare che in alcuni azionamenti sono presenti diversi limiti specifici per le varie velocità, quali la velocità di ispezione, di evacuazione ecc. (ad es. limite/tempo di velocità vano, limite/tempo di velocità manutenzione vano)</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Malfunzionamento dell'encoder di rotazione del motore dell'azionamento</td>
+<td valign="top">Sostituire l'encoder.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Field Feedback</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="20%">Location</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Drive</td>
+<td valign="top">Controllare : freno meccanico.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

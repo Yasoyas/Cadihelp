@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Melodies</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Melodies</em> of the parameter group <em>Gong</em> in subsystem <em>Lift Control</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Melodies</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the gong melodies for arrival gong interface board LONDAG/LONIOS.<br><br>P_GONG_GA_UP … P_GONG_IN_CAR_BUZZER: Gong melodies for LONDAG’s. Tone 0 terminates the gong melody.<br>P_GONG_GA_EXT_UP … P_GONG_GA_EXT_UP: Gong melodies for external (driven by generic IO’s) gongs.<br><br>Default Melodies: <br><br>    Gong melody identifier(field 1)  Gong tone identifier (field 2…9)<br>   --------------------------------+----------------------------------<br>    1 (P_GONG_GA_UP)               |  7, 0, 0, 0, 0, 0, 0, 0<br>    2 (P_GONG_GA_DOWN)             |  7, 5, 0, 0, 0, 0, 0, 0<br>    3 (P_GONG_FLOOR_PASSING)       | 15, 0, 0, 0, 0, 0, 0, 0<br>    4 (P_GONG_IN_CAR_BUZZER)       |  8, 0, 0, 0, 0, 0, 0, 0<br>    5 (P_GONG_GA_EXT_UP)           |  1, 0, 0, 0, 0, 0, 0, 0<br>    6 (P_GONG_GA_EXT_DOWN)         |  1, 0, 1, 0, 0, 0, 0, 0</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Tone Duration</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the waiting time to start next gong tone. Used for arrival gong interface board LONDAG/LONIOS.<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Examples:
+
+- Timing diagram for the gong melody P_GONG_GA_DOWN:
+
+        start tone 1    start tone 2        end of gong sequence
+   ____________|__________|____________________|___________________________
+                &lt;   1 s  &gt; &lt;        2 s       &gt; 
+
+
+- Timing diagram for gong melody P_GONG_GA_EXT_DOWN:
+
+              gong tone 1           gong tone 2        end of gong sequence
+              _________       ____________________
+   __________|         |_____|                    |_____|__________________
+              &lt;  1 s  &gt; 0.5s  &lt;       3 s        &gt; 0.5 s &lt; 
+
+
+Default Gong Times: 
+
+    Gong melody identifier(field 1) |     Gong time (field 2…9)
+   ---------------------------------+--------------------------------
+    1 (P_GONG_GA_UP)                | 20,  0,  0,  0,  0,  0,  0,  0
+    2 (P_GONG_GA_DOWN)              | 10, 20,  0,  0,  0,  0,  0,  0
+    3 (P_GONG_FLOOR_PASSING)        | 20,  0,  0,  0,  0,  0,  0,  0
+    4 (P_GONG_IN_CAR_BUZZER)        | 10,  0,  0,  0,  0,  0,  0,  0
+    5 (P_GONG_GA_EXT_UP)            | 30,  0,  0,  0,  0,  0,  0,  0
+    6 (P_GONG_GA_EXT_DOWN)          | 10,  5, 30,  5,  0,  0,  0,  0</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Gong Tone</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the gong tones, which are used to generate gong melodies. Up to 16 different gong tones can be defined.<br><br>Default Tones: <br><br> Gong tone identifier | Gong tone frequency<br> ---------------------+--------------------<br>         1            |           440<br>         2            |           550<br>         3            |           660<br>       4..16          |             0</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,167 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Miconic 10 Control</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Miconic 10 Control</em> of the parameter group <em>General</em> in subsystem <em>Miconic 10</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Max. Lifts on Special Service</h4></TD>
+<TD valign="top" class="Layout"><p>In order to avoid low traffic handling performance of the elevator group because too many elevator running with active special services the maximum number of elevators running with active special service must be controlled. The parameter defines the maximum number of lifts in the group with active special service simultaneously. Limitation is only valid for services JRV / JRVP / JAB / DDF1 / NF2 / JNO / NF1 / JLI triggered from a destination terminal.<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Destination Call Limit</h4></TD>
+<TD valign="top" class="Layout"><p>Limit for allocation of coincident destination calls entered on a floor.<br><br>This feature reduces the negative impact for the elevator group (traffic load) if impatient or undisciplined passengers enter the same call several times on the same terminal and this way enter/book unnecessary trips. If the number of coincident calls entered consecutively at a particular floor exceed the call limit value, the calls are no longer considered in the trip-planning/cost-calculation. The call acknowledge and the signalisation are done normal. The similar call limit can be set per floor. <br>For the Main Floor or other busy floors the call limit should be set higher than for normal floors. The Call Limit function is disabled by setting the limit value (per floor) to 32.<br><br>This feature has to be used with caution because it violates the M10 rule that each destination call entered represents one passenger and a booking for a trip. There is no way to distinguish unnecessary (nuisance) calls given by one person from legitimate calls given by different people arriving at the same floor at the same time who want to travel to the same destination. When the feature is enabled it can happen that a group of passengers who operate the lift interface correctly get a car with not enough space for all of them or that other people that booked a trip from another floor will see a full car stopping at their floor.<br><br>created: 20.01.2004<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example 1: with default values the feature is disabled for all floors
+
+¨1D [06 02 01 20] * P_M10C_SIMILAR_CALL_LIMIT floor 1
+¨1D [06 02 02 20] * P_M10C_SIMILAR_CALL_LIMIT floor 2
+¨1D [06 02 03 20] * P_M10C_SIMILAR_CALL_LIMIT floor 3
+¨1D [06 02 04 20] * P_M10C_SIMILAR_CALL_LIMIT floor 4
+¨1D [06 02 05 20] * P_M10C_SIMILAR_CALL_LIMIT floor 5
+¨1D [06 02 06 20] * P_M10C_SIMILAR_CALL_LIMIT floor 6
+¨1D [06 02 07 20] * P_M10C_SIMILAR_CALL_LIMIT floor 7
+¨1D [06 02 08 20] * P_M10C_SIMILAR_CALL_LIMIT floor 8
+.........
+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">M10 Subgroup</h4></TD>
+<TD valign="top" class="Layout"><p>M10 subgroup. It defines for each Mode which car accepts calls from which Riser.<br>It is possible to define 8 differents Modes. Each parameter line corresponds to one Mode. Each parameter contains a 8bits mask per Riser representing the cars that can serve a call from this Riser.<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Car mask:
+bit#         | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+-------------+---+---+---+---+---+---+---+---+
+car#         | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 |
+-------------+---+---+---+---+---+---+---+---+
+value to add |128| 64| 32| 16| 8 | 4 | 2 | 1 |
+
+
+
+Example: group of 3 cars with 2 Risers (R2 and R5). 
+       Mode 0 Riser 2: car 1 and 2 and 3
+                    Riser 5: car 1 and 2 and 3
+       Mode 1 Riser 2: car 1 and 2
+                    Riser 5: car 3
+
+    ¨68                                        * PCT_GP_M10_CONTROL
+      {...
+       ...
+       ¨1B [06 19 00 00 07 00 00 07 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]
+                                                                           * P_M10C_SUBGROUP Mode 0
+       ¨1B [06 19 01 00 03 00 00 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]
+                                                                           * P_M10C_SUBGROUP Mode 1
+       ¨1B [06 19 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]
+                                                                           * P_M10C_SUBGROUP Mode 2
+       ¨1B [06 19 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]
+                                                                           * P_M10C_SUBGROUP Mode 3
+       ¨1B [06 19 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]
+                                                                           * P_M10C_SUBGROUP Mode 4
+       ¨1B [06 19 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]
+                                                                           * P_M10C_SUBGROUP Mode 5
+       ¨1B [06 19 06 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]
+                                                                           * P_M10C_SUBGROUP Mode 6
+       ¨1B [06 19 07 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00]
+                                                                           * P_M10C_SUBGROUP Mode 7
+      }
+
+Default: all Mode with all cars for all Risers.
+
+    ¨68                                        * PCT_GP_M10_CONTROL
+      {...
+       ...
+       ¨1B [06 19 00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF]
+                                                                           * P_M10C_SUBGROUP Mode 0
+       ¨1B [06 19 01 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF]
+                                                                           * P_M10C_SUBGROUP Mode 1
+       ¨1B [06 19 02 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF]
+                                                                           * P_M10C_SUBGROUP Mode 2
+       ¨1B [06 19 03 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF]
+                                                                           * P_M10C_SUBGROUP Mode 3
+       ¨1B [06 19 04 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF]
+                                                                           * P_M10C_SUBGROUP Mode 4
+       ¨1B [06 19 05 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF]
+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

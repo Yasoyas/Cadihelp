@@ -1,0 +1,262 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Lift General</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Lift General</em> of the parameter group <em>General</em> in subsystem <em>Lift Control</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Lift ID</h4></TD>
+<TD valign="top" class="Layout"><p>Identification number of this lift. The first lift of the group has to be the number 1.<br><br>Attention: The lift number must be unique on all elevators operating within a group.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Lowest Floor-Lift</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the group related floor number of the lowest floor served by the lift. <br>(The parameter is also used by the drive to allow it to send the right selector number for the group.)<br><br>Caution: make sure the value is set according to the definition made in the table 'served floors' for the lift (see group parameters).<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example: triplex with 3 floors
+
+        L1  L2   L3    
+       +---+---+       
+    4  |   |   |       
+       +---+---+---+   
+    3  |   |   |   |   
+       +---+---+---+   
+    2      |   |   |   
+           +---+---+   
+    1      |   |   |   
+           +---+---+   
+
+ =&gt; lowest floor  L1 = 3
+                  L2 = 1
+                  L3 = 1</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Highest Floor-Lift</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the group related floor number of the highest floor served by the lift. <br><br>Caution: make sure the value is set according to the definition made in the table 'served floors' for the lift (see group parameters).<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example: triplex with 4 floors
+                                       
+    L1  L2   L3    
+       +---+       
+4      |   |       
+       +---+---+   
+3      |   |   |   
+   +---+---+---+   =&gt; last floor  L1 = 2
+2  |   |   |   |                  L2 = 4
+   +---+---+---+                  L3 = 3
+1  |   |   |   |   
+   +---+---+---+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Number of Side</h4></TD>
+<TD valign="top" class="Layout"><p>Number of doors (entrance sides) for this lift.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Commission Number</h4></TD>
+<TD valign="top" class="Layout"><p>Commission number of this lift (7 digits). Each lift of the group has its own number.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Max.Nbr.Passengers</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum number of persons which can occupy the car. The default value (nominal load divided by load per person) is normally ok. With M10 control this parameter is used for the allocation of cars to M10 destination calls. If the default value is not ok (not enough room for the number of person), M10 will always allocate too much people for this car. For M10 the value must not exceed 32.<br><br>Default value: P_LFT_NOMINAL_LOAD / P_STR_LOAD_PER_PERSON</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Country Features Enable</h4></TD>
+<TD valign="top" class="Layout"><p>To enable special country features.<br><br>Country features id:<br>0: no special features (standard software)<br>1: USA features enabled</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">LON Bus Architecture</h4></TD>
+<TD valign="top" class="Layout"><p>Defines type of user bus architecture (IO's). <br><br>Default value (Value = 0 or parameter 'USERBUS_ARCHITECTURE' not defined in PCT):<br>LON group bus connection between all elevator controls within one group.<br>Each elevator control has two separate buses (channels): one for lift I/Os and one for group I/Os. This architecture is used with TX-GC / 10-GC / MX-GC (up to R3).<br><br>Value = 1: <br>LON group bus connection between all elevator controls within one group.<br>Each elevator control has two separate buses (channels): one for lift I/Os and one for group I/Os. This architecture is used with TX-GC / 10-GC / MX-GC (up to R3).<br><br>Value = 2:<br>No LON group bus connection between the elevator controls within one group.<br>Each elevator control has only one bus down the shaft for lift I/Os and for group I/Os.<br><br>Rem: The parameter is used to define the bus architecture on MX controls. On TX-GC/GC2 controls the user bus architecture is defined by the system type.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Manual Car Call Cancel</h4></TD>
+<TD valign="top" class="Layout"><p>Mode for manual cancelling of car calls<br><br>0: OFF<br>1: Cancel car call when car call button is pressed twice<br><br>refer also to parameter P_STR_MAN_CC_CANCEL_TIME<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Maximum Time Cancel Car Call</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum time allowed between two activations of the call button to trigger car call cancelling. Only used when manual cancelling of car calls activated (refer also to parameter MAN_CC_CANCEL)<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Block Car Call Next Floor</h4></TD>
+<TD valign="top" class="Layout"><p>Disable registration of car call for next floor - for floor below and above position of car.<br><br>0: OFF<br>1: Do not register car call for next floor below and above car position<br><br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Car Fan Mode</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the behavior of the car fan (output signal RMVEC-A) based on status of the car fan switch JVEC. The following modes can be set:<br><br>0: No car fan<br>1: Automatic: No car fan switch JVEC available. The fan is automatically activated during trips with adjustable off delay.<br>2: OFF/ON: Switch JVEC used to turn the car fan on/off.<br>3: OFF/Automatic: With JVEC = OFF fan is off. With switch JVEC = ON the car fan is automatically activated during trips with adjustable off delay.<br>4: ON/Automatic: With switch JVEC = ON the fan is switched on permanently. With JVEC = OFF the fan is automatically activated during trips with adjustable off delay.<br>5: OFF/ON/FAST: For 2 speed car fan only (output RVECF)<br>6: Toggle ON/OFF: Activation of input JVEC switches fan ON when it is OFF or switches fan OFF when it is ON.<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">LON Freeze Node Command</h4></TD>
+<TD valign="top" class="Layout"><p>Defines if the control requires manual LON freeze during commissioning with SMLCD/SPECI/CADI)<br><br>0: No LON freeze command available on service user interface.<br>1: LON freeze command available on service user interface.<br><br>Remark: the parameter is only valid/required for TXR5 and GX with common release 2.10</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Number Of Decks</h4></TD>
+<TD valign="top" class="Layout"><p>Number of decks of elevator car<br><br>1: Single Deck Elevator (Default)<br>2: Double Deck Elevator</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

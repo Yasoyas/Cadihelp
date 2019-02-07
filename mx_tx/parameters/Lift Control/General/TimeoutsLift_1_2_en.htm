@@ -1,0 +1,216 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Timeouts Lift</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Timeouts Lift</em> of the parameter group <em>General</em> in subsystem <em>Lift Control</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">CC Registr.Reserv Time</h4></TD>
+<TD valign="top" class="Layout"><p>For KA/KS:<br>Specify the time to wait after a floor call has been served and the doors are closing before clearing the preselected direction to allow people in the cabin to give a car call.<br><br>For PI:<br>Specify the time to wait after door closed for the cabin to be free.<br><br>- For PI with load measuring: this time must be set to 1 ( 1 * 100ms = 0.1s)<br><br>- For PI without minimal load detection (load measuring): the time must not be less than 2 seconds (20 * 100ms = 2s). This is necessary because without minimal load detection it is not possible to know if somebody is in the car or not. If this time is too short a floor call may be allocated to the lift before the person in the cabin has given a car call.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Delay Car Fan Off</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the behavior of the car fan (RVEC-A). The fan is controlled by the switch JVEC on the car operating panel and the timeout value defined with the parameter.<br><br>If the input JVEC for fan switch on the COP is not configured the control of the fan is defined by the timeout parameter. If the value is 0, then the fan will be switched on when needed (e.g. during a trip) and immediately switched off afterwards. If the timeout has a different value (default 12000 i.e. 20 minutes), then the fan will remain on for the specified time.<br><br>If JVEC is present, the fan operation will depend on the state of the switch and the timeout parameter. <br><br>When JVEC is off, the fan can not be switched on at all. When JVEC is switched on, a test is made for the timeout parameter and if equal to 0, then JVEC has full control of the fan and the fan will be switched on for the time that JVEC remains on. If the timeout parameter has a different value, then the fan will be switched on for the time specified in the parameter. Once the time has expired, the fan will be switched off, but it may be reactivated by either the service or the lift manager if so needed. As long as JVEC is on, this secondary control is possible. If JVEC is switched off at any time, the fan is switched off immediately and not allowed to be switched on again.<br><br>The service manager can specify that the ventilator should be switched on permanently or automatically or decoupled from the automatic switching and switched off. This will happen if JVEC is either not present or when it is  switched on and the timeout parameter is set to a value other than 0.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Delay Car Light Off</h4></TD>
+<TD valign="top" class="Layout"><p>Time (s) to wait before switching off the cabin light (output: RLC) when the elevator has no destination/direction and the doors are closed. When the parameter is set to zero the car light (RLC) switches off without delay.<br><br>This parameter was renamed (old name: P_STR_DELAY_CABIN_LIGHT)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Master Check</h4></TD>
+<TD valign="top" class="Layout"><p>Time interval between two cycles of the master check (check if there is one and only one master). Do not change the parameter in the field unless instructed to do so; always use the value defined in the PCT.<br><br>Remark: this value should always be higher than two times the value of the parameter P_STR_TIMEOUT_SEND_LIFT_ALIVE.<br><br>For MX-GC controls the value for this parameter was increased from 3.5s to 15s in order to avoid unnecessary master switching after resets (Oct 2002).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">New PI Floor Call Group</h4></TD>
+<TD valign="top" class="Layout"><p>Time to wait before creating a new group of floor calls. Used for non-directional floor calls only (PI).  This is used for a special feature of PI that optimize the PI algorithm. A value of zero for this parameter means that this optimization is disabled.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Check Valid Floor Calls</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the time interval for the periodical check if the registered floor calls are still valid. Valid means that a floor call can be served by an elevator in the group. Floor calls which can no longer be served are cancelled. The check is done according to the 'served floor table' which defines the served floors of each elevator in the group.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Observe Traffic</h4></TD>
+<TD valign="top" class="Layout"><p>Time intervall between two cycles of type of traffic determination (interfloor, up, down or noon peak).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Board Rate Calculation</h4></TD>
+<TD valign="top" class="Layout"><p>Interval between two boarding rates calculation cycles.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Board Rate Decrement</h4></TD>
+<TD valign="top" class="Layout"><p>Time interval after which the boarding rates must be decremented of one person.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Trip Start</h4></TD>
+<TD valign="top" class="Layout"><p>Timeout used for the monitoring of the drive start. If after a 'start_ok' command to the drive (which means that the door is locked) the drive does not start to move within this time the control will send the 'start_ok' again.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Send Lift Alive</h4></TD>
+<TD valign="top" class="Layout"><p>Time period after which the control sends the 'lift alive' message to the master. A value of 10 means that the elevator control repeats the 'alive' message every second. Do not change the parameter in the field unless instructed to do so; always use the value defined in the PCT.<br><br>Remark: this value should always be less than half of the value of the parameter P_STR_TIMEOUT_MASTER_CHECK.<br><br>For MX-GC controls the value for this parameter was increased from 1.0s to 4.0s in order to avoid unnecessary master switching after resets (Oct 2002).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Timeout Recover Powerup</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum time allowed to recover door and drive when normal mains power is restored (power up). The control software expects the system to be ready within this time (does not include the time required for the software restart). Drive and door(s) remain blocked until drive and the door(s) are available for operation and the software can proceed to determine and activate the appropriate function (the behavior of door and drive is then controlled by that function/service e.g. 'N' etc.). <br>In case the timer elapses the control allows door movements in order to release passengers provided the car is leveled on a floor.<br><br>This is oneshot timer used only after power cycle.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example:		 		 		  52   **  PCT_GP_RS_TIMEOUT
+{
+...
+C8[02 02 04B0]   **P_STR_TIMEOUT_POWERUP = 1200(120 secs)
+}</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

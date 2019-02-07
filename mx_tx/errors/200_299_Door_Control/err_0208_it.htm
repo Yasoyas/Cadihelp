@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0208 DoorDevErr</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0208 DoorDevErr</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Door Control</em> error <em>DoorDevErr</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Errore dei dispositivi della porta. Malfunzionamento del controllo porta. Per ulteriori dettagli, vedere le altre informazioni.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Identifica il componente responsabile:<br>
+01: Ingresso dalla barriera ottica (PROGARD L ecc.).<br>
+02: Errore bus I/O.<br>
+03: JHCT premuto.<br>
+04: Malfunzionamento dell'alimentazione del motore della porta.<br>
+05: Errore di comunicazione con il nodo della porta.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Dispositivo guasto</td>
+<td valign="top">Esaminare il dispositivo e sostituirlo, se necessario.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Altre informazioni = 2</td>
+<td valign="top">Verificare il cavo del bus I/O.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top"></td>
+<td valign="top">Verificare i driver del bus I/O.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Altre informazioni = 3</td>
+<td valign="top">Verificare il JHCT.</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top"></td>
+<td valign="top">Verificare il cablaggio del JHCT.</td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top">Altre informazioni = 4</td>
+<td valign="top">Verificare l'alimentazione sul pcb di comando porta (fusibile).</td>
+</tr>
+<tr>
+<td align="center" valign="top">7</td>
+<td valign="top">Altre informazioni = 5</td>
+<td valign="top">Verificare il bus LON per la scheda di interfaccia della porta.</td>
+</tr>
+<tr>
+<td align="center" valign="top">8</td>
+<td valign="top"></td>
+<td valign="top">Verificare il nodo LON e le relative impostazioni del selettore.</td>
+</tr>
+<tr>
+<td align="center" valign="top">9</td>
+<td valign="top"></td>
+<td valign="top">Verificare il bus LON con altri nodi (rimuovere per la verifica)</td>
+</tr>
+<tr>
+<td align="center" valign="top">10</td>
+<td valign="top"></td>
+<td valign="top">Verificare il pcb EBLON.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

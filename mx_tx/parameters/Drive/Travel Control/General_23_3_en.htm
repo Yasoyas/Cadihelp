@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>General</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>General</em> of the parameter group <em>Travel Control</em> in subsystem <em>Drive</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Allow Inspection without JRECC</h4></TD>
+<TD valign="top" class="Layout"><p>This parameter is only changed for installations in North America.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Upper access floor</h4></TD>
+<TD valign="top" class="Layout"><p>The control buttons for hoistway access control are installed on two floors. <br>The access to the car top is possible from the floor defined with P_ANT_UPPER ACCESS FLOOR (normally at the top end/floor of the hoistway).<br>The access to the pit is possible from the bottom floor level (lowest floor). The elevator can only be moved using the control buttons (up/dow) if it is at either of the two floors.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Max Trip Time</h4></TD>
+<TD valign="top" class="Layout"><p>For SW releases dated earlier than April 2006 the trip time is limited by the parameter 'MAX_TRIP_TIME' only (see also description of error 89). For software releases with later date the software calculates the maximum trip time before each trip based on the maximum speed for the selected trip type and the maximum possible travel distance (HQ) and uses the calculated value to monitor the trip. If the maximum travel distance is not known the parameter 'MAX_TRIP_TIME' is used instead (learn trip). If the time elapses during a trip the trip is interrupted and the error message 'TRIP_TIME_EXCEEDED' is logged.<br><br>Default value for TX: 700s<br>Default value for MX: 700s<br>refer to EN81-1:1998 chapter 12.10<br><br>Parameter description for software released before April 2006:<br>Time limit for the monitoring of the trip time during automatic trips. If this time elapses during a trip the error message 89 TRIP_TIME_EXCEEDED will be generated.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Drive Type</h4></TD>
+<TD valign="top" class="Layout"><p>Type of the electrical drive. The parameter value is determined automatically once the serial communication to the drive is established.<br><br>0: ACVF_EU_AP<br>1: ACVF_NA<br>2: SSDC<br>3: WLDC<br>4: VECSYS_EU_AP<br>5: VECSYS_NA<br>6: MAGNETEK<br>7: H_BRIDGE<br>8: YASKAWA<br>9: CDI<br>10: Invalid Drive Type<br><br>Type 'CDI' added 17.10.2005</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Safety circuit type</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the type of safety chain in use:<br><br>values:<br>0: TX_OLD_SAFETY                 IVXVF-TX with old safety chain<br>1: TX_OLD_SAFETY_1SH         IVXVF-TX old safety chain '1 Contactor'<br>2: TX__SAFETY                       IVXVF-TX with new safety chain<br>3: VDS_PGO                           VDS-New safety chain<br>4: TX_S700_SKEAP                 GCIO-S700 with SKEAP<br>5: TX_S700_SKENA                 GCIO-S700 with SKENA<br>6: MX_SAFETY                        GCIO-MX with new safety chain</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

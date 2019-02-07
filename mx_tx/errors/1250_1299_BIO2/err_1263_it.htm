@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1263 BIO2 Missing Node</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1263 BIO2 Missing Node</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>BIO2</em> error <em>BIO2 Missing Node</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Manca un nodo sul bus BIO2. Ci è un nodo BIO2 che è stato riconosciuto e non risponde più. Un nodo BIO2 non risponde quando viene scansito (nodo senza IO) critico) o non invia più un segnale heartbeat (nodo con IO) critico). È possibile che il nodo mancante sia difettoso, e pertanto deve essere sostituito. È possibile anche che il nodo mancante sia stato caricato in un processo di apprendimento. Ciò significa che in effetti il nodo sta lavorando correttamente, ma l'host non può ricevere risposte dal vecchio indirizzo del nodo. L'host non è in grado di dire se è montato un nuovo nodo o se un vecchio nodo è stato ricaricato. In questo caso si deve effettuare una procedura di freeze.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>0x0000yyxx: xx = numero piano / yy = lato di accesso</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Task Id.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Nessuna comunicazione con scheda BIO2</td>
+<td valign="top">Controllare la scheda del nodo BIO2 al relativo piano</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Interruzione di alimentazione della scheda BIO2</td>
+<td valign="top">Controllare la scheda del nodo BIO2 al relativo piano</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Nuovo apprendimento del nodo BIO2</td>
+<td valign="top">Eseguire il comando di freeze dopo aver verificato il funzionamento del nodo.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Hardware difettoso (scheda BIO2)</td>
+<td valign="top">Sostituire la scheda.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

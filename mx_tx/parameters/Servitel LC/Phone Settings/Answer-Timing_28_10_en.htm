@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Answer - Timing</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Answer - Timing</em> of the parameter group <em>Phone Settings</em> in subsystem <em>Servitel LC</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Answer Window 1</h4></TD>
+<TD valign="top" class="Layout"><p>Servitel-LC allows an existing telephone line to be shared with the customer. The customer telephone is actuated parallel to the modem. The Servitel Control Center can, if an Answer Window is defined, make one call with connection to the modem, within that time. The answer window is limited by two times. If the answer window is set on 00:00 - 00:00 , this function is turned off, and it is assumed that a separate telephone line is available for the modem.<br>The customer can call at any time. Collisions have to be expected when using the customer telephone with customer telephone and modem in parallel circuit.<br><br>Example:<br>Answer Window 1: 00:15 to 01:00 (times are in 24 hr format)<br>Answer Window 2: 02:35 to 02:40<br><br>One telephone call from 0:15 until 01:00 is answered by Servitel-LC, i.e. with one call the modem will respond. During that time period the Servitel Control Center can carry out Test Trips, status inquiries and other operations. From 01:00 until 00:15, i.e. during most of the time, the modem never responds. The same rule applies for Answer Window 2.<br><br>Default:<br>00:00 - 00:00 (i.e. No customer phone. Modem answers every call.)<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Answer Window 2</h4></TD>
+<TD valign="top" class="Layout"><p>Servitel-LC allows an existing telephone line to be shared with the customer. The customer telephone is actuated parallel to the modem. The Servitel Control Center can, if an Answer Window is defined, make one call with connection to the modem, within that time. The answer window is limited by two times. If the answer window is set on 00:00 - 00:00 , this function is turned off, and it is assumed that a separate telephone line is available for the modem.<br>The customer can call at any time. Collisions have to be expected when using the customer telephone with customer telephone and modem in parallel circuit.<br><br>Example:<br>Answer Window 1: 00:15 to 01:00 (times are in 24 hr format)<br>Answer Window 2: 02:35 to 02:40<br><br>One telephone call from 0:15 until 01:00 is answered by Servitel-LC, i.e. with one call the modem will respond. During that time period the Servitel Control Center can carry out Test Trips, status inquiries and other operations. From 01:00 until 00:15, i.e. during most of the time, the modem never responds. The same rule applies for Answer Window 2.<br><br>Default:<br>00:00 - 00:00 (i.e. No customer phone. Modem answers every call.)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

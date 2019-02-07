@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0067 KUET_Fault</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0067 KUET_Fault</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>KUET_Fault</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Il monitoraggio dei segnali di ponte porta dei relè RUET e RUET1 indica che tali relè non funzionano correttamente. RUET e RUET1 non intervengono in parallelo, oppure RUET e RUET1 intervengono al di fuori dell'aletta o del magnete della zona della porta.<br>
+Commenti: entrambi i segnali vengono trasmessi mediante comunicazione bus dalla cabina. L'errore non innesca un arresto di emergenza. Un errore rilevato durante la corsa viene registrato solo quando la cabina si arresta. Di conseguenza, la fase di corsa è sempre registrata come STANDSTILL.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Significato delle altre informazioni per valore codice di origine = 104:<br>
+Il valore delle altre informazioni è un numero esadecimale a 8 cifre (0xABCDEFGH) e deve essere convertito/decodificato in formato binario (ciascun bit ha un significato specifico).<br><br>
+Significato del valore 'GH' (da Bit0 a Bit7):<br>
+0000 0001(bin) / 01(hex): gli stati di KUET e KUET1 differiscono<br>
+0000 0010(bin) / 02(hex): Enable UET falso o non a un piano, ma KUET o KUET1 è VERO<br>
+0000 0011(bin) / 03(hex): Enable UET vero e a un piano, ma KUET o KUET1 è FALSO<br>
+0000 0100(bin) / 04(hex): gli stati di KUET_20 e KUET1_20 differiscono<br>
+0000 0101(bin) / 05(hex): Enable UET_20 falso o non a un piano, ma KUET_20 o KUET1_20 è VERO<br>
+Ulteriore diagnostica solo per MX:<br>
+0000 0110(bin) / 06(hex): cabina al piano senza porta su lato1, ma IUET o IUET1 è vero<br>
+0000 0111(bin) / 07(hex): cabina al piano con porta su lato1, ma IUET o IUET1 è falso<br>
+0000 1000(bin) / 08(hex): cabina non al piano, ma IUET o IUET1 è vero<br>
+0000 1001(bin) / 09(hex): cabina al piano senza porta su lato20, ma IUET_20 o IUET1_20 è vero<br>
+0000 1010(bin) / 0A(hex): cabina al piano con porta su lato20, ma IUET_20 o IUET1_20 è falso<br>
+0000 1011(bin) / 0B(hex): cabina non al piano, ma IUET_20 o IUET1_20 è vero<br><br>
+Significato del valore 'F' (da Bit8 a Bit11):<br>
+0000(bin) / 00(hex): 'KUET' falso, 'KUET1' falso, 'Enable UET' falso<br>
+0001(bin) / 01(hex): 'KUET' vero, 'KUET1' falso, 'Enable UET' falso<br>
+0010(bin) / 02(hex): 'KUET' falso, 'KUET1' vero, 'Enable UET' falso<br>
+0011(bin) / 03(hex): 'KUET' vero, 'KUET1' vero, 'Enable UET' falso<br>
+0100(bin) / 04(hex): 'KUET' falso, 'KUET1' falso, 'Enable UET' vero<br>
+0101(bin) / 05(hex): 'KUET' vero, 'KUET1' falso, 'Enable UET' vero<br>
+0110(bin) / 06(hex): 'KUET' falso, 'KUET1' vero, 'Enable UET' vero<br>
+0111(bin) / 07(hex): 'KUET' vero, 'KUET1' vero, 'Enable UET' vero<br><br>
+Significato del valore 'E' (da Bit12 a Bit15): solo per TX<br>
+0000(bin) / 00(hex): 'PHS' = OUT_FIN, 'PHNR_D' = OUT_FIN<br>
+0001(bin) / 01(hex): 'PHS' = IN_FIN, 'PHNR_D' = OUT_FIN<br>
+0010(bin) / 02(hex): 'PHS' = OUT_FIN, 'PHNR_D' = IN_FIN<br>
+0011(bin) / 03(hex): 'PHS' = IN_FIN, 'PHNR_D' = IN_FIN<br><br>
+Significato del valore 'D' (da Bit16 a Bit19): solo per MX<br>
+0000(bin) / 00(hex): 'IUET' falso, 'IUET1' falso, 'LUET' falso<br>
+0001(bin) / 01(hex): 'IUET' vero, 'IUET1' falso, 'LUET' falso<br>
+0010(bin) / 02(hex): 'IUET' falso, 'IUET1' vero, 'LUET' falso<br>
+0011(bin) / 03(hex): 'IUET' vero, 'IUET1' vero, 'LUET' falso<br>
+0100(bin) / 04(hex): 'IUET' falso, 'IUET1' falso, 'LUET' vero<br>
+0101(bin) / 05(hex): 'IUET' vero, 'IUET1' falso, 'LUET' vero<br>
+0110(bin) / 06(hex): 'IUET' falso, 'IUET1' vero, 'LUET' vero<br>
+0111(bin) / 07(hex): 'IUET' vero, 'IUET1' vero, 'LUET' vero<br><br><br>
+Significato delle altre informazioni per valore codice di origine = 27:<br>
+0x00000001: Ponte porta (con porta aperta) non riuscito durante la preparazione della corsa -&gt; 'enable UET' vero, ma 'KUET' o 'KUET1' falso.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>see extra info</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Cablaggio errato sulla cabina</td>
+<td valign="top">Verificare il collegamento dei segnali di abilitazione e feedback RUET/RUET1 alla scheda di interfaccia della cabina.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top"></td>
+<td valign="top">Verificare il cablaggio dei rilevatori della zona della porta (PHUET / KUET)</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Ambiente sporco</td>
+<td valign="top">Verificare se gli interruttori di fotocellule/magneti sulla cabina sono sporchi.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Problemi elettrici</td>
+<td valign="top">Verificare il collegamento di terra sulla cabina, l'alimentazione per la scheda di interfaccia della cabina e il dispositivo di ponte porta (es. PHUET)</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top">Problemi di comunicazione con la cabina</td>
+<td valign="top">Verificare il collegamento del bus dall'armadietto di controllo alla cabina.</td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top">Configurazione<br></td>
+<td valign="top">Verificare se il numero dei piani e il layout del pozzo (porte anteriori/posteriori) nella configurazione corrispondono alle linguette dei piani nel vano di corsa.<br>
+MX-GC: Il controllo corsa verifica che per ogni accesso sia presente una linguetta KUET per la parte anteriore e/o posteriore.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Field Feedback</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="20%">Location</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Car Roof</td>
+<td valign="top">Controllare : Connessioni RUET/RUET1, PHUET/KUET sulla cabina</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Car Roof</td>
+<td valign="top">Controllare : sporcizia su interruttori magnetici bistabili (ev. Lettori ottici)</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Car Roof</td>
+<td valign="top">Controllare : connessione a massa di PHUET/KUET</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Car Roof / Controller</td>
+<td valign="top">Controllare : connessione BUS tra cabina e manovra)</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top"></td>
+<td valign="top">Controllare : Field Info no. 291 (problemi EMC)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

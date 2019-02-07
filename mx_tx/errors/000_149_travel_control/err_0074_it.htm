@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0074 Safety KNE</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0074 Safety KNE</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>Safety KNE</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Il circuito di sicurezza si è aperto prima della terza presa (ISKT3), ma dopo la seconda presa (ISKT2).<br>
+Commenti: gli ingressi delle prese del circuito di sicurezza in direzione discendente (ISKT4 ecc.) non generano messaggi di errore corrispondenti. Consultare lo schema di cablaggio per individuare i contatti che provocano l'errore.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>= 00000000: nessuna informazione<br><br>
+= xxyyyyyy: le prime 2 cifre (xx) mostrano informazioni per la diagnostica (vedere di seguito).<br>
+Le altre 6 cifre (yyyyyy) mostrano la posizione della cabina (valore decimale in mm) nel momento in cui l'errore si è verificato.<br><br>
+Altre informazioni (xx):<br>
+64 (hex)/100 (dec): il circuito di sicurezza si è aperto prima della terza presa (ISKT3) per oltre 15 minuti. Questo errore non si verifica quando gli interruttori JHC o JHM sono attivi o è attivo il controllo di richiamo o ispezione.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Contatto aperto nel circuito di sicurezza</td>
+<td valign="top">Verificare la relativa sezione del circuito di sicurezza.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Cablaggio errato di contatti nel circuito di sicurezza</td>
+<td valign="top">Verificare il cablaggio verso e tra i contatti.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Ingresso guasto sulla scheda di interfaccia per gli ingressi delle prese del circuito di sicurezza</td>
+<td valign="top">Verificare la scheda di interfaccia e i collegamenti al circuito di sicurezza. Se necessario, sostituire la scheda.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

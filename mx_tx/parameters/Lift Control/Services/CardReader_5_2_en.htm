@@ -1,0 +1,138 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Card Reader</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Card Reader</em> of the parameter group <em>Services</em> in subsystem <em>Lift Control</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Card Reader Mode</h4></TD>
+<TD valign="top" class="Layout"><p>Card reader mode used for access control functions ZBC3 and ZBD1 (see ESS)<br><br>0: Card reader function disabled (elevator goes out of service JAB when car reader operation is active)<br><br>1: Card reader function enabled. Activation of a KKL signal temporarily enables car calls locked by HW inputs.<br><br>2: Card reader function enabled. Activation of a KKL signal temporarily enables car calls locked by ICC Lobby.<br><br>3: Card reader function enabled. Activation of a KKL signal temporarily enables car calls locked from any source (ICC Lobby or HW inputs).<br><br>Remark: For M10 control (ZBD1) only values 0 and 1 are applicable.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Timeout Release</h4></TD>
+<TD valign="top" class="Layout"><p>Time to enable the corresponding car call (button) after activation of the release signal (KKL) from car reader etc. When the time has elapsed the car call is disabled again. Used for access control functions ZBC3 and ZBD1 (see ESS)<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Card Check Mode M10</h4></TD>
+<TD valign="top" class="Layout"><p>M10 card reader check mode. Used for access control function ZBD1. Defines when an authorized passenger must/can enter the required authorization (e.g. by inserting a badge into a card reader) in order to access the restricted destination floor/landing. This action will then activate the corresponding input (KKLC) on the elevator control.<br><br>1: Validation in the car required/possible when the car has reached the destination floor.<br>2: Validation in the car required/possible during the trip.<br>3: Validation the car required before the car starts to the destination floor.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Card Reader PIN Config.</h4></TD>
+<TD valign="top" class="Layout"><p>Used for parallel card reader interface (access control). The table specifies the accesses (floor and side) to be released after activation of a input KKLC-n.<br>Meaning of parameter fields:<br><br> ¨01[06 04 ii kk zz nn]<br><br>ii: Index number for parameter table<br>kk:Floor number (1 to N)<br>zz: Entry side (0 = side all / 1 = side 1 / 2 = side 20)<br>nn: Pin number n of input KKLC-n<br><br>The default values of the table are set so that the KKLC input with pin number x release all accesses on floor x. (input KKLC has no side attribute)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Representation of default pin configuration in PCT:
+
+   ¨7C                                  *   PCT_GP_CARDREADER
+     {…
+     ¨01 [06 04 01 01 01 01]            *    Entry 1, floor 1, side 1, P_CR_PIN_CFG PIN 1
+     ¨01 [06 04 02 01 02 01]            *    Entry 2, floor 1, side 20, P_CR_PIN_CFG PIN 1
+     ¨01 [06 04 03 02 01 02]            *    Entry 3, floor 2, side 1, P_CR_PIN_CFG PIN 2
+     ¨01 [06 04 04 02 02 02]            *    Entry 4, floor 2, side 20, P_CR_PIN_CFG PIN 2
+     ¨01 [06 04 05 03 01 03]            *    Entry 5, floor 3, side1, P_CR_PIN_CFG PIN 3
+     …
+     ¨01 [06 04 (2*N-1) (N) 01 (n)]     *    Entry (i), floor (N), side 1, P_CR_PIN_CFG PIN 2
+     ¨01 [06 04 (2*N)     (N) 02 (n)]   *    Entry (i), floor (N), side 20, P_CR_PIN_CFG PIN 3
+     }
+
+i: Index for Entry
+N: Number of Floors in this building
+n: Max Pin Value defined with N_KKLC-n
+
+Remark: In the default table, the card reader pins are allocated to the floors  with the same
+number. Entries with floor numbers where no corresponding, individual card reader pin is
+available, are completed with the highest card reader pin number configured in the PCT 
+(see example above). In case of  diffrently specified access controled floors,  the 
+allocation table has to be set up or edited corresponding to those specifications.</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,753 @@
+<!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN" "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+<tocitem text="Errors" target="error_main">
+<tocitem text="0...149 Travel Control" target="000_149_Travel_Control">
+<tocitem text="0001 NormalStop" target="err_1" />
+<tocitem text="0002 ExceptionMC" target="err_2" />
+<tocitem text="0003 NoKSE_STDSTL" target="err_3" />
+<tocitem text="0004 InvldMovement" target="err_4" />
+<tocitem text="0005 SH_on_STDSTL" target="err_5" />
+<tocitem text="0006 SB_on_STDSTL" target="err_6" />
+<tocitem text="0007 SH_Fault" target="err_7" />
+<tocitem text="0008 SB_Fault" target="err_8" />
+<tocitem text="0009 KB_Fault" target="err_9" />
+<tocitem text="0010 FC_Fault" target="err_10" />
+<tocitem text="0011 FC_Block" target="err_11" />
+<tocitem text="0012 DirectionErr" target="err_12" />
+<tocitem text="0013 OverSpeed" target="err_13" />
+<tocitem text="0014 UnderSpeed" target="err_14" />
+<tocitem text="0015 NoTargetLow" target="err_15" />
+<tocitem text="0016 NoTargetUp" target="err_16" />
+<tocitem text="0017 OverSpeedKSE" target="err_17" />
+<tocitem text="0018 NoLowerKSE" target="err_18" />
+<tocitem text="0019 NoUpperKSE" target="err_19" />
+<tocitem text="0020 PositionLost" target="err_20" />
+<tocitem text="0021 HigherPrio" target="err_21" />
+<tocitem text="0022 MaskErased" target="err_22" />
+<tocitem text="0023 JHC_Pressed" target="err_23" />
+<tocitem text="0024 JHC1_Pressed" target="err_24" />
+<tocitem text="0025 JHSG_Pressed" target="err_25" />
+<tocitem text="0026 JHR_Pressed" target="err_26" />
+<tocitem text="0027 JHM_Pressed" target="err_27" />
+<tocitem text="0028 OverTempMotor" target="err_28" />
+<tocitem text="0029 TripBlocked" target="err_29" />
+<tocitem text="0030 NewTripBlockd" target="err_30" />
+<tocitem text="0031 PrepNewDest" target="err_31" />
+<tocitem text="0032 PrepClearDest" target="err_32" />
+<tocitem text="0033 RelvNewDest" target="err_33" />
+<tocitem text="0034 SH_Timeout" target="err_34" />
+<tocitem text="0035 FC_Timeout" target="err_35" />
+<tocitem text="0036 No Start Ok" target="err_36" />
+<tocitem text="0037 CarAtLevel" target="err_37" />
+<tocitem text="0038 TargetLost" target="err_38" />
+<tocitem text="0039 NoDirRelv" target="err_39" />
+<tocitem text="0040 NoPHS_Learn" target="err_40" />
+<tocitem text="0041 ErrTachoFact" target="err_41" />
+<tocitem text="0042 LowKSE_Low" target="err_42" />
+<tocitem text="0043 LowKSE_High" target="err_43" />
+<tocitem text="0044 UpperKSE" target="err_44" />
+<tocitem text="0045 NoFloorTop" target="err_45" />
+<tocitem text="0046 ErrFloorTop" target="err_46" />
+<tocitem text="0047 ErrReleveling" target="err_47" />
+<tocitem text="0048 InvldTripType" target="err_48" />
+<tocitem text="0049 ErrFloorCTP" target="err_49" />
+<tocitem text="0050 NoDistRelv" target="err_50" />
+<tocitem text="0051 ZeroParam" target="err_51" />
+<tocitem text="0052 OverflowCTP" target="err_52" />
+<tocitem text="0053 NoSTR_Com" target="err_53" />
+<tocitem text="0054 PCT_Checksum" target="err_54" />
+<tocitem text="0055 NoMCR_Com" target="err_55" />
+<tocitem text="0056 CarNoStop" target="err_56" />
+<tocitem text="0057 MCR_NoStop" target="err_57" />
+<tocitem text="0058 SH_NoStop" target="err_58" />
+<tocitem text="0059 SingleReset" target="err_59" />
+<tocitem text="0060 DoubleReset" target="err_60" />
+<tocitem text="0061 RSE1_Fault" target="err_61" />
+<tocitem text="0062 RSE2_Fault" target="err_62" />
+<tocitem text="0063 RSE3_Fault" target="err_63" />
+<tocitem text="0064 PHS_Fault" target="err_64" />
+<tocitem text="0065 PHNR_D_Fault" target="err_65" />
+<tocitem text="0066 NoGetAnswer" target="err_66" />
+<tocitem text="0067 KUET_Fault" target="err_67" />
+<tocitem text="0068 SGRB_Fault" target="err_68" />
+<tocitem text="0069 SBNH_Fault" target="err_69" />
+<tocitem text="0070 SW_Warning" target="err_70" />
+<tocitem text="0071 SW Error" target="err_71" />
+<tocitem text="0072 Safety 110V" target="err_72" />
+<tocitem text="0073 Safety SPT" target="err_73" />
+<tocitem text="0074 Safety KNE" target="err_74" />
+<tocitem text="0075 Safety RTS" target="err_75" />
+<tocitem text="0076 Safety End" target="err_76" />
+<tocitem text="0077 LM_PrintsErr" target="err_77" />
+<tocitem text="0078 LM_NoCommiss" target="err_78" />
+<tocitem text="0079 Topt_Fault" target="err_79" />
+<tocitem text="0080 OverTempMCR" target="err_80" />
+<tocitem text="0081 TripV_Tacho" target="err_81" />
+<tocitem text="0082 NoSupply12V" target="err_82" />
+<tocitem text="0083 NoSupply24V" target="err_83" />
+<tocitem text="0084 DMS_Spoiled" target="err_84" />
+<tocitem text="0085 LM_ComErr" target="err_85" />
+<tocitem text="0086 RUET_Fault" target="err_86" />
+<tocitem text="0087 RTSC_Fault" target="err_87" />
+<tocitem text="0088 TachoFault" target="err_88" />
+<tocitem text="0089 TripTimeExp" target="err_89" />
+<tocitem text="0090 StopOverFault" target="err_90" />
+<tocitem text="0091 SMPB_Fault" target="err_91" />
+<tocitem text="0092 IVXVF_HW_Fault" target="err_92" />
+<tocitem text="0093 AccessSwitch" target="err_93" />
+<tocitem text="0094 DoorLockFault" target="err_94" />
+<tocitem text="0095 ETSL_Overspeed" target="err_95" />
+<tocitem text="0096 ETSL_VaneError" target="err_96" />
+<tocitem text="0097 ETSL_DeviceError" target="err_97" />
+<tocitem text="0098 COM_Busreconf" target="err_98" />
+<tocitem text="0099 RSK_Fault" target="err_99" />
+<tocitem text="0100 RFE_Fault" target="err_100" />
+<tocitem text="0101 RTRT_Fault" target="err_101" />
+<tocitem text="0102 RKUET_Fault" target="err_102" />
+<tocitem text="0103 HighSpeedStop" target="err_103" />
+<tocitem text="0104 CDOOR Bypass" target="err_104" />
+<tocitem text="0105 SDOOR Bypass" target="err_105" />
+<tocitem text="0106 PHASE Loss" target="err_106" />
+<tocitem text="0107 Pit Oil Switch" target="err_107" />
+<tocitem text="0108 Over Temperature Oil" target="err_108" />
+<tocitem text="0109 KSE Failure" target="err_109" />
+<tocitem text="0110 Motor Overload" target="err_110" />
+<tocitem text="0111 No Floor Slowdown" target="err_111" />
+<tocitem text="0112 Pressure Switch" target="err_112" />
+<tocitem text="0113 Thermistor Failure" target="err_113" />
+<tocitem text="0114 Anti Stall Failure" target="err_114" />
+<tocitem text="0115 Duty Cycle Regulation" target="err_115" />
+<tocitem text="0116 KLU Fault" target="err_116" />
+<tocitem text="0117 KLD Fault" target="err_117" />
+<tocitem text="0118 NodeAlive" target="err_118" />
+<tocitem text="0119 Node Dead" target="err_119" />
+<tocitem text="0120 Door Lock Failure" target="err_120" />
+<tocitem text="0121 Switch Fault" target="err_121" />
+<tocitem text="0122 KSE Fail 2" target="err_122" />
+<tocitem text="0123 EV Error" target="err_123" />
+<tocitem text="0124 EV Shutdown" target="err_124" />
+<tocitem text="0125 EV Event" target="err_125" />
+<tocitem text="0126 Wrong hardware" target="err_126" />
+<tocitem text="0127 MoSis_Error" target="err_127" />
+<tocitem text="0128 LOWER_KSE_LOW_SYNCH" target="err_128" />
+<tocitem text="0129 EQ_Midpoint_Fault" target="err_129" />
+<tocitem text="0130 PCT_Drive_Para" target="err_130" />
+<tocitem text="0131 MoSis_KNE_Fault" target="err_131" />
+<tocitem text="0132 MoSis_ETSL_Fault" target="err_132" />
+<tocitem text="0133 Inverter Para Not Accepted" target="err_133" />
+<tocitem text="0134 NTSD_Triggered" target="err_134" />
+<tocitem text="0135 DREC_DRH_button" target="err_135" />
+<tocitem text="0136 Safety Bypass" target="err_136" />
+<tocitem text="0137 JHCC_Pressed" target="err_137" />
+<tocitem text="0138 Brake Not Set" target="err_138" />
+<tocitem text="0139 Unintended Car Movement" target="err_139" />
+<tocitem text="0140 Safety T4B" target="err_140" />
+<tocitem text="0141 Safety T1" target="err_141" />
+<tocitem text="0142 Safety T2" target="err_142" />
+<tocitem text="0143 Safety T2A" target="err_143" />
+<tocitem text="0144 Safety T2B" target="err_144" />
+<tocitem text="0145 Safety T3" target="err_145" />
+<tocitem text="0146 Safety T3A" target="err_146" />
+<tocitem text="0147 Safety T3B" target="err_147" />
+<tocitem text="0148 Safety T4" target="err_148" />
+<tocitem text="0149 Safety T5" target="err_149" />
+</tocitem>
+<tocitem text="150...199 Variodyn E" target="150_199_Variodyn_E">
+<tocitem text="0151 LearnTrip" target="err_151" />
+<tocitem text="0152 CorrTrip" target="err_152" />
+<tocitem text="0153 SynchTrip" target="err_153" />
+<tocitem text="0154 KS_MagnetPos" target="err_154" />
+<tocitem text="0155 KSE_MagnetPos" target="err_155" />
+<tocitem text="0156 LearnMesProbl" target="err_156" />
+<tocitem text="0157 DeltaS_2BP" target="err_157" />
+<tocitem text="0158 SF_Fault" target="err_158" />
+<tocitem text="0159 NoBpReaction" target="err_159" />
+<tocitem text="0160 SK ErrorStart" target="err_160" />
+<tocitem text="0161 CarNotAtLevel" target="err_161" />
+<tocitem text="0162 CarOutOfFloor" target="err_162" />
+<tocitem text="0163 TargetFailure" target="err_163" />
+<tocitem text="0164 FC_ShortBrake" target="err_164" />
+<tocitem text="0165 FC_StopSpeed" target="err_165" />
+<tocitem text="0166 SW_BlockPerm" target="err_166" />
+<tocitem text="0167 LastBlockTime" target="err_167" />
+<tocitem text="0168 ShaftChecksum" target="err_168" />
+<tocitem text="0169 Supply24V" target="err_169" />
+<tocitem text="0170 FloorPrec" target="err_170" />
+<tocitem text="0171 InvDrivePCT" target="err_171" />
+<tocitem text="0172 InvDriveParam" target="err_172" />
+</tocitem>
+<tocitem text="200...299 Door Control" target="200_299_Door_Control">
+<tocitem text="0201 ConfigErr" target="err_201" />
+<tocitem text="0202 DoorOperErr" target="err_202" />
+<tocitem text="0203 ThermoDoorMot" target="err_203" />
+<tocitem text="0204 DoorRevDevErr" target="err_204" />
+<tocitem text="0205 DoorContrErr" target="err_205" />
+<tocitem text="0206 DoorBoltErr" target="err_206" />
+<tocitem text="0207 CloseSeqErr" target="err_207" />
+<tocitem text="0208 DoorDevErr" target="err_208" />
+<tocitem text="0209 DoorContact" target="err_209" />
+<tocitem text="0210 Lift Guardian" target="err_210" />
+<tocitem text="0211 COM_Busreconf" target="err_211" />
+<tocitem text="0240 SW-Warning" target="err_240" />
+</tocitem>
+<tocitem text="300...399 Varidor70 Door Drive" target="300_399_Varidor70_Door_Drive">
+<tocitem text="0300 CTR_PAR_ACCESS" target="err_300" />
+<tocitem text="0301 CTR_CALC" target="err_301" />
+<tocitem text="0302 TRC_PAR_ACCESS" target="err_302" />
+<tocitem text="0303 TRC_POS_ERR" target="err_303" />
+<tocitem text="0304 TRC_CALC" target="err_304" />
+<tocitem text="0305 OS_CYCLE_OVERRUN" target="err_305" />
+<tocitem text="0306 PAR_NOVRAM_MISSING" target="err_306" />
+<tocitem text="0307 HW_PAR_ACCESS" target="err_307" />
+<tocitem text="0308 HW_POSITION" target="err_308" />
+<tocitem text="0309 HW_POSREF" target="err_309" />
+<tocitem text="0310 HW_DRV_SERIOUS" target="err_310" />
+<tocitem text="0311 DRIVE _OVER_TEMP" target="err_311" />
+<tocitem text="0312 HW_FLASH_READ" target="err_312" />
+<tocitem text="0313 HW_FLASH_WRITE" target="err_313" />
+<tocitem text="0314 HW_WATCHDOG" target="err_314" />
+<tocitem text="0315 IAC_MOD_UPD_FAIL" target="err_315" />
+<tocitem text="0316 IAC_PAR_UPD_FAIL" target="err_316" />
+<tocitem text="0317 IAC_UNKNOWN_LEVEL" target="err_317" />
+<tocitem text="0318 IAC_DOOR_TYPE_UNKNOWN" target="err_318" />
+<tocitem text="0319 IAC_CLUTCH_FAILURE" target="err_319" />
+<tocitem text="0320 ESTIMATED_CONSTRUCT_DATA" target="err_320" />
+<tocitem text="0321 ESK_INTERNAL" target="err_321" />
+<tocitem text="0322 ESK_PARAM_WRITE" target="err_322" />
+<tocitem text="0323 ESK_PARAM_READ" target="err_323" />
+<tocitem text="0324 ESK_COMMUNICATION_ERR" target="err_324" />
+<tocitem text="0325 VLON_INTERNAL" target="err_325" />
+<tocitem text="0326 VLON_TRANSMIT" target="err_326" />
+<tocitem text="0327 VLON_RECEIVE" target="err_327" />
+<tocitem text="0328 EMERGENCY" target="err_328" />
+<tocitem text="0329 NORMAL_RESET" target="err_329" />
+<tocitem text="0330 EST_LRACCU_OVERFL" target="err_330" />
+<tocitem text="0331 BLOCKED_OPENING_DIRECTION" target="err_331" />
+<tocitem text="0332 BLOCK_CLOSE_DIRECTION" target="err_332" />
+<tocitem text="0333 SLV70_OBSTACLE_DETECT" target="err_333" />
+<tocitem text="0334 SLV70_RESULT_RANGE" target="err_334" />
+<tocitem text="0335 IAC_CLUTCH_WARNING" target="err_335" />
+<tocitem text="0336 DRIVE_OVER_TEMP_WARNING" target="err_336" />
+<tocitem text="0337 HOLDING_FORCE_AT_CLOSED_POSITION" target="err_337" />
+<tocitem text="0338 Reserve_8" target="err_338" />
+<tocitem text="0339 Reserve_9" target="err_339" />
+<tocitem text="0340 Reserve_10" target="err_340" />
+<tocitem text="0341 Reserve_11" target="err_341" />
+<tocitem text="0342 Reserve_12" target="err_342" />
+<tocitem text="0343 Reserve_13" target="err_343" />
+<tocitem text="0344 Reserve_14" target="err_344" />
+<tocitem text="0345 Reserve_15" target="err_345" />
+</tocitem>
+<tocitem text="400...599 Lift" target="400_599_Lift">
+<tocitem text="0401 VCOM Node Connected" target="err_401" />
+<tocitem text="0402 VCOM Node Disconnected" target="err_402" />
+<tocitem text="0403 PowerUp" target="err_403" />
+<tocitem text="0404 Start Monitor Expired" target="err_404" />
+<tocitem text="0405 Permanent Active Call" target="err_405" />
+<tocitem text="0406 ExceptionMC" target="err_406" />
+<tocitem text="0407 COM Bus Stress" target="err_407" />
+<tocitem text="0408 PIOL_ConfErr" target="err_408" />
+<tocitem text="0409 COM_Bus Reconfiguration" target="err_409" />
+<tocitem text="0410 PIO-Error" target="err_410" />
+<tocitem text="0411 ARA-Service" target="err_411" />
+<tocitem text="0412 KTHM-Service" target="err_412" />
+<tocitem text="0413 TAB-Service" target="err_413" />
+<tocitem text="0414 SDU-Service" target="err_414" />
+<tocitem text="0415 Reserve_Error_415" target="err_415" />
+<tocitem text="0416 Reserve_Error_416" target="err_416" />
+<tocitem text="0417 Reserve_Error_417" target="err_417" />
+<tocitem text="0418 Reserve_Error_418" target="err_418" />
+<tocitem text="0419 Reserve_Error_419" target="err_419" />
+<tocitem text="0420 SCT/PCT-Checksum" target="err_420" />
+<tocitem text="0421 Invalid Parameter Value" target="err_421" />
+<tocitem text="0422 FLASH Failure" target="err_422" />
+<tocitem text="0423 PCT define" target="err_423" />
+<tocitem text="0424 Parameter Missing" target="err_424" />
+<tocitem text="0425 SCT/PCT write error" target="err_425" />
+<tocitem text="0426 Wrong SBT Data" target="err_426" />
+<tocitem text="0427 Wrong SCT Data" target="err_427" />
+<tocitem text="0428 End Monitor Expired" target="err_428" />
+<tocitem text="0429 Chipcard general error" target="err_429" />
+<tocitem text="0430 Chipcard general warning" target="err_430" />
+<tocitem text="0431 Chipcard general event" target="err_431" />
+<tocitem text="0432 Chipcard expansion done" target="err_432" />
+<tocitem text="0433 Chipcard not valid" target="err_433" />
+<tocitem text="0434 SCT Expansion" target="err_434" />
+<tocitem text="0435 Invalid SCT" target="err_435" />
+<tocitem text="0436 Reserve_Error_436" target="err_436" />
+<tocitem text="0437 Reserve_Error_437" target="err_437" />
+<tocitem text="0438 Reserve_Error_438" target="err_438" />
+<tocitem text="0439 Reserve_Error_439" target="err_439" />
+<tocitem text="0440 Invalid Parameter Access" target="err_440" />
+<tocitem text="0441 Invalid Telegram Data" target="err_441" />
+<tocitem text="0442 Invalid Telegram Attribute" target="err_442" />
+<tocitem text="0443 Invalid Telegram ID" target="err_443" />
+<tocitem text="0444 Invalid Telegram Group" target="err_444" />
+<tocitem text="0445 Invalid Lift Number" target="err_445" />
+<tocitem text="0446 Reserve_Error_446" target="err_446" />
+<tocitem text="0447 Reserve_Error_447" target="err_447" />
+<tocitem text="0448 Reserve_Error_448" target="err_448" />
+<tocitem text="0449 Reserve_Error_449" target="err_449" />
+<tocitem text="0450 Parameter Configuration Error" target="err_450" />
+<tocitem text="0451 IO Configuration Error" target="err_451" />
+<tocitem text="0452 SCT/PCT read error" target="err_452" />
+<tocitem text="0453 Timer Table Overflow" target="err_453" />
+<tocitem text="0454 SW-Warning54" target="err_454" />
+<tocitem text="0455 SW-Warning55" target="err_455" />
+<tocitem text="0456 SW-Warning56" target="err_456" />
+<tocitem text="0457 Reserve_Error_457" target="err_457" />
+<tocitem text="0458 Reserve_Error_458" target="err_458" />
+<tocitem text="0459 Reserve_Error_459" target="err_459" />
+<tocitem text="0460 VCOM Init" target="err_460" />
+<tocitem text="0461 VCOM open" target="err_461" />
+<tocitem text="0462 VCOM close" target="err_462" />
+<tocitem text="0463 VCOM provide" target="err_463" />
+<tocitem text="0464 VCOM unprovide" target="err_464" />
+<tocitem text="0465 VCOM request" target="err_465" />
+<tocitem text="0466 VCOM unrequest" target="err_466" />
+<tocitem text="0467 VCOM send" target="err_467" />
+<tocitem text="0468 VCOM pend" target="err_468" />
+<tocitem text="0469 VCOM get" target="err_469" />
+<tocitem text="0470 VCOM accept" target="err_470" />
+<tocitem text="0471 VCOM reply" target="err_471" />
+<tocitem text="0472 VCOM queue overflow" target="err_472" />
+<tocitem text="0473 VCOM table full" target="err_473" />
+<tocitem text="0474 VCOM Comms Queue Full" target="err_474" />
+<tocitem text="0475 SW-Warning75" target="err_475" />
+<tocitem text="0476 Fatal Error ON (Breakdown)" target="err_476" />
+<tocitem text="0477 Fatal Error OFF" target="err_477" />
+<tocitem text="0478 OVERLAY failure" target="err_478" />
+<tocitem text="0479 Reserve_Error_479" target="err_479" />
+<tocitem text="0480 Reserve_Error_480" target="err_480" />
+<tocitem text="0481 Reserve_Error_481" target="err_481" />
+<tocitem text="0482 Reserve_Error_482" target="err_482" />
+<tocitem text="0483 Reserve_Error_483" target="err_483" />
+<tocitem text="0484 Reserve_Error_484" target="err_484" />
+<tocitem text="0485 Reserve_Error_485" target="err_485" />
+<tocitem text="0486 Reserve_Error_486" target="err_486" />
+<tocitem text="0487 Reserve_Error_487" target="err_487" />
+<tocitem text="0488 Reserve_Error_488" target="err_488" />
+<tocitem text="0489 Reserve_Error_489" target="err_489" />
+<tocitem text="0490 Table_Overflow" target="err_490" />
+<tocitem text="0491 User Level 3 disabled" target="err_491" />
+<tocitem text="0492 User Level 3 reenabled" target="err_492" />
+<tocitem text="0493 Low Building Sway Active" target="err_493" />
+<tocitem text="0494 Medium Building Sway Active" target="err_494" />
+<tocitem text="0495 High Building Sway Active" target="err_495" />
+<tocitem text="0496 Building Sway Deactivated" target="err_496" />
+<tocitem text="0497 Reserve_Error_497" target="err_497" />
+<tocitem text="0498 Group 24VDC Fail" target="err_498" />
+<tocitem text="0499 Lift 24VDC Fail" target="err_499" />
+<tocitem text="0500 12VDC Power Fail" target="err_500" />
+<tocitem text="0501 Battery Charging" target="err_501" />
+<tocitem text="0502 Battery Charge Low" target="err_502" />
+<tocitem text="0503 Battery Charge Very Low" target="err_503" />
+<tocitem text="0504 Battery Dead / Missing" target="err_504" />
+<tocitem text="0505 Battery Charge Time Expired" target="err_505" />
+</tocitem>
+<tocitem text="600...699 MC PVF" target="600_699_MC_PVF">
+<tocitem text="0600 Attempt to start not allowed" target="err_600" />
+<tocitem text="0601 Attempt to restart not allowed" target="err_601" />
+<tocitem text="0602 Overtemperature" target="err_602" />
+<tocitem text="0603 SW warning" target="err_603" />
+<tocitem text="0604 DL overvolt trigg" target="err_604" />
+<tocitem text="0605 DL overvolt" target="err_605" />
+<tocitem text="0606 DC link undervoltage" target="err_606" />
+<tocitem text="0607 Control Hardware command wrong" target="err_607" />
+<tocitem text="0608 Charging DC link failure" target="err_608" />
+<tocitem text="0609 Discharging DC link failure" target="err_609" />
+<tocitem text="0610 Current loop not OK" target="err_610" />
+<tocitem text="0611 Deactivate current loop failure" target="err_611" />
+<tocitem text="0612 Input contactor failure" target="err_612" />
+<tocitem text="0613 Charge contactor failure" target="err_613" />
+<tocitem text="0614 Current difference warning" target="err_614" />
+<tocitem text="0615 SW encoder warning" target="err_615" />
+<tocitem text="0616 Over current warning" target="err_616" />
+<tocitem text="0617 Over speed warning" target="err_617" />
+<tocitem text="0618 Start direction wrong" target="err_618" />
+<tocitem text="0619 Speed reference warning" target="err_619" />
+<tocitem text="0620 Time control motor exceeded" target="err_620" />
+<tocitem text="0621 Receive uart failure" target="err_621" />
+<tocitem text="0622 Message source failure" target="err_622" />
+<tocitem text="0623 Message length failure" target="err_623" />
+<tocitem text="0624 Receive state wrong" target="err_624" />
+<tocitem text="0625 Transmit state wrong" target="err_625" />
+<tocitem text="0626 EPROM checksum failure" target="err_626" />
+<tocitem text="0627 RAM failure" target="err_627" />
+<tocitem text="0628 Board battery failure" target="err_628" />
+<tocitem text="0629 RAM checksum failure" target="err_629" />
+<tocitem text="0630 Watchdog failure" target="err_630" />
+<tocitem text="0631 Transmit failure" target="err_631" />
+<tocitem text="0632 Open safety circuit" target="err_632" />
+<tocitem text="0633 HW encoder warning" target="err_633" />
+<tocitem text="0634 Exception vector" target="err_634" />
+<tocitem text="0635 Contactor time exceeded" target="err_635" />
+<tocitem text="0636 Driver Print power failure" target="err_636" />
+<tocitem text="0637 Overtemperature brake resistor" target="err_637" />
+<tocitem text="0638 FCR no start" target="err_638" />
+<tocitem text="0639 FCR no stop" target="err_639" />
+<tocitem text="0640 FCR interrupt" target="err_640" />
+<tocitem text="0641 External error" target="err_641" />
+<tocitem text="0642 PCC failure" target="err_642" />
+<tocitem text="0643 Supply failure cc1" target="err_643" />
+<tocitem text="0644 Input contactor failure cc1" target="err_644" />
+<tocitem text="0645 Charge contactor failure cc1" target="err_645" />
+<tocitem text="0646 DL overvolt trigg cc1" target="err_646" />
+<tocitem text="0647 Current difference warn cc1" target="err_647" />
+<tocitem text="0648 Current loop failure cc1" target="err_648" />
+<tocitem text="0649 Overtemperature cc1" target="err_649" />
+<tocitem text="0650 External error cc1" target="err_650" />
+<tocitem text="0651 Supply failure cc2" target="err_651" />
+<tocitem text="0652 Input contactor failure cc2" target="err_652" />
+<tocitem text="0653 Charge contactor failure cc2" target="err_653" />
+<tocitem text="0654 DL overvolt trigg cc2" target="err_654" />
+<tocitem text="0655 Current difference warn cc2" target="err_655" />
+<tocitem text="0656 Current loop failure cc2" target="err_656" />
+<tocitem text="0657 Overtemperature cc2" target="err_657" />
+<tocitem text="0658 External error cc2" target="err_658" />
+<tocitem text="0659 Supply failure cc3" target="err_659" />
+<tocitem text="0660 Input contactor failure cc3" target="err_660" />
+<tocitem text="0661 Charge contactor failure cc3" target="err_661" />
+<tocitem text="0662 DL overvolt trigg cc3" target="err_662" />
+<tocitem text="0663 Current difference warn cc3" target="err_663" />
+<tocitem text="0664 Current loop failure cc3" target="err_664" />
+<tocitem text="0665 Overtemperature cc3" target="err_665" />
+<tocitem text="0666 External error cc3" target="err_666" />
+<tocitem text="0667 Dummy 1" target="err_667" />
+<tocitem text="0668 Dummy 2" target="err_668" />
+<tocitem text="0669 Dummy 3" target="err_669" />
+</tocitem>
+<tocitem text="700...739 MC PVEC" target="700_739_MC_PVEC">
+<tocitem text="0700 Memory Failure" target="err_700" />
+<tocitem text="0701 SW Warning" target="err_701" />
+<tocitem text="0702 Communication Failure" target="err_702" />
+<tocitem text="0703 Overcurrent Motor" target="err_703" />
+<tocitem text="0704 Encoder Failure" target="err_704" />
+<tocitem text="0705 Speed Difference" target="err_705" />
+<tocitem text="0706 Speed Ref Missing" target="err_706" />
+<tocitem text="0707 SGRW Failure" target="err_707" />
+<tocitem text="0708 SGR/SH Failure" target="err_708" />
+<tocitem text="0709 Safety Circuit" target="err_709" />
+<tocitem text="0710 FCR Not Ready" target="err_710" />
+<tocitem text="0711 Overcurrent Inverter" target="err_711" />
+<tocitem text="0712 Power Electronic Failure" target="err_712" />
+<tocitem text="0713 Current Difference" target="err_713" />
+<tocitem text="0714 Current Not Zero" target="err_714" />
+<tocitem text="0715 Current Sum Failure" target="err_715" />
+<tocitem text="0716 Overtemp HS Trigger" target="err_716" />
+<tocitem text="0717 Overtemp HS Limit" target="err_717" />
+<tocitem text="0718 DCL Overvoltage Trigger" target="err_718" />
+<tocitem text="0719 DCL Overvoltage" target="err_719" />
+<tocitem text="0720 DCL Undervoltage" target="err_720" />
+<tocitem text="0721 DCL Unsymmetric Voltage" target="err_721" />
+<tocitem text="0722 DCL Charging Time" target="err_722" />
+<tocitem text="0723 DCL Discharging Time" target="err_723" />
+<tocitem text="0724 Power Supply" target="err_724" />
+<tocitem text="0725 Overtemp KTHBR" target="err_725" />
+<tocitem text="0726 Overtemp MH" target="err_726" />
+<tocitem text="0727 HW failure" target="err_727" />
+<tocitem text="0728 Phase failure" target="err_728" />
+<tocitem text="0729 Fan failure" target="err_729" />
+<tocitem text="0730 FCM failure" target="err_730" />
+<tocitem text="0731 FCM overtemperature" target="err_731" />
+</tocitem>
+<tocitem text="740...799 Magnetek" target="740_799_Magnetek">
+<tocitem text="0740 Overspeed" target="err_740" />
+<tocitem text="0741 Tach Loss" target="err_741" />
+<tocitem text="0742 Reverse Tach" target="err_742" />
+<tocitem text="0743 not_a_number" target="err_743" />
+<tocitem text="0744 overflow" target="err_744" />
+<tocitem text="0745 underflow" target="err_745" />
+<tocitem text="0746 divide by zero" target="err_746" />
+<tocitem text="0747 Motor overload" target="err_747" />
+<tocitem text="0748 Motor field overcurrent" target="err_748" />
+<tocitem text="0749 Contactor fault" target="err_749" />
+<tocitem text="0750 1 minute full field" target="err_750" />
+<tocitem text="0751 Open armature circuit" target="err_751" />
+<tocitem text="0752 safety circuit" target="err_752" />
+<tocitem text="0753 PAC fault" target="err_753" />
+<tocitem text="0754 DCU CEMF fault" target="err_754" />
+<tocitem text="0755 PCU CEMF fault" target="err_755" />
+<tocitem text="0756 PCU reset" target="err_756" />
+<tocitem text="0757 loop fault" target="err_757" />
+<tocitem text="0758 IST fault" target="err_758" />
+<tocitem text="0759 Power supply" target="err_759" />
+<tocitem text="0760 Line synch" target="err_760" />
+<tocitem text="0761 Low line" target="err_761" />
+<tocitem text="0762 Field loss" target="err_762" />
+<tocitem text="0763 DCU failure" target="err_763" />
+<tocitem text="0764 Bad thermistor" target="err_764" />
+<tocitem text="0765 High temperature" target="err_765" />
+<tocitem text="0766 Exessive ripple" target="err_766" />
+<tocitem text="0767 Blown fuse" target="err_767" />
+<tocitem text="0768 shorted doubler" target="err_768" />
+<tocitem text="0769 Open SCR" target="err_769" />
+<tocitem text="0770 bad parameter" target="err_770" />
+<tocitem text="0771 Forcing fault" target="err_771" />
+<tocitem text="0772 AV feedback reversed" target="err_772" />
+<tocitem text="0773 Parameter too high" target="err_773" />
+<tocitem text="0774 Parameter out of range" target="err_774" />
+<tocitem text="0775 Parameter out of range" target="err_775" />
+<tocitem text="0776 Bridge fault" target="err_776" />
+<tocitem text="0777 parameter out of range" target="err_777" />
+<tocitem text="0778 parameter out of range" target="err_778" />
+<tocitem text="0779 parameter out of range" target="err_779" />
+<tocitem text="0780 Field supply fault" target="err_780" />
+<tocitem text="0781 PCU software fault" target="err_781" />
+</tocitem>
+<tocitem text="900...999 IO" target="900_999_IO">
+<tocitem text="0901 ConfigErr" target="err_901" />
+<tocitem text="0902 PIO Error" target="err_902" />
+<tocitem text="0903 IO Table Overflow" target="err_903" />
+<tocitem text="0904 IO_Missing" target="err_904" />
+<tocitem text="0905 COP Configuration Error" target="err_905" />
+<tocitem text="0906 Duplicate_BMK" target="err_906" />
+<tocitem text="0910 COM_Busreconf" target="err_910" />
+<tocitem text="0951 IO_Configuration_Error" target="err_951" />
+<tocitem text="0952 EEP_BurnProbl" target="err_952" />
+<tocitem text="0953 Deployment_Rule_Failure" target="err_953" />
+<tocitem text="0961 EEP_BurnProbl" target="err_961" />
+<tocitem text="0970 Timer Error" target="err_970" />
+</tocitem>
+<tocitem text="1000...1199 CPU" target="1000_1199_CPU">
+<tocitem text="1000 Bus Error" target="err_1000" />
+<tocitem text="1001 Address Error" target="err_1001" />
+<tocitem text="1002 Illegal Instruction" target="err_1002" />
+<tocitem text="1003 Zero Divide" target="err_1003" />
+<tocitem text="1004 CHK Instruction" target="err_1004" />
+<tocitem text="1005 TRAPV Instruction" target="err_1005" />
+<tocitem text="1006 Privilege Violation" target="err_1006" />
+<tocitem text="1007 TRACE" target="err_1007" />
+<tocitem text="1008 Uninitialized Int Vect" target="err_1008" />
+<tocitem text="1009 Spurious Interrupt" target="err_1009" />
+<tocitem text="1010 TRAP Instruction" target="err_1010" />
+<tocitem text="1011 User Interrupt Vector" target="err_1011" />
+<tocitem text="1012 IVXVF Reserve12" target="err_1012" />
+<tocitem text="1013 Task Create" target="err_1013" />
+<tocitem text="1014 Queue create" target="err_1014" />
+<tocitem text="1015 Operating system RTEMS" target="err_1015" />
+<tocitem text="1016 New Config Reset" target="err_1016" />
+<tocitem text="1017 Event Handler Reset" target="err_1017" />
+<tocitem text="1018 Appl. Requested Reset" target="err_1018" />
+<tocitem text="1019 IVXVF Reserve19" target="err_1019" />
+<tocitem text="1020 Line1010 Instruction Emulation" target="err_1020" />
+<tocitem text="1021 Line1111 Instruction Emulation" target="err_1021" />
+<tocitem text="1022 HW Breakpoint" target="err_1022" />
+<tocitem text="1023 FP protocol violation" target="err_1023" />
+<tocitem text="1024 Format error" target="err_1024" />
+<tocitem text="1025 Reserved interrupt" target="err_1025" />
+<tocitem text="1026 Autovector 1" target="err_1026" />
+<tocitem text="1027 Autovector 2" target="err_1027" />
+<tocitem text="1028 Autovector 3" target="err_1028" />
+<tocitem text="1029 Autovector 4" target="err_1029" />
+<tocitem text="1030 Autovector 5" target="err_1030" />
+<tocitem text="1031 Autovector 6" target="err_1031" />
+<tocitem text="1032 Autovector 7" target="err_1032" />
+<tocitem text="1033 FP Reserved" target="err_1033" />
+<tocitem text="1034 FP Br Unord" target="err_1034" />
+<tocitem text="1035 FP Inexact Result" target="err_1035" />
+<tocitem text="1036 FP Div Zero" target="err_1036" />
+<tocitem text="1037 FP Underflow" target="err_1037" />
+<tocitem text="1038 FP Operand Error" target="err_1038" />
+<tocitem text="1039 FP Overflow" target="err_1039" />
+<tocitem text="1040 FP Signaling NAN" target="err_1040" />
+<tocitem text="1041 FP Unimplemented DataType" target="err_1041" />
+<tocitem text="1042 MMU Reserved" target="err_1042" />
+<tocitem text="1043 MMU Config error" target="err_1043" />
+<tocitem text="1044 MMU Illegal Operation" target="err_1044" />
+<tocitem text="1045 MMU Access Level Violation" target="err_1045" />
+<tocitem text="1046 TPU Interrupt" target="err_1046" />
+<tocitem text="1047 SCI Interrupt" target="err_1047" />
+<tocitem text="1048 SPI Interrupt" target="err_1048" />
+<tocitem text="1049 CPM Interrupt" target="err_1049" />
+<tocitem text="1050 External H Reset" target="err_1050" />
+<tocitem text="1051 PowerUpReset" target="err_1051" />
+<tocitem text="1052 Watchdog Reset" target="err_1052" />
+<tocitem text="1053 DoubleBusFaultReset" target="err_1053" />
+<tocitem text="1054 ClockLossReset" target="err_1054" />
+<tocitem text="1055 External S-Reset" target="err_1055" />
+<tocitem text="1056 BErr Released Write" target="err_1056" />
+<tocitem text="1057 BErr Prefetch" target="err_1057" />
+<tocitem text="1058 BErr Operand Read" target="err_1058" />
+<tocitem text="1059 BErr Operand Write" target="err_1059" />
+<tocitem text="1060 BErr MoveMultiple" target="err_1060" />
+<tocitem text="1061 BErr Exception Processing" target="err_1061" />
+<tocitem text="1062 Dead Task" target="err_1062" />
+<tocitem text="1063 Group24vFail" target="err_1063" />
+<tocitem text="1064 Lift24vFail" target="err_1064" />
+<tocitem text="1065 12vPowerFail" target="err_1065" />
+<tocitem text="1066 BatteryCharging" target="err_1066" />
+<tocitem text="1067 BatteryLow50" target="err_1067" />
+<tocitem text="1068 BatteryLow25" target="err_1068" />
+<tocitem text="1069 BatteryDeadOrMissing" target="err_1069" />
+<tocitem text="1070 LiftIdSwitchInvalid" target="err_1070" />
+<tocitem text="1071 MissingEB" target="err_1071" />
+<tocitem text="1072 Saved Registers" target="err_1072" />
+<tocitem text="1073 ManualDoubleReset" target="err_1073" />
+<tocitem text="1074 Init NVRAM" target="err_1074" />
+<tocitem text="1075 Bad_SIMM Memory" target="err_1075" />
+<tocitem text="1076 CPLD_Programmed" target="err_1076" />
+<tocitem text="1077 OS Fault" target="err_1077" />
+<tocitem text="1078 OS Restriction Failure" target="err_1078" />
+<tocitem text="1079 Appl Restriction Failure" target="err_1079" />
+<tocitem text="1080 BKPT BGND" target="err_1080" />
+</tocitem>
+<tocitem text="1200...1249 LON" target="1200_1249_LON">
+<tocitem text="1201 PowerUpReset" target="err_1201" />
+<tocitem text="1202 Exception68332" target="err_1202" />
+<tocitem text="1203 ExtReset" target="err_1203" />
+<tocitem text="1204 DeadTask" target="err_1204" />
+<tocitem text="1205 WdogReset" target="err_1205" />
+<tocitem text="1206 MysteryReset" target="err_1206" />
+<tocitem text="1207 NiInitFail" target="err_1207" />
+<tocitem text="1208 NewNodeFound" target="err_1208" />
+<tocitem text="1209 Missing Node" target="err_1209" />
+<tocitem text="1210 NiErrLogged" target="err_1210" />
+<tocitem text="1211 NodeErrLogged" target="err_1211" />
+<tocitem text="1212 SvcPinEvent" target="err_1212" />
+<tocitem text="1213 NiReset" target="err_1213" />
+<tocitem text="1214 DupLocID" target="err_1214" />
+<tocitem text="1215 NiErrCounter" target="err_1215" />
+<tocitem text="1216 DiffCksGP_Konf" target="err_1216" />
+<tocitem text="1217 DiffCksIO_Konfl" target="err_1217" />
+<tocitem text="1218 TmoCksGP_Konf" target="err_1218" />
+<tocitem text="1219 TmoDatGP_Konf" target="err_1219" />
+<tocitem text="1220 TmoCksIO_Konf" target="err_1220" />
+<tocitem text="1221 TmoDatIO_Konf" target="err_1221" />
+<tocitem text="1222 DnLdGP_Konf" target="err_1222" />
+<tocitem text="1223 DnLdIO_KOnf" target="err_1223" />
+<tocitem text="1224 CksErrGP_Konf" target="err_1224" />
+<tocitem text="1225 CksErrIO_Konf" target="err_1225" />
+<tocitem text="1226 DoubleReset" target="err_1226" />
+<tocitem text="1227 HWisLCTRL" target="err_1227" />
+<tocitem text="1228 NiNoInAppBuf" target="err_1228" />
+<tocitem text="1229 NiNoInNetBuf" target="err_1229" />
+<tocitem text="1230 PmipNoOutQ" target="err_1230" />
+<tocitem text="1231 PmipIqOverflow" target="err_1231" />
+<tocitem text="1232 SubsystemStart" target="err_1232" />
+<tocitem text="1233 SybsystemDead" target="err_1233" />
+<tocitem text="1234 VcomUpcall" target="err_1234" />
+<tocitem text="1235 KonfWipe" target="err_1235" />
+<tocitem text="1236 CadiReset" target="err_1236" />
+<tocitem text="1237 VcomAllDied" target="err_1237" />
+<tocitem text="1238 KonfTableFull" target="err_1238" />
+<tocitem text="1239 TelTrap" target="err_1239" />
+<tocitem text="1240 LonDistQFull" target="err_1240" />
+<tocitem text="1241 LonPupXON" target="err_1241" />
+<tocitem text="1242 LonDownNACK" target="err_1242" />
+<tocitem text="1243 FreezeFailed" target="err_1243" />
+<tocitem text="1244 LonErr44" target="err_1244" />
+<tocitem text="1245 LonErr45" target="err_1245" />
+<tocitem text="1246 LonErr46" target="err_1246" />
+<tocitem text="1247 LonErr47" target="err_1247" />
+<tocitem text="1248 LonErr48" target="err_1248" />
+<tocitem text="1249 NodePowerFail" target="err_1249" />
+</tocitem>
+<tocitem text="1250...1299 BIO2" target="1250_1299_BIO2">
+<tocitem text="1250 BIO2_ISR_Initialisation_Error" target="err_1250" />
+<tocitem text="1251 BIO2_ISR_Buffering_Error" target="err_1251" />
+<tocitem text="1252 BIO2_ISR_Queueing_Error" target="err_1252" />
+<tocitem text="1253 BIO2_ISR_Communication_Error" target="err_1253" />
+<tocitem text="1254 BIO2_ISR_Busmaster_Error" target="err_1254" />
+<tocitem text="1255 BIO2_spare" target="err_1255" />
+<tocitem text="1256 BIO2_Reserve_1256" target="err_1256" />
+<tocitem text="1257 BIO2_Reserve_1257" target="err_1257" />
+<tocitem text="1258 BIO2_Reserve_1258" target="err_1258" />
+<tocitem text="1259 BIO2_Reserve_1259" target="err_1259" />
+<tocitem text="1260 BIO2 Queue Failure" target="err_1260" />
+<tocitem text="1261 BIO2 Requestor Failure" target="err_1261" />
+<tocitem text="1262 BIO2 Dispatcher Failure" target="err_1262" />
+<tocitem text="1263 BIO2 Missing Node" target="err_1263" />
+<tocitem text="1264 BIO2 Node Alive Again" target="err_1264" />
+<tocitem text="1265 BIO2 No_Address_Left" target="err_1265" />
+<tocitem text="1266 BIO2 Unsupported_Protocol" target="err_1266" />
+<tocitem text="1267 BIO2 Multiple Node on address" target="err_1267" />
+</tocitem>
+<tocitem text="1400...1499 VF" target="1400_1499_VF">
+<tocitem text="1401 SW_Event" target="err_1401" />
+<tocitem text="1402 SW_Warning" target="err_1402" />
+<tocitem text="1403 SW Error" target="err_1403" />
+<tocitem text="1404 VarOutOfRange" target="err_1404" />
+<tocitem text="1405 JHC_Pressed" target="err_1405" />
+<tocitem text="1406 JHM_Pressed" target="err_1406" />
+<tocitem text="1407 JHSG_Pressed" target="err_1407" />
+<tocitem text="1408 Supply24V_OFF" target="err_1408" />
+<tocitem text="1409 DriveLocked" target="err_1409" />
+<tocitem text="1410 UnknownFloor" target="err_1410" />
+<tocitem text="1411 SF_Fault" target="err_1411" />
+<tocitem text="1412 SF1_Fault" target="err_1412" />
+<tocitem text="1413 KB_Fault" target="err_1413" />
+<tocitem text="1414 ShaftChecksum" target="err_1414" />
+<tocitem text="1415 StartFailed" target="err_1415" />
+<tocitem text="1416 TargetFailure" target="err_1416" />
+<tocitem text="1417 CarNotAtLevel" target="err_1417" />
+<tocitem text="1418 CarOutOfFloor" target="err_1418" />
+<tocitem text="1419 KSE_Int_Fail" target="err_1419" />
+<tocitem text="1420 KS_MagnetPos" target="err_1420" />
+<tocitem text="1421 KSE_MagnetPos" target="err_1421" />
+<tocitem text="1422 KS_Bounce" target="err_1422" />
+<tocitem text="1423 KSE_Bounce" target="err_1423" />
+<tocitem text="1424 SynchFailed" target="err_1424" />
+<tocitem text="1425 IO_NotPresent" target="err_1425" />
+<tocitem text="1426 VF_Notstop" target="err_1426" />
+<tocitem text="1427 DeltaS_2BP" target="err_1427" />
+<tocitem text="1428 TEL_Request" target="err_1428" />
+<tocitem text="1429 TEL_Provide" target="err_1429" />
+<tocitem text="1430 TEL_Reply" target="err_1430" />
+<tocitem text="1431 TEL_Get" target="err_1431" />
+<tocitem text="1432 TEL_ReadQueue" target="err_1432" />
+<tocitem text="1433 TEL_VCOMopen" target="err_1433" />
+<tocitem text="1434 Unknown_TEL" target="err_1434" />
+<tocitem text="1435 No_ANT_PCT (Not Used)" target="err_1435" />
+<tocitem text="1436 No_VF20_PCT" target="err_1436" />
+<tocitem text="1437 OverTempMotor" target="err_1437" />
+<tocitem text="1438 NoIncrement" target="err_1438" />
+<tocitem text="1439 InvldMovement" target="err_1439" />
+<tocitem text="1440 OverSpeed" target="err_1440" />
+<tocitem text="1441 OverSpeedKSE" target="err_1441" />
+<tocitem text="1442 DirectionErr" target="err_1442" />
+<tocitem text="1443 DirNotAllowed" target="err_1443" />
+<tocitem text="1444 PosLost_Tacho" target="err_1444" />
+<tocitem text="1445 PosLost_KS" target="err_1445" />
+<tocitem text="1446 PosLost_KSE" target="err_1446" />
+<tocitem text="1447 FloorPrec" target="err_1447" />
+<tocitem text="1448 RSK_Fault" target="err_1448" />
+<tocitem text="1449 RSK1_Fault" target="err_1449" />
+<tocitem text="1450 TIF_WriteErr" target="err_1450" />
+<tocitem text="1451 TIF_ReadErr" target="err_1451" />
+<tocitem text="1452 NoStartOK" target="err_1452" />
+<tocitem text="1453 SK ErrorStart" target="err_1453" />
+<tocitem text="1454 SK ErrorRun" target="err_1454" />
+<tocitem text="1455 SynchTrip" target="err_1455" />
+<tocitem text="1456 LearnTrip" target="err_1456" />
+<tocitem text="1457 CorrTrip" target="err_1457" />
+<tocitem text="1458 Inv_VF20_PCT" target="err_1458" />
+<tocitem text="1459 Inv_BMG_Param" target="err_1459" />
+<tocitem text="1460 LastBlockTime" target="err_1460" />
+<tocitem text="1461 LearnFailed" target="err_1461" />
+<tocitem text="1462 LearnMesProbl" target="err_1462" />
+<tocitem text="1463 TEL_Send" target="err_1463" />
+<tocitem text="1464 NoBpReaction" target="err_1464" />
+<tocitem text="1465 Jump_Tacho" target="err_1465" />
+<tocitem text="1466 SK_Bridging" target="err_1466" />
+<tocitem text="1467 PosLost_IUET" target="err_1467" />
+<tocitem text="1468 Supply24VOn" target="err_1468" />
+<tocitem text="1469 VF20_Blocked" target="err_1469" />
+<tocitem text="1470 Safety110V" target="err_1470" />
+<tocitem text="1471 SafetySPT" target="err_1471" />
+<tocitem text="1472 SafetyKNE" target="err_1472" />
+<tocitem text="1473 SafetyRTS" target="err_1473" />
+<tocitem text="1474 SafetyEnd" target="err_1474" />
+<tocitem text="1475 SW_BlockPerm" target="err_1475" />
+<tocitem text="1476 DataDestroyed" target="err_1476" />
+<tocitem text="1477 VF_StartError" target="err_1477" />
+<tocitem text="1478 VF_ShortBrake" target="err_1478" />
+<tocitem text="1479 VF_StopSpeed" target="err_1479" />
+</tocitem>
+<tocitem text="1500...1699 Travel Control Ext" target="1500_1699_Travel_Control_Ext">
+<tocitem text="1501 Invalid Position" target="err_1501" />
+<tocitem text="1502 Position Jump" target="err_1502" />
+<tocitem text="1503 Defect_MoSis_Sensor" target="err_1503" />
+</tocitem>
+</tocitem>
+</toc>

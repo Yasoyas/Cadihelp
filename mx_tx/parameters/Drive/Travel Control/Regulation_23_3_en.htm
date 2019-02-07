@@ -1,0 +1,296 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Regulation</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Regulation</em> of the parameter group <em>Travel Control</em> in subsystem <em>Drive</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">P-Ampli Accel</h4></TD>
+<TD valign="top" class="Layout"><p>Amplification for the proportional section of the position controller during acceleration and at constant speed.<br>Values greater than 20 can reduce passenger comfort.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">P-Ampli Decel</h4></TD>
+<TD valign="top" class="Layout"><p>Amplification for the proportional section of the position controller during deceleration. With a value of 10 the position control is smoother and comfort is enhanced, but the car will stop less precisely. As a general rule the value for P_ANT_P_AMPLI_DECE should be kept at a low value and leveling accuracy should be optimized using parameters P_ANT_I_AMPLI_DECE and P_ANT_P_AMPLI_KEF.<br>Values greater than 50 can reduce passenger comfort.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">KEF Enable</h4></TD>
+<TD valign="top" class="Layout"><p>The parameter P-Ampli KEF is activated in the KEF area. In addition, when the photo-electric cell enters the floor vane the measured distance for leveling-in correction (KEFTOT) is not transmitted directly to the position controller (direct addition to DELTA_S), but via a filter which adds an increment to DELTA_S every 10 ms until the whole KEFTOT value has been transmitted.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">P-Ampli KEF</h4></TD>
+<TD valign="top" class="Layout"><p>Additional P (proportional) part which is added to the existing P-part 185 mm before the floor (range of Korrektur EinFahrt), when the first photo-electric cell enters the vane. <br>The value of P_ANT_P_AMPLI_KEF must be approximately the same as P_ANT_P_AMPLI_DECE so that an effect is visible. The value of P_ANT_P_AMPLI_KEF can also be negative in order to reduce the whole P-part in this area.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Pre Indice</h4></TD>
+<TD valign="top" class="Layout"><p>The distance regulation starts its output of velocity_reference values the time earlier as defined in Pre Indice.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">I Begin</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the start of the I (integral) section during the deceleration phase.<br>This time before destination is added to the I section. This activates parameter P_ANT_I_AMPLI_DECE. For high values the I section is active during the whole deceleration phase but not before.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">I Ampli Decel</h4></TD>
+<TD valign="top" class="Layout"><p>Integral portion for the amplification of the position controller. The position control is active during the final landing approach of the car (last few ms of deceleration phase). This parameter influences the stopping behaviour/characteristics. Switch-on time for the I section is set with the parameter P_ANT_I_BEGIN.<br><br>Caution: Very high parameter values destabilize the system. The elevator turns away from the destination floor and the events 'FALSE DIR' and 'ERR RELEVEL' occur during the fourth rounding of the speed curve (turning point).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Time Stop Precision</h4></TD>
+<TD valign="top" class="Layout"><p>See comment (Note) on the parameter Dist Stop Precision.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Time Advanced Selector</h4></TD>
+<TD valign="top" class="Layout"><p>The Advanced Selector is the selector message to the control which is generated before the actual selector. This allows the system to accommodate conflicting destination and selector messages. This parameter is intended only for development work. If this parameter is changed it can result in destination overrun.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Window Auto Tacho Factor</h4></TD>
+<TD valign="top" class="Layout"><p>During constant-speed IVXVF may recalculate his tacho-factor according the values of position- & speedtacho.<br>To deactivate the automatic tachocorrection set this parameter to 0.<br>Default value: 50 [Tachopulses/sec.]</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Result Auto Tacho Factor</h4></TD>
+<TD valign="top" class="Layout"><p>There is no action if you write any value to this parameter. The program will overwrite this parameter each time if it recalculates the tachfactor.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Acceleration Tolerance</h4></TD>
+<TD valign="top" class="Layout"><p>Acceleration limitation is activated after the position controller to accommodate any jumps in actual values (e.g. when tacho slip is corrected). This ensures that the acceleration calculated from the speed reference values generated remains within specific tolerance limits about the acceleration reference value.<br>At values above 300 the tolerance is so wide that limitation is no longer effective.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Rope Elongation</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the (dynamic) rope elongation during the deceleration of the car. On high rise elevators extra rope stretch on the hoisting ropes may be caused during the acceleration and deceleration phases. The parameter is used by the software to compensate the measured car position in this situation. The rope elongation compensation takes this dynamic factor into account and corrects the 'S_IST' (current car position) for the position controller accordingly. The calculated compensation value is proportional to the current acceleration/deceleration of the car and the value of the parameter 'Rope Elongation'.<br>The compensation is usually only needed on high rise buildings (>100 meter) and for control systems where the car position is measured with an encoder mounted on the overspeed governor. Therefore the compensation is not required with Mosis.<br><br>See also parameter 'P_ANT_GOVERNOR_ROPE_ELONG'</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Weight House Shrink</h4></TD>
+<TD valign="top" class="Layout"><p>In normal operation the control compensates continuously the shrinkage/expansion of a building due to environmental conditions (temperature) or ageing by updating the floor positions (shaft image) learnt during the learn trip (the learnt values can be made visible with CADI). Every time the car stops on a floor it measures the position difference between the value stored for this floor by the control and the current value from the car position information. If a deviation is detected a separate correction value per floor is updated accordingly. After 10 arrivals of the car on a floor the average correction value for that floor is added/subtracted to/from the current position value. Before adding/subtracting this correction value the value itself is scaled (multiplied) with the parameter 'weight_house_shrink' in order to allow that only a proportional part of the pre-calculated correction value is finally added to the floor position values.<br>With a value of 0 the correction is disabled.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Distance Stop Precision</h4></TD>
+<TD valign="top" class="Layout"><p>This is activated after the predetermined time for the trip has elapsed. The position controller remains active until this leveling accuracy has been achieved or until the Time Stop Precision parameter time has elapsed.<br>The I section of the position controller will increase during this phase in order to position the elevator at the floor within the leveling accuracy values defined in Dist Stop Precision.<br>If the value is set at 1 the process takes proportionately longer. In such a case the parameter Time Stop Precision must be matched accordingly.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Door Contact Delay</h4></TD>
+<TD valign="top" class="Layout"><p>Delay during trip initiation to avoid emergency stops caused by bouncing door contacts. Defines the time delay from the moment the door(s) has closed until travel control disables the door contact bridgeing in the safety circuit.<br><br>If the door contacts bounce (reopen) within this time limit the preparation for a new trip is interrupted and the event SAFETY_RTS or SAFETY_END is generated.<br><br>This parameter is effectiv from TXGC 1.46 and higher. It replaces the Parameter (P_ANT_RESERVE_SHORT_2)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Releveling Delay</h4></TD>
+<TD valign="top" class="Layout"><p>Drive Relevelling Delay</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Governor Rope Elongation</h4></TD>
+<TD valign="top" class="Layout"><p>Defines the elongation of the governor rope during deceleration of the car (at 1 m/s*s) at the bottom floor in tacho units [TF]. This parameter is used by the software to compensate the measured car position when the car enters into the fin of the targetfloor. It is usually only needed only for high rise buildings (>100 meter) and for control systems where the car position is measured with an encoder mounted on the overspeed governor. The compensation is not required with Mosis. The typical effect observed when the compensation is not set as it should be is that the car stops with different distances away from the floor level after trips from below and above the floor. A value of 0 means no compensation of the car position is done by the software (default).<br><br>Adjustment: If the stopping position on the second floor is different in case of approaching from top and from bottom (e.g. +5mm approaching in up direction and -2mm approaching in down direction), the value should be the difference of the deviation times 2 in tacho units (e.g. (5 - (-2))/2 = 3.5mm. If tacho factor is 3400 the value is 12).<br><br>See also parameter 'P_ANT_ROPE_ELONGATION'</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Speed Regulation Mode</h4></TD>
+<TD valign="top" class="Layout"><p>The parameter allows to select the regulation mode. <br><br>0: Speed regulation with (conventional) time based calculation of speed reference curve.<br>1: Speed regulation with distance based calculation of car reference speed.<br><br>On new installations the conventional regulation is used normally. For modernization (existing motors) the distance based regulation can be activated in order to avoid 'underspeed' errors due to slow running of the motor in certain operating conditions.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0035 FC_Timeout</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0035 FC_Timeout</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>FC_Timeout</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>When preparing a new trip, Travel Control requests the status of the inverter (Motor Control). If the Motor Control does not respond as expected (e.g. within the predefined time), Travel control aborts the preparation of the trip. The preparation of a trip by travel control is divided into the following states (phase):<br><br>
+INIT_START_DRIVE<br>
+WAIT_CONTACTORS<br>
+WAIT_SH_CLOSED<br>
+ASK_FC_STATUS<br>
+ACTIVATE_FC<br>
+WAIT_VECSYS_SH_CLOSED (not used with DC drive)<br>
+START_DRIVE_END<br><br>
+Variodyn E only: VF20/30 interrupted starting trial that had been already begun.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Value indicates the cause of the trip abortion and the phase of the trip preparation:<br><br>
+10(hex0A): 'Preparation False' message from inverter in phase 'WAIT_CONTACTORS'<br>
+20(hex14): 'Preparation Wrong Trip Type' message from inverter in phase 'WAIT_CONTACTORS'<br>
+01(hex01): 'Preparation False' message from inverter in phase 'ASK_FC_STATUS'<br>
+21(hex15): 'Preparation Wrong Trip Type' message from inverter in phase 'ASK_FC_STATUS'<br>
+02(hex02): Timeout occurred in phase 'ASK_FC_STATUS' because no response from inverter<br>
+03(hex03): Timeout occurred in phase 'ACTIVATE_FC' because no response from inverter<br><br>
+Variodyn E: Distance covered away from start [mm].</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Motor Control not ready for new trip</td>
+<td valign="top">Check Motor Control.Check connection to Motor Control.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Incorrect parameter on Travel Control</td>
+<td valign="top">Adjust the time that Travel Control waits for Motor Control by the parameter START_UP_PARA.FC_DELAY</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Variodyn E: Inaccurate parameter setting (frequency converter)</td>
+<td valign="top">Check (and adjust if necessary) frequency converter parameter.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0318 IAC_DOOR_TYPE_UNKNOWN</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0318 IAC_DOOR_TYPE_UNKNOWN</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Varidor70 Door Drive</em> error <em>IAC_DOOR_TYPE_UNKNOWN</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>[V70 Door Controller SW]<br>
+Door type is not known/incorrect from the parameters.<br><br>
+Error response: Stop all door motions and stop all further door motions<br>
+Easy Setup: Bargraph-RED-LED-8 [ON]</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>There are two types of door<br>
+a. Center Door Type (param value: 0,2,4)<br>
+b. Telescope Door Type (param value: 1,3,5)<br><br>
+The Parameter involved in this case is <br>
+a. TypeOfDoor<br><br>
+This error is generated when the trip is being calculated</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>This error is generated from the Trip Curve Generator</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">1. Incorrect Parameter</td>
+<td valign="top">1. Check the parameters and the actual door type<br>
+2. Reset the Door Controller</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

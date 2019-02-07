@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0071 SW Error</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0071 SW Error</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>SW Error</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>A severe error in the software was detected. The message indicates a major problem in the software. For further details refer to comments for the extra info. Normally no such error should occur in the field with an ofiicially released software.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Provides information (in addition to the source ID) about the error trap in the software which generated the error message:<br><br>
+14E(hex)/334(dec): Error in trip plan calculation <br>
+155(hex)/341(dec): Unknown value for CTP message found (calculate trip plan)<br>
+1B0(hex)/432(dec): Undefined trip type found (TP.current_trip)<br>
+200(hex)/512(dec): Undefined value for velocity state (speed calculation)<br>
+21A(hex)/538(dec): Unknown Command to motor control (inverter)<br>
+23F(hex)/575(dec): Unknown application message from motor control (inverter)<br>
+25B(hex)/603(dec): Unknown value in trip preparation 'start drive state'<br>
+323(hex)/803(dec): Unknown configuration message from motor control (inverter)<br>
+3B8(hex)/952(dec): Undefined value for deceleration state found (speed calc.)<br>
+4FC(hex)/1276(dec): Wrong application command for motor control (inverter)<br>
+55F(hex)/1375(dec): Wrong configuration command for motor control (inverter)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Identifies the file in the core software (travel control) from where the message is generated. Refer to the list in the description for source id. for error number 70.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top"></td>
+<td valign="top">Contact R&amp;D department in Ebikon.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top"></td>
+<td valign="top">Please report all the values logged in the event log as well as the Travel Control Local log entries. These are clues for the software specialist to detect the source of the problem.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Field Feedback</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="20%">Location</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Controller</td>
+<td valign="top">Actualizar el software MX-GC V-2.51</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

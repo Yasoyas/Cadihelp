@@ -1,0 +1,188 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Supervisor</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Supervisor</em> of the parameter group <em>Motor Control</em> in subsystem <em>Drive</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Over Speed Factor</h4></TD>
+<TD valign="top" class="Layout"><p>Overspeed factor. Used for overspeed monitoring. ( see also error 0705 'Speed difference' )</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Over Current Factor</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum admissible motor current for the duration of constant speed. The factor relates to the rated motor current "IS_NOM".<br><br>The effective limits are:<br><br>Gearless induction motors and SGB:	over current fact * 1.15 =  1.38<br>Planetary gear:			over current fact * 1.2 =  1.44<br>Worm gear:			over current fact * 1.25 = 1.5<br>Synchronous motors (typically underslung):	over current fact * 1.25 = 1.5<br>(refer to error description)<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Is Diff Limit</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum admissible deviation between the reference current and the actual current in the rotor flux oriented reference frame. Scaling: The number 1024 corresponds to the rated motor current.( see also error 0713 'current difference' )</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Inverter Temp Limit</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum temperature of the heat sink.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">U DC Link Drift Limit</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum DC link voltage mid-point drift</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">U DC Link LOW Limit Idle</h4></TD>
+<TD valign="top" class="Layout"><p>Lower DC link voltage limit at trip phase standing (refer to remark) with net (mains power) connection using SGR/SH. Used for undervoltage monitoring (refer to error description). Values [V]:<br><br>{276}	inverter input voltage: 230 V<br>{446}	inverter input voltage: 380 V<br>{470}	inverter input voltage: 400 V<br>{487}	inverter input voltage: 415 V<br>{540}	inverter input voltage: 460 V<br>{563}	inverter input voltage: 480 V<br><br>remarks:	definition of standing:<br>- all inverters except the ones with FCR:	motor switched off<br>- inverters with FCR (line converter):	FCR and motor are switched off</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">U DC Link UPP Limit Idle</h4></TD>
+<TD valign="top" class="Layout"><p>Upper DC link voltage limit at standing (refer to remark of parameter 'DC Link Min Voltage Idle'), with net connection using SGR/SH. Used for overvoltage monitoring (refer to error description)<br><br>Values:	<br>{364} with inverter input voltage: 230 V<br>{602} with inverter input voltage: 380 V<br>{634} with inverter input voltage: 400 V<br>{657} with inverter input voltage: 415 V<br>{729} with inverter input voltage: 460 V<br>{760} with inverter input voltage: 480 V<br><br>remarks:	parameter-relation: see Inverter Input Voltage<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">U DC Link LOW Limit Ride</h4></TD>
+<TD valign="top" class="Layout"><p>Lower limit of DC link voltage during trip. Used for undervoltage monitoring. (refer to error description)<br><br>Values:<br>{255} with inverter input voltage: 230 V<br>{422} with inverter input voltage: 380 V<br>{444} with inverter input voltage: 400 V<br>{460} with inverter input voltage: 415 V<br>{510} with inverter input voltage: 460 V<br>{533} with inverter input voltage: 480 V<br><br>remark:	parameter-relation: see Inverter Input Voltage <br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Dist Diff Limit</h4></TD>
+<TD valign="top" class="Layout"><p>Maximun admissible travel distance into wrong direction</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Motor Temperature Limit</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum allowed operating temperature of the hoisting motor [C]. <br><br>{140.0}	for all Schindler FM/VM/PMS machines (see also Type motor)<br>{90.0}	FMB130-(LANC)  <br>{120.0}	FMB130-(MLS) and Basic<br>{140}	all other (default value)<br><br>Remark: High limit temperature of the hoisting motor. The value is set by the inverter depending on the Motor Id. For unknown motors the default value is used (140degC).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

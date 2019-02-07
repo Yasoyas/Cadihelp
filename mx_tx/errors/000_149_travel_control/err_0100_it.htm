@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0100 RFE_Fault</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0100 RFE_Fault</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>RFE_Fault</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Problema con il feedback del relè RFE (malfunzionamento del relè).<br>
+Commenti: Questo errore viene generato solo con relè RFE nel circuito di avvio corsa.<br>
+Questo relè RFE viene monitorato durante la preparazione della corsa. Il relè RFE deve disattivarsi dopo l'intervento dei relè RSK &amp; RSK1.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">RFE è attivato e non interviene entro 5 secondi (timeout)</td>
+<td valign="top">Verificare il cablaggio e la funzionalità dell'RFE.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top"></td>
+<td valign="top">Verificare tutti i contatti/contattori del circuito RFE.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">L'RFE non si disattiva</td>
+<td valign="top">Verificare l'RSPFE.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">TX4: Parametro 'System Type' errato</td>
+<td valign="top">Verificare il controllo corsa - parametro dell'ascensore 'System Type' (solo TX4).</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

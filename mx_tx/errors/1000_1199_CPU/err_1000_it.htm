@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1000 Bus Error</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1000 Bus Error</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>CPU</em> error <em>Bus Error</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The CPU attempted to read/write to a memory address that does not exist, or the ~BERR signal was asserted to the CPU.<br>
+TX5/HX: On TX5, this error is reported if a more specific cause for the bus-error error cannot be determined. Normally, a more specific reason for the bus-error can be determined by the software. See also: <br>
+1056 BErr Released Write<br>
+1057 BErr Prefetch<br>
+1058 BErr Operand Read<br>
+1059 BErr Operand Write<br>
+1060 BErr MoveMultiple<br>
+1061 BErr Exception Processing</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Program counter before the fault</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top"></td>
+<td valign="top">Save all error and event logs and report to supplier hotline or R&amp;amp;D</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">EMC problems</td>
+<td valign="top">Check for strong EMC source in the building.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top"></td>
+<td valign="top">Check that the 24V power supply is separated from higher voltage cables, for example, the power supply cables of the brake.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top"></td>
+<td valign="top">Make sure that the pcb's ground and mass connections are properly done.</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top"></td>
+<td valign="top">Check all of the ground and mass connections in the cabinet</td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top">Defective PCB</td>
+<td valign="top">Replace PCB</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

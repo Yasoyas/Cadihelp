@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0009 KB_Fault</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0009 KB_Fault</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>KB_Fault</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The brake contacts KB or KB1 do not switch properly. Travel Control expects both KB and KB1 information. In case of only one KB contact, check that there is a jumber on the connector to the PCB.<br>
+Comment: With gearless drives, check that the brake contacts work properly, and that the brake power supply is ok; when the brake opens, SB is operated first (full power supply to the brake) and just afterwards the voltage reduction to the brake is activated (e.g. SGRB or electronic brake module). The operation of the voltage reduction is independent of the KB and KB1 status. <br>
+The brake has a certain time within which it must open; after this time the contacts are checked. The brake contact(s) is a delicate component in the control system. Make sure the contacts are well fixed and clean. Consult the corresponding instruction to adjust the brake contacts (experience shows, that probably the best adjustment is to allow a gap of 1 mm between the contact and the actuating element when the brake is closed).</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>with MBB:<br>
+01 (hex)/ 1 (dec): (MBB_TASK_CREATE_ERROR) = State message<br>
+02 (hex)/ 2 (dec): (MBB_BUFFER_OVERFLOW_ERROR) = IO message<br>
+03 (hex)/ 3 (dec): (MBB_INT_WRONG_MSG) = Unknown message received<br>
+04 (hex)/ 4 (dec): (MBB_ZERO_MESSAGE) = Zero length message sent<br>
+05 (hex)/ 5 (dec): (MBB_UNKNOWN_COMMAND) = Unknown command received<br>
+06 (hex)/ 6 (dec): (MBB_KB_FAULT) = KB fault<br>
+07 (hex)/ 7 (dec): (MBB_KB1_FAULT) = KB1 fault<br>
+08 (hex)/ 8 (dec): (MBB_OPEN_TIMEOUT_CURRENT) = Open timeout , no current<br>
+09 (hex)/ 9 (dec): (MBB_CLOSE_TIMEOUT_CURRENT) = Close timeout, no 0 current<br>
+0A (hex)/10 (dec): (MBB_IGBT3_FAULT) = IGBT fault or other error<br>
+0B (hex)/11 (dec): (MBB_HW_FAULT) = Error on MBB HW<br>
+0C (hex)/12 (dec): (MBB_OPEN_STANDSTILL) = Brake open during stanstill<br>
+0D (hex)/13 (dec): (MBB_CLOSED_RUNNING) = Brake closed during trip<br>
+0E (hex)/14 (dec): (MBB_MBX_ERROR) = MBB mailbox error<br>
+0F (hex)/15 (dec): (MBB_MAX_MESSAGE_SIZE) = MBB too long message size<br>
+10 (hex)/16 (dec): (MBB_CURRENT_DIFF_ERROR) = MBB current difference error<br>
+11 (hex)/17 (dec): (MBB_MAINS_NOT_OFF) = Mains did not switch off<br>
+12 (hex)/18 (dec): (MBB_IGBT1_FAULT) = IGBT1 check not O.K.<br>
+13 (hex)/19 (dec): (MBB_VOLTAGE_DIFF_ERROR) = MBB voltage difference error</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Defective brake contact(s)</td>
+<td valign="top">Check the brake contacts.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Bad adjustment of the brake contact(s)</td>
+<td valign="top">Check the operation of the brake contact(s) and (re-)adjust if necessary</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Mechanical problem on the brake</td>
+<td valign="top">Check the brake.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top"></td>
+<td valign="top">Observe the brake when it opens.</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top"></td>
+<td valign="top">Both sides of the brake should open symmetrically.</td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top">Wrong parameter value for parameter 'KB feedback type'</td>
+<td valign="top">Check drive parameters (settings) for correct brake type.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Field Feedback</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="20%">Location</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Drive</td>
+<td valign="top">Comprobar el contacto de freno KB/KB1 (polvo, suciedad, permitir un hueco de 1 mm entre el contacto y el elemento actuante cuando el freno esté cerrado)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

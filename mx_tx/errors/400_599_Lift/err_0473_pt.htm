@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0473 VCOM table full</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0473 VCOM table full</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Lift</em> error <em>VCOM table full</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Software Warning "VCOM_table_full" <br>
+One of the internal tables used by the communication system VCOM is full or overflowed. These tables keep track of which tasks send and receive messages to and from which other tasks. (Like an address book) If these tables are full, messages cannot be delivered. This condition is generally not affected by the total volume of messages, but by too many tasks which must send and receive too many different kinds of messages to each other.<br>
+IMPORTANT!<br>
+Immediately save all error logs, and note the circumstances of the error.<br>
+Please immediately contact the VX-Center, reliable operation is no longer guaranteed.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Encoded information from the VCOM_upcall:<br>
+0x00000100 + cause: VCOM_ADMIN_FULL:<br>
+0x00000101: cause == 1   &lt;--- horizontal dimension (requestor)<br>
+0x00000102: cause == 2   &lt;--- horizontal dimension (provider)<br>
+0x00000103: cause == 3   &lt;--- vertical dimension<br><br>
+0x00000200: VCOM_UPDATES_FULL<br>
+0x00000300 + cause: VCOM_LOC_TABLE_FULL:<br>
+0x00000301: cause == 1   &lt;--- (requestor)<br>
+0x00000302: cause == 2   &lt;--- (provider)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Too many special telegrams or special custom services configured in the PCT/SCT</td>
+<td valign="top">Please contact the VX-Center.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Incorrect use of wildcards and MYLIFT in the PCT</td>
+<td valign="top">Please contact the VX-Center.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Too many times the same telegram is configured on multiple I/O boards in PCT.</td>
+<td valign="top">Please contact the VX-Center.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Software problem.</td>
+<td valign="top">Please contact the VX-Center.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

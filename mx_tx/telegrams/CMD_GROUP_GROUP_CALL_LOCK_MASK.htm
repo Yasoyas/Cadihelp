@@ -1,0 +1,274 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>CMD_GROUP&nbsp;(4)&nbsp;&nbsp;/&nbsp;&nbsp;GROUP_CALL_LOCK_MASK&nbsp;(8)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">attr_1     : --<br>      attr_2     : VXT_T_CALL_LOCK_SOURCE<br>      data_length: round off(highest_floor/8) + 2	(variable)<br>      data[0]    : call_type_1<br>      data[1]    : floor_mask   8 <- 1<br>      data[2]    : floor_mask  16 <- 9<br>      data[3]    : floor_mask  24 <- 17<br>      data[4]    : floor_mask  32 <- 25<br>      data[5]    : floor_mask  40 <- 33<br>      data[6]    : floor_mask  48 <- 41<br><br>      data[7]    : floor_mask  56 <- 49<br>      data[8]    : floor_mask  64 <- 57<br>      data[9]    : floor_mask  72 <- 65<br>      data[10]   : floor_mask  80 <- 73<br>      data[11]   : floor_mask  88 <- 81<br>      data[12]   : floor_mask  96 <- 89<br>      data[13]   : floor_mask 104 <- 97<br>      data[14]   : floor_mask 112 <- 105<br>      data[15]   : floor_mask 120 <- 113<br>      data[data_length - 1]   : vxt_state<br><br>      Description:<br><br>        Command to lock or unlock cabin- or/and floor calls and the specified<br><br>        lift(s), side(s) and floor(s).<br>        Simulated calls are not supported.<br><br>        attr_2: source which locks or unlocks the calls.<br>                (VXT_T_CALL_LOCK_SOURCE). The calls locked using a given source id<br>                can only be unlocked using the same source id (except source id = 0<br>                which can unlock calls locked by any source).<br><br>        data[0]: call_type_1<br><br>        BIT_NR   CALL_TYPES<br>        0        Cabin_Call from VXT_SIDE_1<br><br>        1        Simulated Call from VXT_SIDE_1<br>        2        Up_Floor_Call from VXT_SIDE_1<br>        3        Down_Floor_Call from VXT_SIDE_1<br><br>        4        Cabin_Call from VXT_SIDE_20<br>        5        Simulated Call from VXT_SIDE_20<br>        6        Up_Floor_Call from VXT_SIDE_20<br>        7        Down_Floor_Call from VXT_SIDE_20<br><br>        In this example, with the value 221, we select the car calls on both<br>        sides and the up and down floor calls on both sides:<br><br>         128  64 32  16   8   4   2   1  <-- value(10)<br>        +---+---+---+---+---+---+---+---+<br>        | 1 | 1 | 0 | 1 | 1 | 1 | 0 | 1 |call_type_1: BYTE-MASK<br>        +---+---+---+---+---+---+---+---+<br>          7   6   5   4   3   2   1   0   <--BIT_NR<br><br><br>        data[1] to [13]: floor mask: bit mask to specify which floors are<br>                         selected.<br><br>       In the following example are locked floors 3 and 11.<br><br>                    data[0]            |           data[1]<br><br>       -----------------------------------------------------------------<br>       | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |<br>       -----------------------------------------------------------------<br>       bit_number:   4   3   2   1   0 | 7   6   5   4   3   2   1   0<br>       floor_nr:    13  12  11  10   9 | 8   7   6   5   4   3   2   1<br><br>       state: data[data_length-1]:<br>         VXT_STATE_1 means lock the selected calls<br>         VXT_STATE_0 means unlock the selected calls.<br><br>         The calls are selected by the values of lift_id, data [0] and data[1]<br>         to [13].</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">CMD_GROUP</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">GROUP_CALL_LOCK_MASK</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">-</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">T_CALL_LOCK_SOURCE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">16</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[0]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[1]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[2]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[3]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[4]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[5]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[6]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[7]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[8]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[9]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[10]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[11]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[12]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[13]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[14]:</em></TD>
+<TD valign="top" class="Layout">T_VALUE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Data[15]:</em></TD>
+<TD valign="top" class="Layout">T_STATE</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_CALL_LOCK_SOURCE</h4></TD>
+<TD valign="top" WIDTH="80%">1: VXT_ALL_LOCK = 0    /* all sources HLS_1 VXT_LOBBY */<br>2: VXT_HLS_1_LOCK        /* task HLS on RS print */<br>3: VXT_HLS_2_LOCK        /* task HLS on RS print */<br>4: VXT_HLC_LOCK            /* task HLC on RS print */<br>5: VXT_HCB_LOCK            /* task HCB on RS print */<br>6: VXT_KEY_LOCK           /* Key as hardware input */<br>7: VXT_HW_INP_LOCK    /* Hardware input of any type */<br>8: VXT_LOBBY_LOCK      /* LOBBY as call lock source */</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">0</TD>
+<TD valign="top" WIDTH="70%">ALL_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">HLS_1_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">HLS_2_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">HLC_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">HCB_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">5</TD>
+<TD valign="top" WIDTH="70%">KEY_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">6</TD>
+<TD valign="top" WIDTH="70%">HW_INP_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">7</TD>
+<TD valign="top" WIDTH="70%">LOBBY_LOCK</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_VALUE</h4></TD>
+<TD valign="top" WIDTH="80%">This Type is used for general data description. <br>See description above for more details.<br>range: 0..255</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"></TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_STATE</h4></TD>
+<TD valign="top" WIDTH="80%">State ON, OFF and Blinking:<br>possible states of outputs or inputs<br><br>and<br><br>Priority Ready and Fully Ready:<br>possible states of bus (LON1, LON2 and BIO) and <br>STATUS IO-Handler Telegrams<br><br><br></TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">0</TD>
+<TD valign="top" WIDTH="70%">STATE_0</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">STATE_1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">STATE_BLINKING</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">PRIORITY_READY</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">FULLY_READY</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">241</TD>
+<TD valign="top" WIDTH="70%">WILDCARD</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">255</TD>
+<TD valign="top" WIDTH="70%">UNDEFINED</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

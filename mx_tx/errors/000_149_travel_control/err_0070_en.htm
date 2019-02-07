@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0070 SW_Warning</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0070 SW_Warning</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>SW_Warning</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The software detected an abnormal situation which is not considered to be severe for the operation of the elevator. Warning messages are also used to provide additional information related to other messages logged. For further details refer to comments for the extra info and the source identifier.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>1(hex)/1(dec): Flash write error<br>
+2(hex)/2(dec): Flash write error<br>
+3(hex)/3(dec): Flash read error<br>
+4(hex)/4(dec): Message is sent together with error 94 'door lock fault' (door open with KTS closed)<br>
+5(hex)/5(dec): Message is sent together with error 94 'door lock fault' (door open with KTC closed)<br>
+064(hex)/100(dec): Monitoring of drive mask in travel control<br>
+166(hex)/358(dec): Travel control IO handling error<br>
+175(hex)/373(dec): Unexpected application message received from inverter<br>
+190(hex)/400(dec): Unknown logical state of KSE found (kse_status)<br>
+1D3(hex)/467(dec): Travel control IO handling error<br>
+1F4(hex)/500(dec): State of ETD (evaluate trip demand) found IDLE during a trip<br>
+209(hex)/521(dec): Unknown inverter (MC) application state in travel control<br>
+27B(hex)/635(dec): Travel control IO handling error<br>
+2FE(hex)/766(dec): Unknown state of travel control found<br>
+35A(hex)/858(dec): Calculated velocity reference too high (with overspeed error)<br>
+446(hex)/1094(dec): Unknown message acknowledge from motor control (VF)<br>
+44B(hex)/1099(dec): Unknown message acknowledge from motor control (VF)<br>
+451(hex)/1105(dec): Unknown message acknowledge from motor control (VF)<br>
+45B(hex)/1115(dec): No acknowledge message from motor control (VF)<br>
+6BA(hex)/1722(dec): Wrong trip type found (trip type check function)<br>
+9A3(hex)/2467(dec): Error when computing new tacho factor (function: win_auto_tacho)<br>
+6A2(hex)/1698(dec): The VF has sent something wrong intentionally or the message got corrupt.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Identifies the file in the core software from where the warning message is generated. This information gives  general hint about the nature of the problem.<br>
+The extra information (see below) gives additional information about the exact cause.<br><br>
+Meaning of the source id.:<br>
+1(dec): ADJUST_EVENT_VEX<br>
+2(dec): ASY_CURVES<br>
+3(dec): AUTO_TRIP<br>
+4(dec): BRAKE_PARA<br>
+5(dec): CALCULATE_VELOCITY<br>
+6(dec): CALC_TRIP_PLAN<br>
+7(dec): CHECK_VERSION<br>
+8(dec): CMD_IVXVF<br>
+9(dec): CM_COM<br>
+10(dec): CONFIG_AN<br>
+11(dec): CONTROLER_PARA_PVF<br>
+12(dec): DEFAULT_VALUES<br>
+13(dec): DIAG_TASK<br>
+14(dec): DLK_PVF<br>
+15(dec): DOORINFO_IO<br>
+16(dec): DRIVE<br>
+17(dec): DRV_TASK<br>
+18(dec): DWG_PFC_COM<br>
+19(dec): EEP_INTERFACE<br>
+20(dec): ELEVATOR_PARA_PVF<br>
+21(dec): ERROR_LOGS_PVF<br>
+22(dec): ERROR_LOG_VEX<br>
+23(dec): ETD<br>
+24(dec): EVENT_COUNTER_VEX<br>
+25(dec): EVENT_HANDLING<br>
+26(dec): EVENT_LOGS<br>
+27(dec): EXECUTE_TRIP<br>
+28(dec): FAIL_FILTERS_PVF<br>
+29(dec): FAULT_COUNTERS_PVF<br>
+30(dec): FAULT_LOG<br>
+31(dec): FINISH_TRIP<br>
+32(dec): FLT_LOGS_PVF<br>
+33(dec): FSA_TRACER<br>
+34(dec): GCI_MENU_TREE<br>
+35(dec): HANDLE_EXTERNALS<br>
+36(dec): INI_IVXVF_APPL<br>
+37(dec): INPUTS_PCC<br>
+38(dec): INPUTS_PVF<br>
+39(dec): INTSTATUS_IO<br>
+40(dec): INVERTER_PARA_PVF<br>
+41(dec): IVXVF_COMMANDS<br>
+42(dec): IVXVF_FAULT_LOGS<br>
+43(dec): IVXVF_IO<br>
+44(dec): IVXVF_TRACER<br>
+45(dec): IVXVF_UART_CTRS<br>
+46(dec): IVX_LINK_VERSION<br>
+47(dec): KALENDER<br>
+48(dec): KSE_VX<br>
+49(dec): LCD_CAR_PARA<br>
+50(dec): LCD_COMMANDER<br>
+51(dec): LCD_CONFIG_LIFT<br>
+52(dec): LCD_DATE_TIME<br>
+53(dec): LCD_DIS_LINE<br>
+54(dec): LCD_DOOR_PARA<br>
+55(dec): LCD_DRIVE_PARA<br>
+56(dec): LCD_EDIT<br>
+57(dec): LCD_ERROR_LOGS_STO<br>
+58(dec): LCD_ERR_LOGS<br>
+59(dec): LCD_GET_SELECTION<br>
+60(dec): LCD_GUINP<br>
+61(dec): LCD_HW_DRIVER<br>
+62(dec): LCD_IO<br>
+63(dec): LCD_IO_DRIVE<br>
+64(dec): LCD_IO_GET<br>
+65(dec): LCD_LIFT_STATUS<br>
+66(dec): LCD_LMS_HANDLER<br>
+67(dec): LCD_LOGIN<br>
+68(dec): LCD_MENU_TREE<br>
+69(dec): LCD_PCTACCESS<br>
+70(dec): LCD_READ_KBD<br>
+71(dec): LCD_SERVICE<br>
+72(dec): LCD_SHOW<br>
+73(dec): LCD_STATISTIC<br>
+74(dec): LCD_STO_STATISTIC<br>
+75(dec): LCD_TASK<br>
+76(dec): LCD_TIMER<br>
+77(dec): LCD_TM1_LC<br>
+78(dec): LCD_TM_STO<br>
+79(dec): LCD_VCOM_HANDLER<br>
+80(dec): LCD_VERSION<br>
+81(dec): LCD_VER_STO<br>
+82(dec): LEARN_TRIP<br>
+83(dec): LMK_VX<br>
+84(dec): LMS_COM<br>
+85(dec): LMS_COMMPARA<br>
+86(dec): LMS_FP_EXT<br>
+87(dec): LMS_LCOM<br>
+88(dec): LMS_LSTATUS<br>
+89(dec): LMS_PARA<br>
+90(dec): LMS_STATUS<br>
+91(dec): LMS_VX<br>
+92(dec): LM_CONTROL<br>
+93(dec): LOADINFO_IO<br>
+94(dec): LOAD_PARA<br>
+95(dec): LOGICAL_IO<br>
+96(dec): LON_LM<br>
+97(dec): LON_MB<br>
+98(dec): MANUAL_TRIP<br>
+99(dec): MDI_SESS<br>
+100(dec): MDI_TASK<br>
+101(dec): MMB_FUNC<br>
+102(dec): MMB_INT<br>
+103(dec): MMB_TASK<br>
+104(dec): MONITOR<br>
+105(dec): MONITOR_IO_VEX<br>
+106(dec): MOTIONCONT_IO<br>
+107(dec): MOTION_PARA<br>
+108(dec): MOTOR_PARA_PVF<br>
+109(dec): OUTPUTS_PVF<br>
+110(dec): PARA_EVENT_LOGS<br>
+111(dec): PAR_INP<br>
+112(dec): PHYSICAL2_IO<br>
+113(dec): PHYSICAL_IO<br>
+114(dec): PREPARE_TRIP<br>
+115(dec): PVF_SETTINGS<br>
+116(dec): PVF_TRACER<br>
+117(dec): REGULATION_PARA<br>
+118(dec): RESERVE_IO<br>
+119(dec): RESET_PROOF_RAM<br>
+120(dec): SEL_TRAN_TAB<br>
+121(dec): SHAFT_IMAGE<br>
+122(dec): SHAFT_PARA<br>
+123(dec): SHUTDOWN_PARA<br>
+124(dec): SIGNALS<br>
+125(dec): SIGNAL_LIST<br>
+126(dec): SIGNAL_LIST_PVF<br>
+127(dec): SIMUL_CMD<br>
+128(dec): SIM_PARA<br>
+129(dec): SIM_TASK<br>
+130(dec): SLT_EDI_INIT<br>
+131(dec): SLT_LATER<br>
+132(dec): SLT_SWITCH_SUBSYS<br>
+133(dec): START_UP_PARA<br>
+134(dec): STATISTIC_IO<br>
+135(dec): STATUS_PVF<br>
+136(dec): STATUS_VEX<br>
+137(dec): STR_CF<br>
+138(dec): STR_ER<br>
+139(dec): STR_RX<br>
+140(dec): STR_TX<br>
+141(dec): SUPERVISOR_PARA_PVF<br>
+142(dec): SWITCHES2_IO<br>
+143(dec): SWITCHES_IO<br>
+144(dec): SYNCH_TRIP<br>
+145(dec): SYSTEM_PARA_VEX<br>
+146(dec): SYSTEM_TEST<br>
+147(dec): TAR_SESS1<br>
+148(dec): TAR_SESS2<br>
+149(dec): TAR_SESS3<br>
+150(dec): TEK_PRINTF<br>
+151(dec): TEL_INTERN<br>
+152(dec): TEST_PVF<br>
+153(dec): TIF_HANDLER<br>
+154(dec): TIME_TRIP_COUNTER_PVF<br>
+155(dec): TRACED_DATA<br>
+156(dec): TRACER_SETTINGS_IVXVF<br>
+157(dec): TRACER_TRIGGERS_IVXVF<br>
+158(dec): TRACE_COND_IVXVF<br>
+159(dec): TRACE_COND_PVF<br>
+160(dec): TRACE_VARIABLES_PVF<br>
+161(dec): TRIPINFO_IO<br>
+162(dec): TRIP_CURVE_PARA_PVF<br>
+163(dec): TRIP_PROFILE<br>
+164(dec): UART2<br>
+165(dec): VCOM_ERR_CTRS<br>
+166(dec): VF_APPL_COMM<br>
+167(dec): VF_CONFIG<br>
+168(dec): VF_NET_HANDLER<br>
+169(dec): VF_SWG_COMM<br>
+170(dec): VRTX_ERROR<br>
+171(dec): VXDC_PARA<br>
+172(dec): VXDC_STATUS<br>
+173(dec): VXT_SCREEN<br>
+174(dec): VX_VRTX<br>
+175(dec): WARNING_LOGS_PVF<br>
+176(dec): WARNING_LOG_VEX<br>
+177(dec): WAR_ERR_COUNTERS_PVF<br>
+178(dec): LM_ADT<br>
+179(dec): CAN_TASK<br>
+180(dec): DCF_PARA</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top"></td>
+<td valign="top">Contact R&amp;D department in Ebikon if no details about the cause of the message is provided in the help here. Please report all the values logged in the event log as well as the Travel Control Local log entries. These are clues for the software specialist to detect the source of the problem.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

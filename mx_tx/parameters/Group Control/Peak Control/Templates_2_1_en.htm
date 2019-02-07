@@ -1,0 +1,175 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Templates</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Templates</em> of the parameter group <em>Peak Control</em> in subsystem <em>Group Control</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Day Template 1</h4></TD>
+<TD valign="top" class="Layout"><p>These parameters defined 4 different day templates for clock controlled peak switching. Each template can define up to 10 events. Each event specifies when (hour/minute) a peak must be switched on (interfloor, up-peak, down-peak or automatic).<br>Each template must always have the ten lines to allow to add a peak switch with CADI if wanted. The not used lines must have a value bigger than 23 in the hour field.<br>If no clock switching is wanted but only automatic mode: define first event with automatic (a time must be given but when is not important, use midnight as default) and all remaining events as not used (see 71 in example below). This can also be used as default for the day templates which are not used.<br><br>Peak:<br> 0 = automatic<br> 1 = interfloor<br> 2 = up-peak<br> 3 = down-peak<br><br>Tip: to avoid to have to reset all RS print when this parameter changed simply modify the real-time clock using CADI -> this parameter will be read again.<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example:
+ ¤5C                             *   PCT_GP_RS_PEAK
+  {...                           * P_STR_TIME_ACT_DAY_TMP_1
+   ¤70[06 04 01 07 1E 02]        *    7.30 : up-peak
+   ¤70[06 04 02 08 00 01]        *    8.00 : interfloor
+   ¤70[06 04 03 0B 1E 03]        *   11.30 : down-peak
+   ¤70[06 04 04 0C 00 00]        *   12.00 : automatic
+   ¤70[06 04 05 0D 00 02]        *   13.00 : up-peak
+   ¤70[06 04 06 0D 19 01]        *   13.25 : interfloor
+   ¤70[06 04 07 11 00 03]        *   17.00 : down-peak
+   ¤70[06 04 08 11 1E 00]        *   17.30 : automatic
+   ¤70[06 04 09 FF 00 00]        *   not used
+   ¤70[06 04 0A FF 00 00]        *   not used
+                           * P_STR_TIME_ACT_DAY_TMP_2
+   ¤71 [06 04 01 00 00 00]       *   automatic 
+   ¤71 [06 04 02 FF 00 00]       *   not used
+   ¤71 [06 04 03 FF 00 00]       *   not used 
+   ¤71 [06 04 04 FF 00 00]       *   not used 
+   ¤71 [06 04 05 FF 00 00]       *   not used 
+   ¤71 [06 04 06 FF 00 00]       *   not used 
+   ¤71 [06 04 07 FF 00 00]       *   not used 
+   ¤71 [06 04 08 FF 00 00]       *   not used 
+   ¤71 [06 04 09 FF 00 00]       *   not used 
+   ¤71 [06 04 0A FF 00 00]       *   not used 
+                           * P_STR_TIME_ACT_DAY_TMP_3
+   ¤72 [06 04 01 07 00 00]       *   automatic
+   ¤72 [06 04 02 FF 00 00]       *   not used 
+   ...
+   ¤72 [06 04 0A FF 00 00]       *   not used 
+                           * P_STR_TIME_ACT_DAY_TMP_4
+   ¤73 [06 04 01 06 00 02]       *   automatic
+   ¤73 [06 04 02 06 09 00]       *   not used 
+   ...
+   ¤73 [06 04 0A 06 09 00]       *   not used 
+   ...
+   }</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Day Template 2</h4></TD>
+<TD valign="top" class="Layout"><p>see P_STR_TIME_ACT_DAY_TMP_1</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Day Template 3</h4></TD>
+<TD valign="top" class="Layout"><p>see P_STR_TIME_ACT_DAY_TMP_1</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Day Template 4</h4></TD>
+<TD valign="top" class="Layout"><p>see P_STR_TIME_ACT_DAY_TMP_1</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Week Template</h4></TD>
+<TD valign="top" class="Layout"><p>This table defines for each day of the week which day template has to be used. It must always have 7 lines and a template must always be specified.<br><br>If no clock control peak switching are wanted use day template 1 for each day of the week and defines each day template with first event at midnight for automatic mode and the remaining ones as not used (see P_STR_TIME_ACT_DAY_TMP_x).<br><br>day of the week: 1: Sunday, 2: Monday,… 7: Saturday<br>day template   : 1: P_STR_TIME_ACT_DAY_TMP_1<br>                 2: P_STR_TIME_ACT_DAY_TMP_2<br>                 …<br>Tip: to avoid to have to reset all RS print when this parameter changed simply modify the real-time clock using CADI -> this parameter will be read again.<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example:
+
+ ¤5C                      *   PCT_GP_RS_PEAK
+  {...                    * P_STR_TIME_ACT_WEEK_TMP
+  ¤74[06 02 01 02]        * Sunday   : day template 2
+  ¤74[06 02 02 01]        * Monday   : day template 1
+  ¤74[06 02 03 01]        * Tuesday  : day template 1
+  ¤74[06 02 04 01]        * Wednesday: day template 1
+  ¤74[06 02 05 01]        * Thursday : day template 1
+  ¤74[06 02 06 01]        * Friday   : day template 1
+  ¤74[06 02 07 02]        * Saturday : day template 2
+  ...
+  }</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

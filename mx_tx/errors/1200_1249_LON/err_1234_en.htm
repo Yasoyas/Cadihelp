@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1234 VcomUpcall</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1234 VcomUpcall</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>LON</em> error <em>VcomUpcall</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>VCOM on SIOL/SIOG detected an abnormal condition. This is usually catastrophic, and reliable operation can not be guaranteed.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Bits 15..8: cause=<br>
+03=VCOM_QUEUE_FULL, paramater is Queue-ID<br>
+04=VCOM_ADMIN_FULL<br>
+05=VCOM_UPDATES_FULL<br>
+06=VCOM_COMMS_Q_FULL<br>
+07=VCOM_BUSSED_STRESSED, paramater is stress-ID<br>
+08=VCOM_LOC_TABLE_FULL<br>
+09=VCOM_ADMIN_CONFLICT<br>
+Bits 7..0: paramater from VCOM.H<br>
+Example: 000003CB = VCOM_QUEUE_FULL, paramater=CB hex</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Noise on group- or lift-bus</td>
+<td valign="top">Check bus terminations, grounding, cable shields. Make sure connectors are plugged in firmly.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Defective SIO board</td>
+<td valign="top">Replace SIO board.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Other defective board on group- or lift-bus</td>
+<td valign="top">Replace/remove other boards on lift bus or group bus to isolate problem.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Software failure</td>
+<td valign="top">Save error logs and report to supplier hotline.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

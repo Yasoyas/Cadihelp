@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0124 EV Shutdown</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0124 EV Shutdown</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>EV Shutdown</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>A serious error has been reported by the Electronic Valve control. (Hydro only)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>1F5 Hex (501 Dec) = Framing error communicating with Dynahyd.  Replace Dynahyd software chip. Replace CRIPEV board.<br>
+1F6 Hex (502 Dec) = Checksum error communicating with Dynahyd.  Replace Dynahyd software chip. Replace CRIPEV board. <br>
+1F7 Hex (503 Dec) = Count error communicating with Dynahyd.  Replace Dynahyd software chip. Replace CRIPEV board.<br>
+1F8 Hex (504 Dec) = Timeout error communicating with Dynahyd.  Replace Dynahyd software chip. Replace CRIPEV board.<br>
+1F9 Hex (505 Dec) = Unknown message recieved from Dynahyd.  Replace Dynahyd software chip. Replace CRIPEV board.<br>
+1FB Hex (507 Dec) = Dynahyd A7 = The "UTS" (motor up to speed) signal from the softstarter did not arrive in time.  Check the wiring, check the softstarter, check the sizing of the motor and softstarter.<br>
+1FC Hex (508 Dec) = Dynahyd C4 = The command to start the motor isn't working.  Replace CRIPEV board.<br>
+1FD Hex (509 Dec) = Dynahyd C6 = Incorrect current thru the Servo Valve.  Check wiring.  Replace CRIPEV board.  Replace Servo Valve.<br>
+204 Hex (516 Dec) = Dynahyd E3 = Replace CRIPEV board.<br>
+205 Hex (517 Dec) = Dynahyd E4 = Replace CRIPEV board.<br>
+206 Hex (518 Dec) = Dynahyd E5 = CCR relay dropped during an up trip .  Replace CRIPEV board.<br>
+207 Hex (519 Dec) = Dynahyd E7 = Motor run time is too long during up trip.  Check car speed, check for encoder slipping.<br>
+208 Hex (520 Dec) = Dynahyd H1 = Servo valve at full current, but car not moving up.  Check the Pressure relief valve. Clean the servo filter. Check out the encoder system.  Replace the servo valve.  Replace CRIPEV board.<br>
+209 Hex (521 Dec) = Dynahyd H2 = Speed feedback says car is not moving during up trip.  Check the encoder system.  Check the Pressure relief valve.  Check for overloaded or hung-up car.<br>
+20A Hex (522 Dec) = Dynahyd H3 = Servo valve at minimum current, but car not moving down.  Make sure the check valve near the Pressure relief valve is closed.  Check out the encoder system.   Check the wiring to the VMD valve.  Clean the servo filter. Dismantle the valve under the screw and check for any dirt. Replace the VMD valve.  Replace the servo valve.  Replace CRIPEV board.<br>
+20B Hex (523 Dec) = Dynahyd H4 = Speed feedback says car is not moving during down trip.  Check the encoder system.  Make sure the check valve near the Pressure relief valve is closed.   Check the rupture valve.  Check the VMD coil and wiring.  Dismantle the valve under the screw and check for any dirt. Replace the VMD valve.  Replace the servo valve.  Replace CRIPEV board.<br>
+20C Hex (524 Dec) = Dynahyd H5 = 30% overspeed during a down trip.  Check the encoder system.  Check the servo valve and wiring.  Replace the servo valve.<br>
+20D Hex (525 Dec) = Dynahyd H6 = The VMD valve did not close at the end of a down trip.  Caution:  do not turn off power until after you lower the car to the buffer using the manual lowering valve.  Power on the servo valve is preventing the car from falling.  Dismantle the VMD valve and check for any dirt. Replace the VMD if necessary.  Replace the CRIPEV print.<br>
+20E Hex (526 Dec) = Dynahyd H9 = The car speed exceeded 0.3 m/s while relevelling.  Replace the servo valve. Replace the CRIPEV print.<br>
+20F Hex (527 Dec) = Dynahyd D7 = The KSEU magnet was found more than 50mm from where it used to be.  Check for encoder slip.  Check to see if  KSEU magnet has moved.<br>
+210 Hex (528 Dec) = Dynahyd D8 = The KSEU magnet was found too far from where it used to be.  Check for encoder slip.  Check to see if  KSED magnet has moved.<br>
+321 Hex (801 Dec) = Dynahyd U5 = KLU or KLD signal stuck on during a trip.  Check switches and wiring.  Replace CRIPEV board.<br>
+384 Hex (900 Dec) = Dynahyd U1 = Car didn't slow down in response to the servo current as it approached the top floor<br>
+385 Hex (901 Dec) = Dynahyd U2 = Car didn't slow down in response to the servo current as it approached the bottom floor</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top"></td>
+<td valign="top">none</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

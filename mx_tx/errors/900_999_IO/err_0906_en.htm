@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0906 Duplicate_BMK</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0906 Duplicate_BMK</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>IO</em> error <em>Duplicate_BMK</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>If the same critical BMK is configured more than once on the same lift then the error will be logged. In case the software finds a unallowed duplicate entry in the IO database (e.g. for a critical input) an error will be logged for each entry. The first number in the extra info indicates the sequence of the entries in the IO database (the same BMK may be configured twice on the same node).</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Identifies the board type of the bus node on which the same BMKs are configured. xABCDEFGH (8 digit hex number) where:<br><br>
+A: is the sequence number of the entry in the internal IO database<br>
+B: Identifies the IO Domain <br>
+CD: Node type<br>
+EF: Higher byte of Node ID<br>
+GH: Lower byte of Node ID<br><br>
+Identification numbers of the sequence number (A):<br>
+1: means the error is for first found node entry in the IO database<br>
+2: means the error is for the other node<br><br>
+Identification numbers of the IO Domains (B):<br>
+1 for IO_DOMAIN_LOCAL<br>
+2 for IO_DOMAIN_LON<br>
+3 for IO_DOMAIN_BIO2<br>
+4 for IO_DOMAIN_CAN (Not in used yet)<br><br>
+For explanation of the LON node types please refer to the description of error 1209.<br><br>
+Identification numbers ob BIO bus node types:<br>
+0x00: SLOP2  /*BIO1 Node*/<br>
+0x01: SLOP22 /*BIO1 Node*/<br>
+0x02: SLOPM2 /*BIO1 Node used for first tests with BIO2*/<br>
+0x03: SLOPM22 /*BIO1 Node used for first tests with BIO2*/<br>
+0x04: SLIN2  /*BIO1 Node*/<br>
+0x05: SLOPB1 /*BIO1 Node*/<br>
+0x06: SLOPB2 /*BIO1 Node*/<br>
+0x07: SLOPSASB1 /*BIO1 Node*/<br>
+0x08: SLOPSASB2 /*BIO1 Node*/<br>
+0x09: SLOPBM1 /*BIO1 Node*/<br>
+0x0A: SLOPBSASM1 /*BIO1 Node*/<br>
+0x0B: SLCU1 /*BIO1/BIO2 Node*/<br>
+0x0C: SLCUM1 /*BIO1/BIO2 Node*/<br>
+0x0D: BIOPCSE /*BIO2 Node*/<br>
+0x0E: BIODCE /*BIO2 Node*/<br>
+0x0F: SLCUX  /*BIO2 Node*/<br>
+0x10: BIOPCT1 /*BIO2 Node*/<br>
+0x11: BIODCT1 /*BIO2 Node*/<br>
+0x12: BI2SCT1MCT1 /*BIO2 Node*/<br>
+0x13: BI2NCT1MDT1 /*BIO2 Node*/<br>
+0x14: SLOP51 /*BIO1 Node*/<br>
+0x15: SLOP52 /*BIO1 Node*/<br>
+0x16: SLOPM51 /*BIO1 Node*/<br>
+0x17: SLOPM52 /*BIO1 Node*/<br>
+0x18: SLOPB51 /*BIO1 Node*/<br>
+0x19: SLOPB52 /*BIO1 Node*/<br>
+0x1A: SLINV5 /*BIO1 Node*/<br>
+0x1B: CLIF1 /*BIO2 Node*/<br>
+0x1C: SLOPE51<br>
+0x1D: SLOPE52<br>
+0x1E: SLOPEB51<br>
+0x1F: SLOPEB52<br>
+0x20: SLOPDMA5<br>
+0x21: BIOAPI1<br>
+0x22: SLINK5<br>
+0x23: PSI1<br>
+0x24: BIO2_LOP</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Identification number of SW task (IOC_TASK_ID)</p></td>
+</tr>
+</table>
+</body>
+</html>

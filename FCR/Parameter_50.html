@@ -1,0 +1,161 @@
+<html>
+	<head>
+		<link rel=stylesheet href=../gddt/images/styles.css type=text/css>
+	</head>
+	<body>
+		<hr>
+		<table width=100% border=0 cellspacing=0 cellpadding=2 class=filehead>
+			<tr><td align=left colspan=2 class=filehead>
+				<h1>FCR Parameter Description (V5.0)</h1></td></tr>
+			<tr><td colspan=2 class=filehead>&copy; 2007 by Schindler Aufzüge AG, R&amp;D-DR</td></tr>
+			<tr><td width=30% class=filehead>Product: <b>VARIOdyn&reg PF1-FCR</b></td>
+				<td class=filehead></td></tr>
+<!--			<tr><td class=filehead>External Reference:</td>
+				<td class=filehead></td></tr>
+			<tr><td class=filehead>Document Number:</td>
+				<td class=filehead>0032</td></tr>
+-->
+			<tr><td class=filehead>Version: GDDT Release 1.1 November 07</td>
+				<td class=filehead></td></tr>
+		</table>
+		<hr>
+		<h2 id=1>1. Introduction</h2>
+		<h3 id=1_1>1.1 Purpose</h3>
+		<p>
+			This document describes the general concept, the states and the values of the configuration of FCR SW 5.0.
+		</p>
+		<h3 id=1_2>1.2 Scope</h3>
+		<p>
+			This description is valid for mains converters controlled by SW FCR 5.0:
+			<ul>
+				<li>PVEC/PIOFCR: VF155/VF288</li>
+			</ul>
+		</p>
+		<h3 id=1_3>1.3 References to documentation</h3>
+		<ul>
+			<li>None</li>
+		</ul>
+		<h2 id=2>2 Parameter configuration</h2>
+		<h3 id=2_1>2.1 General concept</h3>
+		<p >
+			The mains converter is configured by GDDT (Graphical Drive Diagnostic Tool). For parametrization, the following input data is necessary:
+			<ul>
+				<li>FC Type (VF155, VF288)</li>
+				<li>Mains voltage (380 V, 400 V, 415 V, 460 V, 480 V)</li>
+				<li>Motor voltage (340 V, 460 V)</li>
+			</ul>
+			The parameters of chapter 3 are calculated by GDDT out of the above mentioned values.
+		</p>
+		<h3 id=2_2>2.2 Commissioning state</h3>
+		<p>
+			After a download of new SW version to PVEC, the yellow LED on PIOFCR is on and "F" is shown.
+			This indicates that parameters are needed. No start of mains converter is possible. 
+			The mains converter remains in this state until	a save command is executed.
+		</p>
+		<h2 id=3>3 Parameter description</h2>
+		<table border="1" cellspacing="1" cellpadding="5">
+			<tr>
+				<th>Parameter name</th><th>Unit</th><th>Parameter description</th>
+			</tr>
+			<tr>
+				<td>UD_REF</td><td>[V]</td><td>DC link voltage reference. This parameter need to be the same value as "Rated DC Link Voltage" on Variosys/Vecsys.</td>
+			</tr>
+			<tr>
+				<td>IMD_NOM</td><td>[A]</td><td>Peak value of the nominal mains current. This parameter is used for current limitation.</td>
+			</tr>
+			<tr>
+				<td>IM_OFF</td><td>[A]</td>
+				<td>Peak value of the maximum allowed mains current. This parameter is the shot-down level for mains current. Related errors:
+					<ul>
+						<li >E01 Overcurrent phase 1</li>
+						<li >E02 Overcurrent phase 2</li>
+						<li >E03 Overcurrent phase 3</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>NORM_IM</td><td>[-]</td><td>Scaling factor of current measurement.</td>
+			</tr>
+			<tr>
+				<td>NORM_IMOFF</td><td>[-]</td><td>Scaling factor for over current protection.</td>
+			</tr>
+			<tr>
+				<td>PHI</td><td>[°]</td><td>Phase shift compensation.</td>
+			</tr>
+			<tr>
+				<td>T1REC_TEMP</td><td>[?]</td><td>Reciprocal time constant for I2T monitoring.</td>
+			</tr>
+			<tr>
+				<td>P_IM</td><td>[-]</td><td>Proportional gain of mains current controller.</td>
+			</tr>
+			<tr>
+				<td>I_IM</td><td>[-]</td><td>Integral gain of mains current controller.</td>
+			</tr>
+			<tr>
+				<td>P_UD</td><td>[-]</td><td>Proportional gain of dc link voltage controller.</td>
+			</tr>
+			<tr>
+				<td>I_UD</td><td>[-]</td><td>Integral gain of dc link voltage controller.</td>
+			</tr>
+			<tr>
+				<td>UD_MIN_ON</td><td>[V]</td><td>Minimum dc link voltage for switching on. If a dc link undervoltage is logged before, a new start is allowed as soon as this level is exceeded. Related error:
+				<ul >
+					<li >E05 Undervoltage DC link</li>
+				</ul> 
+				</td>
+			</tr>
+			<tr>
+				<td>UD_MIN_OFF</td><td>[V]</td><td>Minimum dc link voltage for switching off. If the dc link voltage is lower than this value, a dc link undervoltage is logged. The error is logged only during trip. Related error:
+				<ul >
+					<li >E05 Undervoltage DC link</li>
+				</ul> 
+				</td>
+			</tr>
+			<tr>
+				<td>UD_MAX_ON</td><td>[V]</td><td>Maximum dc link voltage for switching on. If a dc link overvoltage is logged before, a new start is allowed as soon as dc link voltage is lower than this value. Related error:
+				<ul >
+					<li >E04 Overvoltage DC link</li>
+				</ul> 
+				</td>
+			</tr>
+			<tr>
+				<td>UD_MAX_OFF</td><td>[V]</td><td>Maximum dc link voltage for switching off. If the dc link voltage is higher than this value, an dc link overvoltage is logged. Related error:
+				<ul >
+					<li >E04 Overvoltage DC link</li>
+				</ul> 
+				</td>
+			</tr>
+			<tr>
+				<td>UMD_MIN</td><td>[V]</td><td>Minimum RMS mains voltage. If the mains voltage is lower, a mains undervoltage is logged. Related error:
+				<ul >
+					<li >E17 Mains undervoltage</li>
+				</ul> 
+				</td>
+			</tr>
+			<tr>
+				<td>UM_MIN</td><td>[V]</td><td>Phase loss detection level: If absolute value of phase to phase voltage voltage does not reach this value within a certain time, a mains interruption is logged. Related errors:
+				<ul >
+					<li >E07 Mains interruption phase 1</li>
+					<li >E08 Mains interruption phase 2</li>
+					<li >E09 Mains interruption phase 3</li>
+				</ul> 
+				</td>
+			</tr>
+			<tr>
+				<td>OMEGAM_MAX</td><td>[Hz]</td><td>Maximum frequency. If measured mains frequency is higher than this value, the error mains frequency wrong is logged. Related error:
+				<ul >
+					<li >E23 Mains frequency wrong.</li>
+				</ul> 
+				</td>
+			</tr>
+			<tr>
+				<td>OMEGAM_MIN</td><td>[Hz]</td><td>Minimum frequency. If measured mains frequency is lower than this value, the error mains frequency wrong is logged. Related error:
+				<ul >
+					<li >E23 Mains frequency wrong.</li>
+				</ul> 
+				</td>
+			</tr>
+		</table>
+		<hr>
+	</body>
+</html>

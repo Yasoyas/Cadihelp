@@ -1,0 +1,319 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Peak Control General</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Peak Control General</em> of the parameter group <em>Peak Control</em> in subsystem <em>Group Control</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Load Car Call Delay</h4></TD>
+<TD valign="top" class="Layout"><p>Delay before allowing the load car to leave the lobby when a car call is registered or when a floor call is allocated. Used for up-peak and next car. See also P_STR_LOAD_CAR_LOAD_LIMIT.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Load Car Call Limit</h4></TD>
+<TD valign="top" class="Layout"><p>Load limit to reach to allow the load car to leave the lobby. Used for up-peak and next car. See also P_STR_LOAD_CAR_CALL_DELAY.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Next Car On</h4></TD>
+<TD valign="top" class="Layout"><p>Next car feature available or not.<br> Mode:<br>  0 = OFF<br>  1 = ON</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Start High Zone</h4></TD>
+<TD valign="top" class="Layout"><p>First floor of the high zone in zoned up-peak.<br><br>Remark: zoned up-peak not yet implemented.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Load Limit Quota Modify</h4></TD>
+<TD valign="top" class="Layout"><p>Load limit of all car in quota leaving the lobby to modify number of car in quota for up-peak. When all the cars currently part of the quota leave the main floor with a load over the one specified by this parameter and the maximum quota has not been reached, the quota will be incremented by 1. If all the cars currently part of the quota leave the main floor with a load less than the one specified by this parameter minus 20 % (P_STR_UPK_LOAD_LIMIT_QUOTA_MODIF - 20 %) and the minimum quota (2) has not been reached, the quota will be decremented by 1.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Up-Peak Mode</h4></TD>
+<TD valign="top" class="Layout"><p>Enable/disable up-peak operation (for all activation means).<br><br>Up peak traffic handling mode:<br>0 = always off, up-peak not allowed (disabled)<br>1 = normal, up-peak is allowed (enabled)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Activation Nbr.Car Lobby</h4></TD>
+<TD valign="top" class="Layout"><p>For up-peak activation condition: number of cars leaving the lobby. See also P_STR_UPK_ACT_LOAD and P_STR_UPK_ACT_NB_CC.<br>Up-peak is activated when a number of cars (P_STR_UPK_ACT_NB_CAR_LOBBY) leave the lobby (main floor) fully loaded (P_STR_UPK_ACT_LOAD) within a certain time interval (fixed, 2 minutes) with a minimum number of car calls (P_STR_UPK_ACT_NB_CC).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Activation Load Limit</h4></TD>
+<TD valign="top" class="Layout"><p>For up-peak activation condition: load limit of the cars leaving the lobby. See also P_STR_UPK_ACT_NB_CAR_LOBBY and P_STR_UPK_ACT_NB_CC.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Activation Nbr.Car Call</h4></TD>
+<TD valign="top" class="Layout"><p>Used for the automatic activation of up-peak traffic handling. <br>Activation condition: minimum number of car calls registered when the car leaves the lobby. <br>See also  P_STR_UPK_ACT_NB_CAR_LOBBY and P_STR_UPK_ACT_LOAD.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Activation Nbr.Full Cars</h4></TD>
+<TD valign="top" class="Layout"><p>For down-peak activation: number of cars reaching full load in the down direction limit. See also P_STR_DPK_ACT_RATIO and P_STR_DPK_FULL_LOAD_BYPASS.<br><br>Down peak is activated when the number of cars reaching full load (P_STR_DPK_FULL_LOAD_BYPASS) in the down direction exceeds the limit specified by P_STR_DPK_ACT_NB_FULL_CARS within a fixed time interval of 2 minutes, and the ratio of down-boarding rate to the up-boarding rate exceeds the limit specified by P_STR_DPK_ACT_RATIO.<br><br>Old (before June 2002): There is no parameter to choose the availablity of down-peak feature. This is performed indirectly using the activation parameter P_STR_DPK_ACT_NB_FULL_CARS. If this parameter is set higher than 100 the down-peak feature will never be activated and therefore is not available.<br><br>New: there is now a down-peak mode parameter (P_STR_DPK_MODE) to enable/disable down-peak operation for all activation means and another parameter (P_STR_PEAK_ACTIVATION_MODE) to enable/disable each activation means for all peak programs.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Activation Ratio</h4></TD>
+<TD valign="top" class="Layout"><p>For down-peak activation: limit of ratio of down-boarding rate to up-boarding rate. See also P_STR_DPK_ACT_NB_FULL_CARS and P_STR_DPK_FULL_LOAD_BYPASS.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Full Load Bypass</h4></TD>
+<TD valign="top" class="Layout"><p>Full load limit to bypass floor calls when in down-peak. This limit is generally set higher than the normal full load (P_STR_LOAD_VALUE_FULL_LOAD) in order to obtain better filling of the cars.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Number of Load cars</h4></TD>
+<TD valign="top" class="Layout"><p>Number of cars which are allowed for simulultaneous boarding at the lobby during up-peak mode after returning to the lobby floor. <br><br>The maximum value is the number of  cars in the group minus one.<br><br>Remark: This value should not be set too high because people will start to board on different cars and cars will eventually not be filled as required during up-peak. This will again result in longer waiting times for other passengers.<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example:  2 cars simultaneously
+
+      ¨5C                       *   PCT_GP_RS_PEAK
+       {
+         ...
+       ¨A3 [02 02 0002]         *    P_STR_UPK_NB_LOAD_CAR
+         ...
+       }
+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Number of UP-Peak car at Start</h4></TD>
+<TD valign="top" class="Layout"><p>Number of car taken part of up-peak when up-peak starts. <br>The default is half of the available car (but not less than 2).<br>The minimum is 2 because up-peak with only one car makes no sense.<br>The maximum is 7 (maximum nb cars in group - 1) because at least one car should stay out of the quota to serve the down calls.<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example:  4 cars in quota at start (default for a group of 8 cars)
+
+      ¨5C                       *   PCT_GP_RS_PEAK
+       {
+         ...
+       ¨A4 [02 02 0004]         *    P_STR_UPK_START_NB_QUOTA_CAR
+         ...
+       }
+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Load Car Side</h4></TD>
+<TD valign="top" class="Layout"><p>Entrance side for the boarding of the car (both sides not allowed). Used for automatic opening of the door during up-paek at the main floor.<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example:  Load car opens door side 1
+      ¨5C                       *   PCT_GP_RS_PEAK
+       {
+         ...
+       ¨A5 [02 02 0001]         *    P_STR_LOAD_CAR_SIDE
+         ...
+       }
+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Load Car Direction</h4></TD>
+<TD valign="top" class="Layout"><p>Direction for the Load car.<br><br>In up-peak mode it is the direction the Load car will signal (LW) at Main floor.<br>If direction down is chosen, the up-peak will be done in the down direction (required with the lobby at top floor).<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example:  Load car direction up
+      ¨5C                       *   PCT_GP_RS_PEAK
+       {
+         ...
+       ¨A6 [02 02 0001]         *    P_STR_LOAD_CAR_DIR
+         ...
+       }
+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Down-Peak mode</h4></TD>
+<TD valign="top" class="Layout"><p>Enable/disable down-peak operation (for all activation means).<br><br>Down-peak traffic handling mode (Software reference: P_DPK_MODE):<br>0 = always off , down-peak not allowed (disabled)<br>1 = normal, down-peak is allowed (enabled)<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>¨5C            *   PCT_GP_RS_PEAK
+ {...
+  ¨A7 [02 02 0000]   *    P_STR_DPK_MODE
+  ...
+ }
+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Peak Activation mode</h4></TD>
+<TD valign="top" class="Layout"><p>Used to define/enable the activation mode (trigger) for the peak programs. The possible activation modes are:  Manual, Time controlled and Automatic.<br><br>Values: <br>0 (000bin) = PK_NO_ACTIVATIONS<br>1 (001bin) = PK_AUTO<br>2 (010bin) = PK_TIMER<br>3 (011bin) = PK_TIMER_AUTO<br>4 (100bin) = PK_MANUAL <br>5 (101bin) = PK_MANUAL_AUTO<br>6 (110bin) = PK_MANUAL_TIMER<br>7 (111bin) = PK_ALL_ACTIVATIONS<br><br>Defined with a bit mask:<br>Bit 0 (LSB) enables the automatic activation<br>Bit 1 enables the timer activation <br>Bit 2 enables the manual activation.<br><br>Manual activation has priority over timer activation.<br>Timer activation has priority over automatic activation.<br>The automatic activation is based on the observed traffic situation.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

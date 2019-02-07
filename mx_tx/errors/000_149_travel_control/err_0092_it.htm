@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0092 IVXVF_HW_Fault</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0092 IVXVF_HW_Fault</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>IVXVF_HW_Fault</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Il monitoraggio degli I/O nel controllo corsa rileva uno stato anomalo degli I/O stessi (attivazione non controllata dei relè o stato errato degli ingressi). Consultare le altre informazioni per una descrizione dettagliata della possibile causa.<br>
+Vedere anche l'errore n° 135</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>0 (hex)/0 (dec): tutti i relè controllati dal controllo corsa sono erroneamente attivi<br><br>
+A (hex)/10 (dec): il pulsante DRH-U sul pannello di richiamo viene premuto senza controllo di richiamo JRH attivo; verificare il cablaggio di JRH / DRH-U<br><br>
+B (hex)/11 (dec): il pulsante DRH-D sul pannello di richiamo viene premuto senza controllo di richiamo JRH attivo; verificare il cablaggio di JRH / DRH-D<br><br>
+14(hex)/20 (dec): il pulsante DREC-U sul pannello di ispezione viene premuto senza controllo di ispezione JREC attivo; verificare il cablaggio di JREC / DREC-U<br><br>
+15 (hex)/21 (dec): il pulsante DREC-D sul pannello di ispezione viene premuto senza controllo di ispezione JREC attivo; verificare il cablaggio di JREC / DREC-D<br><br>
+16 (hex)/22 (dec): il pulsante DREC-E sul pannello di ispezione viene premuto senza controllo di ispezione JREC attivo; verificare il cablaggio di JREC / DREC-E.<br><br>
+17 (hex)/23 (dec): pulsante DREC-U premuto per oltre 30 secondi, ma nessuna corsa in quanto DREC-E non è premuto simultaneamente; i due pulsanti devono essere rilasciati prima dell'avvio di una nuova corsa.<br><br>
+18 (hex)/24 (dec): pulsante DREC-D premuto per oltre 30 secondi, ma nessuna corsa in quanto DREC-E non è premuto simultaneamente; i due pulsanti devono essere rilasciati prima dell'avvio di una nuova corsa.<br><br>
+19 (hex)/25 (dec): pulsante DREC-E premuto per oltre 30 secondi, ma nessuna corsa in quanto DREC-D o DREC-U non è premuto simultaneamente; i pulsanti devono essere rilasciati prima dell'avvio di una nuova corsa.<br><br>
+1E (hex)/30 (dec): il pulsante DRH-E sul pannello di richiamo viene premuto senza controllo di richiamo JRH attivo; verificare il cablaggio di JRH / DRH-E<br><br>
+5C (hex)/92 (dec): Rilevato circuito di sicurezza ponticellato manualmente (tra le prese 3 e 5) con controllo di ispezione REC attivo. L'attivazione del controllo di ispezione sulla cabina non è consentito con il circuito di sicurezza ponticellato sul pannello di controllo di ispezione (JREC / JHC)<br><br>
+64 (hex)/100 (dec): consultare la descrizione delle altre informazioni per l'errore 74 (con l'errore 74 viene eseguito il monitoraggio del circuito di sicurezza aperto prima della terza presa ISKT3 per oltre 15 minuti /modificato il 20.02.03)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Reserved</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Problema di manipolazione (manipolazione errata sul pannello di richiamata o ispezione)</td>
+<td valign="top">Nessuna</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Problema di collegamento a terra o EMC</td>
+<td valign="top">Rimuovere tutti i possibili anelli di terra dal pcb corrispondente (utilizzare la presa AC nell'armadietto di controllo per alimentare il laptop di servizio).</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Guasto HW<br><br></td>
+<td valign="top">1) Verificare il cablaggio<br>
+2) Verificare il funzionamento degli I/O (consultare le altre informazioni)<br>
+3) Se necessario, sostituire il pcb (IVXVF / GCIO)</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Ponticello nel circuito di sicurezza</td>
+<td valign="top">Rimuovere il ponticello</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Field Feedback</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="20%">Location</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Car Roof</td>
+<td valign="top">Mettere l'istallazione in ispezione. Azionare Tasto "salita" e tasto "discesa" contemporaneamente. Rimettere in modo "Normale.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

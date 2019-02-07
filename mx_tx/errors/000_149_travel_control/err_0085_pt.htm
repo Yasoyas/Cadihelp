@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0085 LM_ComErr</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0085 LM_ComErr</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>LM_ComErr</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The software detects that the communication to the load measuring system (LMS) is lost. Software name of error: LMS_COM_UNAVAILABLE<br><br>
+Comments: TX4: With CADI in Travel Control under the menu EVENT LOGS enter the submenu VCOM ERR CTRS to see the performance of the lift bus connection with Travel Control.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Identification of the load measuring system:<br>
+10(hex): First load measuring device (deck one)<br>
+20(hex): Second load measuring device (deck two)<br><br>
+6E(hex)/110(dec): No communication to load measuring device after power down/power up</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top"></td>
+<td valign="top">Check the LMS device and the bus connection to the control cabinet</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Incorrect baud rate</td>
+<td valign="top">TX4 only: Check the baud rate adjustment on the pcb's.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

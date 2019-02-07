@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0645 Charge contactor failure cc1</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0645 Charge contactor failure cc1</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>MC PVF</em> error <em>Charge contactor failure cc1</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Charge contactor of the parallel converter (1_SGRW) not responding to switch on or switch off signal.<br><br>
+That applies only to the parallel operation with Schindler converters (VF 280). If there is Parallel operation with AEG converters (VF 140 / 220), the contactor feedback is not connected and this error should never occur (except PVF elevator paraInverter_Model is wrong).</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Input contactor failure</td>
+<td valign="top">Check contactor coil</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Wrong feedback</td>
+<td valign="top">Check auxiliary contacts and wiring PCC X3.4</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Wrong wiring, no driver signal</td>
+<td valign="top">Check driver signal VSGRW on PVFP X3.3</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

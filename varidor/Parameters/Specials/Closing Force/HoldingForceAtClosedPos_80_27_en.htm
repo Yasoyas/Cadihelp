@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>HoldingForceAtClosedPos</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>HoldingForceAtClosedPos</em> of the parameter group <em>Closing Force</em> in subsystem <em>Specials</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">F1</h4></TD>
+<TD valign="top" class="Layout"><p>This force F1 ramp is used to minimize closed loop position control error. It helps to close the door completely before trip curve has completed.<br>The force ramps up from 0.0 to F1 within 0.5 seconds and starts at calculated blind zone (t0).<br>Ramp-up stops when trip curve has completed (t1) latest and force F2 is applied.<br><br>t0: Calculated BlindZone<br>t1: Reference trip curve has finished<br><br>Calculated BlindZone= BlindZone + ClosedPosition<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">F2</h4></TD>
+<TD valign="top" class="Layout"><p>This force F2 is used to close the door in case of misalignment. It moves the door towards closing simultaneously while the active clutch system is closing. Especially needed with the car front sealing which gives additional friction to the door while clutch closing.<br><br>It is applied as soon as the reference trip curve has completed (t1) and stops if clutch are closed (t2) to start force ramp-up F3.<br>In case of no misalignment the door is fully closed at this time.<br><br>t1: Reference trip curve has completed<br>t2: Door Locked i.e. Clutch closed<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">F3</h4></TD>
+<TD valign="top" class="Layout"><p>This force F3 is used to press the panels together. This helps to pre-form the sealing rubber to get the doors completely closed especially in case of car front sealing.<br>Force ramps up with 12.5 N/s starting as soon as door is locked i.e. clutch closed (t2) and hold for 3 seconds.<br>After this force F3 is started to ramp down with 25 N/s to force F4 (t3) as long as the door position has not moved back for > 0.5 mm.<br><br>Error 337 HOLDING_FORCE_AT_CLOSED_POSITION<br>is generated if F3 can not be reduced to < 70N<br><br>t3: F3 ramped down as long as door position from F3 does not change > 0.5mm to F4<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">F4</h4></TD>
+<TD valign="top" class="Layout"><p>This force F4 is used to save power consumption.<br>It is applied all the time until the door position is changing > 1mm from the average door position while force F3 is applied. In this case force F3 is ramped up with 417 N/s and hold for 3 seconds to ramp down as described on F3.<br><br>Error 337 HOLDING_FORCE_AT_CLOSED_POSITION<br>is generated if F4 to F3 cycle has occurred for more than 10 times before a door command has arrived.<br><br>t4: If average door position while F3 has changed > 1.0mm by any reason, F4 is applied to close the door again<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">HoldingForceAtClosedPosition</h4></TD>
+<TD valign="top" class="Layout"><p>HoldingForceAtClosedPosition is a force profile consisting of F1, F2, F3 and F4 to close the door in case of misalignment and with the option car front sealing properly.<br>Detailed description see on force F1 to F4.<br><br>ON: 	Force profile= enabled (F1 to F4 have effect)<br>OFF:	Force profile= disabled (F1 to F4 have no effect)<br>	(i.e. same behaviour as on SW V70 2.40;<br>	target closed position= closed pos -3mm)<br>F3_Only:	Part of force profile= enabled (F1, F2 have no effect)<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

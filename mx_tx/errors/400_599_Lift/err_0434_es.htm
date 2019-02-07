@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0434 SCT Expansion</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0434 SCT Expansion</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Lift</em> error <em>SCT Expansion</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>This warning is generated when there is a problem while expanding the SCT on systems where the SCT is configured and not downloaded (MX). This warning would be accompanied by the PCT/SCT checksum error. Reasons for such problems are detailed in the extra information, which is populated as soon as the warning occured.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>0xAABBCCDD:<br><br>
+Meaning of DD:<br>
+01: SCT size overrun has occurred (HSCT Service Lib module).<br>
+02: Maximum number of services has been reached while generation of SCT (HSCT Service Lib module)<br>
+03: Size of individual service is too big while generation of SCT (HSCT Service Lib module)<br>
+04: Size of SCT is too big while generation in the HSCT service lib module<br><br>
+Meaning of AA: (for development only)<br>
+Byte 1 (MSB) in the extra info indicates that the HSCT module is the source of the warning.<br><br>
+Meaning of BB: (for development only)<br>
+not used (always left as "00")<br><br>
+Meaning of CC: (for development only)<br>
+Byte 3 indicates the count of the warning.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Task Id.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Too many services ordered.</td>
+<td valign="top">Verifiy oder data.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

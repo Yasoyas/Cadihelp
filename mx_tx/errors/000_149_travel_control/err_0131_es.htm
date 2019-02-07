@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0131 MoSis_KNE_Fault</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0131 MoSis_KNE_Fault</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>MoSis_KNE_Fault</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Message sent by MoSis together with status change of KNE relay.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>The extra information is a 8 digit code with the following meaning per digit:xSTUVWXYZ<br><br>
+S=0: KNE relay closed (normal)<br>
+S=1: KNE relay open (reason for opening see other digits)<br>
+T=_: RESERVED FOR FUTURE USE<br>
+U=1: KNE open because of detection of unintended car movement<br>
+V=1: MoSis nternal hardware or software error relating to the KNE. Check the error-log (MoSis) for further info.<br>
+W=1: Relay test failure (KneRelayFail)<br>
+X=1: Car travelled past the end of the known shaft range (StrangePlace). MoSis was never at this position before (past the last floor).<br>
+Y=1: Travel past last known floor (Overtravel)<br>
+Z=1: Pre-commissioned state; no floors discovered (Precom)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+</table>
+</body>
+</html>

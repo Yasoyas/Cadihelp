@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1251 BIO2_ISR_Buffering_Error</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1251 BIO2_ISR_Buffering_Error</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>BIO2</em> error <em>BIO2_ISR_Buffering_Error</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>BIO2 driver message buffering error. An error has occurred while buffering messages passed to or from the BIO2 driver.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>0xCCSSMMBB<br><br>
+CC = Error code / SS = Source / MM = Message length / BB = Buffer size<br><br>
+Meaning of Error code (CC):<br>
+  04 = Message too long for specified buffer<br>
+  05 = Buffer too small for requested message<br><br>
+Meaning of source (SS):   <br>
+    02 = Function BIO2_ISR_write<br>
+    03 = Function BIO2_ISR_read<br>
+    04 = Function BIO2_ISR_pend</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Task Id.</p></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Motor  (Asynchron / Synchron / DC)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Motor  (Asynchron / Synchron / DC)</em> of the parameter group <em>Motor Control</em> in subsystem <em>Drive</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Id Motor</h4></TD>
+<TD valign="top" class="Layout"><p>Identification of the motor. The motor parameters are derived from the parameter table on the inverter based on the value for the motor setting. This parameter needs to be edited only if the motor parameters selected are not commissioned individually.<br><br>Value: 4 last digits of the Schindler Id.No.<br>Example: the motor VM132-C4A240 is identified with the Id.No. 147964. Therefore, the correct value for the Motor Id is 7964.<br><br>The value 0 corresponds to NO_SETTING. A negative value indicates which value the parameter had originally i.e. before at least one motor parameter was edited and will be set automatically by software.. <br>All motor parameters are defined in DR-92069_Vxx.<br><a href='../Motor Control/MotorTable.htm'>Motor list</a></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Motor Type</h4></TD>
+<TD valign="top" class="Layout"><p>Type of Motor. Used to define whether motor parameter estimation has to be executed or not.<br><br>Values [-]:<br>{0.0= SCHINDLER_VM_FM }	all Schindler frequency converter motors with the identifiers FM.... or VM....<br>{1.0= OTHER}		all other induction motors (asynchronous motors)<br>{2.0 = SYNCHRONOUS}	synchronous motors<br>{3.0 = DC_MOTOR}		DC motor</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">f Motor Nominal / f Motor Nominal / P Motor Nominal</h4></TD>
+<TD valign="top" class="Layout"><p>AC motors: Rated frequency of the motor [Hz]<br>DC motors: Rated motor power [kW]</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">U Motor Nominal / U Motor Nominal / U Motor Nominal</h4></TD>
+<TD valign="top" class="Layout"><p>AC motors: Rated Motor Voltage (line to line voltage, RMS); is used to normalize parameters and input/output variables of the vector control.<br><br>DC motors: value to be set according to the motor plate (no Motor Id's available for DC motors)<br><br>Designation  according to EE-DR 93376:	UMN</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">I Motor Nominal / I Motor Nominal / I Motor Nominal</h4></TD>
+<TD valign="top" class="Layout"><p>Rated-Motor Current (A)<br><br>For DC motors the value must be set according to the motor plate (no Motor Id for DC motors)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Isa Motor Nominal / Flux / --</h4></TD>
+<TD valign="top" class="Layout"><p>AC Induction (Asynchronous) Motors: Magnetizing motor current (RMS) <br>Designation  according to EE-DR 93376:	IM0<br>Higher value cause a higher motor voltage, which leads to incorrect functioning of the two point regulator (refer to error handling) and higher motor temperatures. Smaller values may cause too high motor currents which may lead to inadequate acceleration power and to an error ( refer to error handling).<br><br>AC Synchronous Motors: Flux<br>Permanent Magnet Flux<br><br>DC Motors: Field current of the motor. Value must be set according to the motor plate data (no Motor Id for DC motors)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Tr / Zero Position / --</h4></TD>
+<TD valign="top" class="Layout"><p>AC Induction (Asynchronous) Motors: Rotor time constant.<br>Used for the calculation of the transformation angle and the flux. Higher values will increase the motor voltage, which may lead to incorrect operation of the two point regulator (refer to the error handling) and increased motor temperatures. Smaller values cause higher motor currents leading to inadequate acceleration power and to an error (refer to error handling). The value is set by the commissioning test Estimate Motor Parameters for motors without a known motor id.<br><br>AC Synchronous Motors: Zero Position<br>Angle between the permanent magnet north pole and zero positon of the motor encoder. The value is determined with Zero Position Test during commissioning.<br><br>DC Motors: Motor armature resistance [Ohm]<br>The Value must be set according to motor TK (no Motor Id for DC motors available)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Xh / I Motor Peak / I Motor max</h4></TD>
+<TD valign="top" class="Layout"><p>AC Induction (Asynchronous) Motors: Main reactance of the motor equivalent switching circuit. It is used for standardization of parameters and input and output size of the vector regulator. Value is derived from P_ANT_MOT_SETTING on the inverter. The value is set by the commissioning test Estimate Motor Parameters for motors without a known motor id.<br><br>AC Synchronous Motors: Maximum Motor Current ('IMotPeak')<br><br>DC Motors: Maximum armature current</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Xr / (--/Xsd) / La</h4></TD>
+<TD valign="top" class="Layout"><p>AC Induction (Asynchronous) Motors: Rotor inductance of the motor equivalent switching circuit and is used for standardization of parameters and input and output size of the vector regulator. Value is derived from P_ANT_MOT_SETTING on the inverter.<br><br>AC Synchronous Motors: depending on the type of synchronous motor the parameter is either not used (-) or corresponds to the synchronous d - inductance (Xsd)<br>Condition for "not used": Not used, if only Xs is available, i.e. if there is no extension "d" or "q" (e.g. PMS 230, SM 250)<br>Condition for Xsd: The parameter corresponds to Xsd, if Xsd and Xsq are given (e.g. PMS 420)<br><br>DC Motors: Armature inductance<br>The value must be set according to the motor TK (no Motor Id for DC motors available)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Xs / (Xs/Xsq) / --</h4></TD>
+<TD valign="top" class="Layout"><p>AC Induction (Asynchronous) Motors: Stator inductance of the motor equivalent switching circuit is used for standardization of parameters and input and output size of the vector regulator. Value is derived from the setting P_ANT_MOT_SETTING on the inverter.<br><br>Synchronous Motors: <br>Depending on the type of synchronous motor the parameter corresponds either to the synchronous inductance (Xs) or to the synchronous q inductance (Xsq).<br>Condition for Xs: The parameter corresponds to Xs, if only Xs is available, i.e. if there is no extension "d" or "q" (e.g. PMS 230, SM 250)<br>Condition for Xsq: The parameter corresponds to Xsq, if Xsd and Xsq are given (e.g. PMS 420)<br><br>DC Motors: Field inductance (not used yet).<br>The value must be set according to the motor TK (no Motor Id for DC motors available)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Rs / Rs / --</h4></TD>
+<TD valign="top" class="Layout"><p>AC inverters/motors: Stator resistance of the motor.<br><br>DC inverters/motors: Field resistance (not used yet)<br>The value must be set according to the motor TK (no Motor Id for DC motors available)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Nominal Torque / Nominal Torque / --</h4></TD>
+<TD valign="top" class="Layout"><p>Rated torque of the motor [Nm]. Used to calculate the starting torque (load measurement) and feedforward torques (direct-traction).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Pole Pairs / Pole Pairs / n Motor Nominal</h4></TD>
+<TD valign="top" class="Layout"><p>AC motors: Number of pole pairs of the motor<br><br>DC motors: Rated motor speed [1/min], used to calculate the rated torque and for scaling of speed. Value must be set according to motor plate (no Motor Id for DC motors).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

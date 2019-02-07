@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<!-- (c) 2001 Inventio AG, CH-6052 Hergiswil -->
+<!-- All rights reserved for all countries. -->
+<style>
+<!--
+
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-size: 11pt; font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+
+-->
+</style>
+<title>How to Use: Command &amp; Status Dialogs</title>
+</head>
+
+<body>
+
+<table WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+  <tr>
+    <td class="Layout"><p class="zb-SectionNumber"></td>
+    <td class="Layout"><h2>Commands</h2>
+    </td>
+  </tr>
+  <tr>
+    <td class="Layout"><img src="../../../../layout/symbols/blank.gif"
+    width="122" height="1"></td>
+    <td class="Layout"><hr></td>
+  </tr>
+  <tr>
+<!-- short-cuts -->
+  </tr>
+  <tr>
+    <td valign="top" class="Layout"><h4 class="Block">Summary</h4>
+    </td>
+    <td class="Layout"></em>This list contains all predefined Bionic Command</em>
+  </td>
+  </tr>
+  <tr>
+    <td class="Layout"></td>
+    <td class="Layout"><hr></td>
+  </tr>
+   <tr>
+      <td class="Layout"></td>
+    
+       <td>
+    	<table border="1" width="100%">
+	      <tr>
+	        <th class="Layout">Command</th>
+	        <th class="Layout">Shortname</th>
+	        <th class="Layout">Description</th>
+	      </tr>
+	      <tr>
+			<td>SYSTEM_INFO:=1</td>
+		        <td>System Info</td>
+		        <td>List all the relevant elevator data</td>
+      	     </tr>
+		<tr>
+		        <td>READ_SIM_CARD:=1</td>
+		        <td>SIM card content</td>
+		        <td>List the data stored into the SIMcard</td>
+      		</tr>
+		<tr>
+			<td>GC_SHOW_EE:=1</td>
+		        <td>EEPROM content</td>
+		        <td>List the data stored into the EE-PROM</td>
+      		</tr>
+		<tr>
+			<td>5</td>
+		        <td>Active system status</td>
+		        <td>System status (Shows activeservices running)</td>
+      		</tr>
+		<tr>
+			<td>4</td>
+		        <td>Error history</td>
+		        <td>Shows the error log</td>
+      		</tr>
+		<tr>
+			<td>CTRL_AVAILABILITY:=1</td>
+		        <td>Availability subsystems</td>
+		        <td>Shows the availability of the elevator subsystems</td>
+      		</tr>
+		<tr>
+			<td>READ_SHAFT_EE:=1</td>
+		        <td>Hoistway information</td>
+		        <td>Shows hoistway image (in clo-sed loop, also the floor height is shown)</td>
+      		</tr>
+		<tr>
+			<td>CTRL_IOSTATUS:=1</td>
+		        <td>Control I/Os</td>
+		        <td>Shows the current status of the SCIC I/O ports</td>
+      		</tr>
+		<tr>
+			<td>CAR_IOSTATUS_RQST:=1</td>
+		        <td>Car I/Os</td>
+		        <td>Shows the status of the SDIC I/O ports. List mode must be active</td>
+      		</tr>
+		<tr>
+			<td>CAR_LOAD_RQST:=1</td>
+		        <td>CLC frequency</td>
+		        <td>Shows the current cell measurement (Hz) in Hex</td>
+      		</tr>
+		<tr>
+			<td>LIST_MODE:=1</td>
+		        <td>Watch all data</td>
+		        <td>Scrolls the filtered messages (mode one in this case)</td>
+      		</tr>
+		<tr>
+			<td>LIST_MODE:=0</td>
+		        <td>HSTOP Watch all data</td>
+		        <td>Stops the messages scrolling</td>
+      		</tr>
+		<tr>
+			<td>SIM_FLOOR_CALL:=1-n</td>
+		        <td></td>
+		        <td>Call to floor 1 ..n. Lowest floor is (1)</td>
+      		</tr>
+		<tr>
+			<td>CLR_PERSISTENT:=1</td>
+		        <td>Reset persistent fatal error</td>
+		        <td>Clear persistent fatal error</td>
+      		</tr>
+		<tr>
+			<td>CF_DUMP:=1</td>
+		        <td>Actual configuration</td>
+		        <td>Read out the complete configuration)</td>
+      		</tr>
+		<tr>
+			<td>di</td>
+		        <td></td>
+		        <td>Read out the complete configuration)</td>
+      		</tr>
+		<tr>
+			<td>SET_AAT_MODE:=0</td>
+		        <td></td>
+		        <td>Disable automatic acceptance test mode in case of SW hangup during acceptance tests(HMI display S001r3)</td>
+      		</tr>
+		<tr>
+			<td>CTRL_SHOW_SERVICES:=1</td>
+		        <td>(Instead of 5)</td>
+		        <td>Shows the service currently active</td>
+		<tr>
+			<td>SHOW_LAST_ERR:=1x</td>
+		        <td>(Instead of 4)</td>
+		        <td>List the error history</td>
+      		</tr>
+   	 </table>
+   	</td> 
+
+    </tr>
+
+
+    </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

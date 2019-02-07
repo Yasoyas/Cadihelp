@@ -1,0 +1,230 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 1px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="20%"></TD>
+<TD valign="top" class="Layout" WIDTH="80%"><h2>STAT_GROUP&nbsp;(8)&nbsp;&nbsp;/&nbsp;&nbsp;STAT_CALL_LOCK&nbsp;(10)</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Description</h4></TD>
+<TD valign="top" class="Layout">attr_1     : VXT_T_CALL_LOCK_TYPE<br>      attr_2     : VXT_T_CALL_LOCK_SOURCE<br>      data_length: round off(highest_floor/8)<br>      data[0]    : floor_lock   8 <- 1<br>      data[1]    : floor_lock  16 <- 9<br>      data[2]    : floor_lock  24 <- 17<br>      data[3]    : floor_lock  32 <- 25<br>      data[4]    : floor_lock  40 <- 33<br>      data[5]    : floor_lock  48 <- 41<br>      data[6]    : floor_lock  56 <- 49<br><br>      data[7]    : floor_lock  64 <- 57<br>      data[8]    : floor_lock  72 <- 65<br>      data[9]    : floor_lock  80 <- 73<br>      data[10]   : floor_lock  88 <- 81<br>      data[11]   : floor_lock  96 <- 89<br>      data[12]   : floor_lock 104 <- 97<br><br>      Description: This telegram is used to send the call_lock states of<br>      the specified call type as containd in attr_1.<br>      The get's can be requested for a specific lift or with wildcard.<br>      In case of wildcard the information which returns is an 'OR' of all lifts.<br><br>      That means if one of the lift has a locked call of the corresponding<br>      'VXT_T_CALL_LOCK_TYPE' then the floor-Bit is set to TRUE.<br><br><br>      The get-handling vcom_get() is supported with the call type<br>      VXT_T_CALL_LOCK_TYPE and has to be interpreted as follow.<br><br>      attr_1: VXT_T_CALL_LOCK_TYPE<br><br>      VXT_C_FL_CALL_SIDE_ALL = 1,/*   There is at least one locked-call-type<br>                                      on independent side */<br><br>      VXT_C_FL_CALL_SIDE_1,      /* 2:There is at least one locked-call-type on<br>                                      side_1 */<br>      VXT_C_FL_CALL_SIDE_20,     /* 3:There is at least one locked-call-type on<br>                                      side_20*/ */<br>      VXT_C_CALL_SIDE_ALL,       /* 4:There is at least one locked cabin_call<br>                                      on independent side */<br>      VXT_C_CALL_SIDE_1,         /* 5:cabin_call locked on side_1  */<br>      VXT_C_CALL_SIDE_20,        /* 6:cabin_call locked on side_20 */<br><br>      VXT_FL_CALL_SIDE_ALL,      /* 7:There is at least one locked floor_call<br>                                      on independent side */<br>      VXT_FL_CALL_SIDE_1,        /* 8:floor_call locked on side_1 */<br>      VXT_FL_CALL_SIDE_20,       /* 9:floor_call locked on side_20*/<br>      VXT_FL_CALL_UP_SIDE_ALL    /*10:There is at least one floor_call_up<br>                                      locked on independent side */<br>      VXT_FL_CALL_DOWN_SIDE_ALL  /*11:There is at least one floor_call_down<br><br>                                      locked on independent side */<br>      VXT_FL_CALL_UP_SIDE_1      /*12:floor_call_up locked on side_1  */<br>      VXT_FL_CALL_DOWN_SIDE_1    /*13:floor_call_down locked on side_1 */<br>      VXT_FL_CALL_UP_SIDE_20     /*14:floor_call_up locked on side_20  */<br>      VXT_FL_CALL_DOWN_SIDE_20   /*15:floor_call_down locked on side_20 */</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Specification</h4></TD>
+<TD valign="top" class="Layout">
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="30%"><em>Telegram Group:</em></TD>
+<TD valign="top" class="Layout" WIDTH="70%">STAT_GROUP</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Telegram:</em></TD>
+<TD valign="top" class="Layout">STAT_CALL_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 1:</em></TD>
+<TD valign="top" class="Layout">T_CALL_LOCK_TYPE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Attribute 2:</em></TD>
+<TD valign="top" class="Layout">T_CALL_LOCK_SOURCE</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><em>Datalength:</em></TD>
+<TD valign="top" class="Layout">0</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_CALL_LOCK_TYPE</h4></TD>
+<TD valign="top" WIDTH="80%">1: VXT_C_FL_CALL_SIDE_ALL <br>2: VXT_C_FL_CALL_SIDE_1<br>3: VXT_C_FL_CALL_SIDE_20<br>4: VXT_C_CALL_SIDE_ALL<br>5: VXT_C_CALL_SIDE_1<br>6: VXT_C_CALL_SIDE_20<br>7: VXT_FL_CALL_SIDE_ALL<br>8: VXT_FL_CALL_SIDE_1<br>9: VXT_FL_CALL_SIDE_20<br>10: VXT_FL_CALL_UP_SIDE_ALL<br>11: VXT_FL_CALL_DOWN_SIDE_ALL<br>12: VXT_FL_CALL_UP_SIDE_1<br>13: VXT_FL_CALL_DOWN_SIDE_1<br>14: VXT_FL_CALL_UP_SIDE_20<br>15: VXT_FL_CALL_DOWN_SIDE_20</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">C_FL_CALL_SIDE_ALL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">C_FL_CALL_SIDE_1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">C_FL_CALL_SIDE_20</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">C_CALL_SIDE_ALL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">5</TD>
+<TD valign="top" WIDTH="70%">C_CALL_SIDE_1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">6</TD>
+<TD valign="top" WIDTH="70%">C_CALL_SIDE_20</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">7</TD>
+<TD valign="top" WIDTH="70%">FL_CALL_SIDE_ALL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">8</TD>
+<TD valign="top" WIDTH="70%">FL_CALL_SIDE_1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">9</TD>
+<TD valign="top" WIDTH="70%">FL_CALL_SIDE_20</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">10</TD>
+<TD valign="top" WIDTH="70%">FL_CALL_UP_SIDE_ALL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">11</TD>
+<TD valign="top" WIDTH="70%">FL_CALL_DOWN_SIDE_ALL</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">12</TD>
+<TD valign="top" WIDTH="70%">FL_CALL_UP_SIDE_1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">13</TD>
+<TD valign="top" WIDTH="70%">FL_CALL_DOWN_SIDE_1</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">14</TD>
+<TD valign="top" WIDTH="70%">FL_CALL_UP_SIDE_20</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">15</TD>
+<TD valign="top" WIDTH="70%">FL_CALL_DOWN_SIDE_20</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="20%"><h4 class="Block">T_CALL_LOCK_SOURCE</h4></TD>
+<TD valign="top" WIDTH="80%">1: VXT_ALL_LOCK = 0    /* all sources HLS_1 VXT_LOBBY */<br>2: VXT_HLS_1_LOCK        /* task HLS on RS print */<br>3: VXT_HLS_2_LOCK        /* task HLS on RS print */<br>4: VXT_HLC_LOCK            /* task HLC on RS print */<br>5: VXT_HCB_LOCK            /* task HCB on RS print */<br>6: VXT_KEY_LOCK           /* Key as hardware input */<br>7: VXT_HW_INP_LOCK    /* Hardware input of any type */<br>8: VXT_LOBBY_LOCK      /* LOBBY as call lock source */</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><TABLE WIDTH="100%" BORDER="1" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TH>Value</TH>
+<TH>Name</TH>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">0</TD>
+<TD valign="top" WIDTH="70%">ALL_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">1</TD>
+<TD valign="top" WIDTH="70%">HLS_1_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">2</TD>
+<TD valign="top" WIDTH="70%">HLS_2_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">3</TD>
+<TD valign="top" WIDTH="70%">HLC_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">4</TD>
+<TD valign="top" WIDTH="70%">HCB_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">5</TD>
+<TD valign="top" WIDTH="70%">KEY_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">6</TD>
+<TD valign="top" WIDTH="70%">HW_INP_LOCK</TD>
+</TR>
+<TR>
+<TD valign="top" WIDTH="30%">7</TD>
+<TD valign="top" WIDTH="70%">LOBBY_LOCK</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+<TR>
+<TD valign="top"></TD>
+<TD valign="top"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

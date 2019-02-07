@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 1250 BIO2_ISR_Initialisation_Error</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>1250 BIO2_ISR_Initialisation_Error</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>BIO2</em> error <em>BIO2_ISR_Initialisation_Error</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>BIO2 driver initialisation error. An error has occurred during the BIO2 driver initialisation or later due to the failed initialisation.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>0xCCSS????   CC = Error code / SS = Source<br><br>
+Meaning of error code (CC):<br>
+01 = Missing BIO2 Hardware (EBBIO)<br>
+02 = Driver has already been initialised<br>
+03 = Driver has not yet been initialised<br><br>
+Meaning of source (SS):<br>
+01 = Function BIO2_ISR_open<br>
+02 = Function BIO2_ISR_write<br>
+03 = Function BIO2_ISR_read<br>
+04 = Function BIO2_ISR_pend</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Task Id.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Defective hardware</td>
+<td valign="top">Replace hardware</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

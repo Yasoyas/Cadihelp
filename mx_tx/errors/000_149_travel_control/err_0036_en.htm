@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0036 No Start Ok</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0036 No Start Ok</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>No Start Ok</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The trip preparation exceeds the maximum allowed time limit defined by the parameter (P_ANT_TIME_START_UP). In addition to the contactor timeout and the fc-timeout the overall timeout monitoring checks if the preparation for a trip exceeds the predefined time limit. This maximum time is not field adjustable.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Value of the internal variable 'prepare_state'. Identifies the trip preparation phase during which the error occurs. Not all preparation phases are used in the different deployments (control systems); depends on the control system architecture.<br><br>
+00 (hex)/ 0 (dec): PREP_INIT,<br>
+01 (hex)/ 1 (dec): PREP_END,<br>
+02 (hex)/ 2 (dec): PREP_ABORT,<br>
+03 (hex)/ 3 (dec): WAIT_FOR_RUET_OFF,<br>
+04 (hex)/ 4 (dec): DECIDE_DRIVE,<br>
+05 (hex)/ 5 (dec): WAIT_FOR_ISKT3,<br>
+06 (hex)/ 6 (dec): DECIDE_AFTER_ISKT3,<br>
+07 (hex)/ 7 (dec): WAIT_FOR_RFE_ON,<br>
+08 (hex)/ 8 (dec): FINDING_DIRECTION, determine the direction of movement for the given trip_type<br>
+09 (hex)/ 9 (dec): WAIT_FOR_ISKT5_SPEZ_DOOR,<br>
+0A (hex)/10 (dec): WAIT_CALC_FINISHED, Calculation of the trip plan<br>
+0B (hex)/11 (dec): WAIT_FOR_RSK_ON,<br>
+0C (hex)/12 (dec): WAIT_FOR_RFE_OFF,<br>
+0D (hex)/13 (dec): DECIDE_MOTOR_TRIP_TYPE, <br>
+0E (hex)/14 (dec): STARTING_DRIVE, Start the drive (inverter) in order to prepare it for the trip.<br>
+0F (hex)/15 (dec): EARLY_SB,<br>
+10 (hex)/16 (dec): WAIT_FOR_TRIP_START, Wait for the trip release signal from the control (VXT_START_OK)<br>
+11 (hex)/17 (dec): WAIT_FOR_SAFETY_BYPASS_CONTACTS,<br>
+12 (hex)/18 (dec): WAIT_FOR_SAFETY_CHAIN, Wait for safety circuit closed<br>
+13 (hex)/19 (dec): WAIT_FOR_DOOR_CONTACTS, Maximum time delay (Parameter: door_contact_delay) for bouncing contacts KTS/KTC<br>
+14 (hex)/20 (dec): WAIT_FOR_DOOR_LOCK_MONITOR,<br>
+15 (hex)/21 (dec): WAIT_FOR_RUET,<br>
+16 (hex)/22 (dec): STARTING_TRIP</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Identifies the file in the core software where the error message is generated from. This information gives a general hint about the nature of the problem.<br>
+The extra information (see below) gives additional information about the exact cause. (see help text for error 70 for the identification list of the source code modules)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Depending on number in extra info.</td>
+<td valign="top">Check that the start-up parameters are set correct: The parameter time_start_up has to be bigger than the parameters fc_delay + sh_delay.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

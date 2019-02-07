@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0314 HW_WATCHDOG</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0314 HW_WATCHDOG</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Varidor70 Door Drive</em> error <em>HW_WATCHDOG</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>[V70 Door Controller SW]<br>
+This is not an error, but a warning.<br>
+This warning comes after the door controller had had a reset because of a Watchdog or a self reset<br><br>
+Error response: None, just to notify that there was a Watchdog initiated reset<br>
+Easy Setup: Bargraph-RED_LED-8 [ON]</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>This could be beacuse of a runaway task. Watchdog will reset the system if it has not been notified within a preset period of time. This warning is generated at startup of the system.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>This warning is generated from General Init</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">1. Watchdog caused a reset, the reasons are explained in the Error Description above</td>
+<td valign="top">None</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">2. Errors in Peripheral units can cause seld resets to reactivate the Peripherals</td>
+<td valign="top">None</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Brake</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Brake</em> of the parameter group <em>Travel Control</em> in subsystem <em>Drive</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Brake</h4></TD>
+<TD valign="top" class="Layout"><p>The parameter defines the type of the electrical brake on the hoisting machine. <br>Values:<br>{0 =  MB_07E}<br>{1 =  MB_09D}<br>{2 = MB_10D}<br>{3 = MB_10E}<br>{4 = MB_11D}<br>{5 = MB_11E}<br>{6 = MB_13D}<br>{7 = MB_13E}<br>{8 = MB_14D}<br>{9 = MB_14E}<br>{10 = MB_16E}<br>{11 = MB_ES16}<br>{12 = MB_ES19}<br>{13 = MB_ZS19_1}<br>{14 = MB_ZS19_2<br>{15 = MB_BZ16}<br>{16 = MB630_HYB44}<br>{17 = MB750_HYB44}<br>{18 = MB900_HYB45}<br>{19 = MB900_HYB46}<br>{20 = MB_15B}<br>{21 = MB_18B}<br>{22 = CMOD}	Custom Modular Brake Setting used in USA also,contactor  type C/C<br>{23 = USA_B} 	USA Brake setting with USA Brake type, contactor type C/C<br>{24 = MB800_HYB54}<br>{25 = MB940_HYB55}<br>{26 = SB_EINSCHUETZ}    (use 100 for configuration with PCT)<br>{27 = HW_SIM_LAB}<br>{28 = MB1215_HYB66}<br>{29 = MBS1215_HYB66}<br>{30 = CMOD2}	Custom Modular Brake Setting used in USA also,contactor  type O/C<br>{31 = USA_B2} 	USA Brake setting with USA Brake type,contactor  type O/C<br>{100 = SB_EINSCHUETZ}<br><br>The following parameters are derived from the brake setting value:<br>P_ANT_BRAKE_TYPE;<br>P_ANT_OPENING_VOLTAGE;<br>P_ANT_HOLDING_VOLTAGE;<br>P_ANT_OPENING_CURRENT;<br>P_ANT_HOLDING_CURRENT;<br>P_ANT_HYDRO_ON_TIME;<br>P_ANT_HYDRO_PAUSE_TIME;<br><br>Table with values for the parameters derived from P_ANT_BRAKE_SETTING. The sequence of the values from left to right relates to the list above (first value is for parameter = P_ANT_BRAKE_TYPE, last value is for parameter  P_ANT_HYDRO_PAUSE_TIME):<br><br>MB_07E:          MAGNET_BRAKE1, 80,  40, 16,  8, 400, 6000<br>MB_09D:          MAGNET_BRAKE1, 80,  60, 16, 11, 400, 6000<br>MB_10D:          MAGNET_BRAKE1, 80,  40, 22, 11, 400, 6000<br>MB_10E:          MAGNET_BRAKE1, 80,  80, 14, 14, 400, 6000<br>MB_11D:          MAGNET_BRAKE1,         80,  50, 23, 14, 400, 6000<br>MB_11E:          MAGNET_BRAKE1,         80,  50, 15,  9, 400, 6000<br>MB_13D:          MAGNET_BRAKE1,         80,  50, 32, 20, 400, 6000<br>MB_13E:          MAGNET_BRAKE1,         80,  50, 18, 11, 400, 6000<br>MB_14D:          MAGNET_BRAKE1,         80,  40, 41, 21, 400, 6000<br>MB_14E:          MAGNET_BRAKE1,         80,  60, 17, 13, 400, 6000<br>MB_16E:          MAGNET_BRAKE1,         80,  40, 27, 14, 400, 6000<br>MB_ES16,         MAGNET_BRAKE1,         80,  50, 17, 10, 400, 6000<br>MB_ES19,         MAGNET_BRAKE1,         80,  40, 30, 10, 400, 6000<br>MB_ZS19_1:       MAGNET_BRAKE1,         80,  40, 30, 10, 400, 6000<br>MB_ZS19_2:       MAGNET_BRAKE1,         80,  60, 30, 22, 400, 6000<br>MB_BZ16:         MAGNET_BRAKE1,         80,  40, 98, 44, 400, 6000<br>MB630_HYB44:     HYDRO_BRAKE1,         110, 110,  2,  2, 400, 6000<br>MB750_HYB44:     HYDRO_BRAKE1,         110, 110,  2,  2, 400, 6000<br>MB900_HYB45:     HYDRO_BRAKE1,         110, 110,  2,  2, 400, 6000<br>MB900_HYB46:     HYDRO_BRAKE1,         110, 110,  2,  2, 400, 6000<br>MB_15B:          MAGNET_BRAKE1,         80,  40, 39, 20, 400, 6000<br>MB_18B:          MAGNET_BRAKE1,         80,  40, 50, 25, 400, 6000<br>CMOD:            CM_BRAKE1,             80,  40, 50, 25, 400, 6000<br>USA_B:           MAGNET_BRAKE1,         80,  50, 23, 14, 400, 6000<br>MB800_HYB54:     HYDRO_BRAKE1,         110, 110,  4,  4, 400, 6000<br>MB940_HYB55:     HYDRO_BRAKE1,         110, 110,  8,  8, 400, 6000<br>SB_EINSCHUETZ_26:  CM_BRAKE1,             80,  40, 50, 25, 400, 6000<br>HW_SIM_LAB:      MAGNET_BRAKE1,         80,  40,  4,  2, 400, 6000<br>MB1215_HYB66:    HYDRO_BRAKE1,         110, 110,  4,  4, 400, 6000<br>MBS1215_HYB66:   HYDRO_BRAKE1,         110, 110,  4,  4, 400, 6000<br>CMOD2:            CM_BRAKE2,             80,  40, 50, 25, 400, 6000<br>USA_B2:           MAGNET_BRAKE2,         80,  50, 23, 14, 400, 6000<br>SB_EINSCHUETZ:    see SB_EINSCHUETZ_26</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">KB Feedback Type</h4></TD>
+<TD valign="top" class="Layout"><p>Type of the brake on machine. Defines the expected behaviour of KB/KB1 contacts.<br><br>Values: <br>{0 =  NO_BRAKE}<br>{1 =  BRAKE1} : not used<br>{2 =  BRAKE2} : not used<br>{3 =  BRAKE3} : not used<br>{4 =  BRAKE4} : not used<br>{5 =  BRAKE5} : not used<br>{6 =  BRAKE6} : not used<br>{7 =  BRAKE7} : not used<br>{8 =  MAGNET_BRAKE1} : Magnet Brake with two active closed contacts KB/KB1. Both contacts open when brake closed. (wiht interface to MMB type brake module) <br>{9 =  MAGNET_BRAKE2} : Magnet Brake with active open and active closed contacts KB/KB1. KB closed when brake closed/KB1 open when brake closed. (wiht interface to MMB type brake module) <br>{10 =  MAGNET_BRAKE3} : not used<br>{11 =  HYDRO_BRAKE1} : Hydraulic brake with active open and active closed contacts KB/KB1. KB closed when brake closed/KB1 open when brake closed. (wiht interface to MMB type brake module) <br>{12 =  HYDRO_BRAKE2} : Hydraulic brake with two active closed contacts KB/KB1. Both contacts open when brake closed. (wiht interface to MMB type brake module) <br>{13 =  HYDRO_RES1} : spare<br>{14 =  CM_BRAKE1} : Magnet Brake with two active closed contacts KB/KB1. Both contacts open when brake closed. (wiht interface to non-MMB type brake module) <br>{15 =  CM_BRAKE2} : Magnet Brake with active open and active closed contacts KB/KB1. KB closed when brake closed/KB1 open when brake closed. (wiht interface to non-MMB type brake module)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">KB Time</h4></TD>
+<TD valign="top" class="Layout"><p>Max. waittime for KB feedback</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">SGRB Time</h4></TD>
+<TD valign="top" class="Layout"><p>Time for pickup the brake with high voltage. After sgrb_time the voltage on the brake will be reduced.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Brake Start Delay</h4></TD>
+<TD valign="top" class="Layout"><p>Time delay after brake opening until the trip starts. During this time the control holds the car on the floor by sending speed reference values = 0 to the inverter. This time is necessary to allow the elevator to start without brake slide.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Brake Stop Delay</h4></TD>
+<TD valign="top" class="Layout"><p>Delay until the brake closes after the car has arrived at floor level (typically used during commissioning/maintenance).</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Hydro On Time</h4></TD>
+<TD valign="top" class="Layout"><p>Only used for hydraulic brakes. Hydraulic pump 'on time' (the hydraulic pump is switched on periodically to compensate loss of pressure during a trip). The output RMPB is used to control the motor of the hydraulic pump.<br><br>PCT parameter value for 'hydro_on_time' is derived from brake_setting:<br>{0: MB_07E} = 400 = 4000ms<br>{1: MB_09D} = 400 = 4000ms<br>{2: MB_10D} = 400 = 4000ms<br>{3: MB_10E] = 400 = 4000ms<br>{4: MB_11D} = 400 = 4000ms<br>{5: MB_11E} = 400 = 4000ms<br>{6: MB_13D} = 400 = 4000ms<br>{7: MB_13E} = 400 = 4000ms<br>{8: MB_14D} = 400 = 4000ms<br>{9: MB_14E} = 400 = 4000ms<br>{10: MB_16E} = 400 = 4000ms<br>{11: MB_ES16} = 400 = 4000ms<br>{12: MB_ES19} = 400 = 4000ms<br>{13: MB_ZS19_1} = 400 = 4000ms<br>{14: MB_ZS19_2} = 400 = 4000ms<br>{15: MB_BZ16}   = 400 = 4000ms<br>{16: MB630_HYB44} = 400 = 4000ms<br>{17: MB750_HYB44} = 400 = 4000ms<br>{18: MB900_HYB45} = 400 = 4000ms<br>{19: MB900_HYB46} = 400 = 4000ms<br>{20: B15}  = 400 = 4000ms<br>{21: B18}  = 400 = 4000ms<br>{22: CMOD} = 400 = 4000ms<br>{23: USA_B} = 400 = 4000ms<br>{24: MB800_HYB54} = 400 = 4000ms<br>{25: MB940_HYB55} = 400 = 4000ms<br>{28: MB1215_HYB66} = 400 = 4000ms<br>{29: MBS1215_HYB66} = 400 = 4000ms = 4s<br><br>(Unit of the PCT parameter value is 10ms: e.g. 400 = 4000ms = 4s)</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Hydro Pause Time</h4></TD>
+<TD valign="top" class="Layout"><p>Only used for hydraulic brakes.<br><br>Hydraulic pump switch-off time during a trip.<br>PCT parameter value for 'hydro_pause_time' is derived from brake_setting:<br><br>{0: MB_07E} = 6000 = 60000ms<br>{1: MB_09D} = 6000 = 60000ms<br>{2: MB_10D} = 6000 = 60000ms<br>{3: MB_10E] = 6000 = 60000ms<br>{4: MB_11D} = 6000 = 60000ms<br>{5: MB_11E} = 6000 = 60000ms<br>{6: MB_13D} = 6000 = 60000ms<br>{7: MB_13E} = 6000 = 60000ms<br>{8: MB_14D} = 6000 = 60000ms<br>{9: MB_14E} = 6000 = 60000ms<br>{10: MB_16E} = 6000 = 60000ms<br>{11: MB_ES16} = 6000 = 60000ms<br>{12: MB_ES19} = 6000 = 60000ms<br>{13: MB_ZS19_1} = 6000 = 60000ms<br>{14: MB_ZS19_2} = 6000 = 60000ms<br>{15: MB_BZ16}   = 6000 = 60000ms<br>{16: MB630_HYB44} = 6000 = 60000ms<br>{17: MB750_HYB44} = 6000 = 60000ms<br>{18: MB900_HYB45} = 6000 = 60000ms<br>{19: MB900_HYB46} = 6000 = 60000ms<br>{20: B15}  = 6000 = 60000ms<br>{21: B18}  = 6000 = 60000ms<br>{22: CMOD} = 6000 = 60000ms<br>{23: USA_B} = 6000 = 60000ms<br>{24: MB800_HYB54} = 6000 = 60000ms<br>{25: MB940_HYB55} = 6000 = 60000ms<br>{28: MB1215_HYB66} = 6000 = 60000ms<br>{29: MBS1215_HYB66} = 6000 = 60000ms = 60s<br><br>(Unit for PCT parameter value is 10ms: e.g. 6000 = 60s)<br><br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Early Brake</h4></TD>
+<TD valign="top" class="Layout"><p>With P_ANT_EARLY_BRAKE set to 1 the travel control opens the brake during the start preparation as soon as possible (after the door(s) start(s) to close). Once the brake is open and the doors are still closing until the 'start_ok' command from the control is received, the travel control regulates to the velocity 0. The drive takes off from the floor with overbridged door contacts in order to eliminate start delays caused by bouncing of this contacts.<br>Set P_ANT_EARLY_BRAKE to 0 to disable the function. In this case the travel control software will open the brake only when the door(s) are locked and starts to accelerate from the floor with the door overbridging unit disabled.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Earlybrake Delay</h4></TD>
+<TD valign="top" class="Layout"><p>This time should be set only when the parameter Early_brake is defined as TRUE.<br>The idea of this time is to prevent the car of perceptible jerks when the brake has to be closed in case of reversing the doors. The time should be defined such that the IVXVF opens the brake (and regulates to velocity 0) when the doors are 3/4 closed.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Opening Current</h4></TD>
+<TD valign="top" class="Layout"><p>Defiines the current required to open the brake. For brake module MBB<br><br>values for OPENING_CURRENT depending on brake setting:<br>{0: MB_07E} = 1.6A<br>{1: MB_09D} = 1.6A<br>{2: MB_10D} = 2.2A<br>{3: MB_10E] = 1.4A<br>{4: MB_11D} = 2.3A<br>{5: MB_11E} = 1.5A<br>{6: MB_13D} = 3.2A<br>{7: MB_13E} = 1.8A<br>{8: MB_14D} = 4.1A<br>{9: MB_14E} = 1.7A<br>{10: MB_16E} = 2.7A<br>{11: MB_ES16} = 1.7A<br>{12: MB_ES19} = 3.0A<br>{13: MB_ZS19_1} = 3.0A<br>{14: MB_ZS19_2} = 3.0A<br>{15: MB_BZ16} = 9.8A<br>{16: MB630_HYB44} = 0.2A<br>{17: MB750_HYB44} = 0.2A<br>{18: MB900_HYB45} = 0.2A<br>{19: MB900_HYB46} = 0.2A<br>{20: B15} = 3.9A<br>{21: B18} = 5.0A<br>{22: CMOD} = 5.0A<br>{23: USA_B} = 2.3A<br>{24: MB800_HYB54} = 0.4A<br>{25: MB940_HYB55} = 0.8A<br>{26: SB_EINSCHUETZ} = N.A.<br>{27: HW_SIM_LAB} = 0.4A<br>{28: MB1215_HYB66} = 0.4A<br>{29: MBS1215_HYB66} = 0.4A</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Opening Voltage</h4></TD>
+<TD valign="top" class="Layout"><p>Voltage required to open the brake. For brake module MBB<br><br>values for OPENING_VOLTAGE depending on brake setting:<br>{0: MB_07E} = 80V<br>{1: MB_09D} = 80V<br>{2: MB_10D} = 80V<br>{3: MB_10E] = 80V<br>{4: MB_11D} = 80V<br>{5: MB_11E} = 80V<br>{6: MB_13D} = 80V<br>{7: MB_13E} = 80V<br>{8: MB_14D} = 80V<br>{9: MB_14E} = 80V<br>{10: MB_16E} = 80V<br>{11: MB_ES16} = 80V<br>{12: MB_ES19} = 80V<br>{13: MB_ZS19_1} = 80V<br>{14: MB_ZS19_2} = 80V<br>{15: MB_BZ16} = 80V<br>{16: MB630_HYB44} = 110V<br>{17: MB750_HYB44} = 110V<br>{18: MB900_HYB45} = 110V<br>{19: MB900_HYB46} = 110V<br>{20: B15} = 80V<br>{21: B18} = 80V<br>{22: CMOD} = 80V<br>{23: USA_B} = 80V<br>{24: MB800_HYB54} = 110V<br>{25: MB940_HYB55} = 110V<br>{28: MB1215_HYB66} = 110V<br>{29: MBS1215_HYB66} = 110V</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Holding Current</h4></TD>
+<TD valign="top" class="Layout"><p>Defiines the current required to keep the brake open. For brake module MBB.<br><br>values for HOLDING_CURRENT depending on brake setting:<br>{0: MB_07E} = 0.8A<br>{1: MB_09D} = 1.1A<br>{2: MB_10D} = 1.1A<br>{3: MB_10E] = 1.4A<br>{4: MB_11D} = 1.4A<br>{5: MB_11E} = 0.9A<br>{6: MB_13D} = 2.0A<br>{7: MB_13E} = 1.1A<br>{8: MB_14D} = 2.1A<br>{9: MB_14E} = 1.3A<br>{10: MB_16E} = 1.4A<br>{11: MB_ES16} = 1.0A<br>{12: MB_ES19} = 1.0A<br>{13: MB_ZS19_1} = 1.0A<br>{14: MB_ZS19_2} = 2.2A<br>{15: MB_BZ16} = 4.4A<br>{16: MB630_HYB44} = 0.2A<br>{17: MB750_HYB44} = 0.2A<br>{18: MB900_HYB45} = 0.2A<br>{19: MB900_HYB46} = 0.2A<br>{20: B15} = 2.0A<br>{21: B18} = 2.5A<br>{22: CMOD} = 2.5A<br>{23: USA_B} = 1.4A<br>{24: MB800_HYB54} = 0.4A<br>{25: MB940_HYB55} = 0.8A<br>{26: SB_EINSCHUETZ} = N.A.<br>{27: HW_SIM_LAB} = 0.2A<br>{28: MB1215_HYB66} = 0.4A<br>{29: MBS1215_HYB66} = 0.4A</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Holding Voltage</h4></TD>
+<TD valign="top" class="Layout"><p>Defiines the voltage required to keep the brake open. For brake module MBB.<br><br>values for HOLDING_VOLTAGE depending on brake setting:<br>{0: MB_07E} = 40V<br>{1: MB_09D} = 60V<br>{2: MB_10D} = 40V<br>{3: MB_10E] = 80V<br>{4: MB_11D} = 50V<br>{5: MB_11E} = 50V<br>{6: MB_13D} = 50V<br>{7: MB_13E} = 50V<br>{8: MB_14D} = 40V<br>{9: MB_14E} = 60V<br>{10: MB_16E} = 40V<br>{11: MB_ES16} = 50V<br>{12: MB_ES19} = 40V<br>{13: MB_ZS19_1} = 40V<br>{14: MB_ZS19_2} = 60V<br>{15: MB_BZ16} = 40V<br>{16: MB630_HYB44} = 110V<br>{17: MB750_HYB44} = 110V<br>{18: MB900_HYB45} = 110V<br>{19: MB900_HYB46} = 110V<br>{20: B15} = 40V<br>{21: B18} = 40V<br>{22: CMOD} = 40V<br>{23: USA_B} = 50V<br>{24: MB800_HYB54} = 110V<br>{25: MB940_HYB55} = 110V<br>{28: MB1215_HYB66} = 110V<br>{29: MBS1215_HYB66} = 110V</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

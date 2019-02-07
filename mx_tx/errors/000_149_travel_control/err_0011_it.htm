@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0011 FC_Block</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0011 FC_Block</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>FC_Block</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Lo stato del controllo motore  'bloccato'.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top"></td>
+<td valign="top">Consultare la diagnostica per il controllo motore</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Variodyn E: errore BARMAG LED rosso su ER113</td>
+<td valign="top">Reimpostare il convertitore di frequenza. Se il problema persiste, verificare il registro errori interno del convertitore di frequenza con un emulatore di terminale:</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top"></td>
+<td valign="top">Guida rapida:</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top"></td>
+<td valign="top">- Per iniziare, premere s</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top"></td>
+<td valign="top">- Premere f, leggere l'errore (v. di seguito</td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top"></td>
+<td valign="top">- Per uscire, premere F10</td>
+</tr>
+<tr>
+<td align="center" valign="top">7</td>
+<td valign="top"></td>
+<td valign="top">Reimpostare di nuovo il convertitore di frequenza.</td>
+</tr>
+<tr>
+<td align="center" valign="top">8</td>
+<td valign="top">Messaggi di errore interni del convertitore di frequenza:</td>
+<td valign="top">Possibili cause</td>
+</tr>
+<tr>
+<td align="center" valign="top">9</td>
+<td valign="top">U_ZK &lt; UZK_MIN</td>
+<td valign="top">Tensione di alimentazione troppo bassa. Fase di rete assente.</td>
+</tr>
+<tr>
+<td align="center" valign="top">10</td>
+<td valign="top">U_ZK &gt; UZK_MIN</td>
+<td valign="top">Resistenza del chopper non collegata, con specifiche errate (ohm) o difettosa. Impostazione errata del parametro.</td>
+</tr>
+<tr>
+<td align="center" valign="top">11</td>
+<td valign="top">I &gt; I_MAX</td>
+<td valign="top">Convertitore di frequenza VF20/30 difettoso. Cortocircuito o corto di terra sul cablaggio del motore. Impostazione errata del parametro.</td>
+</tr>
+<tr>
+<td align="center" valign="top">12</td>
+<td valign="top">TIBR &gt; 5 S</td>
+<td valign="top">La scheda di interfaccia non reimposta il segnale di avvio. Verificare il funzionamento del freno.</td>
+</tr>
+<tr>
+<td align="center" valign="top">13</td>
+<td valign="top">NET &gt; OFF</td>
+<td valign="top">Malfunzionamento del convertitore di frequenza VF20/30</td>
+</tr>
+<tr>
+<td align="center" valign="top">14</td>
+<td valign="top">KEINE IMPULSE</td>
+<td valign="top">Verificare l'alimentazione del rilevatore di posizione (pin 1 e 2 sul connettore IG100). Scheda di controllo VF20/30 difettosa. Slittamento della corda del rilevatore. Rilevatore difettoso.</td>
+</tr>
+<tr>
+<td align="center" valign="top">15</td>
+<td valign="top">ZEIT V K-FAHRT</td>
+<td valign="top">La corsa di correzione delle istruzioni non  stata reimpostata.</td>
+</tr>
+<tr>
+<td align="center" valign="top">16</td>
+<td valign="top">VBET &lt; 1.15 x VKN/2</td>
+<td valign="top">Valore VKN troppo elevato. DELTA_U troppo basso. Slittamento della corda del rilevatore. Difetti di cablaggio. Convertitore di frequenza difettoso. Difetto meccanico dell'impianto dell'ascensore.</td>
+</tr>
+<tr>
+<td align="center" valign="top">17</td>
+<td valign="top">VBET &gt; 1.15 x VKN</td>
+<td valign="top">Valore VKN troppo basso. FC_MAX_R troppo alto. MM_IMP troppo alto. Difetto meccanico dell'impianto dell'ascensore</td>
+</tr>
+<tr>
+<td align="center" valign="top">18</td>
+<td valign="top">TEMP &gt; T_MAX</td>
+<td valign="top">Superamento permanente della corrente nominale. Soffianti di raffreddamento non collegati o difettosi. Restrizione del flusso dell'aria. Direzione di rotazione errata.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

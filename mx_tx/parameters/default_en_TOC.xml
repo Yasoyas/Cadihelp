@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+
+<tocitem      text="Parameters" target="parameter_main">
+  <tocitem    text="Group Control" target="GroupControl" >
+    <tocitem  text="Display" target="GroupControlDisplay" >
+      <tocitem  text="Special Display" target="SpecialDisplay_15_1"/>
+      <tocitem  text="Display General" target="DisplayGeneral_15_1"/>
+    </tocitem>
+    <tocitem  text="General" target="GroupControlGeneral" >
+      <tocitem  text="Group General" target="GroupGeneral_1_1"/>
+      <tocitem  text="Building" target="Building_1_1"/>
+      <tocitem  text="Cost Calculation" target="CostCalculation_1_1"/>
+      <tocitem  text="Cost Calculation M10" target="CostCalculationM10_1_1"/>
+      <tocitem  text="Served Floors" target="ServedFloors_1_1"/>
+    </tocitem>
+    <tocitem  text="Parking" target="GroupControlParking" >
+      <tocitem  text="Parking General" target="ParkingGeneral_11_1"/>
+      <tocitem  text="Predefinition Parking" target="PredefinitionParking_11_1"/>
+      <tocitem  text="Statistical Parking" target="StatisticalParking_11_1"/>
+    </tocitem>
+    <tocitem  text="Peak Control" target="GroupControlPeakControl" >
+      <tocitem  text="Peak Control General" target="PeakControlGeneral_2_1"/>
+      <tocitem  text="Templates" target="Templates_2_1"/>
+    </tocitem>
+    <tocitem  text="Services" target="GroupControlServices" >
+      <tocitem  text="Firemans Control" target="FiremansControl_5_1"/>
+    </tocitem>
+    <tocitem  text="Subgroup Control" target="GroupControlSubgroupControl" >
+      <tocitem  text="Specification" target="Specification_3_1"/>
+      <tocitem  text="Signalisation" target="Signalisation_3_1"/>
+      <tocitem  text="Riser Reallocation" target="RiserReallocation_3_1"/>
+    </tocitem>
+  </tocitem>
+  <tocitem    text="Lift Control" target="LiftControl" >
+    <tocitem  text="General" target="LiftControlGeneral" >
+      <tocitem  text="Lift General" target="LiftGeneral_1_2"/>
+      <tocitem  text="Handicapped Mode" target="HandicappedMode_1_2"/>
+      <tocitem  text="Timeouts Lift" target="TimeoutsLift_1_2"/>
+    </tocitem>
+    <tocitem  text="Gong" target="LiftControlGong" >
+      <tocitem  text="Melodies" target="Melodies_4_2"/>
+      <tocitem  text="Gong in Car" target="GonginCar_4_2"/>
+      <tocitem  text="Gong on Floor" target="GongonFloor_4_2"/>
+    </tocitem>
+    <tocitem  text="Services" target="LiftControlServices" >
+      <tocitem  text="Bankinghouse Control" target="BankinghouseControl_5_2"/>
+      <tocitem  text="Building Sway" target="BuildingSway_5_2"/>
+      <tocitem  text="Emergency Stop" target="EmergencyStop_5_2"/>
+      <tocitem  text="Earthquake" target="Earthquake_5_2"/>
+      <tocitem  text="Service General" target="ServiceGeneral_5_2"/>
+      <tocitem  text="Car Selection Control" target="CarSelectionControl_5_2"/>
+      <tocitem  text="Card Reader" target="CardReader_5_2"/>
+      <tocitem  text="DPF / DH / DF / JRVP / JRV" target="DPF_DH_DF_JRVP_JRV_5_2"/>
+      <tocitem  text="Emergency Power" target="EmergencyPower_5_2"/>
+      <tocitem  text="Enforced Stop" target="EnforcedStop_5_2"/>
+      <tocitem  text="Firemans Control" target="FiremansControl_5_2"/>
+      <tocitem  text="Out of Services" target="OutofServices_5_2"/>
+      <tocitem  text="Ramp Trip" target="RampTrip_5_2"/>
+      <tocitem  text="Services Reserve" target="ServicesReserve_5_2"/>
+      <tocitem  text="Emergency Control" target="EmergencyControl_5_2"/>
+      <tocitem  text="Sabbath" target="Sabbath_5_2"/>
+      <tocitem  text="Others" target="Others_5_2"/>
+    </tocitem>
+    <tocitem  text="Voice Settings" target="LiftControlVoiceSettings" >
+      <tocitem  text="Voice" target="Voice_31_2"/>
+    </tocitem>
+  </tocitem>
+  <tocitem    text="Drive" target="Drive" >
+    <tocitem  text="Motor Control" target="DriveMotorControl" >
+      <tocitem  text="Inverter" target="Inverter_24_3"/>
+      <tocitem  text="Hoistway" target="Hoistway_24_3"/>
+      <tocitem  text="Traction" target="Traction_24_3"/>
+      <tocitem  text="Rope" target="Rope_24_3"/>
+      <tocitem  text="DMC" target="DMC_24_3"/>
+      <tocitem  text="Motor  (Asynchron / Synchron / DC)" target="Motor(Asynchron_Synchron_DC)_24_3"/>
+      <tocitem  text="Supervisor" target="Supervisor_24_3"/>
+      <tocitem  text="Controller" target="Controller_24_3"/>
+      <tocitem  text="Reserve" target="Reserve_24_3"/>
+      <tocitem  text="Magnetek-Motor" target="Magnetek-Motor_24_3"/>
+      <tocitem  text="Magnetek-Motor Field" target="Magnetek-MotorField_24_3"/>
+      <tocitem  text="Magnetek-Elevator" target="Magnetek-Elevator_24_3"/>
+      <tocitem  text="Magnetek-Regulation" target="Magnetek-Regulation_24_3"/>
+      <tocitem  text="Magnetek-Supervisor" target="Magnetek-Supervisor_24_3"/>
+    </tocitem>
+    <tocitem  text="Settings" target="DriveSettings" >
+      <tocitem  text="Settings" target="Settings_22_3"/>
+      <tocitem  text="DMC Settings" target="DMCSettings_22_3"/>
+    </tocitem>
+    <tocitem  text="Travel Control" target="DriveTravelControl" >
+      <tocitem  text="Brake" target="Brake_23_3"/>
+      <tocitem  text="Accel./Decel./Jerk" target="Accel._Decel._Jerk_23_3"/>
+      <tocitem  text="Simulation" target="Simulation_23_3"/>
+      <tocitem  text="DC-Drive" target="DC-Drive_23_3"/>
+      <tocitem  text="General" target="General_23_3"/>
+      <tocitem  text="Regulation" target="Regulation_23_3"/>
+      <tocitem  text="Speed" target="Speed_23_3"/>
+      <tocitem  text="Shaft" target="Shaft_23_3"/>
+    </tocitem>
+  </tocitem>
+  <tocitem    text="Doors" target="Doors" >
+    <tocitem  text="All Doors" target="DoorsAllDoors" >
+      <tocitem  text="Door Mode" target="DoorMode_10_5"/>
+      <tocitem  text="Door Timeouts" target="DoorTimeouts_10_5"/>
+      <tocitem  text="Door General" target="DoorGeneral_10_5"/>
+    </tocitem>
+    <tocitem  text="Miconic 10" target="DoorsMiconic10" >
+      <tocitem  text="Door Times M10" target="DoorTimesM10_9_5"/>
+    </tocitem>
+    <tocitem  text="Side 1" target="DoorsSide1" >
+      <tocitem  text="Door General Side 1" target="DoorGeneralSide1_6_5"/>
+      <tocitem  text="Reserve Door Side 1" target="ReserveDoorSide1_6_5"/>
+      <tocitem  text="Door Times Side 1" target="DoorTimesSide1_6_5"/>
+    </tocitem>
+    <tocitem  text="Side 2" target="DoorsSide2" >
+      <tocitem  text="Door General Side 2" target="DoorGeneralSide2_7_5"/>
+      <tocitem  text="Reserve Door Side 2" target="ReserveDoorSide2_7_5"/>
+      <tocitem  text="Door Times Side 2" target="DoorTimesSide2_7_5"/>
+    </tocitem>
+  </tocitem>
+  <tocitem    text="Load Measurement" target="LoadMeasurement" >
+    <tocitem  text="General" target="LoadMeasurementGeneral" >
+      <tocitem  text="Load Handling" target="LoadHandling_1_6"/>
+      <tocitem  text="Unbalance" target="Unbalance_1_6"/>
+    </tocitem>
+  </tocitem>
+  <tocitem    text="Servitel LC" target="ServitelLC" >
+    <tocitem  text="Dial Sequences" target="ServitelLCDialSequences" >
+      <tocitem  text="Installation" target="Installation_27_10"/>
+      <tocitem  text="Dial Sequence" target="DialSequence_27_10"/>
+      <tocitem  text="Call - Timing" target="Call-Timing_27_10"/>
+    </tocitem>
+    <tocitem  text="Monitoring" target="ServitelLCMonitoring" >
+      <tocitem  text="Monitoring General" target="MonitoringGeneral_21_10"/>
+    </tocitem>
+    <tocitem  text="Phone Settings" target="ServitelLCPhoneSettings" >
+      <tocitem  text="Phone Settings" target="PhoneSettings_28_10"/>
+      <tocitem  text="Modem" target="Modem_28_10"/>
+      <tocitem  text="Answer - Timing" target="Answer-Timing_28_10"/>
+    </tocitem>
+  </tocitem>
+  <tocitem    text="Miconic 10" target="Miconic10" >
+    <tocitem  text="General" target="Miconic10General" >
+      <tocitem  text="Handicapped Call Handling M10" target="HandicappedCallHandlingM10_1_11"/>
+      <tocitem  text="Terminal Lift Allocation" target="TerminalLiftAllocation_1_11"/>
+      <tocitem  text="Miconic 10 Control" target="Miconic10Control_1_11"/>
+    </tocitem>
+    <tocitem  text="Terminals" target="Miconic10Terminals" >
+      <tocitem  text="Destination Indicator" target="DestinationIndicator_12_11"/>
+      <tocitem  text="Floor Terminal" target="FloorTerminal_12_11"/>
+      <tocitem  text="Option Box" target="OptionBox_12_11"/>
+    </tocitem>
+  </tocitem>
+  <tocitem    text="CADI-SMLCD" target="CADI-SMLCD" >
+    <tocitem  text="General" target="CADI-SMLCDGeneral" >
+      <tocitem  text="SMLCD" target="SMLCD_1_12"/>
+    </tocitem>
+    <tocitem  text="Supervisory Display" target="CADI-SMLCDSupervisoryDisplay" >
+      <tocitem  text="Names General" target="NamesGeneral_13_12"/>
+    </tocitem>
+  </tocitem>
+</tocitem>
+</toc>

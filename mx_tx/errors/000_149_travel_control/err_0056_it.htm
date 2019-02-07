@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0056 CarNoStop</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0056 CarNoStop</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>CarNoStop</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Il controllo corsa rileva il movimento della cabina anche dopo il completamento della corsa e il successivo tempo di ritardo. Il monitoraggio della corsa prevede che la cabina si arresti dopo il completamento interno della corsa (fine normale della corsa o arresto di emergenza) e il tempo definito con il parametro 'MOVE_SHUTDOWN'.<br>
+(Nome evento interno: FIN_CAR_MOVING)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Regolazione errata del freno</td>
+<td valign="top">Verificare l'azione del freno eseguendo un arresto di emergenza a piena velocità in ascesa con la cabina vuota e verificare se la cabina si ferma (dovrebbe arrestarsi entro al massimo 4 secondi). Utilizzare la verifica del freno per misurare la decelerazione media dopo l'arresto di emergenza. Attenzione a un eventuale scivolamento della corda sulla puleggia di trazione.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Parametro errato nel controllo corsa</td>
+<td valign="top">Verificare il valore del parametro 'MOVE_SHUTDOWN'</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

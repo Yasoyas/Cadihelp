@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0009 KB_Fault</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0009 KB_Fault</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>KB_Fault</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>I contatti del freno KB o KB1 non si attivano correttamente. Il controllo corsa richiede informazioni da KB e KB1. In caso di un solo contatto KB, verificare se è presente un ponticello sul connettore del PCB.<br>
+Commenti: per i comandi senza ingranaggi, verificare il corretto funzionamento dei contatti del freno e il corretto funzionamento dell'alimentatore del freno stesso; quando il freno si apre, viene prima attivato SB (alimentazione completa al freno) e subito dopo la riduzione della tensione per il freno stesso (es. SGRB o modulo freno elettronico). Il funzionamento della riduzione della tensione è indipendente dallo stato di KB e KB1.<br>
+È previsto un determinato intervallo di tempo entro il quale il freno deve aprirsi; allo scadere di questo intervallo, i contatti vengono verificati. Il KB è probabilmente il componente più problematico dell'intero impianto. Assicurarsi che i contatti siano fissati correttamente e puliti. L'esperienza ha dimostrato che probabilmente la soluzione migliore è prevedere uno spazio di 1 mm tra il contatto e l'elemento di attuazione quando il freno è chiuso.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Con MBB:<br>
+01 (hex)/ 1 (dec): (MBB_TASK_CREATE_ERROR) = Messaggio di stato<br>
+02 (hex)/ 2 (dec): (MBB_BUFFER_OVERFLOW_ERROR) = Messaggio IO<br>
+03 (hex)/ 3 (dec): (MBB_INT_WRONG_MSG) = Ricevuto messaggio sconosciuto<br>
+04 (hex)/ 4 (dec): (MBB_ZERO_MESSAGE) = Inviato messaggio di lunghezza zero<br>
+05 (hex)/ 5 (dec): (MBB_UNKNOWN_COMMAND) = Ricevuto comando sconosciuto<br>
+06 (hex)/ 6 (dec): (MBB_KB_FAULT) = Errore KB<br>
+07 (hex)/ 7 (dec): (MBB_KB1_FAULT) = Errore KB1<br>
+08 (hex)/ 8 (dec): (MBB_OPEN_TIMEOUT_CURRENT) = Timeout di apertura, assenza di corrente<br>
+09 (hex)/ 9 (dec): (MBB_CLOSE_TIMEOUT_CURRENT) = Timeout di chiusura, assenza di corrente 0<br>
+0A (hex)/10 (dec): (MBB_IGBT3_FAULT) = Guasto IGBT o altro errore<br>
+0B (hex)/11 (dec): (MBB_HW_FAULT) = Errore su HW MBB<br>
+0C (hex)/12 (dec): (MBB_OPEN_STANDSTILL) = Freno aperto durante la sosta<br>
+0D (hex)/13 (dec): (MBB_CLOSED_RUNNING) = Freno chiuso durante la corsa<br>
+0E (hex)/14 (dec): (MBB_MBX_ERROR) = Errore mailbox MBB<br>
+0F (hex)/15 (dec): (MBB_MAX_MESSAGE_SIZE) = Messaggio MBB troppo lungo<br>
+10 (hex)/16 (dec): (MBB_CURRENT_DIFF_ERROR) = Errore di differenza di corrente MBB<br>
+11 (hex)/17 (dec): (MBB_MAINS_NOT_OFF) = La rete elettrica non si è disattivata<br>
+12 (hex)/18 (dec): (MBB_IGBT1_FAULT) = Verifica IGBT1 non riuscita.<br>
+13 (hex)/19 (dec): (MBB_VOLTAGE_DIFF_ERROR) = Errore di differenza di tensione MBB</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Contatti del freno difettosi</td>
+<td valign="top">Verificare i contatti del freno.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top"></td>
+<td valign="top">Verificare la regolazione dei contatti del freno.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Problema meccanico del freno</td>
+<td valign="top">Verificare il freno.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top"></td>
+<td valign="top">Osservare il freno quando si apre.</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top"></td>
+<td valign="top">I due lati del freno devono aprirsi simmetricamente.</td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top">Tipo KB/KB1 (feedback) errato</td>
+<td valign="top">Verificare se i parametri di comando (impostazioni) presentano il tipo di freno corretto.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Field Feedback</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="20%">Location</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Drive</td>
+<td valign="top">Controllare : contatti del freno SB/SB1 (sporcizia, polvere, distanza di 1 mm tra il contatto e l'elemento di azionamento quando il freno é chiuso)</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body		{ font-family:Arial; font-size:12pt; }
+h3		{ font-size:10pt; }
+/* vertical-align:top doesn't work in the Java Help Viewer */
+
+p 			{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table		{ border-collapse:collapse;
+		  border-width:1px;
+		  margin-bottom: 5px;
+		  margin-top:5px;}
+th		{ background-color:silver; /*#FFFF99; */
+		  border-width:1px;
+		  font-size:14pt;
+		  font-weight: bold;
+		  padding:3px;
+  		  text-align:center; 
+		  vertical-align:top; }
+td		{ border-width:1px;
+		  font-size:14pt;
+		  padding:3px;
+		  vertical-align:top; }
+

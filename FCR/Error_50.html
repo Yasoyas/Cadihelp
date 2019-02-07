@@ -1,0 +1,610 @@
+<html>
+	<head>
+		<link rel=stylesheet href=../gddt/images/styles.css type=text/css>
+	</head>
+	<body>
+		<hr>
+		<table width=100% border=0 cellspacing=0 cellpadding=2 class=filehead>
+			<tr><td align=left colspan=2 class=filehead>
+				<h1>FCR Error Description (V5.1)</h1></td></tr>
+			<tr><td colspan=2 class=filehead>&copy; 2007 by Schindler Aufzüge AG, R&amp;D-DR</td></tr>
+			<tr><td width=30% class=filehead>Product: <b>VARIOdyn&reg PF1-FCR</b></td>
+				<td class=filehead></td></tr>
+<!--			<tr><td class=filehead>External Reference:</td>
+				<td class=filehead></td></tr>
+			<tr><td class=filehead>Document Number:</td>
+				<td class=filehead>0032</td></tr>
+-->
+			<tr><td class=filehead>Version: GDDT Release 1.1 November 07</td>
+				<td class=filehead></td></tr>
+		</table>
+		<hr>
+		<h2 id=1>1. Introduction</h2>
+		<h3 id=1_1>1.1 Purpose</h3>
+		<p>
+			This document describes the errors and their indication. In addition, some hints for trouble shooting are given.
+		</p>
+		<h3 id=1_2>1.2 Scope</h3>
+		<p>
+			This description is valid for mains converters controlled by SW FCR 5.1:
+			<ul>
+				<li>PVEC/PIOFCR: VF155/VF288</li>
+			</ul>
+		</p>
+		<h3 id=1_3>1.3 References to documentation</h3>
+		<ul>
+			<li>none</li>
+		</ul>
+		<h2 id=2>2 Errorlog</h2>
+		<h3 id=2_1>2.1 General concept</h3>
+		<p >
+			The errors of the mains converter are stored in an error log. This can be accessed using GDDT. In addition, pending errors are 
+			indicated on the display of PIOFCR.
+		</p>
+		<h3 id=2_2>2.2 Error state</h3>
+		<p>
+			The error state is indicated by the LED's on PIOFCR as follows:
+			<table border="1" cellspacing="1" cellpadding="5">
+				<tr>
+					<th>ERROR</th><th>OK</th><th>PARAMETER</th><th>Description</th>
+				</tr>
+				<tr>
+					<td>OFF</td><td>OFF</td><td>OFF</td><td>FCR not available, check power supply.</td>
+				</tr>
+				<tr>
+					<td>OFF</td><td>OFF</td><td>ON</td><td>FCR is not commissioned. Load parameters using GDDT.</td>
+				</tr>
+				<tr>
+					<td>OFF</td><td>ON</td><td>OFF</td><td>FCR is ready for operation or is in operation.</td>
+				</tr>
+				<tr>
+					<td>ON</td><td>ON</td><td>OFF</td><td>FCR is blocked. Check 7 segment display.</td>
+				</tr>
+				<tr>
+					<td>ON</td><td>OFF</td><td>OFF</td><td>FCR is in dead state. Check 7 segment display.</td>
+				</tr>
+			</table>
+		</p>
+		<h2 id=3>3 Error description</h2>
+		<p>Not all the errors below are written to error log.</p>
+		<table border="1" cellspacing="1" cellpadding="5">
+			<tr>
+				<th>Error No.</th><th>7 segment</th><th>Error name</th><th>Error description</th>
+			</tr>
+			<tr>
+				<td>01</td><td>2</td><td>Overcurrent Phase 1</td>
+				<td>
+					<p>Over current detected in phase 1.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Heavy overload of mains converter.</li>
+							<li>Problem with current measurement.</li>
+							<li>Phase interruption during trip.</li>
+							<li>Wrong parameters.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>IM_OFF</li>
+							<li>NORM_IMOFF</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>02</td><td>3</td><td>Overcurrent Phase 2</td>
+				<td>
+					<p>Over current detected in phase 2.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Heavy overload of mains converter.</li>
+							<li>Problem with current measurement.</li>
+							<li>Phase interruption during trip.</li>
+							<li>Wrong parameters.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>IM_OFF</li>
+							<li>NORM_IMOFF</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>03</td><td>4</td><td>Overcurrent Phase 3</td>
+				<td>
+					<p>Over current detected in phase 3.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Heavy overload of mains converter.</li>
+							<li>Problem with current measurement.</li>
+							<li>Phase interruption during trip.</li>
+							<li>Wrong parameters.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>IM_OFF</li>
+							<li>NORM_IMOFF</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>04</td><td>5</td><td>Overvoltage DC Link</td>
+				<td>
+					<p>Over voltage detected in dc link.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Heavy overload in generative operation.</li>
+							<li>Phase interruption during trip.</li>
+							<li>Wrong parameters.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>UD_MAX_OFF</li>
+							<li>UD_MAX_ON</li>
+							<li>P_UD</li>
+							<li>I_UD</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>05</td><td>6</td><td>Undervoltage DC Link</td>
+				<td>
+					<p>Under voltage detected in dc link.</p>
+					<p>Possible reason:
+						<ul>
+							<li>DC link discharged by motor controller (visible on display only, no errorlog entry).</li>
+							<li>Heavy overload in motiv operation.</li>
+							<li>Problem (interruption) of dc link voltage measurement.</li>
+							<li>Wrong parameters.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>UD_MIN_OFF</li>
+							<li>UD_MIN_ON</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>-</td><td>0</td><td>DC Link Voltage OK</td>
+				<td>
+					<p>DC link voltage within allowed range.</p>
+					<p>Related parameters:
+						<ul>
+							<li>UD_MAX_ON</li>
+							<li>UD_MIN_ON</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>07</td><td>7</td><td>Mains interruption Phase 1</td>
+				<td>
+					<p>Interruption of phase 1 detected.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Failure in mains supply.</li>
+							<li>Problem (interruption) of mains voltage measurement.</li>
+							<li>Wrong parameters.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>UM_MIN</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>08</td><td>8</td><td>Mains interruption Phase 2</td>
+				<td>
+					<p>Interruption of phase 2 detected.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Failure in mains supply.</li>
+							<li>Problem (interruption) of mains voltage measurement.</li>
+							<li>Wrong parameters.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>UM_MIN</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>09</td><td>9</td><td>Mains interruption Phase 3</td>
+				<td>
+					<p>Interruption of phase 3 detected.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Failure in mains supply.</li>
+							<li>Problem (interruption) of mains voltage measurement.</li>
+							<li>Wrong parameters.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>UM_MIN</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>-</td><td>0</td><td>Mains Phase 1 OK</td>
+				<td>
+					<p>Mains voltage measurement of phase 1 within allowed range.</p>
+					<p>Related parameters:
+						<ul>
+							<li>UM_MIN</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>-</td><td>0</td><td>Mains Phase 2 OK</td>
+				<td>
+					<p>Mains voltage measurement of phase 2 within allowed range.</p>
+					<p>Related parameters:
+						<ul>
+							<li>UM_MIN</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>-</td><td>0</td><td>Mains Phase 3 OK</td>
+				<td>
+					<p>Mains voltage measurement of phase 3 within allowed range.</p>
+					<p>Related parameters:
+						<ul>
+							<li>UM_MIN</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>13</td><td>A / ¯</td><td>Power Electronic Failure Phase 1</td>
+				<td>
+					<p>Error of Skiip phase 1 (VF120/170/280/288) or of mains powermodule (VF155) detected.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Problem (interruption) of current measurement.</li>
+							<li>Skiip module defective.</li>
+							<li>Connection to Skiip module interrupted.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>none</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>14</td><td>A / –</td><td>Power Electronic Failure Phase 2</td>
+				<td>
+					<p>Error of Skiip phase 2 (VF120/170/280/288) detected. Must not appear with VF155.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Problem (interruption) of current measurement.</li>
+							<li>Skiip module defective.</li>
+							<li>Connection to Skiip module interrupted.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>none</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>15</td><td>A / _</td><td>Power Electronic Failure Phase 3</td>
+				<td>
+					<p>Error of Skiip phase 3 (VF120/170/280/288) detected. Must not appear with VF155.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Problem (interruption) of current measurement.</li>
+							<li>Skiip module defective.</li>
+							<li>Connection to Skiip module interrupted.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>none</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>-</td><td>0</td><td>Power Electronic OK</td>
+				<td>
+					<p>Skiip error disappeared.</p>
+					<p>Related parameters:
+						<ul>
+							<li>none</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>17</td><td>b</td><td>Mains Undervoltage</td>
+				<td>
+					<p>Undervoltage detected by mains voltage measurement.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Undervoltage of mains supply.</li>
+							<li>Problem (interruption) of mains voltage measurement.</li>
+							<li>Wrong parameters.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>UMD_MIN</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>-</td><td>0</td><td>Mains Voltage OK</td>
+				<td>
+					<p>Mains voltage within allowed range.</p>
+					<p>Related parameters:
+						<ul>
+							<li>UMD_MIN</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>19</td><td>C / ¯</td><td>Overtemperature Phase 1</td>
+				<td>
+					<p>Overtemperature of phase 1 (VF120/170/280/288) or of mains powermodule (VF155) detected.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Too heavy load for a long period of time.</li>
+							<li>Fan defective.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>none</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>20</td><td>C / –</td><td>Overtemperature Phase 2</td>
+				<td>
+					<p>Overtemperature of phase 2 (VF120/170/280/288) detected. Must not appear with VF155.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Too heavy load for a long period of time.</li>
+							<li>Fan defective.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>none</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>21</td><td>C / _</td><td>Overtemperature Phase 3</td>
+				<td>
+					<p>Overtemperature of phase 3 (VF120/170/280/288) detected. Must not appear with VF155.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Too heavy load for a long period of time.</li>
+							<li>Fan defective.</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>none</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>22</td><td></td><td>Heat Sink Temperature OK</td>
+				<td>
+					<p>Heat sink temperature within allowed range.</p>
+					<p>Related parameters:
+						<ul>
+							<li>none</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>23</td><td>d</td><td>Mains Frequency wrong</td>
+				<td>
+					<p>Measured mains frequency out of range.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Problem (interruption) of mains voltage measurement.</li>
+							<li>Heavy disturbance on mains supply.</li>
+							<li>Wrong parameters</li>
+						</ul>
+					</p>
+					<p>Related parameters:
+						<ul>
+							<li>OMEGAM_MAX</li>
+							<li>OMEGAM_MIN</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			</tr>
+			<tr>
+				<td>-</td><td>0</td><td>Mains Frequency OK</td>
+				<td>
+					<p>Measured mains frequency within range.</p>
+					<p>Related parameters:
+						<ul>
+							<li>OMEGAM_MAX</li>
+							<li>OMEGAM_MIN</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>-</td><td></td><td>Regulation Started (CTRLON)</td>
+				<td>
+					<p>Regulation started. Event only, never in errorlog.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>26</td><td></td><td>Regulation Stopped (CTRLOFF)</td>
+				<td>
+					<p>Regulation started. Event only, never in errorlog.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>27</td><td></td><td>PWM unlocked</td>
+				<td>
+					<p>PWM unlocked. Event only, never in errorlog.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>28</td><td></td><td>PWM locked</td>
+				<td>
+					<p>PWM locked. Event only, never in errorlog.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>29</td><td></td><td>External Enable</td>
+				<td>
+					<p>External enable set (VARIOCON, PIOVEC). Event only, never in errorlog.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>30</td><td></td><td>No external Endable</td>
+				<td>
+					<p>External enable reset (VARIOCON, PIOVEC). Event only, never in errorlog.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>31</td><td></td><td>Reset</td>
+				<td>
+					<p>Reset of PVEC</p>
+					<p>Possible reason:
+						<ul>
+							<li>Reset button pressed on PVEC.</li>
+							<li>Power off/on</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>32</td><td></td><td>Watchdog Reset</td>
+				<td>
+					<p>Watchdog reset of PVEC</p>
+					<p>Possible reason:
+						<ul>
+							<li>Fatal sw error</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>33</td><td></td><td>Undervoltage +12V supply</td>
+				<td>
+					<p>Internal 12 V supply out of range.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Power supply failure.</li>
+							<li>PIOFCR faulty.</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>34</td><td></td><td>Undervoltage -12V supply</td>
+				<td>
+					<p>Internal 12 V supply out of range.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Power supply failure.</li>
+							<li>PIOFCR faulty.</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>35</td><td></td><td>Errorlog initialized</td>
+			</tr>
+			<tr>
+				<td>36</td><td></td><td>PLL not ok.</td>
+				<td>
+					<p>This error occures only on parallel inverter and only on slave!</p>
+					<p>PWM of master and slave line inverter is not synchronized.</p>
+					<p>Possible reason:
+						<ul>
+							<li>Wrong adjustment of switches on CANPCON.</li>
+							<li>Interruption of communication cable between the CANPCON of master and slave line converter.</li>
+						</ul>
+					</p>
+					<p>Check 7 segment display on CANPCON: slave line inverter must show "PLL".</p>
+				</td>
+			</tr>
+			<tr>
+				<td>37</td><td></td><td>Current difference Phase 1</td>
+				<td>
+					<p>Difference between reference and actual current in phase 1
+						is bigger than IMD_NOM / 8 for more than 20 ms.
+					</p>
+					<p>Possible reason:
+						<ul>
+							<li>Interruption of single phases during trip.</li>
+							<li>Wrong parameter adjustment.</li>
+							<li>Mains quality too bad.</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>38</td><td></td><td>Current difference Phase 2</td>
+				<td>
+					<p>Difference between reference and actual current in phase 2
+						is bigger than IMD_NOM / 8 for more than 20 ms.
+					</p>
+					<p>Possible reason:
+						<ul>
+							<li>Interruption of single phases during trip.</li>
+							<li>Wrong parameter adjustment.</li>
+							<li>Mains quality too bad.</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>39</td><td></td><td>Current difference Phase 3</td>
+				<td>
+					<p>Difference between reference and actual current in phase 3
+						is bigger than IMD_NOM / 8 for more than 20 ms.
+					</p>
+					<p>Possible reason:
+						<ul>
+							<li>Interruption of single phases during trip.</li>
+							<li>Wrong parameter adjustment.</li>
+							<li>Mains quality too bad.</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+		</table>
+		<hr>
+	</body>
+</html>

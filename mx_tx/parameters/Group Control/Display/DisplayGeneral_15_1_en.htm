@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Display General</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Display General</em> of the parameter group <em>Display</em> in subsystem <em>Group Control</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Low Cost Position Display</h4></TD>
+<TD valign="top" class="Layout"><p>Indication of car position on car operating panel (COP) with blinking car call acknowledge lamp (LC). Can only be used on elevators with a conventional car operating panel.<br><br>Modes: <br><br>0: (OFF) - Position indication with blinking LC disabled<br>1: Actual floor selector value (P_DISPL_LC_SELECTOR_POS) drives corresponding car call acknowledge lamp.<br>2: Actual floor position value (P_DISPL_LC_FLOOR_POS) drives corresponding car call acknowledge lamp.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Position Display</h4></TD>
+<TD valign="top" class="Layout"><p>Name of the specified floor (maximum 4 characters). There is one parameter per stop/floor. The floor name can be one to four ASCII characters. The remaining characters have to be filled with 0 (zero not 'O').<br><br>For Miconic 10 only:<br>The floor names for a Miconic 10 installation can only contain the ‘-‘ sign and the characters corresponding to the digits 0 to 9 (this is due to the keys available on the terminals used to enter the destination floor). A floor name can only have three characters maximum.<br>The range for the floor names is: -99,-98, …, -2, -1, 0, 1, 2, 3, 4, …, 10, 11, …, 99, 100, …156. Typically the main floor is ‘0’. and the ‘-‘ sign is used for floors below the main floor.<br><br>Default values for Miconic 10:  0...(number_of_floors – 1).<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example: 4 floors
+                    
+Disposition :             Parameter (number in hexadecimal)
+                          +------+-------------------+
+       L1  L2             | FLOOR|    FLR_NAME       |
+      +---+---+           +======+====+====+====+====+
+ 1    |   |   | 4         |  1   | 55 | 47 | 31 | 00 |
+      +---+---+           +------+----+----+----+----+
+ EG   |   |   | 3         |  2   | 55 | 47 | 32 | 00 |
+      +---+---+           +------+----+----+----+----+
+ UG2  |   |   | 2         |  3   | 45 | 47 | 00 | 00 |    
+      +---+---+           +------+----+----+----+----+
+ UG1  |   |   | 1         |  4   | 31 | 00 | 00 | 00 |
+      +---+---+           +------+----+----+----+----+
+
+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Express Zone</h4></TD>
+<TD valign="top" class="Layout"><p>Table for definition of lift related express (blind) zones. A maximum of 3 express zones can be defined.<br>The definition of express zones is required to control position indicators which show additional characters (defined with parameter P_DISPL_ASCII) when the lift is travelling in a express zone. The definition for each express zone includes the floor numbers below and above the express zone and the number of intermediate (virtual) floor levels between the two floors.<br><br>When the lift is travelling in a express zone where no normal floor selector or floor position messages is sent, the travel control sends additional messages (so called TUEM_SELECTOR messages) which are used to generate the OUT_DISPLAY / VXT_EXPRESS_ZONE message to control the position indicator.<br>The TUEM message represents the present car position and consists of a two digit number x, y<br>x = closest group floor position number below present car, <br>y = percentage (0-9) of group floor position of present car position related to x (e.g. 3,4 means car is at a positon 40% above floor 3<br><br>Based on the value of the TUEM_SELECTOR message and the definition of the express zone parameter the required VXT_EXPRESS_ZONE messages are generated. <br>The number of intermediate floor position in a express zone is limited by the resolution of the TUEM_SELECTOR messages which is 6m. Therefore express zone display only works on elevators (simulators) where the floor to floor distance is well above 6m for the express zones defined in the PCT.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>¨08[ 06 04 01 0D0E01 ]    * P_DISPL_EXPRESS_ZONE = 1 13 14 1
+¨08[ 06 04 02 000000 ]    * P_DISPL_EXPRESS_ZONE = 2 0 0 0 0
+¨08[ 06 04 03 000000 ]    * P_DISPL_EXPRESS_ZONE = 3 0 0 0 0
+}</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Floor Name Upper Deck</h4></TD>
+<TD valign="top" class="Layout"><p>Name of the floor (maximum 4 characters) served by the upper deck of a double deck elevator related to the (group) stop number of the car. There is one parameter per stop (index number). The floor name can be one to four ASCII characters. The remaining characters have to be filled with 0 (zero not 'O').<br>The parameter is only used for DD elevators. It is used to convert calls entered on the in-car terminal to the stop number of the car.<br><br>For Miconic 10 only:<br>The floor names for a Miconic 10 installation can only contain the ‘-‘ sign and the characters corresponding to the digits 0 to 9 (this is due to the keys available on the terminals used to enter the destination floor). A floor name can only have three characters maximum.<br>The range for the floor names is: -99,-98, …, -2, -1, 0, 1, 2, 3, 4, …, 10, 11, …, 99, 100, …156. Typically the main floor is ‘0’. and the ‘-‘ sign is used for floors below the main floor.<br><br>Default values for Miconic 10:  0...(number_of_floors – 1).<br><br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre>Example: 4 floors
+                    
+Disposition :             Parameter (number in hexadecimal)
+                          +------+-------------------+
+       L1  L2             | FLOOR|    FLR_NAME       |
+      +---+---+           +======+====+====+====+====+
+ 1    |   |   | 4         |  1   | 55 | 47 | 31 | 00 |
+      +---+---+           +------+----+----+----+----+
+ EG   |   |   | 3         |  2   | 55 | 47 | 32 | 00 |
+      +---+---+           +------+----+----+----+----+
+ UG2  |   |   | 2         |  3   | 45 | 47 | 00 | 00 |    
+      +---+---+           +------+----+----+----+----+
+ UG1  |   |   | 1         |  4   | 31 | 00 | 00 | 00 |
+      +---+---+           +------+----+----+----+----+
+
+</pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0705 Speed Difference</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0705 Speed Difference</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>MC PVEC</em> error <em>Speed Difference</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>La differenza tra il valore di riferimento della velocità fornito dal controllo corsa e il feedback effettivo della velocità fornito dall'encoder del motore supera il valore definito dal parametro OVER_SPEED_FACT. Il parametro OVER_SPEED_FACT si riferisce alla velocità nominale.<br>
+Ulteriore causa di errore: nonostante un'elevata coppia non è possibile misurare alcuna velocità effettiva (errore di controllo velocità).</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>1: velocità inferiore al previsto<br>
+2: velocità superiore al previsto<br>
+3: errore di controllo velocità<br>
+4: senso di rotazione errato rilevato durante il test 'sense of rotation' (test di direzione per motori asincroni)<br>
+5: arresto di emergenza durante verifica senza rilevatore per la regolazione</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>Nessuna.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Altre informazioni 1 - 3:</td>
+<td valign="top">a) assicurarsi che i freni non rimangano chiusi</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">a) il controllore non è in grado di fornire una coppia sufficiente per seguire il valore di riferimento della velocità;</td>
+<td valign="top">b) verificare che la cabina sia bilanciata al 50%</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">possibili cause:</td>
+<td valign="top">c) ridurre i valori di accelerazione o decelerazione</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">- il freno non si apre</td>
+<td valign="top">d) verificare il parametro dell'ascensore impu ref</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top">- ascensore non bilanciato</td>
+<td valign="top">e) verificare l'encoder</td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top">- potenza di uscita del convertitore di frequenza troppo bassa</td>
+<td valign="top"></td>
+</tr>
+<tr>
+<td align="center" valign="top">7</td>
+<td valign="top">b) l'encoder incrementale é difettoso</td>
+<td valign="top"></td>
+</tr>
+<tr>
+<td align="center" valign="top">8</td>
+<td valign="top">Altre informazioni 4: segnali del rilevatore o fasi motore invertiti (rilevazione dell'errore immediatamente dopo l'avvio della corsa)</td>
+<td valign="top">Modificare i segnali del rilevatore o le fasi motore, oppure eseguire un test di direzione</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

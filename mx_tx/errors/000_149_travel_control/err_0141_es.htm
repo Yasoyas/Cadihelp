@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0141 Safety T1</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0141 Safety T1</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>Safety T1</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The safety circuit opened before the first tap (ISKT1). Problem with safety circuit power supply.<br>
+Comments: This error may be logged after main power supply is disconnected. Other safety circuit tap inputs (ISKT2 etc.) will not create corresponding error messages.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>= 00000000: no information available<br><br>
+= xxyyyyyy: First 2 digits (xx) show diagnostics information for the safety circuit supply (SKS). The remaining 6 digits (yyyyyy) show the car position (decimal value in mm) when the error occured.<br><br>
+Extra information safety circuit supply (xx):<br>
+00: no power safety circuit suppy<br><br>
+For control systems with pcb SKS the following extra information is provided:<br>
+01: Safety circuit voltage at the relays too high. In the event of a HW failure (malfunction of the voltage regulation) the safety circuit power supply is switched off if the voltage at the relays is too high. The voltage level is 27.0 to 28.0 volts.<br>
+02: Safety circuit voltage at the source too low. In the event of a HW failure (malfunction of the voltage regulation) the safety circuit power supply is switched off if the output voltage is too low. The voltage level is 19.0 to 20.0 volts.<br>
+03: Safety circuit output voltage too high. In the event of a HW failure (malfunction of the voltage regulation) the safety circuit power supply is switched off if the output voltage is too high. The voltage level is 60.1 to 60.7 volts.<br>
+04: Safety circuit Overcurrent. In the event of a short circuit to GND or leakage current to GND the safety circuit supply is switched off. The overcurrent limit is 300 to 500mA.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">No supply on the safety circuit</td>
+<td valign="top">Check the power supply for the safety circuit.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top"></td>
+<td valign="top">In case of regulated voltage suppy: Reset short circuit protection for safety circuit supply.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Relais RKPH</td>
+<td valign="top">Check the phase control relay RKPH (if available).</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Faulty input on interface board for safety circuit tap inputs</td>
+<td valign="top">Check the interface board and the connections to the safety circuit. Replace board if necessary.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

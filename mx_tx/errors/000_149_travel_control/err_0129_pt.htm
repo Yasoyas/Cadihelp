@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0129 EQ_Midpoint_Fault</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0129 EQ_Midpoint_Fault</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>EQ_Midpoint_Fault</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The error is generated when the Earthquake service requires 'EQ midpoint' and the EQ midpoint (car position when car and counterweight on same level) is not set or invalid. The error is not generated if the Earthquake service is not available or if P_STR_COLLISION_SWITCH is not set. The EQ midpoint position is considered to be valid anywhere between bottom and top floor level. Ideally the EQ midpoint should be set when the car position is exactly at same position with counterweight.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>01: The error message indicates that the Earthquake service is available and the parameter P_STR_COLLISION_SWITCH is TRUE but the EQ midpoint position is not set or invalid.<br><br>
+02: The error indicates that the EQ midpoint set command was done with the elevator control in normal mode. The EQ midpoint set command is allowed only in Inspection/Recall mode and with the drive in standstill condition.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">The lift has a collision switch (counterweight derailment switch) but the midpoint is not set. The control will only switch to automatic operation after the midpoint is set and valid.</td>
+<td valign="top">Park the car where the car and counterweight crossheads are even, and use the "set EQ midpoint" function on CADI or SMLCD.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

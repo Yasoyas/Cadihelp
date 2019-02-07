@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0089 TripTimeExp</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0089 TripTimeExp</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>TripTimeExp</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>The maximum time for the duration of a trip was exceeded. The monitoring of the trip time is required as per EN81-70 (chapt. 12.10) and aims to prevent damage (mechanical wear) of the moving parts (traction sheave, ropes) and damage of the motor, the brake and the inverter caused by overheating. For SW releases dated earlier than April 2006 the maximum trip time is defined by the parameter 'MAX_TRIP_TIME' only (see also description of extra info). For software releases with later date the software calculates the maximum trip time before each trip based on the maximum speed for the selected trip type and the maximum possible travel distance (HQ) and uses the calculated value to monitor the trip (if the maximum travel distance is not known the parameter 'MAX_TRIP_TIME' is used instead).</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>Extra info values in aabbccdd(hex) format are<br><br>
+aabb(hex): Runtime limit in seconds.<br>
+Formula for runtime limit calculation  is = ((bb * 100) + aa)(hex)<br><br>
+cc:    Zero parameter error.(It means if one of the parameter (a2,a6, V4, J1, j3, j5, j7) is zero for the trip, then bb = 1 else 0)<br>
+dd:    The trip type when the error reported. <br><br>
+Trip Type                                         dd (value in Hex)<br><br>
+UNDEFINED_TRIP                              00                                  <br>
+INSPECTION_UP                                01                                  <br>
+INSPECTION_DOWN                          02                                  <br>
+RECALL_UP                                      03                                  <br>
+RECALL_DOWN                                04                                  <br>
+INSP_CAR_UP                                   05                                    <br>
+INSP_CAR_DOWN                            06                                    <br>
+UPPER_ACCESS_UP                         07                                    <br>
+UPPER_ACCESS_DOWN                  08                                    <br>
+LOWER_ACCESS_UP                       09                                    <br>
+LOWER_ACCESS_DOWN                0A                                    <br>
+LEARN_DRV                                    0B                                    <br>
+SYNCH_DRV                                   0C<br>
+NORMAL_DRV                                0D<br>
+RELEVEL_DRV                                0E<br>
+NO_TRIP_DRV                                 0F<br>
+RAMP_UP_DRV                              10<br>
+RAMP_DOWN_DRV                        11<br><br>
+For Example:<br>
+Extra info = 2C01000B<br>
+aa = 2C, bb= 01, So calculated runtime limit is (( 01 * 100) + 2C) = 12C (hex) = 300 s (dec).<br>
+cc = 00, So No Zero parameter error.<br>
+dd = 0B it means Trip Type = LEARN_DRV.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top"></td>
+<td valign="top">Check the parameter Time Stop Precision.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top"></td>
+<td valign="top">Check the traction relation.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

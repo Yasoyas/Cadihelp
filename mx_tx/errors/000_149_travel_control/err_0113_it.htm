@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0113 Thermistor Failure</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0113 Thermistor Failure</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>Thermistor Failure</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Occurs when the software detects that the thermistor for sensing the oil temperature has failed. (Hydro only)</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>x65 (hex)/101 (dec): The reading is out of range. Thermistor (Analog Oil Temp Sensor) not detected or bad thermistor.<br>
+xC9 (hex)/201 (dec): The oil is still cold after 10 attempts to heat it with bypass operation.<br>
+x12D (hex)/301 (dec): Oil temperature has reached 62 degrees and was in the hot oil temperature range before (&gt; 55 degrees). Motor can not shutdown dispatch immediately.<br>
+x191 (hex)/401 (dec): Oil temperature has jumped more than +/- 5 degrees within 1 second. Check temp sensor / oil level</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>None.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Broken sensor</td>
+<td valign="top">replace sensor.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Low oil level</td>
+<td valign="top">refill oil.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

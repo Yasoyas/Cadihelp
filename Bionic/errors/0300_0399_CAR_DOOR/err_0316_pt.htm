@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0316 E_DOOR_HEARTBEAT_ERROR</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0316 E_DOOR_HEARTBEAT_ERROR</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>0300_0399_CAR_DOOR</em> error <em>E_DOOR_HEARTBEAT_ERROR</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>A comunicação com o nó da porta, respectivamente com o nó da cabina (comando) foi interrompida</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>
+</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>
+</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Nó da porta, respectivamente, nó da cabina desligado</td>
+<td valign="top">Ligar nó novamente</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Alimentação inexistente ou deficiente de nó de porta, respectivamente de nó de cabina</td>
+<td valign="top">Verificar alimentação do nó</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Transmissão de dados com falhas</td>
+<td valign="top">Verificar ligação geral da linha de dados.<br>
+Verificar a correcta terminação da linha de dados (quando existente) de todos os dispositivos ligados à comunicação de dados.<br>
+Verificar a blindagem da linha de dados (se existente).<br>
+Verificar existência de perturbações electromagnéticas (EMC).</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top">Nó da porta, respectivamente, nó da cabina com defeito</td>
+<td valign="top">Substituir nó correspondente</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Field Feedback</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="20%">Location</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Controller / MR</td>
+<td valign="top">Verificar a comunicação CAN e a terminação da comunicação CAN em todos os subsistemas (SCIC, FC)</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Car / Shaft</td>
+<td valign="top">Verificar a comunicação CAN e a terminação da comunicação CAN em todos os subsistemas (SDIC, COP, SEM)</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Car / Controller</td>
+<td valign="top">Verificar se as versões de SW da SDIC e SCIC são compatíveis. Corrigir se necessário</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

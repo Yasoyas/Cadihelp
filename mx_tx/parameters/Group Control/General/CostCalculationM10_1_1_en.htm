@@ -1,0 +1,200 @@
+<HTML>
+<HEAD>
+
+<style>
+/* Base Styles */
+body	{font-family: Helvetica, Arial; font-size: 12pt;}
+caption	{font-style: italic;}
+ul	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px;}
+ol	{margin-top: 0px; margin-bottom: 0px; margin-left: 20px; list-style-type: decimal;}
+h1 	{font-size: 18pt}
+h2 	{font-size: 16pt}
+h3 	{font-size: 14pt;}
+hr 	{color="#0052BA"}
+pre	{font-size: 12pt}
+p 	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.0	{margin: 0; margin-bottom: -2px;}
+p.Bold	{font-weight: bold; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Center	{text-align: center; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Italic	{font-style: italic; margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Mono	{font-family: courier, courier new; margin: 0; margin-top: 2px;  margin-bottom: 3px;}
+p.Figure	{text-align: center; margin: 0; margin-bottom:10px; margin-top: 10px;}
+p.FigureCaption	{font-style: italic; text-align: center; margin: 0; margin-bottom: 5px;}
+
+
+/* Page Styles */
+h4.Block	{margin: 0; margin-top: 2px; margin-bottom: 3px;}
+p.Line		{font-size: 2px; color: white; margin-top: 0px; margin-bottom: 0px;}
+p.zb-SectionNumber	{font-weight: bold; margin: 0;}
+p.zc-Restrictions	{font-size: 9pt; margin: 0;}
+table.Layout	{padding: 3px; border-width: 0px; border-collapse: collapse;}
+td.Layout	{padding: 3px; border-width: 0px;}
+table.Layout0	{padding: 0px; border-width: 0px; border-collapse: collapse; margin: 0;}
+td.Layout0	{padding: 0px; border-width: 0px;}
+
+/* Navi Styles */
+h1.Title	{font-size: 26pt;}
+p.H1-number	{text-align: center;}
+p.H2-number	{text-align: center;}
+p.H3-number	{text-align: center;}
+p.H4-number	{text-align: center;}
+
+/* Table Styles */
+table	{border-width: 1px; border-collapse: collapse; margin-top: 5px; margin-bottom: 5px;}
+th	{font-weight: bold; text-align: center;	background-color: silver; padding: 3px; border-width: 1px; border-color: rgb(0,0,0);}
+td	{font-size: 14pt; padding: 3px; border-width: 1px;}
+</style>
+</HEAD>
+<BODY>
+<TABLE WIDTH="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0" class="Layout">
+<TR>
+<TD valign="top" class="Layout" WIDTH="130"></TD>
+<TD valign="top" class="Layout" WIDTH="*"><h2>Cost Calculation M10</h2></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Summary</h4></TD>
+<TD valign="top" class="Layout">This section describes the parameters in the parameter window <em>Cost Calculation M10</em> of the parameter group <em>General</em> in subsystem <em>Group Control</em>.</TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Over the Hill Mode</h4></TD>
+<TD valign="top" class="Layout"><p>Enable/disable ‘over the hill’ mode.<br><br>0: ‘over the hill’ disabled<br>1: ‘over the hill’ enabled<br>2: 'over the hill' enabled when lift operating alone in group<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Max.Stops per Halfround</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum number of stops allowed per halfround (including initial start floor).<br>A halfround is a continous sequence of trips without change of travel direction. The parameter limits the number of stops for such a halfround and therefore affects the destination call allocation to an elevator. The default value for the parameter is 8.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Call Cost Multiplier</h4></TD>
+<TD valign="top" class="Layout"><p>Multiplier for the call cost part of the M10 cost formula.<br><br>Modification 12.09.03: Valid as of:  TX-GC 1.47, MX-GC 2.42 and TX-GC2 3.20<br>Mutliplier for penalty cost for allocation in a far halfround. The penalty cost is two seconds. Allocation in the first or second halfround has no penalty. Allocation in third or fourth halfround has a cost increased by the penalty multiplied by this factor. Allocation in the fifth or sixth halfround has a cost increased by the penalty multiplied by two times this factor.<br></p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Passenger Cost Multiplier</h4></TD>
+<TD valign="top" class="Layout"><p>Multiplier for the passenger cost part of the M10 cost formula.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Wait Cost Multiplier</h4></TD>
+<TD valign="top" class="Layout"><p>Multiplier for the waiting cost part of the M10 cost formula.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Bonus for Coincidence</h4></TD>
+<TD valign="top" class="Layout"><p>Bonus to reduce the cost in case of boarding or exiting coincidence. If there is boarding and exiting coincidence the cost is equal to zero.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Wait Cost Timeout</h4></TD>
+<TD valign="top" class="Layout"><p>Maximum time the master will spend waiting costs from lifts when some of them don’t answer.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">DT-S Mode</h4></TD>
+<TD valign="top" class="Layout"><p>Determine if the DT-S button is disabled or not during boarding and exiting.<br><br> Mode:<br>   0: DT-S not disabled.<br>   1: DT-S disabled during boarding.<br>   2: DT-S disabled during exiting.<br>   3: DT-S disabled during boarding and exiting.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Walking Speed</h4></TD>
+<TD valign="top" class="Layout"><p>Walking speed of passenger going from terminal to the allocated car. Used to calculate the approach time.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Door Open Time Mode</h4></TD>
+<TD valign="top" class="Layout"><p>M10 door open time mode.<br> 0: normal mode<br> 1: extended mode<br><br>The door open time mode affects the allocation of an M10 call when a car is standing with door open at the boarding floor and the walking time is higher than the remaining door open time. In normal mode the call is not allocated. In extended mode the call is allocated and the door open time is extended, but only if it doesn't exceed the maximum door open time defined by P_M10C_MAX_DOOR_OPEN_TIME.</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block">Base Cost</h4></TD>
+<TD valign="top" class="Layout"><p>Lift base cost. A none zero value is used to give a disadvantage to a lift. It is useful for example to avoid that a lift that is the only one that can serve some special floors receives too many allocations for normal floors.<br><br>CAUTION: this parameter table should always be complete in the PCT. It means every index should be present (1 to max lift, max lift is 8 for Miconic TX until now (max lift is the maximum for the system, not the number of lifts of a particular installation)).<br><br>Default values:<br><br>      ¤8B [07 04 0001 0000]       *    P_STR_BASE_COST, Lift 1<br>      ¤8B [07 04 0002 0000]       *    P_STR_BASE_COST, Lift 2<br>      ¤8B [07 04 0003 0000]       *    P_STR_BASE_COST, Lift 3<br>      ¤8B [07 04 0004 0000]       *    P_STR_BASE_COST, Lift 4<br>      ¤8B [07 04 0005 0000]       *    P_STR_BASE_COST, Lift 5<br>      ¤8B [07 04 0006 0000]       *    P_STR_BASE_COST, Lift 6<br>      ¤8B [07 04 0007 0000]       *    P_STR_BASE_COST, Lift 7<br>      ¤8B [07 04 0008 0000]       *    P_STR_BASE_COST, Lift 8</p></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"><h4 class="Block"></h4></TD>
+<TD valign="top" class="Layout"><pre></pre></TD>
+</TR>
+<TR>
+<TD valign="top" class="Layout"></TD>
+<TD valign="top" class="Layout"><hr></TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

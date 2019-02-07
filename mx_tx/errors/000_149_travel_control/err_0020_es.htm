@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>Error Help - 0020 PositionLost</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="160"></td>
+<td width="*"><h2>0020 PositionLost</h2></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Summary</h4></td>
+<td>This section describes the <em>Travel Control</em> error <em>PositionLost</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Description</h4></td>
+<td><p>Error occurs when:<br><br>
+- the car passes a floor fin/magnet at a measured position more than 15cm off the reference position stored during the learn trip.<br><br>
+- the car passes a floor position without detecting a floor fin/magnet at that floor position stored during learn trip.<br><br>
+- the car approaches a target floor without finding a floor fin/magnet at that floor position stored during learn trip.<br><br>
+- the car is at a floor level and detects no floor fin/magnet.<br><br><br>
+Comments:<br>
+- Travel Control initiates a synchronisation trip after the error occurrs. In case of incremental position tacho (IG) the car will make a trip to the KSE position. In case of an absolute encoder-type position tacho (AGSI) the car will go to the next floor level.<br>
+- If the car is standing at floor level and one of the photocells gives an incorrect message OUT_FIN, Travel Control takes the photocell information to be actual and assumes that the car is at the edge of the fin and not at floor level. (This situation can occur in large buildings with significant rope stretch, if the car is standing a long time at the floor level). Travel Control overwrites the position and a relevel_trip is started for a distance of 15mm. Since the car was at level at the beginning of this trip the second photocell will go out of the fin. Now both photocells are out of the fin, but Travel Control still assumes the car is almost level, which is detected as a POSITION_LOST.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Extra Info</h4></td>
+<td><p>0 (hex)/ 0 (dec): With the car at a floor level neither signal PHS nor PHNR_D is active ('IN_FIN'). 'OUT_FIN' transition of signal PHS occurs later than expected.<br>
+1 (hex)/ 1 (dec): 'OUT_FIN' transition of signal PHNR_D occurs later than expected.<br>
+2 (hex)/ 2 (dec): TX-GC2: Corrupted shaft info ==&gt; Floor position / MX-GC with AGSI: LUET did not switch while passing a floor.<br>
+3 (hex)/ 3 (dec): MX-GC/TX-GC: Corrupted shaft info ==&gt; Floor position<br>
+4 (hex)/ 4 (dec): TX-GC2: Corrupted shaft info ==&gt; KSE-D / Mismatch detected between the door zone information (KUET) and the position value from the car position feedback device (AGSI/IGS). The digital signal for the door zone from the shaft information (LUET) is active but the car position value says the car is well outside the door zone.<br>
+5 (hex)/ 5 (dec): MX-GC/TX-GC: Corrupted shaft info -&gt; KSE-D<br>
+8 (hex)/ 8 (dec): TX-GC2: Corrupted shaft info -&gt; KSE-U<br>
+9 (hex)/ 9 (dec): MX-GC/TX-GC: Corrupted shaft info -&gt; KSE-U<br>
+A (hex)/ 10 (dec): Position of KSE-U magnet found more than 15cm away from the position stored during the learn trip.<br>
+B (hex)/ 11 (dec): Position of KSE-D magnet found more than 15cm away from the position stored during the learn trip.<br>
+C (hex)/ 12 (dec): While doing a synch trip KSE-D magnet switched more than 15cm away from the position stored during the learn trip.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Source ID</h4></td>
+<td><p>ndef</p></td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Causes and Actions</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="45%">Possible causes of message</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Mechanical problem with the shaft information.</td>
+<td valign="top">Check the position of the fins or magnets. Repeat the learn trip.</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top"></td>
+<td valign="top">Check the horizontal distance between fins/magnets and photocell/switch. Make sure the clearance of the car is not too big when the car is at floor levels.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">The position tacho (IG type or AGSI type) is not working properly.</td>
+<td valign="top">Check for mechanical slip on the position tacho.</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top"></td>
+<td valign="top">Check that the tacho runs smoothly.</td>
+</tr>
+<tr>
+<td align="center" valign="top">5</td>
+<td valign="top"></td>
+<td valign="top">Check the tacho rope and its tension force, as well as the two pulleys for the rope. The groove of the tacho pulleys has to be clean (especially for IGS-200).</td>
+</tr>
+<tr>
+<td align="center" valign="top">6</td>
+<td valign="top">Wrong car position values from the car position tacho.</td>
+<td valign="top">Check car position value shown on the SMLCD (or UI1). Check for EMC problems and refer to explanations for extra info values.</td>
+</tr>
+<tr>
+<td align="center" valign="top">7</td>
+<td valign="top">Problem with electrical interferences on the photocells (PHS / PHNR_D or magnetic switches)</td>
+<td valign="top">Check the power supply for the photocells.</td>
+</tr>
+<tr>
+<td align="center" valign="top">8</td>
+<td valign="top"></td>
+<td valign="top">Check the ground connection on top of the car and from the machine room/control cabinet to the car.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><hr></td>
+</tr>
+<tr>
+<td valign="top"><h4>Field Feedback</h4></td>
+<td>
+<table width="100%" border="0" cellpadding="2" cellspacing="5">
+<tr>
+<th width="10%">ID</th>
+<th width="20%">Location</th>
+<th>Actions to be taken </th>
+</tr>
+<tr>
+<td align="center" valign="top">1</td>
+<td valign="top">Shaft</td>
+<td valign="top">Comprobar información de hueco (posición de los soportes y los imanes)</td>
+</tr>
+<tr>
+<td align="center" valign="top">2</td>
+<td valign="top">Shaft/Drive</td>
+<td valign="top">Comprobar la posición del tacómetro y deslizamiento del cable.</td>
+</tr>
+<tr>
+<td align="center" valign="top">3</td>
+<td valign="top">Shaft/ Car/ Controller</td>
+<td valign="top">Comprobar fotocélula PHS/PHNR_D (corriente), conexión a tierra (cabina y controlador).</td>
+</tr>
+<tr>
+<td align="center" valign="top">4</td>
+<td valign="top"></td>
+<td valign="top">Comprobar la Información de Campo Nr. 275, 283, 291 (problema EMC</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
